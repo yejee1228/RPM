@@ -1,0 +1,1146 @@
+@charset "utf-8";
+#content.bg_color{width:100%;min-height:720px;margin-bottom:30px;background-color:#fff}
+#contentnew{width:1180px;margin: 0 auto; position: relative; z-index: 1;}
+#contentnew.bg_color{width:100%;min-height:720px;margin-bottom:30px;background-color:#fff}
+.nation{position:relative;overflow:hidden;padding-left:260px;line-height:30px;margin-top:20px;font-size:14px;height:110px}
+.nation span{position:absolute;left:160px;top:50px}
+.nation span.banner{position:absolute;left:540px;top:40px}
+.nation span.banner1{position:absolute;top:40px}
+.form_style input{font-size:13px;}
+.form_style input[type=text]{height:30px;line-height:30px;padding:0 5px;vertical-align:middle;border:1px solid #c5c5c5;border-radius:2px;box-sizing:border-box;}
+.form_style input[type=text].bg_gray{background-color:#f4f2f2;}
+.form_style input[type=password]{height:30px;line-height:30px;padding:0 5px;vertical-align:middle;border:1px solid #c5c5c5;border-radius:2px;box-sizing:border-box;}
+.form_style input[type=checkbox]{vertical-align:middle;}
+.form_style input[type=radio]{vertical-align:middle;}
+.form_style select{height:30px;line-height:30px;color:#000;vertical-align:middle;border:1px solid #c5c5c5;border-radius:2px;background-color:#f4f2f2;box-sizing:border-box;}
+.form_style .dash{color:#c5c5c5;}
+input::-webkit-input-placeholder{color:#999}
+input::-moz-placeholder{color:#999}
+input::-ms-input-placeholder{color:#999}
+.radio_style input[type=radio]{display:none;}
+/*공통레이어 현재 홈엔카/내차팔기등에 사용중*/
+.layer_personal_info1 { width:650px; position:fixed; top:50%; left:50%; margin:-200px 0 0 -325px; background:#fff; z-index:999; }
+.layer_tit{position:relative;background:#ea002c;height:40px;font-size:16px;line-height:40px;color:#fff;padding-left:20px;margin-bottom:20px}
+.layer_tit span{position:absolute;right:20px;top:11px}
+/* table */
+.dot_tbl table{width:100%;}
+.dot_tbl table th{height:45px;font-weight:normal;color:#000;}
+.dot_tbl table td{padding:8px 0 7px;color:#666;}
+.dot_tbl table th,
+.dot_tbl table td{font-size:13px;text-align:left;border-top:1px dashed #d9d9d9;background-color:#fff;vertical-align:middle;}
+.dot_tbl table tr:first-child th,
+.dot_tbl table tr:first-child td{border-top:0;}
+.dot_tbl table + table{border-top:1px dashed #d9d9d9;}
+.dot_tbl .addr_box{margin-top:8px;}
+.dot_tbl .select_notice{height:45px;line-height:45px;}
+.dot_tbl .select_notice + table{border-top:1px dashed #d9d9d9;}
+.dot_tbl .dash{display:inline-block;vertical-align:middle;}
+.dot_tbl .dash:after{display:inline-block;content:'';width:8px;height:1px;background-color:#c5c5c5;}
+.dot_tbl .email{color:#c5c5c5;}
+.dot_tbl .delivery_tbl,
+.dot_tbl .radio_chk_tbl{display:none;}
+.dot_tbl.price table th{font-size:16px;}
+.dot_tbl.price table td{font-size:18px;color:#000;font-weight:bold;text-align:right;}
+.dot_tbl.price table th span.ts{font-size:12px}
+.dot_tbl.price table td span.rd{color:#F00}
+.dot_tbl.price_total table th{font-size:20px;color:#fff;background-color:#f7952d;}
+.dot_tbl.price_total table td{font-size:24px;color:#fff;font-weight:bold;text-align:right;background-color:#f7952d;}
+.check_tbl table{width:100%}
+.check_tbl table th{height:30px;font-weight:normal;font-size:13px;color:#333;text-align:center;border:solid #d5cccc;border-width:1px 0 1px 1px;background-color:#f4f2f2;}
+.check_tbl table th:first-child{border-left:0;}
+.check_tbl table td{padding:15px 2px;color:#666;background-color:#fff;vertical-align:top;}
+.check_tbl table td ul.option_list li{font-size:13px;color:#666;}
+.check_tbl1 table{width:98%;border-collapse:collapse;margin:1% }
+.check_tbl1 table th{height:30px;font-weight:normal;font-size:13px;color:#333;text-align:center;border:1px solid #d5cccc;background-color:#f4f2f2;}
+.check_tbl1 table td{padding:15px 2px;color:#666;background-color:#fff;vertical-align:top;border:1px solid #d5cccc;}
+.check_tbl1 table td ul.option_list{padding-left:2%}
+.check_tbl1 table td ul.option_list li{font-size:13px;color:#666;}
+.tab_tbl{border-top:1px solid #d5cccc;}
+.tab_tbl table{width:100%; font-size:13px; color:#666;}
+.tab_tbl th{padding:15px 10px; font-weight:normal; text-align:left; border-right:1px solid #d5cccc; border-bottom:1px solid #d5cccc; background:#f4f2f2; vertical-align: top}
+.tab_tbl th span{display:block; color:#ea002c; font-size:18px;}
+.tab_tbl td{padding:10px; border-bottom:1px solid #d5cccc; }
+.tab_tbl td .spec{margin-bottom:27px;}
+/* box */
+.info_box{margin:20px 0;padding:10px 24px;background-color:#fff;border-radius:5px;box-sizing:border-box;}
+.info_box_orange{margin:8px 0 0 0;padding:5px 24px;background-color:#f7952d;border-radius:5px;box-sizing:border-box;}
+.radio_box{display:inline-block;color:#000;}
+.radio_box label + label{margin-left:24px;}
+.check_box{display:inline-block;color:#666;}
+.check_box label + label{margin-left:24px;}
+input + .check_box,
+a.btn_gray + .check_box{margin-left:5px;}
+.txt_box{padding:6px 0;}
+.txt_box li{margin-top:15px;font-size:13px;}
+.txt_box li:first-child{margin-top:0;}
+.txt_box .title{color:#000;}
+.txt_box .radio_box{float:right;}
+
+/* button */
+.btn_red_he{display:inline-block;min-width:16%;height:34px;line-height:34px;padding:0 1%;font-size:16px;color:#fff;text-align:center;vertical-align:middle;background-color:#ea002c;border-radius:25px;}
+.btn_red_he:hover{color:#fff;text-decoration:none;}
+.btn_red_he .arrow{display:inline-block;width:8px;height:14px;margin-left:10px;background:url(https://www.kcar.com/resources/images/homeencar/btn/btn_whiteArrow_r.png) no-repeat 0 0;vertical-align:middle;}
+
+.btn_orange{display:inline-block;min-width:16%;height:34px;line-height:34px;padding:0 1%;font-size:16px;color:#fff;text-align:center;vertical-align:middle;background-color:#f48024;border-radius:25px;}
+.btn_orange:hover{color:#fff;text-decoration:none;}
+.btn_orange .arrow{display:inline-block;width:8px;height:14px;margin-left:10px;background:url(https://www.kcar.com/resources/images/homeencar/btn/btn_whiteArrow_r.png) no-repeat 0 0;vertical-align:middle;}
+
+.btn_gray{display:inline-block;height:30px;line-height:30px;padding:0 8px;text-align:center;font-size:14px;color:#fff;vertical-align:middle;background-color:#aca3a2;border-radius:2px;}
+.btn_gray:hover{color:#fff;text-decoration:none;}
+.btn_gray .icon_search{display:inline-block;width:12px;height:12px;margin-right:4px;background:url(https://www.kcar.com/resources/images/homeencar/icon/icon_search.png) no-repeat 0 0;}
+
+.btn_prev{display:inline-block;height:34px;line-height:34px;font-size:18px;color:#333;vertical-align:middle;font-weight:bold}
+.btn_prev:hover{color:#333;text-decoration:none;}
+.btn_prev .arrow{display:inline-block;width:32px;height:32px;margin-right:10px;background:#aca3a2 url(https://www.kcar.com/resources/images/homeencar/btn/btn_whiteArrow_l.png) no-repeat center center;border-radius:50%;vertical-align:middle;}
+
+.btn_next{display:inline-block;height:34px;line-height:34px;font-size:18px;color:#333;vertical-align:middle;font-weight:bold}
+.btn_next:hover{color:#333;text-decoration:none;}
+.btn_next .arrow{display:inline-block;width:32px;height:32px;margin-left:10px;background:#aca3a2 url(https://www.kcar.com/resources/images/homeencar/btn/btn_whiteArrow_r.png) no-repeat center center;border-radius:50%;vertical-align:middle;}
+
+.btn_buy{display:inline-block;min-width:16%;height:34px;line-height:34px;padding:0 1%;font-size:16px;color:#fff;text-align:center;vertical-align:middle;background-color:#ea002c;border-radius:25px;}
+.btn_buy:hover{color:#fff;text-decoration:none;}
+.btn_buy .arrow{display:inline-block;width:8px;height:14px;margin-left:10px;background:url(https://www.kcar.com/resources/images/homeencar/btn/btn_whiteArrow_r.png) no-repeat 0 0;vertical-align:middle;}
+
+.btn_red_border{display:inline-block;min-width:13%;height:34px;line-height:34px;padding:0 1%;font-size:16px;font-weight:bold;color:#ea002c;text-align:center;vertical-align:middle;background-color:#fff;border-radius:5px;border:2px solid #ea002c;}
+.btn_red_border:hover{color:#ea002c;text-decoration:none;}
+
+.btn_more{display:inline-block;width:99%;height:44px;line-height:44px;font-size:20px;color:#000;text-align:center;vertical-align:middle;background-color:#fff;border:1px solid #cac2c1;border-radius:3px;}
+.btn_more:hover{color:#000;text-decoration:none;}
+.btn_more .icon{display:inline-block;width:19px;height:19px;margin:-6px 10px 0 0;background:url(https://www.kcar.com/resources/images/homeencar/btn/btn_more.png) no-repeat 0 0;vertical-align:middle;}
+
+/*20170918*/
+.btn_mid_org{display:inline-block;min-width:16%;height:50px;line-height:50px;padding:0 5% 0 3%;font-size:16px;color:#fff;text-align:center;vertical-align:middle;border-radius:25px;background:url(https://www.kcar.com/resources/images/homeencar/btn/hc_nxt_arrow.png) no-repeat 130px center #ff7900;}
+.btn_mid_org:hover{color:#fff;text-decoration:none;}
+
+.btn_mid_gry{display:inline-block;min-width:16%;height:50px;line-height:50px;padding:0 3% 0 5%;font-size:16px;color:#fff;text-align:center;vertical-align:middle;background:url(https://www.kcar.com/resources/images/homeencar/btn/hc_pre_arrow.png) no-repeat 52px center #aca3a2;border-radius:25px;}
+.btn_mid_gry:hover{color:#fff;text-decoration:none;}
+
+.btn_mid_red{display:inline-block;min-width:16%;height:50px;line-height:50px;padding:0 5% 0 3%;font-size:16px;color:#fff;text-align:center;vertical-align:middle;border-radius:25px;background:url(https://www.kcar.com/resources/images/homeencar/btn/hc_nxt_arrow.png) no-repeat 145px center #db002f;border-radius:25px;}
+.btn_mid_red:hover{color:#fff;text-decoration:none;}
+/*//20170918*/
+
+/* etc */
+.contents_title{font-size:18px;color:#776c6a;text-align:center;}
+.contents_title span.real{display:block;margin-top:10px}
+.info_txt{font-size:13px;color:#666;vertical-align:middle;letter-spacing:-1px;}
+
+/* 차량정보 */
+.accordion{margin:15px 0;}
+.accordion ul.accordion_list > li{overflow:hidden;margin-top:8px;}
+.accordion ul.accordion_list li:first-child{margin:0;}
+.accordion ul.accordion_list li p{height:48px;padding:16px;font-size:16px;color:#333;background-color:#fff;border-radius:5px;cursor:pointer;box-sizing:border-box;}
+.accordion ul.accordion_list li .accordion_btn{font-size:14px;color:#333;float:right;text-decoration:none;}
+.accordion ul.accordion_list li .accordion_btn .arrow{display:inline-block;width:16px;height:16px;margin-left:8px;background:url(https://www.kcar.com/resources/images/homeencar/btn/btn_accordion.png) no-repeat 0 0;vertical-align:middle;}
+.accordion ul.accordion_list li .contents{display:none;padding:15px;margin-top:8px;background-color:#fff;border:1px solid #f7952d;border-radius:5px;box-sizing:border-box;}
+.accordion ul.accordion_list li.on p{color:#fff;background-color:#f7952d;}
+.accordion ul.accordion_list li.on .accordion_btn{color:#fff;}
+.accordion ul.accordion_list li.on .accordion_btn .arrow{background:url(https://www.kcar.com/resources/images/homeencar/btn/btn_accordion.png) no-repeat 0 -16px;}
+.accordion li input[type=checkbox]{vertical-align:middle;}
+.accordion .state_area{overflow:hidden;}
+.purchase_area{height:132px;margin-top:0px;padding:15px;background-color:#fff;border-radius:5px;box-sizing:border-box;}
+.purchase_area + .contents_title{margin-top:25px;}
+.purchase_tbl table {border-collapse:collapse;border:1px solid #cccccc}
+.purchase_tbl table td{padding:0 15px;}
+.purchase_tbl table td:first-child{padding:0;}
+.purchase_tbl table td .img_con img{width:148px;height:100px;}
+.purchase_tbl table td .title{font-size:16px;color:#333;}
+.purchase_tbl table td .info{margin-top:12px;}
+.purchase_tbl table td .info li{float:left;font-size:13px;color:#777;}
+.purchase_tbl table td .info li:first-child:before{display:none;}
+.purchase_tbl table td .info li:before{display:inline-block;content:'';width:2px;height:11px;margin:0 5px;background-color:#ddd;}
+.purchase_tbl table td.price{font-size:16px;color:#ea002c;text-align:right;}
+/* 보증 정보 */
+.guarantee_service .owner_gate{margin: 20px 0 19px;}
+.guarantee_service .owner_gate li{width: 27.7%;height:362px;margin-left: 2.1%;padding-top: 0;}
+.guarantee_service .owner_gate li:first-child{width: 40.08%;}
+.guarantee_service .owner_gate .radio_style{position: relative;margin-top: 0;}
+.guarantee_service .owner_gate li.on .radio_style label{height: 357px;}
+.guarantee_service .owner_gate .radio_style input[type=radio] + label:before,
+.guarantee_service .owner_gate .radio_style input[type=radio]:checked + label:after{top: 16px;}
+.guarantee_service .owner_gate .radio_style label{position: absolute;top: 0;left: 0;height: 362px;}
+.guarantee_service .owner_gate .radio_style label > strong:first-child{display: table;position: absolute;top: 59px;width: 100%;font-weight:normal; font-size: 13px;color: #ea002c;}
+.guarantee_service .owner_gate .radio_style label span{margin-top: 0;font-size: 18px;}
+.guarantee_service .owner_gate .radio_style label > strong + span,
+.guarantee_service .owner_gate .radio_style label span:first-child{margin-top: 76px;letter-spacing: -1px;}
+.guarantee_service .owner_gate .radio_style label span + span + span{font-size: 16px;color: #666;}
+.guarantee_service .owner_gate .radio_style label span.substance{height: 137px;margin: 14px 0 16px;}
+.guarantee_service .owner_gate .radio_style label span em{display: block;font-style: normal;}
+.guarantee_service .owner_gate .radio_style label span .distance{margin-top: 4px;font-size: 18px;font-weight: normal; letter-spacing: 0;color: #333;}
+.guarantee_service .owner_gate .radio_style label span .distance strong{font-weight: normal;color: #ea002c;}
+.guarantee_service .owner_gate .radio_style label .price{margin-top: 3px;font-size: 26px;color: #333;}
+.guarantee_service .owner_gate li.on .radio_style .price strong{color: #ea002c;}
+.guarantee_service .owner_gate + .radio_style input[type=radio] + label:before,
+.guarantee_service .owner_gate + .radio_style input[type=radio]:checked + label:after{margin-left: 0;}
+.guarantee_service .owner_gate + .radio_style label{width: 100%;height: 33px;line-height: 33px;padding-left: 45px;box-sizing:border-box;font-size: 22px;}
+.guarantee_service .owner_gate + .radio_style label span{display: inline-block;margin:-4px 0 0 20px;vertical-align: middle;font-size: 18px;}
+.guarantee_service .owner_gate + .radio_style label strong{float: right;font-size: 26px;}
+
+/* 결제정보 */
+.payment_info .info_box{margin:20px 0 0 0;padding:0 24px;}
+.payment_info .method{overflow: hidden;margin-top: 8px;padding: 12px 27px;font-size: 16px;line-height: 30px;border: 2px solid #aca3a2;border-radius:5px;background-color: #fff;}
+.payment_info .method > p{float: left;}
+.payment_info .method .form_style{float: right;}
+.payment_info .method .input_wrap{float:left;}
+.payment_info .method .input_wrap label{margin-right: 50px;}
+.payment_info .method .input_wrap label{vertical-align: middle;font-size: 16px;}
+.payment_info .method .input_wrap input[type=checkbox] + label:before,
+.payment_info .method .input_wrap input[type=checkbox] + label:after{top: 3px;left: -33px;width: 24px;height: 24px;margin-left:0;background-size: 12px 10px;background-position: 3px 4px;}
+.payment_info .method .form_style select{min-width: 128px;margin-left: 15px;}
+.cont100per{background-color:#fff;font-weight:normal}
+.cont100per1{background-color:#fff;border-bottom:1px solid #e8e8e8;height:53px;}
+.cont100per2{background-color:#fff;overflow:hidden}
+.top920pix{position:relative;background:url(https://www.kcar.com/resources/images/homeencar/bg/home_topbg_20191125.jpg) no-repeat 50% 0;height:240px;}
+.top920pix p{width:1180px;margin:0 auto; padding:66px 0 0 10px}
+.top920pix p span.stit{font-size:15px; color:#000; }
+.top920pix p span.btit{line-height:2.1em; font-size:34px;font-weight:bold; color:#000;}
+.top920pix p span.oldtit{display:block; color:#000; font-size:14px;}
+.tab920pix{position:relative;width:1180px;margin:0 auto;text-align:center}
+.tab920pix li{display:inline-block;width:291px;height:53px;line-height:53px;text-align:center;}
+.tab920pix li a{text-decoration:none;height:53px;width:292px;display:block;cursor:pointer;text-indent:7px}
+.tab920pix li a:hover{border-bottom:1px solid #d52a32; cursor:pointer;background:url( https://www.kcar.com/resources/images/homeencar/icon/edge_arrow.jpg) no-repeat right 48px;text-decoration:none;display:block;height:53px;color:#000;text-indent:7px}
+.tab920pix li a.on{border-bottom:1px solid #d52a32; cursor:pointer;background:url(https://www.kcar.com/resources/images/homeencar/icon/edge_arrow.jpg) no-repeat right 48px;text-decoration:none;display:block;height:53px;color:#000;text-indent:7px; font-weight:bold;}
+.cont920pix{position:relative;width:1180px;margin:0 auto;}
+.cont920pix .mtit{line-height:2.6em;text-align:center;margin:50px 0 30px 0;}
+.cont920pix .mtit:after{display: block; clear: both; content:''; *zoom:1;}
+.cont920pix .mtit span.smbtn{display:block;border:1px solid #cccccc;width:160px;margin:10px auto 0 ;border-radius:5px;line-height:30px;padding:0;}
+.cont920pix .mtit span.smbtn a{text-decoration:none;}
+.cont920pix .mtit span.smbtn:hover{cursor:pointer}
+.cont920pix .mtit p{font-size:24px;font-weight:bold;color:#1c1c1c}
+.cont920pix .mtit span{display:block;font-size:14px;color:#5c5c5c;font-weight:normal;padding-top:5px}
+.cont920pix .pur_box{background-color:#f7f7f7;box-sizing:border-box;border-top:1px solid #1c1c1c;border-right:0;border-left:0;border-bottom:1px solid #e5e5e5;}
+/*step1*/
+.cont920pix .pur_box{background-color:#f7f7f7;box-sizing:border-box;border-top:1px solid #1c1c1c;border-right:0;border-left:0;border-bottom:1px solid #e5e5e5;}
+.cont920pix .pur_tbl table {border-collapse:collapse;}
+.cont920pix .pur_tbl table td{padding:0 15px;height:118px}
+.cont920pix .pur_tbl table td:first-child{padding:0;}
+.cont920pix .pur_tbl table td .img_con img{width:176px;height:118px;}
+.cont920pix .pur_tbl table td .title{font-size:16px;color:#333;padding-left:20px}
+.cont920pix .pur_tbl table td .info{margin-top:12px;padding-left:20px}
+.cont920pix .pur_tbl table td .info li{float:left;font-size:13px;color:#777;}
+.cont920pix .pur_tbl table td .info li:first-child:before{display:none;}
+.cont920pix .pur_tbl table td .info li:before{display:inline-block;content:'';width:2px;height:11px;margin:0 5px;}
+.cont920pix .pur_tbl table td.price{font-size:16px;color:#ea002c;text-align:right;}
+.cont920pix .con_box{margin:20px 0 0 0;}
+.cont920pix .con_box:after{display: block; clear: both; content:''; *zoom:1;}
+.cont920pix .con_box li{float:left;box-sizing:border-box;width:280px;height:270px;border:1px solid #e5e5e5;text-align:center;margin-right:20px;cursor:pointer;}
+.cont920pix .con_box li.fir{margin-left:0px;}
+.cont920pix .con_box li.end{margin-right:0px;}
+.cont920pix .con_box li span{padding-top:75px;display:block;font-size:14px;line-height:1.6em}
+.cont920pix .con_box li#check1{background:url(https://www.kcar.com/resources/images/homeencar/icon/step1_icon1off.png) no-repeat center 30px ;}
+.cont920pix .con_box li#check2{background:url(https://www.kcar.com/resources/images/homeencar/icon/step1_icon2off.png) no-repeat center 30px ;}
+.cont920pix .con_box li#check3{background:url( https://www.kcar.com/resources/images/homeencar/icon/step1_icon3off.png ) no-repeat center 30px ;}
+.cont920pix .con_box li#check4{background:url(https://www.kcar.com/resources/images/homeencar/icon/step1_icon4off.png) no-repeat center 30px ;}
+.cont920pix .con_box li#check1.on{background:url(https://www.kcar.com/resources/images/homeencar/icon/step1_icon1on.png) no-repeat center 30px;border:1px solid #ce0e2d;}
+.cont920pix .con_box li#check2.on{background:url(https://www.kcar.com/resources/images/homeencar/icon/step1_icon2on.png) no-repeat center 30px;border:1px solid #ce0e2d;}
+.cont920pix .con_box li#check3.on{background:url(https://www.kcar.com/resources/images/homeencar/icon/step1_icon3on.png) no-repeat center 30px;border:1px solid #ce0e2d;}
+.cont920pix .con_box li#check4.on{background:url(https://www.kcar.com/resources/images/homeencar/icon/step1_icon4on.png) no-repeat center 30px;border:1px solid #ce0e2d;}
+.cont920pix .con_box li.on span{font-weight:bold}
+/*step2*/
+.cont920pix .con_box2{margin:20px 0 0 0;}
+.cont920pix .con_box2:after{display: block; clear: both; content:''; *zoom:1;}
+.cont920pix .con_box2 p.bottxt{float:left;width:1180px;line-height:1.6em;margin-top:20px}
+.cont920pix .con_box2 li{float:left;box-sizing:border-box;width:380px;height:297px;border:1px solid #e5e5e5;text-align:center;margin-right:19px;cursor:pointer;}
+.cont920pix .con_box2 li.fir{margin-left:0px;}
+.cont920pix .con_box2 li.end{margin-right:0px;}
+.cont920pix .con_box2 li.all0{margin:0}
+.cont920pix .con_box2 li label{display:block;font-size:14px;height:auto; cursor: pointer;}
+.cont920pix .con_box2 li span.btit{padding-top:45px;display:block;font-size:16px;}
+.cont920pix .con_box2 li span.ctit{padding-top:8px;display:block;font-size:14px;line-height:1.6em}
+.cont920pix .con_box2 li span.ptit{padding-top:110px;display:block;font-size:18px;color:#d52a32;font-weight:bold}
+.cont920pix .con_box2 li span.bottit{margin-top:20px;display:block;font-size:12px;background:#666666;line-height:26px;height:26px;color:#fff}
+.cont920pix .con_box2 li span.migat{text-align:left;padding:25px 0 0 30px;display:block;font-size:16px;}
+.cont920pix .con_box2 li span.miga{width:805px;text-align:left;padding:10px 0 0 0;display:inline-block;font-size:14px;}
+.cont920pix .con_box2 li span.migap{text-align:right;display:inline-block;font-size:18px;font-weight:bold;width:240px;padding-right:55px}
+.cont920pix .con_box2 li#WarrantyCd1{background:url(https://www.kcar.com/resources/images/homeencar/icon/ew12_off.png) no-repeat center 10px ;}
+.cont920pix .con_box2 li#WarrantyCd2{background:url(https://www.kcar.com/resources/images/homeencar/icon/ew6_off.png) no-repeat center 10px;}
+.cont920pix .con_box2 li#WarrantyCd3{background:url(https://www.kcar.com/resources/images/homeencar/icon/ew6_off.png) no-repeat center 10px;}
+.cont920pix .con_box2 li#WarrantyCd4{width:1178px;height:100px;background:url(https://www.kcar.com/resources/images/homeencar/icon/moo_off.png) no-repeat 1100px 10px;margin-top:15px;}
+.cont920pix .con_box2 li#WarrantyCd1.on{background:url(https://www.kcar.com/resources/images/homeencar/icon/ew12_on.png) no-repeat center 10px;border:1px solid #ce0e2d;}
+.cont920pix .con_box2 li#WarrantyCd2.on{background:url(https://www.kcar.com/resources/images/homeencar/icon/ew6_on.png) no-repeat center 10px;border:1px solid #ce0e2d;}
+.cont920pix .con_box2 li#WarrantyCd2.on span.bottit{background:#1c1c1c;}
+.cont920pix .con_box2 li#WarrantyCd3.on{background:url(https://www.kcar.com/resources/images/homeencar/icon/ew6_on.png) no-repeat center 10px;border:1px solid #ce0e2d;}
+.cont920pix .con_box2 li#WarrantyCd4.on{height:100px;background:url(https://www.kcar.com/resources/images/homeencar/icon/moo_on.png) no-repeat 1100px 10px;margin-top:15px;border:1px solid #ce0e2d;}
+.cont920pix .con_box2 li.on span.btit{font-weight:bold}
+/*step3*/
+.cont920pix .listt_box{margin:20px 0 0 0;}
+.cont920pix .listt_box:after{display: block; clear: both; content:''; *zoom:1;}
+.cont920pix .listt_box ul{background-color:#f2f2f2;box-sizing:border-box;padding:45px}
+.cont920pix .listt_box li{background-color:#fff; padding: 10px 45px;}
+.cont920pix .listt_box p.boxtit{line-height:1.6em;margin-top:20px;color:#1c1c1c;padding-bottom:10px;font-size:20px;font-weight:bold}
+.cont920pix .listt_box p.boxtit span{font-size:14px;color:#5c5c5c;font-weight:normal}
+.cont920pix .listt_box li table{width:100%;}
+.cont920pix .listt_box li table th,
+.cont920pix .listt_box li table td{border-top:1px solid #E8E8E8; height:25px; padding:12px; line-height:25px;}
+.cont920pix .listt_box li table th.price,
+.cont920pix .listt_box li table td.price{background: #F5F5F5;font-size:12px;color:#095bcb;font-weight:normal; padding-left:25px;}
+.cont920pix .listt_box li table td.price a.int_price{positon:absolute; top:0; right:0; display:inline-block; text-align:right; color:#095bcb;text-decoration:underline;}
+.cont920pix .listt_box li table td.price a{text-decoration:underline; color:#095bcb; font-size:14px;}
+.cont920pix .listt_box li table th{font-weight:normal;color:#5c5c5c;font-size:14px;text-align:left}
+.cont920pix .listt_box li table td{color:#000;font-size:16px;text-align:right;font-weight:bold}
+.cont920pix .listt_box li table td.cre{color:#ce0e2d}
+.cont920pix .listt_box li table th.top,
+.cont920pix .listt_box li table td.top{border:none;}
+.cont920pix .listt_box li table th.bot,
+.cont920pix .listt_box li table td.bot{border:none;}
+.cont920pix .listt_box li table th.binbg{height:1px; background:url(https://www.kcar.com/resources/images/homeencar/bg/papper_bg.png) repeat-x;border:none; }
+.cont920pix .listt_box li table th.totalp{font-weight:bold;padding-bottom:10px;padding-top:10px; border:none;}
+.cont920pix .listt_box li table td.totalp{padding-bottom:10px;padding-top:10px; border:none;}
+.cont920pix .listt_box li table th span.qualgo{font-size:12px}
+.cont920pix .point_ex{padding-top:10px; font-size:13px;}
+.cont920pix .point_ex span{line-height:2; color:#5c5c5c; font-size:13px;}
+.cont920pix .point_ex .int_rule{padding:5px 10px;  line-height:1.5; background:#f9f9f9;}
+.cont920pix .point_ex .int_rule p{padding-top:5px;}
+.cont920pix .point_ex .int_rule ul{padding-left:10px;}
+.cont920pix .point_ex .int_rule .mon_tip .ico { display: inline-block; content: ""; width: 16px; height: 15px; vertical-align: middle; margin:-2px 7px 0 0; background: url("https://www.kcar.com/resources/images/content/buy/qs_ico.png") no-repeat 0 0; }
+.cont920pix .point_ex .int_rule .mon_tip:hover{position:relative;}
+.cont920pix .point_ex .int_rule .mon_tip .ly_tip{display:none;}
+.cont920pix .point_ex .int_rule .mon_tip:hover .ly_tip{display:block; position:absolute; top:20px; left:400px; width:300px; padding:15px 25px 15px 40px; background:#fff url(https://www.kcar.com/resources/images/content/buy/qs_ico.png) 17px 17px no-repeat; opacity: 0.95; border:1px solid #000;  line-height:1.6; font-size:11px; z-index:2}
+.cont920pix .con_box3{margin:20px 0 0 0;}
+.cont920pix .con_box3:after{display: block; clear: both; content:''; *zoom:1;}
+.cont920pix .con_box3 li{float:left;box-sizing:border-box;width:224px;height:205px;border:1px solid #e5e5e5;text-align:center;margin-right:15px;cursor:pointer;}
+.cont920pix .con_box3 p.boxtit{line-height:1.6em;margin-top:20px;color:#1c1c1c;padding-bottom:10px;font-size:20px;font-weight:bold}
+.cont920pix .con_box3 p.boxtit span{font-size:14px;color:#5c5c5c;font-weight:normal}
+.cont920pix .con_box3 p.bottxt{width:920px;float:left;line-height:1.6em;margin-top:20px;color:#5c5c5c}
+.cont920pix .con_box3 p.bottxt span{color:#ce0e2d}
+.cont920pix .con_box3 li.fir{margin-left:0px;}
+.cont920pix .con_box3 li.end{margin-right:0px;}
+.cont920pix .con_box3 li span{display:block;font-size:14px; height: 100%;}
+.cont920pix .con_box3 li label{padding-top:25px;display:block;font-size:14px;height:100%;cursor: pointer;}
+.cont920pix .con_box3 li#PymtMthdCd1{background:url(https://www.kcar.com/resources/images/homeencar/icon/pay_step1off.png) no-repeat center 10px ;}
+.cont920pix .con_box3 li#PymtMthdCd2{background:url(https://www.kcar.com/resources/images/homeencar/icon/pay_step2off.png) no-repeat center 10px;}
+.cont920pix .con_box3 li#PymtMthdCd3{background:url(https://www.kcar.com/resources/images/homeencar/icon/pay_step3off.png) no-repeat center 10px;}
+.cont920pix .con_box3 li#PymtMthdCd4{background:url(https://www.kcar.com/resources/images/homeencar/icon/pay_step4off.png) no-repeat center 10px;}
+.cont920pix .con_box3 li#PymtMthdCd5{background:url(https://www.kcar.com/resources/images/homeencar/icon/pay_step5off.png) no-repeat center 10px;}
+.cont920pix .con_box3 li#PymtMthdCd1.on{background:url(https://www.kcar.com/resources/images/homeencar/icon/pay_step1on.png) no-repeat center 10px;border:1px solid #ce0e2d;}
+.cont920pix .con_box3 li#PymtMthdCd2.on{background:url(https://www.kcar.com/resources/images/homeencar/icon/pay_step2on.png) no-repeat center 10px;border:1px solid #ce0e2d;}
+.cont920pix .con_box3 li#PymtMthdCd3.on{background:url(https://www.kcar.com/resources/images/homeencar/icon/pay_step3on.png) no-repeat center 10px;border:1px solid #ce0e2d;}
+.cont920pix .con_box3 li#PymtMthdCd4.on{background:url(https://www.kcar.com/resources/images/homeencar/icon/pay_step4on.png) no-repeat center 10px;border:1px solid #ce0e2d;}
+.cont920pix .con_box3 li#PymtMthdCd5.on{background:url(https://www.kcar.com/resources/images/homeencar/icon/pay_step5on.png) no-repeat center 10px;border:1px solid #ce0e2d;}
+.cont920pix .con_box3 li#PymtMthdCd4.on span ul li {background:none;}
+.cont920pix .con_box3 li.on label{font-weight:bold}
+.cont920pix .con_box3 .newf2 a.mprice{font-size:13px;padding-top:5px;color:#095bcb;text-decoration:underline;display:block;font-style:normal}
+.cont920pix .con_box3 .crecard{padding-top:50px}
+.cont920pix .con_box3 .crecard select{border:1px solid #c5c5c5; height:30px; width:130px}
+.cont920pix .con_box3 .deacha ul{float:left;text-align:left;padding:0;margin:0;border:0;}
+.cont920pix .con_box3 .deacha li{float:left;width:200px;padding:0;margin:0;display:inline;border:0;height:35px;text-align:left;padding-left:40px;line-height:35px;}
+.cont920pix .con_box3 .deacha li span{font-size:12px; font-weight:normal}
+.cont920pix .con_box3 .deacha li span.con{width:70px;display:inline-block;float:left}
+.cont920pix .con_box3 .deacha li span.con input{width:65px;height:30px;border:1px solid #c5c5c5;font-weight:normal;text-indent:5px}
+.cont920pix .con_box3 .deacha li span.ti{width:55px;display:inline-block;float:left;line-height:35px}
+.cont920pix .con_box3 .deacha li span.tail{width:20px;display:inline-block;float:left;line-height:35px}
+.cont920pix .con_box3 .radio_style input[type=checkbox]{display:none;}
+/*step4*/
+.cont920pix .con_box4{margin:20px 0 0 0;}
+.cont920pix .con_box4:after{display: block; clear: both; content:''; *zoom:1;}
+.cont920pix .login_box{background-color:#f7f7f7;box-sizing:border-box;text-align:center;height:125px;padding:30px 0}
+.cont920pix .login_box .loginbtn{position: relative;padding:15px 0 0 0;}
+.cont920pix .login_box p{font-size:14px}
+.cont920pix .con_box4 p{float:left;line-height:1.6em;margin-top:20px}
+.cont920pix .con_box4 .radio_style{width: 100%; height: 100%;}
+.cont920pix .con_box4 li{float:left;box-sizing:border-box;width:380px;height:240px;border:1px solid #e5e5e5;text-align:center;margin-right:20px;cursor:pointer;}
+.cont920pix .con_box4 li.fir{margin-left:0px;}
+.cont920pix .con_box4 li.end{margin-right:0px;}
+.cont920pix .con_box4 li.all0{margin:0}
+.cont920pix .con_box4 li label.btit{padding-top:20px;display:block;font-size:16px;height:88%;text-align: center;cursor: pointer;}
+.cont920pix .con_box4 li span.ptit{padding-top:130px;display:block;font-size:12px;}
+.cont920pix .con_box4 li#PesonalFg100{background:url(https://www.kcar.com/resources/images/homeencar/icon/coninfo_step1off.png) no-repeat center 10px ;}
+.cont920pix .con_box4 li#PesonalFg300{background:url(https://www.kcar.com/resources/images/homeencar/icon/coninfo_step2off.png) no-repeat center 10px;}
+.cont920pix .con_box4 li#PesonalFg200{background:url(https://www.kcar.com/resources/images/homeencar/icon/coninfo_step3off.png) no-repeat center 10px;}
+.cont920pix .con_box4 li#PesonalFg100.on{background:url(https://www.kcar.com/resources/images/homeencar/icon/coninfo_step1on.png) no-repeat center 10px;border:1px solid #ce0e2d;}
+.cont920pix .con_box4 li#PesonalFg300.on{background:url(https://www.kcar.com/resources/images/homeencar/icon/coninfo_step2on.png) no-repeat center 10px;border:1px solid #ce0e2d;}
+.cont920pix .con_box4 li#PesonalFg200.on{background:url(https://www.kcar.com/resources/images/homeencar/icon/coninfo_step3on.png) no-repeat center 10px;border:1px solid #ce0e2d;}
+.cont920pix .con_box4 li.onyee span.bottit{background:#1c1c1c;}
+.cont920pix .con_box4 li.on label.btit{font-weight:bold;}
+.cont920pix .con_box4 .radio_style input[type=checkbox]{margin-top:3px;}
+/*step5*/
+.cont920pix .cusinfo_box{margin:20px 0 0 0;}
+.cont920pix .cusinfo_box:after{display: block; clear: both; content:''; *zoom:1;}
+.cont920pix .cusinfo_box ul{background-color:#f2f2f2;box-sizing:border-box;padding-left:45px;padding-right:45px;padding-top:15px;color:#5c5c5c;}
+.cont920pix .cusinfo_box ul.padtop{padding-top:45px;}
+.cont920pix .cusinfo_box ul.padbot{padding-bottom:45px}
+.cont920pix .cusinfo_box li{background-color:#fff;padding: 0 40px;}
+.cont920pix .cusinfo_box li:first-child{padding-top:10px}
+.cont920pix .cusinfo_box li:last-child{padding-bottom:10px}
+.cont920pix .cusinfo_box p.boxtit{line-height:1.6em;margin-top:20px;color:#1c1c1c;padding-bottom:10px;font-size:20px;font-weight:bold}
+.cont920pix .cusinfo_box p.boxtit span{font-size:14px;color:#5c5c5c;font-weight:normal}
+.cont920pix .cusinfo_box li table{width:100%;}
+.cont920pix .cusinfo_box li table.perinfo td{font-size:14px;height:40px;padding-bottom:4px;padding-top:0px}
+.cont920pix .cusinfo_box li table.perinfo td.spotline{height:1px;}
+.cont920pix .cusinfo_box li table.perinfo td.binspace{height:15px;}
+.cont920pix .cusinfo_box li table.perinfo td.padjo{line-height:15px;font-size:12px;height:15px;padding-top:5px}
+.cont920pix .cusinfo_box li input{height:30px;border:1px solid #c5c5c5;font-weight:normal;text-indent:5px; vertical-align:middle}
+.cont920pix .cusinfo_box li select{border:1px solid #c5c5c5; height:30px; width:60px;vertical-align:middle; }
+.cont920pix .cusinfo_box li select.bank{width:90px;}
+.cont920pix .cusinfo_box li .perinfo {font-size: 14px;height: 40px;padding-bottom: 4px;}
+.cont920pix .cusinfo_box li select.email{width:140px;}
+.cont920pix .cusinfo_box li .delivery_tbl,
+.cont920pix .cusinfo_box li .radio_chk_tbl{display:none;}
+.cont920pix .cusinfo_box li label{font-size:14px;height:40px;line-height:40px;padding-bottom:4px;padding-top:0px}
+/*btn*/
+.cont920pix .loginbtn .btn_ongline{display:inline-block;min-width:14%;height:34px;line-height:34px;padding:0 1%;font-size:16px;color:#f48024;text-align:center;vertical-align:middle;background-color:#fff;border-radius:25px;border:1px solid #f48024}
+.cont920pix .loginbtn .btn_ongline:hover{color:#fff;text-decoration:none;color:#f48024;}
+.cont920pix .loginbtn .btn_gaib{display:inline-block;min-width:14%;height:34px;line-height:34px;padding:0 1%;font-size:16px;color:#fff;text-align:center;vertical-align:middle;background-color:#ea002c;border-radius:25px;}
+.cont920pix .loginbtn .btn_gaib:hover{color:#fff;text-decoration:none;}
+.cont920pix .btn_ar{padding:20px 0 20px 0;box-sizing:border-box;background-color:#fff;margin-top:10px;text-align:center;}
+.cont920pix .btn_ar .btn_orng{display:inline-block;min-width:16%;height:50px;line-height:50px;padding:0 3% 0 2%;font-size:16px;color:#fff;text-align:center;vertical-align:middle;border-radius:25px;background:url(https://www.kcar.com/resources/images/homeencar/btn/hc_nxt_arrow.png) no-repeat 190px center #ff7900;}
+.cont920pix .btn_ar .btn_orng:hover{color:#fff;text-decoration:none;}
+.cont920pix .btn_ar .btn_redd{display:inline-block;min-width:16%;height:50px;line-height:50px;padding:0 3% 0 2%;font-size:16px;color:#fff;text-align:center;vertical-align:middle;border-radius:25px;background:url(https://www.kcar.com/resources/images/homeencar/btn/hc_nxt_arrow.png) no-repeat 190px center #ce0e2d;}
+.cont920pix .btn_ar .btn_redd:hover{color:#fff;text-decoration:none;}
+.cont920pix .btn_ar .btn_gry{display:inline-block;min-width:16%;height:50px;line-height:50px;padding:0 2% 0 3%;font-size:16px;color:#fff;text-align:center;vertical-align:middle;background:url(https://www.kcar.com/resources/images/homeencar/btn/hc_pre_arrow.png) no-repeat 52px center #aca3a2;border-radius:25px;}
+.cont920pix .btn_ar .btn_gry:hover{color:#fff;text-decoration:none;}
+/*banner*/
+.nation1{position:relative;width:1180px;margin:0 auto;line-height:30px;margin-top:10px;font-size:14px;height:90px}
+.nation1 span{position: absolute;left: 0px;top: 29px}
+.nation1 span.banner{position:absolute;left:720px;top:20px}
+.nation1 span.banner1{position:absolute;top:30px}
+/* 계약자정보 */
+#contentnew .encar_application .path{position:absolute;top:-19px;right:0;} /* path위치 재설정 */
+.encar_application{position:relative;width:1180px;/*20170711 width:920px;*/margin:10px auto 0 auto; box-sizing:border-box;background:#066}
+.step_area{/*20170711height:640px;*/float:left;background-color:#fff;margin-bottom:30px}
+.step_area .indicator{position:relative;float:left;width:160px;/*20170711height:640px;*/height:400px;}
+.step_area .indicator ul.fltab{position:absolute;width:161px;top:-5px}
+.step_area .indicator ul.fltab li a{display:block;line-height:30px;padding:20px 0 20px 7px;font-size:14px;color:#333;border-top:1px solid #d6ccca;border-left:1px solid #d6ccca;border-bottom:1px solid #d6ccca;border-right:1px solid #d6ccca;text-decoration:none;margin:5px 0;box-sizing:border-box;background:#f0f0f0}
+.step_area .indicator ul.fltab li.on a{border-right:1px solid #ffffff;background:#fff;border-left:2px solid #F90}
+.step_area .step_contents{float:left;width:840px;min-height:600px;border-left:1px solid #d6ccca;box-sizing:border-box;}
+.step_area .step_contents .title_area{text-align:center;line-height:34px}
+.step_area .step_contents .title_area .title{position: relative;padding:21px 0 21px 0;/*background:url(https://www.kcar.com/resources/images/homeencar/contents/bg_title.png) no-repeat 24px 19px;*/}
+.step_area .step_contents .title_area .homelogin{position: relative;padding:0 0 21px 0;}
+.step_area .step_contents .title_area .title p.txt01{font-size:14px;color:#777;}
+.step_area .step_contents .title_area .title p.txt02{font-size:26px;color:#333;}
+.step_area .step_contents .title_area .title p.txt03{font-size:18px;color:#777;}
+.step_area .step_contents .title_area .btn_detail{position: absolute;top: 28px;right: 26px;padding: 5px 1% 5px 1.2%;font-size: 14px;font-weight: 700;text-decoration: none;border: 2px solid #ea002c;border-radius:4px;color: #ea002c;}
+.step_area .step_contents .title_area .btn_detail .icon_detail{display: inline-block;width: 14px;height: 14px;margin:-3px 0 0 8px;vertical-align: middle;background:url(https://www.kcar.com/resources/images/homeencar/btn/btn_detail.png) no-repeat 0 0;}
+.step_area .step_contents .contents_area{/*height:492px;*/padding:15px 24px 0 24px;box-sizing:border-box;}
+.step_area .step_contents .contents_areabd{margin:25px;padding:15px 24px 15px 24px;box-sizing:border-box;background-color:#f1f1f1;}
+.step_area .step_contents .indicate_area{height:40px;padding:30px 24px 13px 24px;box-sizing:border-box;background-color:#fff;margin-top:10px}
+.owner_gate{overflow:hidden;margin-top:20px;padding:15px;background:#f1f1f1}
+.owner_gate li{float:left;width:31%;height:320px;padding-top:35px;margin-left:3%;text-align:center;background-color:#fff;border-radius:5px;box-sizing:border-box;}
+.owner_gate li:first-child{margin:0;}
+.owner_gate li.on{border:3px solid #ff9600;}
+.owner_gate li [class*="icon"]{display:inline-block;width:99px;height:102px;background:url(https://www.kcar.com/resources/images/homeencar/icon/icon_owner.png) no-repeat 0 0;}
+.owner_gate li.opt{height:200px; width:22.5%}
+.owner_gate li.opt{height:200px; width:22.5%; cursor:pointer}
+.owner_gate li.opt p.op{position:relative;font-size:17px;padding-top:60px}
+.owner_gate li.opt p.op span{width: 100px;position:absolute;top:0px;left:40px;background:url(https://www.kcar.com/resources/images/homeencar/btn/btn_radioArrow_off.png) no-repeat 18px 0;font-size:14px;}
+.owner_gate li.on p.op span{background:url(https://www.kcar.com/resources/images/homeencar/btn/checkArrow_on.png) no-repeat 18px 0;color:#F90}
+.owner_gate li .icon01{background-position:0 0;}
+.owner_gate li .icon02{background-position:-99px 0;}
+.owner_gate li .icon03{background-position:-198px 0;}
+.owner_gate li.on .icon01{background-position:0 -102px;}
+.owner_gate li.on .icon02{background-position:-99px -102px;}
+.owner_gate li.on .icon03{background-position:-198px -102px;}
+.owner_gate li .radio_style input[type=radio] + label:before,
+.owner_gate li .radio_style input[type=radio]:checked + label:after{left:50%;}
+.owner_gate li .radio_style{margin-top:23px;}
+.owner_gate li .radio_style span.newf{font-size:18px;padding-top:20px}
+.owner_gate li .radio_style label span{display:inline-block;margin-top:37px;}
+.owner_gate li .check{display:block;width:85%;margin:15px auto 0 auto;padding-top:10px;font-size:14px;color:#666;border-top:1px dashed #d9d9d9;}
+.owner_gate li.on .check{margin-top:13px;}
+.owner_gate1{overflow:hidden;margin-top:20px;padding:15px;background:#f1f1f1}
+.owner_gate1 li{float:left;width:22.5%;min-height:200px;padding-top:35px;margin-left:3%;text-align:center;background-color:#fff;border-radius:5px;box-sizing:border-box;}
+.owner_gate1 li:first-child{margin:0;}
+.owner_gate1 li.on{height:100%;border:3px solid #ff9600;}
+.owner_gate1 li .lease p{width:165px;padding:20px 0 10px 0;font-size:16px}
+.owner_gate1 li .lease div{width:165px;text-align:left;padding-left:10px}
+.owner_gate1 li .lease div span{display:inline-block;}
+.owner_gate1 li .radio_style input[type=checkbox] + label:before,
+.owner_gate1 li .radio_style input[type=checkbox]:checked + label:after{left:50%;}
+.owner_gate1 li .radio_style{margin-top:-10px;}
+.owner_gate1 li .radio_style span.newf1{font-size:18px;padding-top:85px;background: url(https://www.kcar.com/resources/images/homeencar/btn/account_icon1.jpg) no-repeat center 20px;width:100px}
+.owner_gate1 li .radio_style span.newf2{font-size:18px;padding-top:85px;background: url(https://www.kcar.com/resources/images/homeencar/btn/account_icon2.jpg) no-repeat center 20px;width:100px}
+.owner_gate1 li .radio_style span.newf3{font-size:18px;padding-top:85px;background: url(https://www.kcar.com/resources/images/homeencar/btn/account_icon3.jpg) no-repeat center 20px;width:100px}
+.owner_gate1 li .radio_style span.newf4{font-size:18px;padding-top:85px;background: url(https://www.kcar.com/resources/images/homeencar/btn/account_icon4.jpg) no-repeat center 20px;width:100px}
+.owner_gate1 li .radio_style span.on1{font-size:18px;padding-top:85px;background: url(https://www.kcar.com/resources/images/homeencar/btn/account_icon1_on.jpg) no-repeat center 20px;width:100px}
+.owner_gate1 li .radio_style span.on2{font-size:18px;padding-top:85px;background: url(https://www.kcar.com/resources/images/homeencar/btn/account_icon2_on.jpg) no-repeat center 20px;width:100px}
+.owner_gate1 li .radio_style span.on3{font-size:18px;padding-top:85px;background: url(https://www.kcar.com/resources/images/homeencar/btn/account_icon3_on.jpg) no-repeat center 20px;width:100px}
+.owner_gate1 li .radio_style span.on4{font-size:18px;padding-top:85px;background: url(https://www.kcar.com/resources/images/homeencar/btn/account_icon4_on.jpg) no-repeat center 20px;width:100px}
+.owner_gate1 li .radio_style label span{display:inline-block;margin-top:25px;}
+.owner_gate1 li .check{display:block;width:85%;margin:15px auto 0 auto;padding-top:10px;font-size:14px;color:#666;border-top:1px dashed #d9d9d9;}
+/*옵션확인테이블*/
+.check_tblpu{width:800px;padding:30px}
+.check_tblpu p{font-size:20px;padding-bottom:20px}
+.check_tblpu table{width:100%;border-collapse:collapse;}
+.check_tblpu table th{height:30px;font-weight:normal;font-size:13px;color:#333;text-align:center;border:1px solid #d5cccc;background-color:#f4f2f2;}
+.check_tblpu table th:first-child{}
+.check_tblpu table td{padding:15px 2px 15px 15px;color:#666;background-color:#fff;vertical-align:top;border:1px solid #d5cccc;}
+.check_tblpu table td ul.option_list li{font-size:13px;color:#666;}
+/* 홈엔카 서비스 안내 */
+.service_info h3.tit_underline{border-bottom: 2px solid #333;}
+.service_info .thumbnail_list{margin: 32px 0;}
+.service_info .thumb_group{margin-top: 15px;border-bottom: 1px solid #e9e7e7;}
+.service_info .thumb_group ul{overflow: hidden;margin-left: -16px;}
+.service_info .thumb_group ul li{float: left;margin-left: 16px;}
+.service_info .thumb_group ul li > a,
+.service_info .thumb_group ul li > a img{display: block;width: 296px;height: 200px;}
+.service_info .subject_area{margin: 20px 0 22px;}
+.service_info .subject_area h4{margin-bottom: 5px;font-size: 18px;}
+.service_info .subject_area h4 a{color: #333;}
+.service_info li.on .subject_area h4 a{color: #f48024;}
+.service_info .subject_area dl{font-size: 14px;}
+.service_info .subject_area dt{margin-bottom: 4px;}
+.service_info .subject_area dt, .service_info .subject_area dd{color: #666;}
+.service_info li.on .subject_area dt, .service_info li.on .subject_area dd, .service_info li.on .subject_area span{color: #f48024;}
+.service_info .subject_area span{display: inline-block;position: relative;min-width: 57px;padding-right: 4px;margin-right: 9px;color: #999;}
+.service_info .subject_area span:after{content:'';position: absolute;top: 3px;right:0;width: 1px;height: 13px;background-color: #aca3a2;}
+
+#content.bg_home_encarService{width: 100%;height:780px;margin-bottom: 32px;background: url(https://www.kcar.com/resources/images/homeencar/contents/bg_home_encar_service_hc.jpg) no-repeat center 0;}
+.home_enca_service{position: relative;width: 920px;margin: 0 auto 33px;}
+.home_enca_service .tit_area{position: relative;padding: 50px 0 50px;letter-spacing: -2px;}
+.home_enca_service .tit_area span{font-size: 18px;color: #4f4438;padding-left:10px;display:block}
+.home_enca_service .tit_area h3{font-size: 95px;font-weight: 700;color: #f48024;}
+.home_enca_service .tit_area p{position: absolute;font-size: 23px;color: #000;left: 300px;top: 90px;}
+.home_enca_service .tit_area em{position: absolute;font-size: 45px;font-weight: 700;color: #f48024;left:290px;top: 131px;}
+.home_enca_service .car_service{overflow: hidden;}
+.home_enca_service .car_service > div{position: relative;float: left;box-sizing:border-box;width: 452px;padding: 38px 41px 32px;background-color: #fff;}
+.home_enca_service .car_service > div:first-child{margin-right: 16px;}
+.home_enca_service .car_service h4{margin-bottom: 17px;font-size: 36px;font-weight: 700;text-align: center;line-height: 1;color: #f48024;}
+.home_enca_service .service_con{text-align: center;}
+.home_enca_service .service_con p{font-size: 22px;letter-spacing: -1px;color: #000;}
+.home_enca_service .service_con .service_list{display: table;margin: 18px auto 23px;}
+.home_enca_service .service_con .service_list li{display: table-cell;width: 120px;padding-top: 104px;font-size: 14px;font-weight: 700;color: #333;background:url(https://www.kcar.com/resources/images/homeencar/contents/img_car_service_list.png) no-repeat;}
+.home_enca_service .buy .service_list li{background-position:0 0;}
+.home_enca_service .buy .service_list li + li{background-position:-108px 0;}
+.home_enca_service .sell .service_list li{background-position:-216px 0;}
+.home_enca_service .sell .service_list li + li{background-position:-324px 0;}
+.home_enca_service .btn_area{margin-top: 24px;}
+.home_enca_service .btn_area a{padding: 0 5%;}
+.home_enca_service .banner_area{width: 920px;height: 128px;margin-top: 16px;}
+.home_enca_service .note{position: relative;margin-top:16px;padding: 24px;color: #777;background-color: #fff;letter-spacing:-1px;}
+.home_enca_service .note strong{font-size: 20px;color: #000;}
+.home_enca_service .note ul{margin-top: 15px;}
+.home_enca_service .note ul li{font-size: 14px;line-height: 1.4;}
+.home_enca_service .note .btn_gray{display: inline-block;position: absolute;top: 68px;right: 24px;padding: 8px 2.4% 8px 2.2%;font-size: 16px;border-radius:4px;background-color: #f48024;}
+.home_enca_service .note .btn_gray .icon_detail{display: inline-block;width: 17px;height: 16px;margin: -4px 0 0 6px;vertical-align: middle;background: url(https://www.kcar.com/resources/images/homeencar/btn/btn_detail02_hc.png) no-repeat 0 0;}
+/* 마이홈엔카 */
+.cf:before, .cf:after {content: " "; display: table;}
+.cf:after {clear: both;}
+.cf {*zoom: 1; /*For IE 6/7 only*/}
+.btn_cen{text-align: center}
+a.sbtn{display:block; width:70%; padding:7px 0; margin:0 auto; background: #aca3a2; border-radius: 5px; color:#fff; font-weight:normal; text-decoration: none;}
+a.btn{display:inline-block; width:160px; padding:12px 0; background: #aca3a2; border-radius: 5px; color:#fff; font-weight:normal; font-size:16px; text-decoration: none;}
+.checks{position:relative; display:inline-block; margin-right:30px;}
+.mb32{margin-bottom: 32px;}
+
+.cont_area {padding:20px 0 70px; background: #fff; color:#666; font-size:13px;}
+.cont_area h3 {padding-bottom:25px; font-size:26px; color:#333; text-align: center}
+.cont_area .step p {height:46px; line-height:46px; border-top: 2px solid #333; border-bottom:1px solid #d4d0cf; background:#f2f1f0; text-align: center; font-size:16px; color:#333;}
+.cont_area .step p span {color:#ea002c}
+.cont_area .step ol {overflow: hidden; width:71%; padding:32px 0; margin:0 auto;}
+.cont_area .step ol li {float:left; width:234px;  background: url(https://www.kcar.com/resources/images/homeencar/icon/bu_arrow.gif) no-repeat 166px 45px;}
+.cont_area .step ol li:last-child{width:112px;}
+.cont_area .step ol li span{display:block; width:112px; height:34px; padding-top:78px;  background: url(https://www.kcar.com/resources/images/homeencar/icon/icon_myhncar.png) no-repeat; text-align: center; text-decoration:none; font-size:14px; color:#333;}
+.cont_area .step ol li:first-child + li + li + li{width:110px;}
+.cont_area .step ol li:first-child + li  span{background-position: -112px 0;}
+.cont_area .step ol li:first-child + li + li span{background-position: -224px 0;}
+.cont_area .step ol li:first-child + li + li + li span{background-position: -336px 0;}
+.cont_area .step ol li:first-child + li + li + li + li span{background-position: -448px 0;}
+.cont_area .step ol li.active span{background-position: 0 -112px;}
+.cont_area .step ol li:first-child + li.active span{background-position: -112px -112px;}
+.cont_area .step ol li:first-child + li + li.active span{background-position: -224px -112px;}
+.cont_area .step ol li:first-child + li + li + li.active span{background-position: -336px -112px;}
+.cont_area .step ol li:first-child + li + li + li + li.active span{background-position: -448px -112px;}
+.cont_area .step ol li.cancel{width:110px;margin:0 41%;}
+.cont_area .step ol li.cancel span{background-position: -448px 0;}
+.cont_area .step ol li.active.cancel span{background-position: -448px -112px;}
+.cont_area .table_wrap {margin-bottom:30px;}
+.cont_area .table_wrap table{width:100%;}
+.cont_area .table_wrap thead th{padding:10px 0; background: #aca3a2;font-size:14px;  color:#fff; font-weight:normal;}
+.cont_area .table_wrap thead th:first-child {border-radius: 3px 0 0 3px;}
+.cont_area .table_wrap thead th:last-child {border-radius: 0 3px 3px 0;}
+.cont_area .table_wrap tbody td{padding:15px 0; text-align: center; border-bottom:1px solid #e9e7e7}
+.cont_area .table_wrap tbody td.car_info{text-align: left;}
+.cont_area .table_wrap tbody td.car_info dt{float:left; margin-right:15px;}
+.cont_area .table_wrap tbody td.car_info dt img{width:148px; height:100px;}
+.cont_area .table_wrap tbody td.car_info dd{margin:5px 0;}
+.cont_area .table_wrap tbody td.car_info dd.tit{font-size:16px; color:#333;}
+.cont_area .table_wrap tbody td.car_info dd span{display: inline-block;padding-right:5px;  margin-right:5px; }
+.cont_area .table_wrap tbody td.car_info dd span:last-child{border:0 none;}
+.cont_area .table_wrap tbody td.car_info dd.point{font-size:16px; color:#ea002c}
+.cont_area .table_wrap tbody td.receipt{color:#0068de}
+.cont_area .table_wrap tbody td.cancle{color:#ea002c}
+.cont_area .table_wrap tbody td.deli .finish{color:#ea002c; }
+.cont_area .table_wrap tbody td.deli .tit{color:#333;}
+.cont_area .table_wrap .desc{padding-top:15px;}
+.cont_area .title{margin-bottom:15px; font-size:20px; color:#333;}
+.cont_area .typeA{border-top:2px solid #333; text-align: left;}
+.cont_area .typeA thead th{padding:10px; background: #fff; color:#333; border-bottom:1px solid #d4d0cf; }
+.cont_area .typeA p{float:left; width:28.5%; padding:0 15px; }
+.cont_area .typeA p span{display:inline-block; margin-top:2px;}
+.cont_area .typeA p span.price{float:right; margin-top:0; font-size:18px;}
+.cont_area .typeA p.benefit{padding-left:34px; background: url(https://www.kcar.com/resources/images/homeencar/icon/bu_benefit.gif) no-repeat;}
+.cont_area .typeA p.total{padding-left:34px; color:#ea002c; background: url(https://www.kcar.com/resources/images/homeencar/icon/bu_total.gif) no-repeat;}
+.cont_area .typeA tbody td{padding:20px 25px; background: #f7f6f6; text-align:left; border-right:1px dashed #d4d0cf; vertical-align: top;}
+.cont_area .typeA ul li{clear:both; margin-bottom:10px;}
+.cont_area .typeA ul li span.price{float:right;}
+.cont_area .typeA ul li span.txt{margin-left:45px;}
+.cont_area .typeB{border-top:2px solid #333; text-align: left;}
+.cont_area .typeB tbody th{padding-left:25px; text-align:left; font-weight:normal; background:#f2f1f0; border-bottom:1px solid #d4d0cf;}
+.cont_area .typeB tbody th.line{border-left:1px solid #d4d0cf}
+.cont_area .typeB tbody td{padding-left:25px; text-align: left; border-bottom: 1px solid #d4d0cf;}
+.cont_area .typeB tbody td .checks input[type=radio]{vertical-align:middle;}
+.newcont_area {overflow:hidden;width: 920px;margin:50px auto 0 auto;color:#666; font-size:13px;}
+.newcont_area h3.tit_underline{border-bottom: 1px solid #f6902e;font-size: 36px;font-weight: 700;text-align: center;line-height: 60px;color: #f48024;}
+.newcont_area .thumbnail_list{margin: 32px 0;}
+.newcont_area .thumb_group{margin-top: 15px;border-bottom: 1px solid #d4d4d4;}
+.newcont_area .thumb_group ul{overflow: hidden;margin-left: -16px;}
+.newcont_area .thumb_group ul li{float: left;margin-left: 16px;}
+.newcont_area .subject_area{margin: 20px 0 22px;}
+.newcont_area .subject_area h4{margin-bottom: 5px;font-size: 18px;}
+.newcont_area .subject_area dl{font-size: 14px;}
+.newcont_area .subject_area dt{margin-bottom: 4px;}
+.newcont_area .subject_area dt, .newcont_area .subject_area dd{color: #999;}
+.newcont_area .subject_area span{display: inline-block;position: relative;min-width: 57px;padding-right: 4px;margin-right: 9px;color: #999;}
+.newcont_area .subject_area span:after{content:'';position: absolute;top: 3px;right:0;width: 1px;height: 13px;background-color: #aca3a2;}
+.newcont_area .homenote{position:relative;margin:60px 0 40px 0;padding: 24px;color: #777;background-color: #fff;letter-spacing:-1px;}
+.newcont_area .homenote strong{font-size: 20px;color: #000;}
+.newcont_area .homenote ul{margin-top: 15px;}
+.newcont_area .homenote ul li{font-size: 14px;line-height: 1.4;}
+.newcont_area .homenote .btn_gray{display: inline-block;position: absolute;top: 68px;right: 24px;padding: 8px 2.4% 8px 2.2%;font-size: 16px;border-radius:4px;background-color: #f48024;}
+.newcont_area .homenote .btn_gray .icon_detail{display: inline-block;width: 17px;height: 16px;margin: -4px 0 0 6px;vertical-align: middle;background: url(https://www.kcar.com/resources/images/homeencar/btn/btn_detail02_hc.png) no-repeat 0 0;}
+.newcont_area .btn_more1{display:inline-block;width:99.8%;height:44px;line-height:44px;font-size:20px;color:#000;text-align:center;vertical-align:middle;background-color:#fff;border:1px solid #cac2c1;border-radius:3px;}
+.newcont_area .btn_more1:hover{color:#000;text-decoration:none;}
+.newcont_area .btn_more1 .icon{display:inline-block;width:19px;height:19px;margin:-6px 10px 0 0;background:url(https://www.kcar.com/resources/images/contents/btn_more.png) no-repeat 0 0;vertical-align:middle;}
+/* gallery size 조정 */
+.detailCar.resize .carImg{padding:0;border:0;background-color:#fff;}
+.detailCar.resize .carImg .img{width:100%;margin-bottom:15px;}
+.detailCar.resize .carImg .img .bigImg li{width:100%;}
+.detailCar.resize .carImg .img .bigImg li img{width:100%;}
+.detailCar.resize .carImg ul.imgList{float:none;width:100%;padding:0 16px;box-sizing:border-box;}
+.detailCar.resize .carImg ul.imgList a{text-decoration:none;}
+/* popup */
+.pop_wrap{overflow: auto; line-height: 1;}
+.pop_wrap .indicate{position:relative;height:42px;padding-top:12px;font-size:1rem;background-color:#959394;box-sizing:border-box;}
+.pop_wrap .indicate h1{color:#fff;text-align:center;letter-spacing:-1px;}
+.pop_head{padding: 19px 27px 20px;color: #fff;background-color: #ea002c;}
+.pop_head h1{font-size: 18px;}
+.pop_con{padding: 31px 27px; height:400px; overflow-y:scroll;}
+.pop_con .pop_con_tit{margin: 31px 0 15px;font-size: 20px;color: #333;}
+.pop_con .pop_con_tit:first-child{margin-top: 0;}
+.pop_con .pop_con_tit + p,
+.pop_con .pop_con_tit + .round_num_list{font-size: 13px;color: #666;}
+.pop_con .under{text-decoration:underline;font-weight:bold}
+.round_num_list li{padding-left: 17px;text-indent: -17px;line-height: 28px;}
+/* 계약서 */
+.contract_area{margin:30px;overflow-x:hidden;}
+.popup_tab_style{width:100%;margin-bottom:30px;}
+.popup_tab_style ul{overflow:hidden;border-top:2px solid #ffb541;border-right:1px solid #d9d9d9;}
+.popup_tab_style ul li{float:left;width:33.33%;height:53px;line-height:50px;font-size:16px;color:#747474;text-align:center;border-bottom:1px solid #d9d9d9;background:#f5f5f5 url('https://www.kcar.com/resources/images/homeencar/contents/popup_tab_off_hc.png') no-repeat 0 0;box-sizing:border-box;}
+.popup_tab_style ul li:first-child{background-image:none;border-left:1px solid #d9d9d9;}
+.popup_tab_style ul li.on{color:#fff;background-color:#ea002c;}
+.popup_tab_style ul li.on + li{background:#f5f5f5 url('https://www.kcar.com/resources/images/homeencar/contents/popup_tab_on_hc.png') no-repeat 0 0;}
+.popup_tab_style ul li:first-child.on{border-left:1px solid #ea002c;}
+.popup_tab_style ul li a,
+.popup_tab_style ul li a:hover{color:#666;}
+.popup_tab_style ul li.on a,
+.popup_tab_style ul li.on a:hover{color:#fff;}
+.radio_confirm_area .top_area {margin-top:15px; width:700px; margin:0 auto;}
+.radio_confirm_area .top_area h2{font-weight:bold; text-align:center; font-size:16px;}
+.radio_confirm_area .top_area h3{padding:10px 0 8px 0; font-weight:bold; font-size:14px;}
+.radio_confirm_area .top_area h4{position:relative; padding-left:18px; font-weight:bold; float:left; width:420px;}
+.radio_confirm_area .top_area h4 span{position:absolute; left:0; top:0;}
+.radio_confirm_area .top_area .radio_info {padding:5px 5px; margin-bottom:8px; background:#f9f9f9; border:1px solid #eee; overflow:hidden;}
+.radio_confirm_area .top_area .radio_info  .radio_info_bx{float:right; text-align:right; width:220px;}
+.radio_confirm_area .top_area .radio_info label{vertical-align: middle; padding-left:15px ;}
+.radio_confirm_area .top_area .radio_info input[type=checkbox]{vertical-align:text-bottom;}
+.radio_confirm_area .top_area .radio_info input[type=radio]{vertical-align:text-bottom;}
+.radio_confirm_area .top_area .btn_info_area{padding:10px 0;text-align:center;}
+.radio_confirm_area .top_area .btn_info_area input{vertical-align:middle;}
+.radio_confirm_area .top_area .btn_info_area label{display:inline-block; padding:15px 50px; background:#5c6375; color:#fff; font-weight:bold; border-radius: 3px;}
+.contract_area .radio_confirm_area .bottom_area{padding:30px 0; margin-top:10px;text-align:center;border-top:1px solid #aeaeae;}
+.contract_area .radio_confirm_area .bottom_area label{color:#666;}
+.contract_area .radio_confirm_area .bottom_area .info{margin-top:50px;font-size:16px;color:#333;}
+.contract_area .radio_confirm_area .bottom_area .btn_area{margin-top:20px;}
+.contract_area .contents_area{display:none;}
+/* except ie */
+*+html body .owner_gate li .radio_style label span{margin-top:0;}
+*+html body .radio_style input[type=radio]{display:inline;}
+*+html body .radio_style input[type=radio] + label{vertical-align:middle;}
+*+html body .radio_style input[type=radio] + label:before{display:none}
+*+html body .radio_style input[type=radio]:checked + label:after{display:none}
+*+html body .guarantee_service .owner_gate .radio_style input[type=radio]{margin-top:30px;}
+*+html body .guarantee_service .unselected_area{position:relative;}
+*+html body .guarantee_service .unselected_area input[type=radio]{position:absolute;top:7px;left:0;}
+*+html body .accordion ul.accordion_list li .contents{min-height:100px;}
+*+html body .detailCar.resize .carImg ul.imgList{padding:0 15px;}
+*+html body .detailCar.resize .carImg .img{overflow:hidden;}
+*+html body .detailCar.resize .de_imgBx{overflow:hidden;}
+
+@media \0screen {
+    .form_style select{padding:5px 0;}
+    .owner_gate li .radio_style label span{margin-top:0;}
+    .radio_style input[type=radio]{display:inline;}
+    .radio_style input[type=radio] + label{vertical-align:middle;}
+    .radio_style input[type=radio] + label:before {display:none}
+    .radio_style input[type=radio]:checked + label:after{display:none}
+    .radio_style input[type=checkbox]{display:inline;}
+    .radio_style input[type=checkbox] + label{vertical-align:middle;}
+    .radio_style input[type=checkbox] + label:before {display:none}
+    .radio_style input[type=checkbox]:checked + label:after{display:none}
+    .guarantee_service .owner_gate .radio_style input[type=radio]{margin-top:30px;}
+    .guarantee_service .unselected_area{position:relative;}
+    .guarantee_service .unselected_area input[type=radio]{position: absolute;top:7px;left:0;}
+    .cont920pix .con_box3 .radio_style input[type=checkbox]{display:inline;}
+}
+/* 홈엔카 체인지업 시작 */
+#content .change_pro{width: 920px; height: auto; margin-bottom: 30px;}
+.change_pro .main_img{width: 920px; height: 629px; margin-bottom: 45px; background: url(https://www.kcar.com/resources/images/homeencar/contents/change_main.jpg) no-repeat; position: relative;}
+.change_pro .main_img .main_date{width: 453px; height: 37px; background: url(https://www.kcar.com/resources/images/homeencar/contents/main_img_date.png) no-repeat; position: absolute; top: 288px; left: 50%; margin-left: -226.5px;}
+.change_pro .main_img .main_date p{font-size: 18px; color: #ffffff; font-weight: bold; letter-spacing: -0.35px; text-align: center; line-height: 37px;}
+.change_pro .change_cont01{width: 920px; height: auto; text-align: center;}
+.change_pro .change_cont01 h3{font-size: 35px; color: #383838; padding-bottom: 30px; font-weight: bold;}
+.change_pro .change_cont01 img{margin-bottom: 15px;}
+.change_cont02{width: 920px; height: 729px; margin-top: 30px; background: url(https://www.kcar.com/resources/images/homeencar/contents/change_cont02_bg.jpg) no-repeat;}
+.change_cont02 h3{font-size: 28px; color: #313131; letter-spacing: -0.5px; padding: 55px 0 5px 110px; background: url(https://www.kcar.com/resources/images/homeencar/contents/cont02_h3.png) left bottom no-repeat; margin-left: 75px;}
+.change_cont02 h3 span{padding-bottom: 1px;  border-bottom: 1px solid #747474;}
+.change_cont03{width: 920px; height: 616px; margin-top: 30px; background: url(https://www.kcar.com/resources/images/homeencar/contents/change_cont03_bg.jpg) no-repeat;}
+.change_cont03 h3{font-size: 28px; color: #313131; letter-spacing: -0.5px; padding: 55px 0 5px 110px; background: url(https://www.kcar.com/resources/images/homeencar/contents/cont03_h3.png) left bottom no-repeat; margin-left: 75px;}
+.change_cont03 .cont03_top{width: 785px; height: 178px; margin: 25px auto 0; background: url(https://www.kcar.com/resources/images/homeencar/contents/change_cont03_arrow02.png) 388px center no-repeat;}
+.change_cont03 .cont03_top .cont03_left01{width: 385px; height: 178px; background: url(https://www.kcar.com/resources/images/homeencar/contents/change_cont03_pic01.png) left bottom no-repeat; float: left;}
+.change_cont03 .cont03_top .cont03_right01{width: 386px; height: 178px; background: url(https://www.kcar.com/resources/images/homeencar/contents/change_cont03_pic02.png) left bottom no-repeat; float: right;}
+.change_cont03 .cont03_top p{font-size: 20px; color: #363636; letter-spacing: -0.5px; padding: 50px 0 0 55px; font-weight: bold; float: left;}
+.change_cont03 .cont03_top input{width: 240px; height: 40px; border: 1px solid #c3c3c3; padding-left: 13px; box-sizing: border-box; line-height: 40px; margin: 18px 0 0 55px; color: #e2193a; float: left;}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */  color: #e2193a;}
+::-moz-placeholder { /* Firefox 19+ */  color: #e2193a;}
+:-ms-input-placeholder { /* IE 10+ */  color: #e2193a;}
+:-moz-placeholder { /* Firefox 18- */  color: #e2193a;}
+.change_cont03 .cont03_top span.won{font-size: 17px; color: #414141; float: left; padding: 25px 0 0 5px;}
+.change_cont03 .cont03_btn{text-align: center; padding-bottom: 23px; background: url(https://www.kcar.com/resources/images/homeencar/contents/change_cont03_arrow.png) center bottom no-repeat;}
+.change_cont03 .cont03_bot{width: 763px; height: 167px; margin: 10px auto 0; background: url(https://www.kcar.com/resources/images/homeencar/contents/change_cont03_box.png) no-repeat;}
+.change_cont03 .cont03_bot .cont03_left02 dl{padding: 50px 0 0 215px; font-weight: bold;}
+.change_cont03 .cont03_bot .cont03_right02 dl{padding: 50px 0 0 190px; font-weight: bold;}
+.change_cont03 .cont03_bot dl dt{font-size: 17px; color: #ffffff; padding-bottom: 10px;}
+.change_cont03 .cont03_bot dl dd{font-size: 23px; color: #ffffff;}
+.change_cont03 .cont03_bot dl dd em {font-style:normal;}
+.change_cont03 .cont03_bot p{font-size: 14px; color: #656565; float: right; margin: 10px 5px 0 0;}
+.change_cont03 .cont03_left02{width: 363px; height: 167px; background: url(https://www.kcar.com/resources/images/homeencar/contents/change_cont03_left.png) no-repeat; float: left;}
+.change_cont03 .cont03_right02{width: 357px; height: 167px; background: url(https://www.kcar.com/resources/images/homeencar/contents/change_cont03_right.png) no-repeat; float: right;}
+.change_cont04{width: 920px; height: 290px;}
+.change_cont04 dl{padding-top: 50px; text-align: center;}
+.change_cont04 dl dt{font-size: 20px; color: #050505; letter-spacing: -0.5px; padding-bottom: 5px; font-weight: bold;}
+.change_cont04 dl dd{font-size: 16px; color: #656565; letter-spacing: -0.5px;}
+.change_cont04 .btn_area{width: 503px; height: auto; margin: 20px auto 0;}
+.change_cont04 .btn_area img{margin-bottom: 10px;}
+.change_cont05{width: 920px; height: 692px; background: url(https://www.kcar.com/resources/images/homeencar/contents/change_cont05_bg.jpg) no-repeat;}
+.change_cont05 ul{padding: 120px 0 0 65px;}
+.change_cont05 ul li{font-size: 14px; color: #535353; letter-spacing: -0.4px; line-height: 19px; padding-bottom: 10px;}
+span.text_hidden{display: none;}
+/* 공통 탭 */
+#content .encar_home_tab{width: 1180px; height: 44px; margin: 0 auto 0;}
+.encar_home_tab ul{width: 1180px; height: 44px;}
+.encar_home_tab ul li{width: 500px; height: 44px; float: left; text-align: center; line-height: 44px; font-size: 16px; color: #ffffff; font-weight: bold;}
+.encar_home_tab ul li a{color: #ffffff; display: block;}
+.encar_home_tab ul li.buy_tab{background: #e34226;}
+.encar_home_tab ul li.sell_tab{background: #f68c28;}
+/* 내차 사기 */
+#content .car_buy_area{width: 100%; height: auto;}
+.car_buy_area .buy_visual{width: 1180px; height: 310px; background:#e34226;margin:0 auto;}
+.car_buy_area .buy_visual h3{font-size: 48px; color: #ffffff; font-weight: bold; padding: 60px 0 40px 80px; float: left;}
+.car_buy_area .buy_visual h3 span{font-size: 25px;}
+.car_buy_area .buy_visual h3 span.oldtit{display:block; font-size: 16px; font-weight:normal;}
+.car_buy_area .buy_visual p{font-size: 20px; color: #ffffff; padding: 90px 0 0 30px; float: left; }
+.car_buy_area .buy_visual .buy_btn{float: left; margin-left: 80px; clear: both;}
+.car_buy_area .buy_visual_cont{width: 1180px; height:120px; margin: 0 auto;}
+/*20170407*/
+.car_buy_area .buy_visual_cont .all_cont{width: 1180px; height: 120px; background: #c1a585; text-align: center; float: left;}
+.car_buy_area .buy_visual_cont .all_cont dl{padding-top:25px; float: left; text-align: left;}
+.car_buy_area .buy_visual_cont .all_cont dl.buy_dl01{margin-left: 150px;}
+.car_buy_area .buy_visual_cont .all_cont dl.buy_dl02{margin-left: 170px;}
+.car_buy_area .buy_visual_cont .all_cont dt{font-size: 16px; color: #ffffff; letter-spacing: -0.5px; padding-bottom: 10px; font-weight: bold;}
+.car_buy_area .buy_visual_cont .all_cont dd{font-size: 50px; color: #ffffff; letter-spacing: -0.5px;}
+.car_buy_area .buy_visual_cont .all_cont dd span{font-size: 24px; color: #312a2a;}
+/*//20170407*/
+.car_buy_area .buy_visual_cont .left_cont{width: 500px; height: 190px; background: #c1a585; text-align: center; float: left;}
+.car_buy_area .buy_visual_cont .left_cont dl{padding-top: 50px; float: left; text-align: left;}
+.car_buy_area .buy_visual_cont .left_cont dl.buy_dl01{margin-left: 60px;}
+.car_buy_area .buy_visual_cont .left_cont dl.buy_dl02{margin-left: 40px;}
+.car_buy_area .buy_visual_cont .left_cont dt{font-size: 16px; color: #ffffff; letter-spacing: -0.5px; padding-bottom: 10px; font-weight: bold;}
+.car_buy_area .buy_visual_cont .left_cont dd{font-size: 50px; color: #ffffff; letter-spacing: -0.5px;}
+.car_buy_area .buy_visual_cont .left_cont dd span{font-size: 24px; color: #312a2a;}
+.car_buy_area .buy_visual_cont .right_cont{width: 500px; height: 190px; background: #dedede; float: left;}
+.car_buy_area .buy_visual_cont .right_cont dl{float: left; margin-left: 100px; padding-top: 30px; text-align: center;}
+.car_buy_area .buy_visual_cont .right_cont dl dd{font-size: 16px; color: #595959; font-weight: bold; padding-bottom: 15px;}
+.buy_article00{width: 100%; height: auto; margin: 0 auto;}
+.buy_article00 .se01_inner{width: 1180px; height: auto; margin: 0 auto;background: #f5f5f5; padding: 40px 0;}
+.buy_article00 h3{font-size: 28px; color: #262525; letter-spacing: -0.5px; text-align: center; padding: 40px 0 50px 0; font-weight: bold;}
+.buy_article00 h3 span{color: #f10739;}
+.buy_article00 .art01_cont{height: auto; float: left;}
+.buy_article00 .art01_cont dl{padding-top: 210px; text-align: center;}
+.buy_article00 .art01_cont dl dt{font-size: 21px; color: #020202; font-weight: bold; letter-spacing: -0.6px; padding-bottom: 5px; font-weight: bold;}
+.buy_article00 .art01_cont dl dd{font-size: 17px; color: #808080; letter-spacing: -0.5px; line-height: 21px;}
+.buy_article00 .cont01{width:200px; margin: 0 0 0 130px; background: url(https://www.kcar.com/resources/images/homeencar/pic/buy_art00_img01.png) top center no-repeat;}
+.buy_article00 .cont02{width:220px; margin: 0 130px 0 130px; background: url(https://www.kcar.com/resources/images/homeencar/pic/buy_art00_img02.png) top center no-repeat;}
+.buy_article00 .cont03{width:200px; margin-right: 75px; background: url(https://www.kcar.com/resources/images/homeencar/pic/buy_art00_img03.png) top center no-repeat;}
+.buy_article00 .cont03 dl dd strong{color: #e81523;}
+.buy_article02{width: 1180px; height: auto; background: #ffffff; margin: 70px auto;}
+.buy_article02 h3{font-size: 28px; color: #262525; letter-spacing: -0.5px; padding-bottom: 20px; text-align: center; font-weight: bold;}
+.buy_article02 h3 span{color: #f10739;}
+.buy_article02 p{font-size: 18px; color: #747474; letter-spacing: -0.75px; line-height: 25px; text-align: center;}
+.buy_article02 .buy_art02_cont{width: 1090px; height: 395px; background: url(https://www.kcar.com/resources/images/homeencar/pic/art02_cont.jpg) no-repeat; margin: 50px auto 50px; position: relative;}
+.buy_article02 .buy_art02_cont dl{width: 347px; height: 166px; position: absolute;}
+.buy_article02 .buy_art02_cont dl dt{font-size: 20px; color: #0a0a0a; letter-spacing: -1px; line-height: 24px; padding: 35px 0 0 30px; font-weight: bold;}
+.buy_article02 .buy_art02_cont dl dd{font-size: 14px; color: #999999; letter-spacing: -0.5px; letter-spacing: -0.5px; line-height: 17px; padding: 10px 0 0 30px;}
+.buy_article02 .buy_art02_cont dl.dl01{top: 20px; left: 15px;}
+.buy_article02 .buy_art02_cont dl.dl02{top: 210px; left: 382px;}
+.buy_article02 .buy_art02_cont dl.dl03{top: 20px; right: -5px;}
+.buy_art02_btn{width: 356px; height: 52px; margin: 0 auto;}
+.buy_article03{width: 100%;}
+.buy_article03 h3{font-size: 28px; letter-spacing: -0.5px; color: #262525; text-align: center; padding: 80px 0 15px 0; font-weight: bold;}
+.buy_article03 h3 span{color: #f10739;}
+.buy_article03 p{font-size: 20px; color: #6b6b6b; letter-spacing: -0.5px; line-height: 25px; text-align: center;}
+.buy_article03 p strong{color: #1f1f1f;}
+.buy_article03 .buy_article03_btn{width: 270px; height: 51px; margin: 30px auto 0;}
+.buy_article03 .buy_main_notice{width: 98%; height: 200px; margin: 30px auto 0; position:relative;overflow:hidden}
+.buy_article03 .buy_main_notice ul{}
+.buy_article03 .buy_main_notice ul li{width: 444px !important; height: 200px; margin-right: 5px;display:inline-block}
+.buy_article03 .buy_main_notice ul li .large_box{width: 296px; height: 200px; float: left;}
+.buy_article03 .buy_main_notice ul li .small_area{width: 142px; height: 200px; float: left;}
+.buy_article03 .buy_main_notice ul li .small_box{width: 142px; height: 97px; float: left;}
+.buy_article03 .buy_main_notice ul li .mr_5{margin-right: 5px;}
+.buy_article03 .buy_main_notice ul li .mb_5{margin-bottom: 5px;}
+.buy_article03 .buy_main_notice .bx-pager{position:absolute; left:50%; bottom:20px; margin-left:-22.5px;}
+.buy_article03 .buy_main_notice .bx-pager .bx-pager-item{display:inline-block; margin-right:5px;}
+.buy_article03 .buy_main_notice .bx-pager .bx-pager-item a{display:block; width:10px; height:10px;border-radius:50%;text-indent:-9999em; background:#a7a7a7;}
+.buy_article03 .buy_main_notice .bx-controls-direction{width: 920px; height: 47px; position: absolute; left: 50%; margin-left: -460px; top: 50%; margin-top: -23.5px;}
+.buy_article03 .buy_main_notice .bx-controls-direction a{display:block; width:57px; height:47px; text-indent:-9999em;}
+.buy_article03 .buy_main_notice .bx-controls-direction a.bx-prev{background:url("https://www.kcar.com/resources/images/homeencar/btn/pager_left_new.png") center center no-repeat; float: left;}
+.buy_article03 .buy_main_notice .bx-controls-direction a.bx-next{background:url("https://www.kcar.com/resources/images/homeencar/btn/pager_right_new.png") center center no-repeat; float: right;}
+.buy_article03 .buy_main_notice .bx-controls{}
+.buy_article03 .buy_main_notice .bx-controls .bx-pager{position:absolute; left:51%; bottom:15px; z-index:500; margin-left: -50px;}
+.buy_article03 .buy_main_notice .bx-controls .bx-pager .bx-pager-item{display:inline-block; margin-left:5px;}
+.buy_article04{width: 920px; height: auto; margin: 60px auto 100px;}
+.buy_article04 .buy_art04_tit{width: 920px; height: 30px;}
+.buy_article04 h3{font-size: 21px; color: #262525; font-weight: bold; letter-spacing: -0.5px; float: left;}
+.buy_article04 h3 span{color: #e34226;}
+.buy_article04 .buy_art04_btn{float: right;}
+.buy_article04 ul{padding: 35px 0 0 30px;}
+.buy_article04 ul li{font-size: 13px; color: #939393; line-height: 20px;}
+/* 내차팔기 */
+#content .car_sell_area{width: 100%; height: auto;}
+.car_sell_area .sell_visual{width: 1180px; height: 310px; background:#f68c28; margin: 0 auto;}
+.car_sell_area .sell_visual h3{font-size: 60px; color: #ffffff; font-weight: bold;  padding: 60px 0 0 80px; float: left; line-height: 75px;}
+.car_sell_area .sell_visual h3 span{font-size: 25px;}
+.car_sell_area .sell_visual p{font-size: 20px; color: #ffffff; line-height: 25px; padding: 95px 0 0 30px; float: left;}
+.car_sell_area .sell_visual_cont{width: 1180px; height: 220px; margin: 0 auto; background: url(https://www.kcar.com/resources/images/homeencar/bg/sell_visual_cont_bg.png) no-repeat;}
+.car_sell_area .sell_visual_cont .sell_input_area{width: 830px; height: auto; margin: 0 auto; padding-top: 40px;}
+.car_sell_area .sell_visual_cont .sell_input_area span.tel_span{width: 10px; height: 40px; line-height: 40px; text-align: center; float: left; color: #ffffff;}
+.car_sell_area .sell_visual_cont .sell_input_area input{width: 270px; height: 40px; background: #ffffff; border: 1px solid #000000; line-height: 39px; padding-left: 10px; box-sizing: border-box; font-size: 16px; color: #a7a7a7; margin: 0 10px 15px 0; float: left;}
+.car_sell_area .sell_visual_cont .sell_input_area input.input_phone{width: 80px; height: 40px; background: #ffffff; border: 1px solid #000000; line-height: 39px; padding-left: 10px; box-sizing: border-box; font-size: 16px; color: #a7a7a7; margin: 0 0 15px 0; float: left;}
+.car_sell_area .sell_visual_cont .sell_input_area input.input_phone.last_phone{margin-right: 10px;}
+.car_sell_area .sell_visual_cont .sell_input_area input.input_check{width: 20px; height: 20px; border: 1px solid #000000; background: #ffffff;}
+.car_sell_area .sell_visual_cont .sell_input_area select#sell_select{width: 130px; height: 40px; background: #ffffff; border: 1px solid #000000; line-height: 39px; padding-left: 10px; box-sizing: border-box; font-size: 16px; color: #a7a7a7; margin: 0 10px 15px 0; float: left;}
+.car_sell_area .sell_visual_cont .sell_input_area select#sell_select_tel{width: 80px; height: 40px; background: #ffffff; border: 1px solid #000000; line-height: 39px; padding-left: 10px; box-sizing: border-box; font-size: 16px; color: #a7a7a7; margin: 0 0 15px 0; float: left;}
+.car_sell_area .sell_visual_cont .sell_input_area select#sell_select {font-family: inherit; background: url(https://www.kcar.com/resources/images/homeencar/pic/sell_select_arrow.jpg) no-repeat right top #ffffff; border-radius: 0px; -webkit-appearance: none; -moz-appearance: none; appearance: none;}
+.car_sell_area .sell_visual_cont .sell_input_area select#sell_select::-ms-expand {display: none;}
+.car_sell_area .sell_visual_cont .sell_input_area select#sell_select_tel {font-family: inherit; background: url(https://www.kcar.com/resources/images/homeencar/pic/sell_select_arrow.jpg) no-repeat right top #ffffff; border-radius: 0px; -webkit-appearance: none; -moz-appearance: none; appearance: none;}
+.car_sell_area .sell_visual_cont .sell_input_area select#sell_select_tel::-ms-expand {display: none;}
+.car_sell_area .sell_visual_cont .sell_input_area .label{font-size: 14px; color: #a7a7a7; padding-top: 10px; clear: both; float: left;}
+.car_sell_area .sell_visual_cont .sell_input_area .label span{padding-bottom: 1px; border-bottom: 1px solid #a7a7a7;}
+.car_sell_area .sell_visual_cont .sell_input_area .label strong{margin-left: 5px; cursor: pointer; padding-bottom: 1px; border-bottom: 1px solid #a7a7a7;}
+.car_sell_area .sell_visual_cont .sell_btn{width: 239px; height: 52px; float: right; margin: -40px 96px 0 0;}
+.car_sell_area .sell_visual_cont02{width: 1180px; height: 190px; margin: 0 auto;}
+.car_sell_area .sell_visual_cont02 .left_cont{width: 500px; height: 190px; background: #c1a585; float: left;}
+.car_sell_area .sell_visual_cont02 .left_cont dl{padding-top: 40px; float: left; text-align: left;}
+.car_sell_area .sell_visual_cont02 .left_cont dl.sell_dl01{margin-left: 60px;}
+.car_sell_area .sell_visual_cont02 .left_cont dl.sell_dl02{float: right; margin-right: 80px;}
+.car_sell_area .sell_visual_cont02 .left_cont dt{font-size: 16px; color: #ffffff; font-weight: bold; padding-bottom: 20px;}
+.car_sell_area .sell_visual_cont02 .left_cont dd{font-size: 50px; color: #ffffff; letter-spacing: -0.5px;}
+.car_sell_area .sell_visual_cont02 .left_cont dd span{font-size: 24px; color: #312a2a;}
+.car_sell_area .sell_visual_cont02 .right_cont{width: 500px; height: 190px; background: #dedede; float: left;}
+.car_sell_area .sell_visual_cont02 .right_cont dl{float: left; margin-left: 100px; padding-top: 30px; text-align: center;}
+.car_sell_area .sell_visual_cont02 .right_cont dl dd{font-size: 16px; color: #595959; font-weight: bold; padding-bottom: 15px;}
+.sell_article02{width: 1180px; height: auto; background: #ffffff; background-size: cover; margin: 70px auto;}
+.sell_article02 h3{font-size: 28px; letter-spacing: -0.5px; color: #262525; text-align: center; padding-bottom: 20px; font-weight: bold;}
+.sell_article02 h3 span{color: #f17a07;}
+.sell_article02 p{font-size: 18px; color: #6b6b6b; letter-spacing: -0.5px; line-height: 25px; text-align: center;}
+.sell_article02 .sell_art02_cont{width: 1090px; height: 382px; background: url(https://www.kcar.com/resources/images/homeencar/pic/sell_art02_cont.jpg) no-repeat; margin: 50px auto 50px; position: relative;}
+.sell_article02 .sell_art02_cont dl{width: 347px; height: 166px; position: absolute;}
+.sell_article02 .sell_art02_cont dl dt{font-size: 20px; color: #0a0a0a; letter-spacing: -1px; line-height: 24px; padding: 35px 0 0 28px; font-weight: bold;}
+.sell_article02 .sell_art02_cont dl dd{font-size: 14px; color: #999999; letter-spacing: -0.5px; letter-spacing: -0.5px; line-height: 17px; padding: 10px 0 0 30px;}
+.sell_article02 .sell_art02_cont dl.sell_art02_dl01{top: 20px; left: 15px;}
+.sell_article02 .sell_art02_cont dl.sell_art02_dl02{top: 210px; left: 382px;}
+.sell_article02 .sell_art02_cont dl.sell_art02_dl03{top: 20px; right: -5px;}
+
+
+
+
+.sell_art02_btn{width: 356px; height: 52px; margin: 0 auto;}
+.sell_article03{width: 1180px; height: 468px; background: url(https://www.kcar.com/resources/images/homeencar/bg/sell_article03_bg.jpg) no-repeat; margin: 0 auto;}
+.sell_article03 h3{font-size: 28px; color: #262525; letter-spacing: -0.5px; text-align: center; font-weight: bold; padding-top: 60px;}
+.sell_article03 h3 span{color: #f68c28}
+.sell_article03 p{font-size: 18px; color: #747474; letter-spacing: -0.5px; line-height: 25px; text-align: center; padding-top: 25px;}
+.sell_article03 p span.tittxt{ display:block;font-size: 22px; color: #333; padding: 15px 0}
+.sell_article03 .sell_article03_cont{width: 1180px; height: auto; margin-top: 0px;}
+.sell_article03 .sell_article03_cont dl{float: left; text-align: center;}
+.sell_article03 .sell_article03_cont dl dd{font-size: 13px; color: #5e5d5d; letter-spacing: -0.5px; line-height: 17px; padding-top: 13px; font-weight: bold;}
+.sell_article03 .sell_article03_cont dl.sell_art03_dl01{margin-left: 90px;}
+.sell_article03 .sell_article03_cont dl.sell_art03_dl02{margin-left: 70px;}
+.sell_article03 .sell_article03_cont dl.sell_art03_dl03{margin-left: 60px;}
+.sell_article03 .sell_article03_cont dl.sell_art03_dl04{margin-left: 50px;}
+.sell_article04{width: 1180px; height: auto; margin: 75px auto 0; background: #ffffff;}
+.sell_article04 h3{font-size: 28px; color: #262525; letter-spacing: -0.5px; text-align: center; font-weight: bold;}
+.sell_article04 h3 span{color: #f68c28}
+.sell_article04 p{font-size: 18px; color: #747474; letter-spacing: -0.5px; text-align: center; line-height: 25px; padding-top: 30px;}
+.sell_article04 .sell_art04_pic{width: 920px; height: 412px; margin: 70px auto 0;}
+.sell_article04 ul.sell_art04_pic02{width: 1180px; height: 84px; background: url(https://www.kcar.com/resources/images/homeencar/pic/sell_art04_pic02.png) no-repeat; margin-top: 30px;}
+.sell_article04 ul.sell_art04_pic02 li{height: 84px; float: left; font-size: 16px; color: #ffffff; letter-spacing: -0.5px; text-align: center; line-height: 23px;}
+.sell_article04 ul.sell_art04_pic02 li.sell04_li01{width: 338px; padding-top: 20px;}
+.sell_article04 ul.sell_art04_pic02 li.sell04_li02{width: 326px; padding-top: 10px;}
+.sell_article04 ul.sell_art04_pic02 li.sell04_li03{width: 336px; padding-top: 20px;}
+.sell_article05{width: 1180px; height: auto; margin: 110px auto 0; background: #ffffff;}
+.sell_article05 h3{font-size: 28px; color: #262525; letter-spacing: -0.5px; text-align: center; font-weight: bold;}
+.sell_article05 h3 span{color: #f68c28}
+.sell_article05 p{font-size: 18px; color: #747474; letter-spacing: -0.5px; text-align: center; line-height: 25px; padding-top: 30px;}
+.sell_article05 .sell_art05_cont{width: 860px; height: 295px; margin: 50px auto 0;}
+.sell_article05 .sell_art05_cont .sell_art05_cont00{width: 280px; height: 295px; float: left;}
+.sell_article05 .sell_art05_cont .sell_art05_cont00 dl{padding-top: 25px; text-align: center;}
+.sell_article05 .sell_art05_cont .sell_art05_cont00 dl dt{font-size: 20px; color: #0a0a0a; letter-spacing: -0.5px; padding-bottom: 15px; font-weight: bold;}
+.sell_article05 .sell_art05_cont .sell_art05_cont00 dl dd{font-size: 14px; color: #696969; letter-spacing: -1px; font-weight: bold;}
+.sell_article05 .art05_cont01{background: url(https://www.kcar.com/resources/images/homeencar/pic/sell_art05_pic01.jpg) no-repeat; margin-right: 10px;}
+.sell_article05 .art05_cont02{background: url(https://www.kcar.com/resources/images/homeencar/pic/sell_art05_pic02.jpg) no-repeat; margin-right: 10px;}
+.sell_article05 .art05_cont03{background: url(https://www.kcar.com/resources/images/homeencar/pic/sell_art05_pic03.jpg) no-repeat;}
+.sell_article06{width: 100%; height: 785px; background: url(https://www.kcar.com/resources/images/homeencar/bg/buy_article03_bg.jpg) repeat; margin-top: 120px;}
+.sell_article06 h3{font-size: 28px; letter-spacing: -0.5px; color: #262525; text-align: center; padding: 80px 0 15px 0; font-weight: bold;}
+.sell_article06 h3 span{color: #f68c28;}
+.sell_article06 p{font-size: 20px; color: #6b6b6b; letter-spacing: -0.5px; line-height: 25px; text-align: center;}
+.sell_article06 p strong{color: #1f1f1f;}
+.sell_article06 .sell_art06_btn{width: 270px; height: 51px; margin: 50px auto;}
+.sell_article06 .sell_main_notice{width: 98%; height: 406px; margin: 0 auto; position:relative;}
+.sell_article06 .sell_main_notice ul{}
+.sell_article06 .sell_main_notice ul li{width: 444px !important; height: 406px; margin-right: 5px;}
+.sell_article06 .sell_main_notice ul li .large_box{width: 296px; height: 200px; float: left;}
+.sell_article06 .sell_main_notice ul li .small_area{width: 142px; height: 200px; float: left;}
+.sell_article06 .sell_main_notice ul li .small_box{width: 142px; height: 97px; float: left;}
+.sell_article06 .sell_main_notice ul li .mr_5{margin-right: 5px;}
+.sell_article06 .sell_main_notice ul li .mb_5{margin-bottom: 5px;}
+.sell_article06 .sell_main_notice .bx-pager{position:absolute; left:50%; bottom:20px; margin-left:-22.5px;}
+.sell_article06 .sell_main_notice .bx-pager .bx-pager-item{display:inline-block; margin-right:5px;}
+.sell_article06 .sell_main_notice .bx-pager .bx-pager-item a{display:block; width:10px; height:10px;border-radius:50%;text-indent:-9999em; background:#a7a7a7;}
+.sell_article06 .sell_main_notice .bx-controls-direction{width: 920px; height: 47px; position: absolute; left: 50%; margin-left: -460px; top: 50%; margin-top: -23.5px;}
+.sell_article06 .sell_main_notice .bx-controls-direction a{display:block; width:57px; height:47px; text-indent:-9999em;}
+.sell_article06 .sell_main_notice .bx-controls-direction a.bx-prev{background:url("https://www.kcar.com/resources/images//homeencar/btn/pager_left02.png") center center no-repeat; float: left;}
+.sell_article06 .sell_main_notice .bx-controls-direction a.bx-next{background:url("https://www.kcar.com/resources/images//homeencar/btn/pager_right02.png") center center no-repeat; float: right;}
+.sell_article06 .sell_main_notice .bx-controls{}
+.sell_article06 .sell_main_notice .bx-controls .bx-pager{position:absolute; left:51%; bottom:15px; z-index:500; margin-left: -50px;}
+.sell_article06 .sell_main_notice .bx-controls .bx-pager .bx-pager-item{display:inline-block; margin-left:5px;}
+.sell_article07{width: 1180px; height: auto; margin: 75px auto 0; background: #ffffff; border-bottom: 1px solid #e7e7e7; padding-bottom: 80px;}
+.sell_article07 h3{font-size: 28px; color: #262525; letter-spacing: -0.5px; text-align: center; font-weight: bold;}
+.sell_article07 h3 span{color: #f68c28}
+.sell_article07 p{font-size: 18px; color: #747474; letter-spacing: -0.5px; text-align: center; line-height: 25px; padding-top: 30px;}
+.sell_article07 .sell_art07_cont{width: 920px; height: auto; margin: 50px auto 0;}
+.sell_article07 .sell_art07_cont .sell_art07_notice{width: 918px; height: auto; border: 1px solid #ebebeb; margin-bottom: 10px;}
+.sell_article07 .sell_art07_cont .sell_art07_notice dl dt{width: 98px; height: auto; float: left;}
+.sell_article07 .sell_art07_cont .sell_art07_notice dl dd.sell_notice_text{width: 400px; height: auto; padding: 25px 0 0 20px; box-sizing: border-box; font-size: 13px; color: #494949; line-height: 20px; float: left; padding-bottom: 20px;}
+.sell_article07 .sell_art07_cont .sell_art07_notice dl dd.sell_notice_day{float: right; line-height: 88px; padding-right: 30px;}
+.sell_article07 .sell_art07_cont .sell_notice_paging{width: 235px; height: 21px; line-height: 21px; margin: 40px auto 0;}
+.sell_article07 .sell_art07_cont .sell_notice_paging img{margin-right: 3px; float: left;}
+.sell_article07 .sell_art07_cont .sell_notice_paging p{margin-right: 5px; color: #7f7e7f; font-size: 12px; float: left; padding: 0 5px; line-height: 21px;}
+.sell_article07 .sell_art07_cont .sell_notice_paging p a{margin: 0 5px;}
+.sell_article08{width: 1180px; height: auto; margin: 60px auto 0; background: #ffffff;}
+.sell_article08 h3{font-size: 20px; color: #222222; font-weight: bold; padding-left: 40px;}
+.sell_article08 .sell_art08_cont{width: 920px; height: auto; margin: 25px auto 0;}
+.sell_article08 .sell_art08_cont .sell_art08_box{width: 439px; height: 199px;}
+.sell_article08 .sell_art08_cont .sell_art08_box01{background: url(https://www.kcar.com/resources/images/homeencar/pic/sell_art08_box01.jpg) no-repeat; float: left;}
+.sell_article08 .sell_art08_cont .sell_art08_box02{background: url(https://www.kcar.com/resources/images/homeencar/pic/sell_art08_box02.jpg) no-repeat; float: right;}
+.sell_article08 .sell_art08_cont .sell_art08_box h5{font-size: 20px; color: #222222; float: left; padding: 30px 0 0 30px; float: left; font-weight: bold;}
+.sell_article08 .sell_art08_cont .sell_art08_box ul{float: left; padding: 30px 0 0 80px;}
+.sell_article08 .sell_art08_cont .sell_art08_box ul li{font-size: 13px; color: #494949; background: url(https://www.kcar.com/resources/images/homeencar/pic/sell_art08_bullet.png) left 7px no-repeat; line-height: 20px; padding-left: 10px;}
+.sell_article08 .sell_art08_cont .sell_art08_box01 ul{padding: 0; margin: 30px 0 0 40px;}
+.sell_article09{width: 920px; height: auto; margin: 60px auto; background: #ffffff}
+.sell_article09 h3{font-size: 20px; color: #222222; letter-spacing: -0.5px; font-weight: bold;}
+.sell_article09 h3 span{ color: #f68c28;}
+.sell_article09 ul{padding: 35px 0 0 15px;}
+.sell_article09 ul li{font-size: 13px; color: #939393; line-height: 20px;}
+/* 팝업 */
+.sell_main_pop{width: 670px; height: 500px; position: absolute; background: #ffffff; top: 0; left: 50%; margin-left: -335px; display: none; z-index: 999; border: 2px solid #f68c28;}
+.sell_main_pop h3{width: 100%; height: 54px; padding-left: 30px; box-sizing: border-box; background: #f68c28;font-size: 16px; color: #ffffff; font-weight: bold; line-height: 54px;}
+.sell_main_pop .sell_main_pop01{width: 570px; height: auto; margin: 50px auto 0;}
+.sell_main_pop .sell_main_pop01 label{font-size: 11px; color: #7f7e7f; margin-top: 10px; float: left;}
+.sell_main_pop .sell_main_pop01 label strong{color: #000000;}
+.sell_main_pop .sell_main_pop01 .sell_agree_text{width: 560px; height: 60px; border: 1px solid #dad9d9; font-size: 12px; color: #7f7e7f; overflow-y: scroll; margin-bottom: 15px; box-sizing: border-box; padding: 10px;}
+.sell_main_pop .sell_main_pop01 .sell_agree_btn{width: 75px; height: 30px; margin: 23px auto 0;}
+.sell_main_pop .sell_main_pop01 .sell_x_btn{width: 26px; height: 26px; position: absolute; top: 10px; left: 50%; margin-left: 300px;}
+#sell_policy table{ font-size:12px; margin: auto; border-collapse: collapse; border-spacing: 0; empty-cells: show; }
+#sell_policy table.sell_table {width: 100%;}
+#sell_policy table th {padding:0; height: 25px; border: 1px solid #ccc; background: #f9f9f9; text-align: center; color:#575757; }
+#sell_policy table.sell_table td { text-align: left; vertical-align: top; }
+#sell_policy table td { height: 20px; padding: 4px; border: 1px solid #ccc; color: #575757;}
+.sell_pop_bg{width: 100%; height: 100%; position: fixed; top: 0; left: 0; background: url(https://www.kcar.com/resources/images/homeencar/bg/sell_pop_bg.png) repeat; display: none;}
+.visual_copy {position:relative;z-index:2; overflow:hidden;}
+.sb-list-set {position:absolute;width:1180px;height:310px;overflow:hidden;z-index:1;}
+.sb-list-set .sb-list-item {position:relative;width:1180px;height:310px;overflow:hidden;}
+.sb-list-set .sb-bg {position:relative}
+.sb-list-set .sb-bg canvas {position:absolute;top:0px;left:0px;}
+.sb-list-set .sb-bg span {position:absolute;top:0px;left:0px;}
+.sb-list-set:after {content:"";display:block;clear:both;}
+.sb-list-item .head {text-align:left;margin-top:40px;}
+.sb-list-item .head dl {position:absolute;display:inline-block;font-size:24px;line-height:17px;font-weight:600;}
+.sb-list-item .head dt {margin-bottom:11px;;letter-spacing:-1.0px;line-height:25px;opacity:0}
+.sb-list-item .head dd {font-size:14px;opacity:0}
+.sb-list-item .head dd span {height:12px;line-height:12px;margin-bottom:6px;font-weight:600;}
+.sb-list-item .head dd.link-btn {margin-top:16px;display:block;}
+.sb-list-item .head dd.txt {padding:0 2px;}
+.sb-list-item.sell .head dt {text-align:left;}
+.sb-list-item.buy .head dt {text-align:right;right:10px;}
+.sb-list-item.sell .head dl {right:340px;color:#2b2b2b;}
+.sb-list-item.sell .head dl dt strong {color:#ff872e;letter-spacing:0px;}
+.sb-list-item.buy .head dl dt strong {color:#e9002d;letter-spacing:0px;}
+.sb-list-item.buy .head dl {left:340px;color:#2b2b2b;}
+.sb-list-item .head dd {font-size:14px;color:#5d5d5d;}
+.sb-list-item .head dd em {font-style:normal;font-size:14px;color:#101010;font-weight:600;display:inline-block;vertical-align:bottom}
+.sb-list-item.sell .head dd em {color:#ff872e;}
+.sb-list-item.buy .head dd em {color:#e9002d;}
+.sb-list-item.buy .head dd {color:#101010;text-align:right;}
+.sb-list-item.buy .pc {position:absolute;top:155px;left:467px;opacity:0}
+.sb-list-item.buy .house {position:absolute;top:222px;left:827px;opacity:0}
+.sb-list-item.buy .car {position:absolute;top:175px;left:505px;opacity:0}
+.sb-list-item.buy .car ul {position:absolute;top:20px;left:-7px;opacity:1}
+.sb-list-item.buy .car ul li {position:absolute;top:0px;left:0px;opacity:1}
+.sb-list-item.buy .car .hearts {--display:none;}
+.sb-list-item.buy .car .hearts.on {display:block;}
+.sb-list-item.buy .car .hearts img {position:absolute;top:0px;left:0px;}
+.sb-list-item.buy .button {position:absolute;top:218px;left:512px;width:94px;height:30px;overflow:hidden;opacity:0}
+.sb-list-item.buy .pointer {position:absolute;top:247px;left:596px;opacity:0}
+.sb-list-item.buy .mouse {position:absolute;top:274px;left:660px;width:60px;height:53px;overflow:hidden;opacity:0}
+.sb-obj-cont {position:absolute;top:-20px;left:0px;width:100%;height:310px;}
+.sb-list-item.sell .house {position:absolute;top:236px;left:464px;opacity:0}
+.sb-list-item.sell .encar-mall {position:absolute;top:184px;left:710px;opacity:0}
+.sb-list-item.sell .car {position:absolute;top:280px;left:495px;opacity:0}
+.sb-list-item.sell .car ul {position:absolute;top:20px;left:-7px;opacity:1}
+.sb-list-item.sell .car ul li {position:absolute;top:0px;left:0px;opacity:1}
+.sb-list-item.sell .staff-01 {position:absolute;top:251px;left:772px;width:34px;height:70px;overflow:hidden;opacity:0}
+.sb-list-item.sell .seller-01 {position:absolute;top:251px;left:561px;width:34px;height:70px;overflow:hidden;opacity:0}
+.sb-list-item.sell .money {position:absolute;top:204px;left:582px;opacity:0}
+.sb-list-item.sell .money2 {position:absolute;top:184px;left:576px;}
+.sb-list-item.sell .money2 li {color:#fff;font-size:14px;margin-left:1px;font-weight:600;opacity:0}
+.sb-list-item.sell .money2 li.on {color:#fff;}
+.sb-list-item.sell .sell-key {position:absolute;top:189px;left:578px;opacity:0}
+.sb-list-item.sell .seller-02 {position:absolute;top:251px;left:561px;opacity:0}
+.sb-list-item.sell .staff-02 {position:absolute;top:251px;right:321px;opacity:0}
+.sb-list-item.sell .staff-03 {display:none;position:absolute;top:251px;right:155px;width:34px;height:70px;overflow:hidden;opacity:1}
+.sb-list-item.buy {background:url(https://www.kcar.com/resources/images/homeencar/motion/tree_bg_02.png) 0 210px no-repeat;}
+.sb-list-item.sell {background:url(https://www.kcar.com/resources/images/homeencar/motion/tree_bg_01.png) 0 222px no-repeat;}
+.ul-inline {}
+.ul-inline li {float:left}
+.ul-inline:after {content:"";display:block;clear:both;}
+.rv8-img {display:none;position:relative;z-index:1;}
+.rv8-img img {display:inline-block;}
+.sb-list-set.ie8 {}
+.sb-list-set.ie8 canvas {display:none;}
+/*.sb-list-set.ie8 .rv8-img {display:block;text-align:center;background:url(images/motion/bg_group.png) 0 180px repeat-x;}*/
+.sb-list-set.ie8 .sb-list-item {display:none;}
+
+.sell_visual .sb-list-set.ie8 {height:323px;}
+/* 메인 끝 */
+.homepolicypopupbox{width: 630px; position: fixed; top: 20px; left: 50%; margin-top: 36px; margin-left: -315px; z-index:1000; background:#fff;}
+.homepolicypopupbox h3{font-size: 16px; color: #ffffff; height: 54px; line-height: 54px; padding-left: 30px; box-sizing: border-box; font-weight: bold;}
+/* 홈엔카 계약서 */
+.input_check{width:13px; height:13px; vertical-align:middle;}
+/* common  */
+.mt5{margin-top:5px;}
+.mt10{margin-top:10px;}
+.mt20{margin-top:20px;}
+.mt30{margin-top:30px;}
+.pt25{padding-top:25px;}
+.check{width:13px; height:13px; vertical-align:middle;}
+a.btn_big { display: inline-block; padding-right: 4px; background: url(https://www.kcar.com/resources/images/self/tabAside_ri.gif) no-repeat 100% 0; font-size: 12px; line-height: 25px; color: #444; word-spacing: -1px; text-decoration: none !important; white-space: nowrap; }
+a.btn_big span,
+a.btn_big strong { display: block; padding: 1px 6px 1px 10px; background: url(https://www.kcar.com/resources/images/self/tabAside_le.gif) no-repeat; font-weight: normal; }
+.contract_wrap{padding:5px; width:730px; margin:0 auto 40px auto; padding-bottom:40px; border-bottom:1px solid #ccc; letter-spacing:-0.5px; font-size:11px;}
+.contract_wrap h1.page_tit{position:relative; padding:10px 0; text-align:center; font-size:18px; font-weight:bold;}
+.contract_wrap h1.page_tit span.left_tit{position:absolute; left:0; top:10px; font-size:12px;}
+.contract_wrap h1.page_tit span.right_tit{position:absolute; right:0; top:10px; font-size:12px;}
+.contract_wrap .t_num { float: right; font-size: 12px; }
+/* 테이블 양식 정의 */
+.pt_table_type00{width:100%; border-top:2px dotted #202020; border-bottom:1px solid #202020;}
+.pt_table_type00 th{padding:3px 5px 3px 5px; text-align:left; }
+.pt_table_type00 td{padding:3px 10px 3px 5px; text-align:left;}
+.pt_table_type01{width:100%; }
+.pt_table_type01 th{padding:3px 5px 3px 5px; text-align:left; border:1px solid #202020; background:#c0c0c0;}
+.pt_table_type01 td{padding:3px 10px 3px 5px; text-align:left; border:1px solid #202020; word-break:keep-all;}
+.pt_table_type01 .right_ty01{text-align:right;}
+.pt_table_type01 .center_ty01{text-align:center;}
+.pt_table_type01 .col_grey01{background:#c0c0c0;}
+.pt_table_type01 .left_noline{border-left:none;}
+.pt_table_type01 .right_noline{border-right:none;}
+.pt_table_type01 .top_noline{border-top:none;}
+.pt_table_type01 .dot01{ background:none; border-right:1px dotted #202020; border-left:1px dotted #202020; border-top:2px dotted #202020; }
+/*보증 동의서*/
+.ew_agree{padding:20px 0 20px 15px; }
+.ew_table_type01{width:100%;}
+.ew_table_type01 th{padding:8px 5px 8px 35px; text-align:left }
+.ew_table_type01 td{padding:8px 5px; text-align:left; border-bottom:1px solid #ccc; }
+.ew_table_type01 td span{display:inline-block;  padding-left:30px;}
+.ew_table_type02{width:100%; font-size:12px;}
+.ew_table_type02 th{padding:5px 10px; border-top:2px solid #3366ff; border-bottom:2px solid #3366ff; text-align:left; }
+.ew_table_type02 td{padding:5px 10px; border-top:2px solid #3366ff; border-bottom:2px solid #3366ff; text-align:left;}
+.list_ty01{overflow:hidden;}
+.list_ty01 strong{float:left; width:70px;}
+.list_ty02 strong{float:left; width:125px;}
+.list_ty01 ul{overflow:hidden; float:left;}
+.list_ty01 ul li{float:left; padding:0 15px 1px 0; }
+.pt_table_type02{width:100%; font-size:9pt;}
+.pt_table_type02 th{padding:3px 5px 3px 5px; border:1px solid #202020; background:#c0c0c0; font-size:9pt;}
+.pt_table_type02 td{padding:3px 10px 3px 5px; text-align:left; border:1px solid #202020; word-break:keep-all; font-size:9pt;}
+.pt_table_type02 .right_ty01{text-align:right;}
+.pt_table_type02 .center_ty01{text-align:center;}
+.pt_table_type02 .col_grey01{background:#c0c0c0;}
+.pt_table_type02 .left_noline{border-left:none;}
+.pt_table_type02 .right_noline{border-right:none;}
+.pt_table_type02 .top_noline{border-top:none;}
+.pt_table_type02 .dot01{ background:none; border-right:1px dotted #202020; border-left:1px dotted #202020; border-top:2px dotted #202020; }
+.contract_box h2{font-size:9pt;}
+.contract_box .text01{padding:5px 0; font-size:9pt;}
+.contract_box .text02{padding:5px 0; text-align:center; font-size:9pt;}
+.contract_box .agree{padding:10px 0 5px 0; text-align:center; line-height:1.5; text-align:center; font-size:9pt;}
+/* list type */
+.terms{line-height:1.4; font-size:12px;}
+.terms b{}
+.terms strong{text-decoration:underline;}
+.terms h2{padding:13px 0 3px 0; font-weight:bold; font-size:13px; }
+.terms p.order_txt{padding-left:15px;}
+.terms ul.order_list{padding-left:15px;}
+.terms ul.order_list02{padding-left:5px;}
+.terms ul.order_list li,
+.terms ul.order_list02 li{position:relative; padding:2px 0 4px 15px;}
+.terms ul.order_list li span.order_unm,
+.terms ul.order_list02 li span.order_unm{position:absolute; top:0; left:0;}
+.ew_txt_ok{padding-top:5px;text-align:right;}
+b.ew_ok span{color:#ddd; font-size:14px; }
+b.ew_ok span.ok{color:#000; font-weight:bold;}
+span.ew_ok b{color:#ddd; font-size:14px; }
+span.ew_ok b.ok{color:#000; font-weight:bold;}
+/*공인인증마크*/
+.certifi{position:relative;z-index:10; }
+.certifi p{position: absolute;background: url(https://www.kcar.com/resources/images/homeencar/certificate.png) no-repeat 0 0; top:-34px;right:0;height: 40px;width: 74px;padding: 0;margin: 0}
+.certifi p b{font-size:10px;color:#ea002c; letter-spacing:-1px;padding:23px 0 0 0;display:block; text-align:center;}
+.certifi p.cer_t{position: absolute;background: url(https://www.kcar.com/resources/images/homeencar/certificate.png) no-repeat 0 0; top: -8px;right:-20px;height: 40px;width: 74px;}
+.certifi p.cer_th{position: absolute;background: url(https://www.kcar.com/resources/images/homeencar/certificate.png) no-repeat 0 0; top: -30px;right:-30px;height: 40px;width: 74px;}
+/*워터마크*/
+#watermark {display:none}
+
+/*프린트 속성*/
+@media print {
+    .contract_wrap{ width:100%; margin:0 auto; padding:5px; border-bottom:none; page-break-after: always;}
+    .print_btn {display:none; }
+    .pt_table_type01 th{padding:1px 5px 1px 5px; text-align:left; border:1px solid #202020; background:#c0c0c0;}
+    .pt_table_type01 td{padding:1px 10px 1px 5px; text-align:left; border:1px solid #202020;}
+
+    .pt_table_type02 th{padding:1px 5px 1px 5px; border:1px solid #202020; background:#c0c0c0;}
+    .pt_table_type02 td{padding:1px 10px 1px 5px; text-align:left; border:1px solid #202020;}
+    .btn_wrap {display:none; }
+    .PB{margin-top:20px; page-break-before: always;}
+    /*워터마크 프린트 시*/
+    #watermark {position:fixed; left: 50%; top: 30%; margin-left:-226px; height: 452px; width: 452px; z-index: -1; display:inline; }
+}
+
+.moviebox .movie_layer_wrap {position:fixed; top:0; left:0; width:100%; height: 100%; background:#000; opacity:0.8; filter:alpha(opacity=80); z-index:4; }
+.moviebox .movie_layer {position:absolute; top:2140px; left:50%; height:405px; margin-left:-360px;background:#fff; color:#999; z-index:5;}
+.moviebox .movie_layer .movie {text-align: center;}
+.moviebox .movie_layer .movie img {max-width: 720px;}
+.moviebox .movie_layer .movie p {margin-top: 40px; font-size: 14px; color: #fff}
+.moviebox .movie_layer .movie p span.title {display: block; margin-bottom: 15px; font-weight: bold;}
+.moviebox .movie_layer a.btn_close {display:block; position:absolute; top: -50px; right: -200px; width: 50px; height: 50px; background: url(https://www.kcar.com/resources/images/content/event/photo/btn_close.png) no-repeat 0 0; line-height: 1000px; vertical-align: bottom; overflow: hidden}
+.moviebox .movie_layer a.btn_close:hover {background-position: 0 -50px;}
+/* homeencar_payment 하단 금융 리플렛 pdf 다운로드 */
+.finance_leaflet{position:relative; padding:15px 0 15px 270px; margin:20px auto 40px auto; background-color:#f2f2f2; font-size:14px; color:#000;}
+.finance_leaflet .link_dw_pdf{display:inline-block; position:absolute; top:12px; right:280px; padding:4px 12px; background-color:#2d2d39; font-size:13px; color:#fff;}

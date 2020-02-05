@@ -1,0 +1,337 @@
+@charset "utf-8";
+/* 내차팔기 */
+.sell_main{position:relative;}
+.sell_main:before, .sell_main:after { content: ""; display: table; }
+.sell_main:after { clear: both; }
+.sell_main .visual_top{position:relative; width:100%; height:486px; box-sizing: border-box;}
+.sell_main .visual_top .bg1{position:absolute; left:0; top:0; display:block; width:50%; height:486px; background-color:#eaebed}
+.sell_main .visual_top .bg2{position:absolute; right:0; top:0; display:block; width:50%; height:486px; background-color:#eaebed ;}
+.sell_main .visual_top .bg3{position:absolute; left:0; top:0; width:100%; height:486px; background:url(/resources/images/content/sell/sell_topvisual_bg_20191118.jpg) no-repeat center top;}
+.sell_main .visual_top .cont{width:1180px; position:absolute; left:50%; top:0; margin-left:-590px; z-index:1;}
+.sell_main .visual_top .cont .tit_bx{position:absolute; top:162px; left:345px;}
+.sell_main .visual_top .cont .tit{height:40px; background:url(/resources/images/homeencar/contents/sell_topvisual_tit.png) no-repeat left top; overflow:hidden; text-indent:-55555px; font-size:0.1em;}
+.sell_main .visual_top .cont .like_list{overflow:hidden;}
+.sell_main .visual_top .cont .like_list li{float:left; padding:6px 17px 0 0; margin-right:5px; background:url(/resources/images/homeencar/contents/check_k.png) no-repeat right top; color:#000; font-size:13px;}
+.sell_main .visual_top .cont .visual_txt01{padding-top:63px; font-size:45px; color:#181819; letter-spacing:-1px;padding-left:50px}
+.sell_main .visual_top .cont .visual_txt02{color:#ff0040; font-size:45px; font-weight:bold;padding-left:50px}
+.sell_main .visual_top .cont .visual_txt02s{font-size:15px;color:#181819;padding-top:10px;padding-bottom:25px;padding-left:50px}
+.sell_main .visual_top .cont .visual_txt00{padding-top:73px; text-align:left; }
+.sell_main .visual_top .cont .visual_txt03{padding-top:14px; font-size:38px; text-align:left; letter-spacing:1px; font-weight: bold; color:#303030;padding-bottom:0}
+.sell_main .visual_top .cont .receive_wrap.space{margin-top: 60px !important;}
+.sell_main .visual_top .cont .receive_wrap{overflow:hidden; width:100%; height:180px; margin-top: 33px; background-color:#fff; box-sizing: border-box;}
+.sell_main .visual_top .cont .receive_wrap .left{float:left; width:180px; background-color: #f7f7f7; height:180px; padding:25px 0 0 26px; box-sizing: border-box;}
+.sell_main .visual_top .cont .receive_wrap .left h4{font-size:24px; letter-spacing:-1px; color:#181819; font-weight: bold;}
+.sell_main .visual_top .cont .receive_wrap .left p{padding-top:6px; font-size:13px; line-height:20px; color:#555555;}
+.sell_main .visual_top .cont .receive_wrap .right{float:left; width:1000px; padding:0 40px 22px 40px; box-sizing: border-box;}
+.sell_main .visual_top .cont .receive_wrap .right ul{overflow:hidden; padding-top:24px;}
+.sell_main .visual_top .cont .receive_wrap .right ul li{float:left; width:200px; margin-left:10px;}
+.sell_main .visual_top .cont .receive_wrap .right ul li:first-child{width:270px; margin-left:0;}
+.sell_main .visual_top .cont .receive_wrap .right ul li:nth-child(3){width:220px; margin-left:10px;}
+.sell_main .visual_top .cont .receive_wrap .right ul li em{font-size:10px;font-style:normal}
+.sell_main .visual_top .cont .receive_wrap .right ul li label{display:block; margin-bottom:15px; font-size:15px; color:#181819;}
+.sell_main .visual_top .cont .receive_wrap .right ul li input.text{width:100%; height:45px; padding-left:20px; border:1px solid #dddddd; line-height:45px; color:#888888; box-sizing: border-box;}
+.sell_main .visual_top .cont .receive_wrap .right .txt_btn_wrap{overflow:hidden; padding-top:10px;}
+.sell_main .visual_top .cont .receive_wrap .right .txt_btn_wrap p{float:left; padding-top:7px; font-size:12px; color:#555555; }
+.sell_main .visual_top .cont .receive_wrap .right .txt_btn_wrap p label{margin-left:9px; vertical-align:middle;}
+.sell_main .visual_top .cont .receive_wrap .right .txt_btn_wrap p input[type="checkbox"]{visibility: visible;opacity: 0;}
+.sell_main .visual_top .cont .receive_wrap .right .txt_btn_wrap p .sell_pop_btn{display:inline-block; width:58px; height:24px; margin-left:2px; border:1px solid #dddddd; line-height:24px; text-align:center; color:#888888; vertical-align:-2px;}
+.sell_main .visual_top .cont .receive_wrap .right .txt_btn_wrap p .sell_pop_btn:hover{text-decoration: none;}
+.sell_main .visual_top .cont .receive_wrap .right .txt_btn_wrap .sell_btn {float:right; width:150px; height:45px; background-color:#ff0040; text-align:center; color:#fff; font-size:15px; line-height:45px;}
+.sell_main .visual_top .cont .receive_wrap .right .txt_btn_wrap .sell_btn:hover{text-decoration:none;}
+.sell_main .sell_receive{width:1180px; margin:0 auto; }
+.sell_main .sell_receive h4{padding-top:44px; font-size:24px; text-align:center; color:#111111; font-weight: bold;}
+.sell_main .sell_receive .sell_receive_num {overflow:hidden; margin:25px 0 0 420px;}
+.sell_main .sell_receive .sell_receive_num dl{float:left; margin-left:20px; padding-left:44px; text-align:center; background:url(/resources/images/content/sell/bg_receive02.png) no-repeat left 48px; box-sizing: border-box;}
+.sell_main .sell_receive .sell_receive_num dl:first-child{margin:0; padding:0; background:none; text-align:center;}
+.sell_main .sell_receive .sell_receive_num dl dt{font-size:15px; padding-bottom:13px; color:#181819; letter-spacing:-1px; font-weight:bold;text-align:center;}
+.sell_main .sell_receive .sell_receive_num dl dd{ font-size:50px; color:#181819; letter-spacing:-1px; font-weight:bold;}
+.sell_main .sell_receive .sell_receive_num dl:first-child dd{color:#ff0040;}
+.odometer.odometer-auto-theme, .odometer.odometer-theme-default {display: inline-block; vertical-align: middle; *vertical-align: auto; *zoom: 1; *display: inline; position: relative;}
+.odometer.odometer-auto-theme .odometer-digit, .odometer.odometer-theme-default .odometer-digit { display: inline-block; vertical-align: middle; *vertical-align: auto; *zoom: 1; *display: inline; position: relative;}
+.odometer.odometer-auto-theme .odometer-digit .odometer-digit-spacer, .odometer.odometer-theme-default .odometer-digit .odometer-digit-spacer {display: inline-block; vertical-align: middle; *vertical-align: auto; *zoom: 1; *display: inline; visibility: hidden;}
+.odometer.odometer-auto-theme .odometer-digit .odometer-digit-inner, .odometer.odometer-theme-default .odometer-digit .odometer-digit-inner {text-align: left; display: block; position: absolute; top: 0; left: 0; right: 0; bottom: 0; overflow: hidden;}
+.odometer.odometer-auto-theme .odometer-digit .odometer-ribbon, .odometer.odometer-theme-default .odometer-digit .odometer-ribbon {display: block;}
+.odometer.odometer-auto-theme .odometer-digit .odometer-ribbon-inner, .odometer.odometer-theme-default .odometer-digit .odometer-ribbon-inner {display: block; -webkit-backface-visibility: hidden;}
+.odometer.odometer-auto-theme .odometer-digit .odometer-value, .odometer.odometer-theme-default .odometer-digit .odometer-value {display: block; -webkit-transform: translateZ(0);}
+.odometer.odometer-auto-theme .odometer-digit .odometer-value.odometer-last-value, .odometer.odometer-theme-default .odometer-digit .odometer-value.odometer-last-value {position: absolute;}
+.odometer.odometer-auto-theme.odometer-animating-up .odometer-ribbon-inner, .odometer.odometer-theme-default.odometer-animating-up .odometer-ribbon-inner {-webkit-transition: -webkit-transform 2s; -moz-transition: -moz-transform 2s; -ms-transition: -ms-transform 2s; -o-transition: -o-transform 2s; transition: transform 2s;}
+.odometer.odometer-auto-theme.odometer-animating-up.odometer-animating .odometer-ribbon-inner, .odometer.odometer-theme-default.odometer-animating-up.odometer-animating .odometer-ribbon-inner {-webkit-transform: translateY(-100%); -moz-transform: translateY(-100%); -ms-transform: translateY(-100%); -o-transform: translateY(-100%); transform: translateY(-100%);}
+.odometer.odometer-auto-theme.odometer-animating-down .odometer-ribbon-inner, .odometer.odometer-theme-default.odometer-animating-down .odometer-ribbon-inner {-webkit-transform: translateY(-100%); -moz-transform: translateY(-100%); -ms-transform: translateY(-100%); -o-transform: translateY(-100%); transform: translateY(-100%);}
+.odometer.odometer-auto-theme.odometer-animating-down.odometer-animating .odometer-ribbon-inner, .odometer.odometer-theme-default.odometer-animating-down.odometer-animating .odometer-ribbon-inner {-webkit-transition: -webkit-transform 2s; -moz-transition: -moz-transform 2s; -ms-transition: -ms-transform 2s; -o-transition: -o-transform 2s; transition: transform 2s; -webkit-transform: translateY(0); -moz-transform: translateY(0); -ms-transform: translateY(0); -o-transform: translateY(0); transform: translateY(0);}
+.odometer.odometer-auto-theme .odometer-value, .odometer.odometer-theme-default .odometer-value {text-align: center;}
+.sell_main .realtime_info {margin-top:47px; overflow:hidden; height:166px;}
+.sell_main .realtime_info ul {overflow:hidden;}
+.sell_main .realtime_info ul li{float:left; width:280px !important; height:166px; margin-right:20px;}
+.sell_main .realtime_info ul li .cont { height:120px; padding:33px 30px 0 30px; border:1px solid #dddddd; box-shadow: 0px 6px 11px 0px rgba(221,221,221,0.5);}
+.sell_main .realtime_info ul li .cont .ico_type01{display:block; width:52px; height:20px; border:1px solid #f7c298; line-height:18px; font-size:11px; text-align:center; color:#f08631; box-sizing:border-box;}
+.sell_main .realtime_info ul li .cont .ico_type02{display:block; width:52px; height:20px; border:1px solid #89d9e0; line-height:18px; font-size:11px; text-align:center; color:#14b4c2; box-sizing:border-box;}
+.sell_main .realtime_info ul li .cont .ico_type03{display:block; width:52px; height:20px; border:1px solid #dddddd; line-height:18px; font-size:11px; text-align:center; color:#555555; box-sizing:border-box;}
+.sell_main .realtime_info ul li .cont .ico_type04{display:block; width:52px; height:20px; border:1px solid #ff7f9f; line-height:18px; font-size:11px; text-align:center; color:#ff0040; box-sizing:border-box;}
+.sell_main .realtime_info ul li .cont .txt{height:48px; max-width:100%; margin-top:7px; font-size:18px; line-height:24px; color:#181819; letter-spacing:-1px; font-weight:bold; overflow: hidden; }
+.sell_main .realtime_info ul li .cont .num_txt{margin-top:9px; font-size:13px; color:#888888; }
+.sell_main .realtime_info ul li .cont .num_txt .street_txt{padding-left: 10px;}
+.sell_main .car_sell_warp{position:relative; margin-top:90px; padding-top:121px;}
+.sell_main .car_sell_warp .sell_tab {position:absolute; left:50%; top:0; width:1180px; height:60px; margin-left:-590px; z-index:10;}
+.sell_main .car_sell_warp .sell_tab li{float:left; margin-left:-1px;}
+.sell_main .car_sell_warp .sell_tab li:first-child {margin-left:0;}
+.sell_main .car_sell_warp .sell_tab li a {position:relative; display:block; width:295px; height:60px; border:1px solid #dddddd; background:#fbfbfb; text-align:center; color:#181819; font-size:15px; line-height:58px; letter-spacing:-1px; text-decoration:none; box-sizing:border-box;}
+.sell_main .car_sell_warp .sell_tab li.on a {width:296px; border:none; background:#ff0040; color:#fff; font-weight:bold;}
+.sell_main .car_sell_warp .sell_tab li.last a{width:297px;}
+.sell_main .car_sell_warp.is_fixed .sell_tab{position:fixed;}
+.sell_main .car_sell_warp .sell_btm_cont{display:none; overflow:hidden; height:60px; width:1180px; padding:0 11px 0 24px; background:#333333; box-sizing:border-box;}
+.sell_main .car_sell_warp .sell_btm_cont p{float:left; font-size:16px; color:#fff; line-height:60px;}
+.sell_main .car_sell_warp .sell_btm_cont a{float:right; width:128px; height:35px; margin-top:12px; background-color:#ff0040; font-size:13px; color:#fff; line-height:35px; text-align:center;}
+.sell_main .car_sell_warp .sell_btm_cont a:hover{text-decoration:none;}
+.sell_main .car_sell_warp.is_fixed  .sell_btm_cont{display: block; position:fixed; left:50%; bottom: 0; margin-left:-590px;}
+.sell_main .sellService_wrap .service_step00 {display:block;height:628px; background:#fff; border-bottom:1px solid #ffffff;margin-bottom:30px;}
+.sell_main .sellService_wrap .service_step00 .cont{width:1180px; margin:0 auto;}
+.sell_main .sellService_wrap .service_step00 .cont .service_desc{padding-top:62px; font-size:15px; color:#555555; text-align:center;}
+.sell_main .sellService_wrap .service_step00 .cont .service_desc strong{display:block; margin-bottom:6px; font-size:24px; color:#000000; line-height:37px;}
+.sell_main .sellService_wrap .service_step00 .cont ul {margin-top:50px;}
+.sell_main .sellService_wrap .service_step00 .cont ul li{position:relative;float:left; text-align:center;width:300px;height:300px; margin:0 46px;background:#f7f7f7;border-radius:50%}
+.sell_main .sellService_wrap .service_step00 .cont ul li span{display:block;padding-top:70px;}
+.sell_main .sellService_wrap .service_step00 .cont ul li p{position:absolute;font-size:18px; color:#000000;top:330px;left:50%;font-weight:bold}
+.sell_main .sellService_wrap .service_step00 .cont ul li p.extxt1{margin-left:-85px;}
+.sell_main .sellService_wrap .service_step00 .cont ul li p.extxt2{margin-left:-65px}
+.sell_main .sellService_wrap .service_step00 .cont ul li p.extxt3{margin-left:-80px}
+.sell_main .sellService_wrap .service_step00 .cont ul li p em{display:block;font-style:normal;padding-top:15px; font-size:15px; color:#555555;font-weight:normal}
+.sell_main .sellService_wrap .service_step01{width:1180px; margin:0 auto;}
+.sell_main .sellService_wrap .service_step01 .service_desc{font-size:15px; color:#555555; text-align:center;}
+.sell_main .sellService_wrap .service_step01 .service_desc strong{display:block; margin-bottom:6px; font-size:24px; color:#000000; line-height:37px;}
+.sell_main .sellService_wrap .service_step01 ul{position:relative; overflow:hidden; margin:50px 0 120px 0;}
+.sell_main .sellService_wrap .service_step01 ul:after{content:''; position:absolute; left:0; top:19px; display:block; width:100%; height:1px; background:#000000;}
+.sell_main .sellService_wrap .service_step01 ul li{position:relative; float:left; width:280px; height:192px; margin-left:20px; padding-top:63px; text-align:center;}
+.sell_main .sellService_wrap .service_step01 ul li:first-child{margin-left:0;}
+.sell_main .sellService_wrap .service_step01 ul li .num{display:block; position:absolute; left:50%; top:0; width:38px; height:38px; margin-left:-19px; background-color:#2d2d38; border-radius:19px; line-height:38px; color:#fff; z-index: 1;}
+.sell_main .sellService_wrap .service_step01 ul li .tit{font-size:18px; color:#000000;}
+.sell_main .sellService_wrap .service_step01 ul li p{padding-top:18px; font-size:13px; line-height:21px; color:#555555;}
+.sell_main .sellService_wrap .service_step01 ul li .img {display:inline-block; position:absolute; left:0; bottom: 0; width:100%; text-align:center;}
+.sell_main .sellService_wrap .service_step02 {height:628px; background:#f7f7f7; border-bottom:1px solid #ffffff;}
+.sell_main .sellService_wrap .service_step02 .cont{width:1180px; margin:0 auto;}
+.sell_main .sellService_wrap .service_step02 .cont .service_desc{padding-top:62px; font-size:15px; color:#555555; text-align:center;}
+.sell_main .sellService_wrap .service_step02 .cont .service_desc strong{display:block; margin-bottom:6px; font-size:24px; color:#000000; line-height:37px;}
+.sell_main .sellService_wrap .service_step02 .cont ul {overflow:hidden; margin-top:50px;}
+.sell_main .sellService_wrap .service_step02 .cont ul li{position:relative;float:left; width:300px; margin:0 46px;}
+.sell_main .sellService_wrap .service_step02 .cont ul li:after{display:block; content:''; position: absolute; left:-48px; top:136px; width:16px; height:30px; background:url(/resources/images/content/sell/bg_arrow04.png) no-repeat left top;}
+.sell_main .sellService_wrap .service_step02 .cont ul li:first-child:after{display:none;}
+.sell_main .sellService_wrap .service_step02 .cont ul li ul{margin:28px 0 0 102px;}
+.sell_main .sellService_wrap .service_step02 .cont ul li ul li{position:relative; float:none; width:auto; padding-left:10px; margin:0 0 6px 0; font-size:13px;}
+.sell_main .sellService_wrap .service_step02 .cont ul li ul li:after{display:block; content:''; position: absolute; left:0; top:8px; width:2px; height:2px; background:#000000;}
+.sell_main .sellService_wrap .service_step02 .cont ul li ul li:first-child:after{display:block;}
+.sell_main .sellService_wrap .service_step03{border-top:1px solid #dddddd; border-bottom:1px solid #dddddd;}
+.sell_main .sellService_wrap .service_step03 .cont{width:1180px; margin:0 auto;}
+.sell_main .sellService_wrap .service_step03 .cont ul {overflow: hidden;}
+.sell_main .sellService_wrap .service_step03 .cont ul li{position:relative; float:left; width:590px; height:280px; text-align:center;}
+.sell_main .sellService_wrap .service_step03 .cont ul li:first-child:after{display:block; content:''; position: absolute; right:0; top:0; width:1px; height:100%; background:#dddddd;}
+.sell_main .sellService_wrap .service_step03 .cont ul li p {padding-top:76px; font-size:15px; line-height:21px; color:#555555;}
+.sell_main .sellService_wrap .service_step03 .cont ul li p strong{display:block; padding-bottom:15px; font-size:24px; color:#181819;}
+.sell_main .sellService_wrap .service_step03 .cont ul li .btn_sell_popup{display:inline-block; width:199px; height:45px; margin-top:28px; border:1px solid #2d2d38; font-size:13px; line-height:43px; color:#555555; box-sizing:border-box; text-align:center;}
+.sell_main .sellService_wrap .service_step04{width:1180px; margin:0 auto;}
+.sell_main .sellService_wrap .service_step04 .service_desc{padding-top:62px; font-size:15px; color:#555555; text-align:center;}
+.sell_main .sellService_wrap .service_step04 .service_desc strong{display:block; margin-bottom:6px; font-size:24px; color:#000000; line-height:37px;}
+.sell_main .sellService_wrap .service_step04 h4{margin-top:40px; font-size:21px; color:#181819; text-align:center; font-weight:bold;}
+.sell_main .sellService_wrap .service_step04 .value_list{overflow:hidden; margin-top:17px; padding-bottom:5px;}
+.sell_main .sellService_wrap .service_step04 .value_list li{float:left; width:380px; height:271px; margin-left:20px; background:#f7f7f7; text-align:center; box-sizing:border-box;}
+.sell_main .sellService_wrap .service_step04 .value_list li:first-child{margin-left:0;}
+.sell_main .sellService_wrap .service_step04 .value_list li .num_txt{padding-top:55px; font-size:50px; color:#ff0040; font-weight: bold;}
+.sell_main .sellService_wrap .service_step04 .value_list li .num_txt .unit{font-size:24px; vertical-align: 0;}
+.sell_main .sellService_wrap .service_step04 .value_list li p{padding-top:28px; font-size:13px; line-height:21px; color:#555555; }
+.sell_main .sellService_wrap .service_step04 .value_list li p strong {display:block; padding-bottom:7px; font-size:18px; color:#181819;}
+.sell_main .sellService_wrap .service_step04 .sell_way{overflow:hidden; margin-top:17px;}
+.sell_main .sellService_wrap .service_step04 .sell_way li{float:left; width:380px; height:335px; margin-left:20px; background:#f7f7f7; text-align:center; box-sizing:border-box;}
+.sell_main .sellService_wrap .service_step04 .sell_way li:first-child{margin-left:0;}
+.sell_main .sellService_wrap .service_step04 .sell_way li .img{display:inline-block; padding-top:60px;}
+.sell_main .sellService_wrap .service_step04 .sell_way li .txt01{padding-top:29px; font-size:13px; line-height:21px; color:#555555; }
+.sell_main .sellService_wrap .service_step04 .sell_way li .txt01 strong {display:block; padding-bottom:7px; font-size:18px; color:#181819;}
+.sell_main .sellService_wrap .service_step04 .sell_way li .txt02{padding-top:23px; font-size:13px; line-height:21px; color:#888888;}
+.sell_main .faq_wrap{width:1180px; margin:0 auto; padding-top:120px;}
+.sell_main .faq_wrap h4{margin-top:7px; font-size:21px; color:#181819; text-align:center; font-weight:bold;}
+.sell_main .faq_wrap .btn_area{margin-top:15px; text-align:center;}
+.sell_main .faq_wrap .btn_area .btn_review{display:inline-block; width:153px; height:35px; border:1px solid #2d2d38; font-size:13px; line-height:33px; color:#555555; box-sizing:border-box;}
+.sell_main .faq_wrap .btn_area .btn_review span{display:inline-block; padding-right:17px; background:url(/resources/images/content/sell/bg_arrow05.png) no-repeat right 15px; letter-spacing:-1px;}
+.sell_main .faq_wrap .faq_list{margin:38px 0 70px; border-top:1px solid #555555;}
+.sell_main .faq_wrap .faq_list li{border-bottom:1px solid #ededed;}
+.sell_main .faq_wrap .faq_list li .faq_head a{position:relative; display:block; padding-left:44px; background:#fafafa url(/resources/images/content/sell/ico_q.png) no-repeat 15px 18px; font-size:15px; line-height:55px; color:#181819;}
+.sell_main .faq_wrap .faq_list li .faq_head a:after{display:block; content: ''; position:absolute; right:25px; top:25px; width:10px; height:5px; background:url(/resources/images/content/sell/bg_faq_arrow.png) no-repeat left top;}
+.sell_main .faq_wrap .faq_list li.active .faq_head a:after{background-position:0 -5px;}
+.sell_main .faq_wrap .faq_list li .faq_body{display:none; border-top:1px solid #ededed; padding:25px 45px 22px; background:url(/resources/images/content/sell/ico_a.png) no-repeat 15px 27px; font-size:15px; line-height:24px; color:#555555;}
+.sell_main .faq_wrap .faq_list li.active .faq_body{display: block;}
+.sell_main .review_Wrap {padding-top:40px;}
+.sell_main .review_Wrap h4{margin-top:7px; font-size:21px; color:#181819; text-align:center; font-weight:bold;}
+.sell_main .review_Wrap .btn_area{margin-top:15px; text-align:center;}
+.sell_main .review_Wrap .btn_area .btn_review{display:inline-block; width:172px; height:35px; border:1px solid #2d2d38; font-size:13px; line-height:33px; color:#555555; box-sizing:border-box;}
+.sell_main .review_Wrap .btn_area .btn_review span{display:inline-block; padding-right:17px; background:url(/resources/images/content/sell/bg_arrow05.png) no-repeat right 15px; letter-spacing:-1px;}
+.sell_main .review_Wrap .review_list{width:100%; height:439px; margin-top:40px;}
+.sell_main .review_Wrap .review_list .review_cont{width:1180px; margin:0 auto; padding-top: 47px;}
+.sell_main .review_Wrap .review_list .review_cont .list {overflow:hidden; margin-left:-20px;}
+.sell_main .review_Wrap .review_list .review_cont .list li{float:left; margin-left:20px; padding-top:3px;}
+.sell_main .review_Wrap .review_list .review_cont .list li .cont{position:relative; width:280px; height:288px; padding:30px 20px 0 20px; background:#fff; box-sizing:border-box;}
+.sell_main .review_Wrap .review_list .review_cont .list li .cont .star_score{display:block; width:94px; height:17px; background:url(/resources/images/content/sell/ico_star.png) no-repeat;}
+.sell_main .review_Wrap .review_list .review_cont .list li .cont .star_score .st_on{display:block; height:17px; background:url(/resources/images/content/sell/ico_star.png) no-repeat; background-position:0 -17px;}
+.sell_main .review_Wrap .review_list .review_cont .list li .cont .star_score .st_on.type01{width:18px;}
+.sell_main .review_Wrap .review_list .review_cont .list li .cont .star_score .st_on.type02{width:38px;}
+.sell_main .review_Wrap .review_list .review_cont .list li .cont .star_score .st_on.type03{width:57px;}
+.sell_main .review_Wrap .review_list .review_cont .list li .cont .star_score .st_on.type04{width:76px;}
+.sell_main .review_Wrap .review_list .review_cont .list li .cont .star_score .st_on.type05{width:94px;}
+.sell_main .review_Wrap .review_list .review_cont .list li .cont .score_txt{display:block; margin-top:8px; font-size:18px; color:#181819;}
+.sell_main .review_Wrap .review_list .review_cont .list li .cont p{overflow:hidden; height:122px; margin-top:23px; line-height: 20px; font-size:13px;}
+.sell_main .review_Wrap .review_list .review_cont .list li .cont p a{white-space: normal; word-wrap: break-word; color:#555555;}
+.sell_main .review_Wrap .review_list .review_cont .list li .cont .date_txt{display:block; font-size:13px; color:#888888;}
+.sell_main .review_Wrap .review_list .review_cont .list li .cont .ico_satisfaction{display:block; position:absolute; top:-3px; right:14px; width:24px; height:25px; background:url(/resources/images/content/sell/ico_satisfaction.png) no-repeat; text-indent:-9999px;}
+.sell_main .review_Wrap .cm_pagination{margin-top:30px;}
+.sell_main .review_Wrap .cm_pagination .pagination li.move a{background:url(/resources/images/content/sell/pagination_arrows.png) no-repeat -30px 0;}
+.sell_main .review_Wrap .cm_pagination .pagination li.move.prev10 a{margin-right:2px; background-position: 0 0;}
+.sell_main .review_Wrap .cm_pagination .pagination li.move.next a{background-position: -60px 0;}
+.sell_main .review_Wrap .cm_pagination .pagination li.move.next10 a{margin-left:2px; background-position: -90px 0;}
+.sell_main .review_Wrap .cm_pagination .pagination li.num a{min-width:16px; color:#726c6c;}
+.sell_main .review_Wrap .cm_pagination .pagination li.num.on a{color:#fff;}
+.sell_main .sell_review_wrap{position: relative; width:100%; height:212px; margin-top:10px;}
+.sell_main .sell_review_wrap ul{overflow:hidden;}
+.sell_main .sell_review_wrap li{overflow:hidden; float:left; width:448px !important;}
+.sell_main .sell_review_wrap li .large_box{float:left; width:296px; height:200px; margin-right:10px;}
+.sell_main .sell_review_wrap li .large_box img{width:296px; height:200px;}
+.sell_main .sell_review_wrap li .small_area{float:left;}
+.sell_main .sell_review_wrap li .small_area img {width:142px; height:97px;}
+.sell_main .sell_review_wrap li .small_area .small_box{width:142px; height:97px;}
+.sell_main .sell_review_wrap .bx-controls-direction{position:absolute; left:50%; top:76px; width:1180px; margin-left:-590px;}
+.sell_main .sell_review_wrap .bx-controls-direction .bx-prev{display:block; position:absolute; left:0; top:0; width:35px; height:60px; background:url(/resources/images/content/sell/btn_prev04.png) no-repeat; text-indent:-9999px;}
+.sell_main .sell_review_wrap .bx-controls-direction .bx-prev.disabled{display:none;}
+.sell_main .sell_review_wrap .bx-controls-direction .bx-next{display:block; position:absolute; right:0; top:0; width:35px; height:60px; background:url(/resources/images/content/sell/btn_next04.png) no-repeat; text-indent:-9999px;}
+.sell_main .sell_review_wrap .bx-controls-direction .bx-next.disabled{display:none;}
+.sell_main .document_guide{width:1180px; margin:0 auto; padding:107px 0 14px;}
+.sell_main .document_guide h4{ font-size:21px; color:#181819; text-align:center; font-weight:bold;}
+.sell_main .document_guide .document_box{overflow:hidden; margin-top:50px;}
+.sell_main .document_guide .document_box .left{float:left; width:580px;}
+.sell_main .document_guide .document_box .right{float:right; width:580px;}
+.sell_main .document_guide .document_box .document_guide_box { height:271px; box-sizing: border-box;}
+.sell_main .document_guide .document_guide_box {position:relative; border:1px solid #dddddd; padding:0 0 32px 37px;}
+.sell_main .document_guide .document_guide_box.type01:after{display:block; content:''; position:absolute; right:30px; top:30px; width:96px; height:96px;background:url(/resources/images/content/sell/bg_guide03.png) no-repeat;}
+.sell_main .document_guide .document_guide_box.type02:after{display:block; content:''; position:absolute; right:30px; top:30px; width:96px; height:96px;background:url(/resources/images/content/sell/bg_guide04.png) no-repeat;}
+.sell_main .document_guide .document_guide_box h5 {padding-top:35px; font-size:21px; color:#181819; font-weight:bold; letter-spacing:-1px;}
+.sell_main .document_guide .document_guide_box h5 span{padding-left:5px; font-size:13px; color:#555555;}
+.sell_main .document_guide .document_guide_box ul {padding-top:24px;}
+.sell_main .document_guide .document_guide_box ul li{padding-bottom:3px; font-size:14px; color:#555555;}
+
+.sell_popup{ display: none; width: 645px; height:807px; border: 1px solid #222; position: fixed; top:40px; left: 50%; margin-left:-322px; z-index: 50; background-color: #fff; }
+.sell_popup .head { height: 50px; line-height: 50px; position: relative; padding: 0 20px; background-color: #2d2d38; }
+.sell_popup .head strong { font-weight: 500; letter-spacing: -0.07em; font-size: 17px; color: #fff; }
+.sell_popup .head a { display: block; width: 15px; height: 15px; position: absolute; top: 50%; right: 20px; margin-top: -7px; text-indent: -9999px; background: url("/resources/images/content/buy/more_popup_close.png") no-repeat 0 0; }
+.sell_popup .scroll_wrap{height:750px; overflow:hidden;padding-top:45px; box-sizing: border-box;}
+.sell_popup .scroll_wrap .scroll-wrapper{}
+.sell_popup .scroll_wrap .scrollbar-inner{height: 100%; box-sizing: border-box;}
+.sell_popup .scroll_wrap .scrollbar-dynamic { height: 100%; box-sizing: border-box;}
+.sell_popup .scroll_wrap ul.list{overflow:hidden; margin:37px 0 0 40px;}
+.sell_popup .scroll_wrap ul.list li{position:relative; float:left; width:280px; height:121px; padding-left: 100px; box-sizing: border-box;}
+.sell_popup .scroll_wrap ul.list li.prepare{width:565px;padding-left:250px;font-size:15px;color:#181819;font-weight:bold;}
+.sell_popup .scroll_wrap ul.list li .img{display:block; position: absolute; left:0; top:0; width:80px; height:80px; background:url(/resources/images/content/direct/bg_employee.png) left top no-repeat;}
+.sell_popup .scroll_wrap ul.list li .img img{width:80px; height:80px;}
+.sell_popup .scroll_wrap ul.list li .cont .tit strong{font-size:15px; color:#181819;}
+.sell_popup .scroll_wrap ul.list li .cont .tit span{display:inline-block; position:relative; margin-left:6px; padding-left:8px; font-size:13px; color:#555555;}
+.sell_popup .scroll_wrap ul.list li .cont .tit span:after{display:inline-block; content: ''; position:absolute; left:0; top:3px; width:1px; height:10px; background:#555555;}
+.sell_popup .scroll_wrap ul.list li .cont .phone_txt{display:block; padding-top: 3px; font-size:13px; color:#555555;}
+.sell_popup .scroll_wrap ul.list li .cont p{padding-top:2px; font-size:13px; color:#555555; line-height:21px;}
+.sell_popup .introduce_wrap .txt{text-align: center; font-size:24px; color:#111111; letter-spacing:-1px; font-weight:bold;}
+.sell_popup .introduce_wrap .txt02{padding-top:11px; text-align: center; font-size:15px; color:#555555; letter-spacing:-1px;}
+.sell_popup .introduce_wrap .introduce_sel{margin-top:36px; padding: 0 40px; box-sizing: border-box;}
+.sell_popup .introduce_wrap .introduce_sel .selectric-wrapper{display: inline-block; width:282px; margin-left:-3px;}
+.sell_popup .introduce_wrap .introduce_sel .selectric-wrapper:first-child{margin-left:0;}
+.sell_popup .introduce_wrap .introduce_sel .selectric{ background:#fff;}
+.sell_popup .introduce_wrap .introduce_sel .selectric .button{height:33px; background:#fff; line-height:33px;}
+.sell_popup .introduce_wrap .introduce_sel .selectric .label{height:33px; line-height:33px;}
+.sell_popup .introduce_wrap .introduce_sel .selectric-items .selectric-scroll li{position: relative; padding-right: 60px;}/* 추가 */
+.sell_popup .introduce_wrap .introduce_sel .selectric-items .selectric-scroll li em{position: absolute; top: 10px; right: 20px; font-style:normal;}/* 추가 */
+.sell_popup .introduce_wrap .car_certificate{width:563px; margin:48px auto 0 auto; padding-bottom:80px; text-align:center;}
+
+/*20181122*/
+.buy_main{position:relative;}
+.buy_main:before, .buy_main:after { content: ""; display: table; }
+.buy_main:after { clear: both; }
+/* 20191118 홈서비스 내차사기 키비주얼 */
+.buy_main .visual_top{position:relative; width:100%; height:415px; background:#eaebed;}
+.buy_main .visual_top .visualimg1{width:100%; height:415px; background:url(/resources/images/homeencar/contents/buy_topvisual_20191118.jpg) no-repeat center top;}
+/* .buy_main .visual_top .visualimg{width:100%; height:413px; background:url(/resources/images/homeencar/contents/buy_topvisual_0515.png) no-repeat center top;} */
+/* //20191118 홈서비스 내차사기 키비주얼 */
+.buy_main .visual_top .cont{width:1180px;margin:0 auto; position:relative; padding-top:39px;}
+.buy_main .visual_top .cont .tit{height:40px; background:url(/resources/images/homeencar/contents/buy_topvisual_tit.png) no-repeat left top; overflow:hidden; text-indent:-55555px; font-size:0.1em;}
+.buy_main .visual_top .cont .like_list{overflow:hidden;}
+.buy_main .visual_top .cont .like_list li{float:left; padding:6px 17px 0 0; margin-right:5px; background:url(/resources/images/homeencar/contents/check_k.png) no-repeat right top; color:#000; font-size:13px;}
+/* 20191118 홈서비스 내차사기 키비주얼 */
+.buy_main .visual_top .cont .visual_txt01{padding-top:26px; font-size:45px; color:#181819; letter-spacing:-1px;padding-left:60px}
+.buy_main .visual_top .cont .visual_txt01 .redtxt{color:#ff0040;}
+.buy_main .visual_top .cont .visual_txt02{color:#181819; font-size:15px;padding-left:65px;padding-top:15px;}
+.buy_main .visual_top .cont .buy_ser_btn a{display:inline-block; width:175px; padding:14px 0; color:#fff; font-size:13px; text-align:center;font-weight:normal}
+.buy_main .visual_top .cont .buy_ser_btn .btn_cars{position:absolute; top:305px; left:60px; background:#ff0040;}
+.buy_main .visual_top .cont .buy_ser_btn .btn_live{position:absolute; top:305px; left:240px; background:#2d2d38;}
+/* //20191118 홈서비스 내차사기 키비주얼 */
+.buy_main .buy_receive{width:1180px; margin:60px auto 0 auto;}
+.buy_main .buy_receive h4{padding-top:0px; font-size:24px; text-align:center; color:#111111; font-weight: bold;}
+.buy_main .buy_receive .buy_receive_num {overflow:hidden; margin:25px 0 0 0;text-align:center;}
+.buy_main .buy_receive .buy_receive_num dl{display:inline-block;margin-left:20px; padding-left:44px; background:url(/resources/images/content/sell/bg_receive02.png) no-repeat left 48px; box-sizing: border-box;}
+.buy_main .buy_receive .buy_receive_num dl:first-child{margin:0; padding:0; background:none; text-align:center;}
+.buy_main .buy_receive .buy_receive_num dl dt{font-size:15px; padding-bottom:13px; color:#181819; letter-spacing:-1px; font-weight:bold;text-align:center;}
+.buy_main .buy_receive .buy_receive_num dl dd{ font-size:50px; color:#181819; letter-spacing:-1px; font-weight:bold;}
+.buy_main .buy_receive .buy_receive_num dl:first-child dd{color:#ff0040;}
+.buy_main .realtime_info {margin-top:47px; overflow:hidden; height:166px;}
+.buy_main .realtime_info ul {overflow:hidden;}
+.buy_main .realtime_info ul li{float:left; width:280px !important; height:166px; margin-right:20px;}
+.buy_main .realtime_info ul li .cont { height:120px; padding:33px 30px 0 30px; border:1px solid #dddddd; box-shadow: 0px 6px 11px 0px rgba(221,221,221,0.5);}
+.buy_main .realtime_info ul li .cont .ico_type01{display:block; width:52px; height:20px; border:1px solid #f7c298; line-height:18px; font-size:11px; text-align:center; color:#f08631; box-sizing:border-box;}
+.buy_main .realtime_info ul li .cont .ico_type02{display:block; width:52px; height:20px; border:1px solid #89d9e0; line-height:18px; font-size:11px; text-align:center; color:#14b4c2; box-sizing:border-box;}
+.buy_main .realtime_info ul li .cont .ico_type03{display:block; width:52px; height:20px; border:1px solid #dddddd; line-height:18px; font-size:11px; text-align:center; color:#555555; box-sizing:border-box;}
+.buy_main .realtime_info ul li .cont .ico_type04{display:block; width:52px; height:20px; border:1px solid #ff7f9f; line-height:18px; font-size:11px; text-align:center; color:#ff0040; box-sizing:border-box;}
+.buy_main .realtime_info ul li .cont .txt{height:48px; max-width:100%; margin-top:7px; font-size:18px; line-height:24px; color:#181819; letter-spacing:-1px; font-weight:bold; overflow: hidden; }
+.buy_main .realtime_info ul li .cont .num_txt{margin-top:9px; font-size:13px; color:#888888; }
+.buy_main .realtime_info ul li .cont .num_txt .street_txt{padding-left: 10px;}
+.buy_main .car_buy_warp{position:relative;width:100% }
+.buy_main .buyService_wrap .service_step02 {height:600px; }
+.buy_main .buyService_wrap .service_step02 .cont{width:1180px; margin:0 auto;}
+.buy_main .buyService_wrap .service_step02 .cont .service_desc{padding-top:62px; font-size:15px; color:#555555; text-align:center;}
+.buy_main .buyService_wrap .service_step02 .cont .service_desc strong{display:block; margin-bottom:6px; font-size:24px; color:#000000; line-height:37px;}
+.buy_main .buyService_wrap .service_step02 .cont ul {overflow:hidden; margin-top:40px;}
+.buy_main .buyService_wrap .service_step02 .cont ul li{position:relative;float:left; width:300px; margin:0 46px;}
+.buy_main .buyService_wrap .service_step02 .cont ul li ul{margin-top:28px ;margin-left:-46px}
+.buy_main .buyService_wrap .service_step02 .cont ul li ul li{position:relative; font-size:18px;text-align:center;color:#000}
+.buy_main .buyService_wrap .service_step02 .cont ul li ul li span{ font-size:15px;color:#555}
+.buy_main .buyService_wrap .service_step02 .cont ul li ul li span em{ font-style:normal}
+.buy_main .buyService_wrap1 {width:100%;background:#f7f7f7}
+.buy_main .buyService_wrap1 .service_step04{width:1180px; margin:0 auto;background:#f7f7f7}
+.buy_main .buyService_wrap1 .service_step04 .service_desc{padding-top:62px; font-size:15px; color:#555555; text-align:center;line-height:24px}
+.buy_main .buyService_wrap1 .service_step04 .service_desc strong{display:block; margin-bottom:6px; font-size:24px; color:#000000; line-height:37px;}
+.buy_main .buyService_wrap1 .service_step04 .value_list{overflow:hidden; margin-top:17px; padding:20px 0 60px 0;}
+.buy_main .buyService_wrap1 .service_step04 .value_list li{display:inline-block; width:342px; height:354px; margin-left:50px;  text-align:center; box-sizing:border-box;border-radius:10px;box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.03); }
+.buy_main .buyService_wrap1 .service_step04 .value_list li:first-child{margin-left:25px;}
+.buy_main .buyService_wrap1 .service_step04 .value_list li .num_txt{padding-top:50px; font-size:15px; color:#ff0040; font-weight: bold;}
+.buy_main .buyService_wrap1 .service_step04 .value_list li.step1{background:url(/resources/images/homeencar/contents/buy_step1.png) no-repeat center 90px #fff}
+.buy_main .buyService_wrap1 .service_step04 .value_list li.step2{background:url(/resources/images/homeencar/contents/buy_step2.png) no-repeat center 90px #fff}
+.buy_main .buyService_wrap1 .service_step04 .value_list li.step3{background:url(/resources/images/homeencar/contents/buy_step3.png) no-repeat center 90px #fff}
+.buy_main .buyService_wrap1 .service_step04 .value_list li p{padding-top:150px; font-size:13px; line-height:21px; color:#555555; }
+.buy_main .buyService_wrap1 .service_step04 .value_list li p strong {display:block; padding-bottom:7px; font-size:18px; color:#181819;}
+.buy_main .faq_wrap{width:1180px; margin:0 auto; padding-top:50px;}
+.buy_main .faq_wrap h4{margin-top:7px; font-size:21px; color:#181819; text-align:center; font-weight:bold;}
+.buy_main .faq_wrap .btn_area{margin-top:15px; text-align:center;}
+/*20181122*/
+.buy_main .faq_wrap .btn_area .btn_review{display:inline-block; width:153px; height:35px; border:1px solid #2d2d38; font-size:13px; line-height:35px; color:#555555; box-sizing:border-box;}
+.buy_main .faq_wrap .btn_area .btn_review span{display:inline-block; padding-right:17px; background:url(/resources/images/content/sell/bg_arrow05.png) no-repeat 110px 14px; letter-spacing:-1px;}
+/*//20181122*/
+.buy_main .faq_wrap .faq_list{margin:38px 0 0px; border-top:1px solid #555555;}
+.buy_main .faq_wrap .faq_list li{border-bottom:1px solid #ededed;}
+.buy_main .faq_wrap .faq_list li .faq_head a{position:relative; display:block; padding-left:44px; background:#fafafa url(/resources/images/content/sell/ico_q.png) no-repeat 15px 18px; font-size:15px; line-height:55px; color:#181819;}
+.buy_main .faq_wrap .faq_list li .faq_head a:after{display:block; content: ''; position:absolute; right:25px; top:25px; width:10px; height:5px; background:url(../images/content/sell/bg_faq_arrow.png) no-repeat left top;}
+.buy_main .faq_wrap .faq_list li.active .faq_head a:after{background-position:0 -5px;}
+.buy_main .faq_wrap .faq_list li .faq_body{display:none; border-top:1px solid #ededed; padding:25px 45px 22px; background:url(/resources/images/content/sell/ico_a.png) no-repeat 15px 27px; font-size:15px; line-height:24px; color:#555555;}
+.buy_main .faq_wrap .faq_list li.active .faq_body{display: block;}
+.buy_main .review_wrap {padding-top:50px;}
+.buy_main .review_wrap .service_desc{font-size:15px; color:#555555; text-align:center;line-height:1.6}
+.buy_main .review_wrap .service_desc strong{font-size:24px; color:#000000; line-height:2}
+.buy_main .review_wrap .btn_area{margin:15px 0 10px 0; text-align:center;}
+.buy_main .review_wrap .btn_area .btn_review{display:inline-block; width:172px; height:35px; border:1px solid #2d2d38; font-size:13px; line-height:33px; color:#555555; box-sizing:border-box;}
+.buy_main .review_wrap .btn_area .btn_review span{display:inline-block; padding-right:17px; background:url(/resources/images/content/sell/bg_arrow05.png) no-repeat right 15px; letter-spacing:-1px;}
+.buy_main .document_guide{width:1180px; margin:0 auto; padding-top:40px ;position:relative;}
+.buy_main .document_guide .document_guide_box { border:1px solid #dddddd; padding:0 0 32px 37px;}
+.buy_main .document_guide .document_guide_box.type01:after{display:block; content:''; position:absolute; right:30px; top:30px; width:96px; height:96px;background:url(/resources/images/content/sell/bg_guide03.png) no-repeat;}
+.buy_main .document_guide .document_guide_box.type02:after{display:block; content:''; position:absolute; right:30px; top:30px; width:96px; height:96px;background:url(/resources/images/content/sell/bg_guide04.png) no-repeat;}
+.buy_main .document_guide .document_guide_box h5 {padding-top:35px; font-size:21px; color:#181819; font-weight:bold; letter-spacing:-1px;}
+.buy_main .document_guide .document_guide_box h5 span{padding-left:5px; font-size:13px; color:#555555;}
+.buy_main .document_guide .document_guide_box ul {padding-top:24px;}
+.buy_main .document_guide .document_guide_box ul li{padding-bottom:3px; font-size:14px; color:#555555;}
+.buy_main .document_guide .document_guide_box .buy_refund_btn{position:absolute; border:1px solid #ddd; font-size:13px; color:#555555;right:50px;top:80px ;padding:5px 15px;}

@@ -1,0 +1,997 @@
+@charset "utf-8";
+/* page title */
+.page_head .tit{padding: 10px 0 40px 0; font-size: 36px; text-align: center; color: #181819; font-weight: 600; letter-spacing: -2px;}
+/* event */
+.eventCont{padding:10px 0 100px 0;border-top:1px solid #CCC}
+.eventCont h3{padding-bottom:5px; font-size:18px; font-weight:bold;}
+.eventCont .event_list ul{overflow:hidden; *zoom:1;}
+.eventCont .event_list li{position:relative; float:left; width:277px; height:105px; margin:5px 16px 8px 0; padding:10px 10px 10px 93px; border:1px solid #e0e0e0;}
+.eventCont .event_list li.nopadd{margin-right:0;}
+.eventCont .event_list li span.img{position:absolute; left:10px; top:10px;}
+.eventCont .event_list li span.img img{border:1px solid #c3c0c0;}
+.eventCont .event_list li span.eventView{position:absolute; left:10px; top:95px; width:71px; text-align:center; text-decoration:underline; font-size:11px;}
+.eventCont .event_list li span{display:block;}
+.eventCont .event_list li span.title{padding-top:5px; font-weight:bold; color:#d42a35; font-size:11px;}
+.eventCont .event_list li span.text{padding:10px 0 15px 0; font-size:11px;}
+.eventCont .event_list li span.date{font-size:11px;}
+/* chanel  */
+.chanel_main .play_social .bx-next.disabled {background-position:-63px -39px !important}
+.chanel_main .play_social .bx-prev.disabled {background-position:-55px -39px !important}
+
+
+.chn_list .bx-controls-direction .bx-next.disabled {background-position:-63px -39px}
+.chn_list .bx-controls-direction .bx-prev.disabled {background-position:-55px -39px}
+
+.v_list .bx-controls-direction .bx-next.disabled {background-position:-63px -39px}
+.v_list .bx-controls-direction .bx-prev.disabled {background-position:-55px -39px}
+
+.v_list02 .bx-controls-direction .bx-next.disabled {background-position:-63px -39px}
+.v_list02 .bx-controls-direction .bx-prev.disabled {background-position:-55px -39px}
+
+
+/*�긽�떒諛곕꼫*/
+.chanel_main {margin-bottom:40px;}
+.sub_banner {background:#f4f4f4; padding:40px 0 40px; text-align:center;}
+.sub_banner p {color:#404041; font-size:24px; font-weight:600}
+.sub_banner p span {display:block; padding:8px 0 0; color:#7f7f7f; font-size:14px; font-weight:100;}
+.sub_banner span {display:block; padding-bottom:20px;}
+.sub_banner .type02 p span  {padding:8px 0 18px;}
+
+/*�뵆�젅�씠硫붿씤*/
+.play_main {}
+.play_main .stit {color:#000; font-size:14px; font-weight:400;}
+.play_main .stit:first-child {margin-right:578px;}
+.play_main .tab_list > ul {position:relative; width:685px; height:385px; padding-right:495px;}
+.play_main .tab_list > ul > li {overflow:hidden; clear:both;}
+.play_main .tab_list > ul > li:after {content:""; display:block; clear:both;}
+.play_main .tab_list ul.bxslider li {position:relative; width:685px;}
+/*.play_main .tab_list ul.bxslider li.on a {display:block; position:absolute; top:50%; left:50%; background:url(https://www.kcar.com/resources/images/channel/chanel_play.png) 50% 50% no-repeat; width:87px; height:87px; margin:-43.5px 0 0 -43.5px;}*/
+.play_main .tab_list ul.bxslider02 li {width:685px !important;}
+.play_main .tab_btn {padding:45px 0 16px 0;}
+.play_main .tab_btn ul {float:right; overflow:hidden; margin-right:346px; zoom:1;}
+.play_main .tab_btn ul:after {content:""; display:block; clear:both;}
+.play_main .tab_btn ul li {float:left;}
+.play_main .tab_btn ul li a {color:#858383; font-size:14px; font-weight:400;}
+.play_main .tab_btn ul li a.on {color:#282828;}
+.play_main .tab_btn ul li:first-child a {position:relative; padding-right:14px; margin-right:14px;}
+.play_main .tab_btn ul li:first-child a:before {content:""; display:block; position:absolute; top:50%; right:0; background:#282828; width:1px; height:12px; margin-top:-6px;}
+.play_main .tab_list .bx-wrapper {position:relative;}
+.play_main .tab_list .thumb {position:absolute; top:0; right:0;}
+.play_main .tab_list .thumb a {display:block; width:460px; margin-top:13px;}
+.play_main .tab_list .thumb a:first-child {margin-top:0;}
+.play_main .tab_list .thumb a img {display:inline-block; *display:inline; max-width:115px; border:1px solid #d1d1d1; zoom:1;}
+.play_main .tab_list .thumb p {display:inline-block; *display:inline; padding-left:20px; zoom:1;}
+.play_main .tab_list .thumb p span {display:block; margin-bottom:4px; color:#7f7f7f; font-weight:400;}
+.play_main .tab_list .thumb p span:first-child {font-size:14px;}
+.play_main .tab_list .thumb p span.topic_txt {font-weight:100; height:15px; overflow: hidden; max-width: 315px; width: 315px; text-overflow: ellipsis; white-space: nowrap;}
+
+span.topic_numbers{display:inline-block;overflow:hidden;font-size:11px;margin-top:8px}
+span.topic_numbers b.ico_playing{display:inline-block;background:url(https://www.kcar.com/resources/images/channel/ico_playing.png) no-repeat 0 1px; width:11px;height:11px;font-size:11px;}
+span.topic_numbers b.ico_good{display:inline-block;background:url(https://www.kcar.com/resources/images/channel/ico_good.png) no-repeat 0 1px; width:14px;height:11px;font-size:11px;}
+span.topic_numbers b.ico_comment{display:inline-block;background:url(https://www.kcar.com/resources/images/channel/ico_comment.png) no-repeat 0 1px; width:14px;height:11px;}
+
+.play_main .tab_list .bx-controls-direction a {position:absolute; top:50%; background:url(https://www.kcar.com/resources/images/channel/ico.png) no-repeat; width:15px; height:40px; margin-top:-21px; font-size:0;}
+.play_main .tab_list .bx-controls-direction .bx-prev {left:16px; background-position: 0 -30px;}
+.play_main .tab_list .bx-controls-direction .bx-next {right:16px; background-position:-15px -30px;}
+.play_main .tab_list .bx-wrapper .bx-caption {position: absolute; bottom:0; left:0;width: 100%; height:114px; color:#fff; font-size:16px;
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+
+}
+.play_main .tab_list .bx-wrapper .bx-caption span {position:absolute; bottom:43px; left:48px;}
+
+/*�뵆�젅�씠由ъ뒪�듃*/
+.chanel_menu {overflow:hidden; padding:33px 0 13px; border-bottom:1px solid #e5e5e5; zoom:1;}
+.chanel_menu:after {content:""; display:block; clear:both;}
+.chanel_menu ul {overflow:hidden; zoom:1;}
+.chanel_menu ul:after {content:""; display:block; clear:both;}
+.chanel_menu ul li {float:left; height:22px; margin-left:21px; padding:2px 0 0 30px; line-height:22px}
+.chanel_menu ul li:first-child {margin-left:0;}
+.chanel_menu ul li a {color:#404041; font-size:16px; line-height:16px;}
+.chanel_menu ul li.ico06{float:right;}
+.chanel_menu p {float:right;}
+
+.chanel_main .chn_list {margin:49px 0 53px;}
+.chanel_main .chn_list h3 {margin-bottom:14px; padding:2px 0 0 29px; color:#404041; font-size:14px; font-weight:400;}
+.chanel_main .chn_list .inner > div {margin-top:43px;}
+.chanel_main .chn_list ul {overflow:hidden; zoom:1;}
+.chanel_main .chn_list ul:after {content:""; display:block; clear:both;}
+.chanel_main .chn_list ul li {float:left}
+.chanel_main .chn_list ul li:first-child {margin-left:0;}
+.chanel_main .chn_list ul li a {display:block;}
+.chanel_main .chn_list ul li img {max-width:207px; border:1px solid #d1d1d1; box-sizing:border-box;}
+.chanel_main .chn_list ul li span {display:block; width:207px; margin-top:10px; color:#404041; text-align:left; letter-spacing:-.5px; font-size:12px; font-weight:100;}
+.chanel_main .chn_list .bx-wrapper {position:relative;width:100%;}
+.chanel_main .chn_list .bx-wrapper .bx-controls-direction a {margin-top:-28px;}
+.chanel_main .bx-controls-direction .bx-next {right:-16px; background-position:-43px -39px;}
+
+.chanel_main .bx-controls-direction a,
+#sub_wrap .bx-controls-direction a,
+.brand_campagin .bx-controls-direction a,
+.social_main .bx-controls-direction a {position:absolute; top:50%; background:url(https://www.kcar.com/resources/images/channel/ico.png) no-repeat; width:8px; height:22px; margin-top:-28px; font-size:0;}
+.chanel_main .bx-controls-direction .bx-prev ,
+#sub_wrap .bx-controls-direction .bx-prev ,
+.brand_campagin .bx-controls-direction .bx-prev ,
+.social_main .bx-controls-direction .bx-prev {left:-16px; background-position:-35px -39px;}
+.chanel_main .bx-controls-direction .bx-next,
+#sub_wrap .bx-controls-direction .bx-next,
+.brand_campagin .bx-controls-direction .bx-next,
+.social_main .bx-controls-direction .bx-next{right:-16px; background-position:-43px -39px;}
+
+
+
+.chanel_main .play_social {background:#e7f5fa; width:100%; margin-bottom:20px; padding:39px 0 36px;}
+.chanel_main .play_social h3 {margin-bottom:15px;}
+.chanel_main .play_social ul li a img {display:block; max-width:209px; height:209px;}
+.chanel_main .play_social ul li a span {display:block; margin-top:10px; font-size:12px; font-weight:100;}
+.chanel_main .play_social .bx-wrapper {position:relative; width:100%;}
+
+.chanel_main .sns {text-align:right;}
+.chanel_main .sns ul {display:inline-block; *display:block; * overflow:hidden; zoom:1;}
+.chanel_main .sns ul:after {content:""; display:block; clear:both;}
+.chanel_main .sns ul li {float:left;margin-left:3px; font-size:0;}
+.chanel_main .sns ul li a {display:block; background:url(https://www.kcar.com/resources/images/channel/ico.png) no-repeat; width:30px; height:30px; }
+.chanel_main .sns ul li.sns01 a {background-position:0 0; margin-left:0;}
+.chanel_main .sns ul li.sns02 a {background-position:-33px 0;}
+.chanel_main .sns ul li.sns03 a {background-position:-66px 0;}
+.social_main {margin-top:42px;}
+.social_main .social_top {overflow:hidden; zoom:1;}
+.social_main .social_top:after {content:""; display:block; clear:both;}
+.social_main .social_top div {float:left;}
+.social_main .social_top div:first-child {position:relative; background:#f1f1f1; width:332px; height:384px; text-align:center;}
+.social_main .social_top div:first-child span {display:block; margin-top:101px; font-size:14px; font-weight:100;}
+.social_main .social_top ul {position:absolute; top:50%; left:50%; width:65px; margin:-15px 0 0 -32.5px;}
+.social_main .social_top ul li {display:inline-block;}
+.social_main .social_top ul li a {display:block; background:url(https://www.kcar.com/resources/images/channel/ico.png) no-repeat; width:30px; height:30px; font-size:0;}
+.social_main .social_top ul li.sns01 a {background-position:-33px 0;}
+.social_main .social_top ul li.sns02 a {background-position:-66px 0;}
+.social_main .social_top .play01 {position:relative;}
+.social_main .social_top .play01.first{margin:0 41px;}
+.social_main .social_top .play01 img {max-width:383px;}
+.social_main .social_top .play01 div {position: absolute; bottom:0; left:0;width: 100%; height:114px;
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+.social_main .social_top .play01 div span {position:absolute; bottom:22px; left:18px; color:#fff; font-size:16px; font-weight:100;}
+
+
+.social_main .social_cts {margin:52px 0 0;}
+.social_main .social_cts .tab_btn03 {margin-bottom:15px;}
+.social_main .social_cts .tab_btn03 ul{overflow:hidden; *zoom:1;}
+.social_main .social_cts .tab_btn03 ul:after {content:""; display:block; clear:both;}
+.social_main .social_cts .tab_btn03 ul li {float:left; margin-left:9px;}
+.social_main .social_cts .tab_btn03 ul li:first-child {margin-left:0;}
+.social_main .social_cts .tab_btn03 ul li a {position:relative; color:#909090; font-size:14px; padding-right:9px;}
+.social_main .social_cts .tab_btn03 ul li a.on {color:#404041}
+.social_main .social_cts .tab_btn03 ul li:first-child a:before {content:""; display:block; position:absolute; right:0; bottom:1px; background:#404041; width:1px; height:12px;}
+.social_main .social_cts .tab_wrap ul {overflow:hidden; *zoom:1;}
+.social_main .social_cts .tab_wrap ul:after {content:""; display:block; clear:both;}
+.social_main .social_cts .tab_wrap ul li {float:left; margin-right:30px; margin-bottom:59px;}
+.social_main .social_cts .tab_wrap ul li img {width:172px; height:172px;}
+.social_main .social_cts .tab_wrap ul li span {display:block; margin-top:18px;}
+
+.social_main .cate_play {margin:52px 0 0;}
+.social_main .cate_play .tab_btn ul{overflow:hidden; margin-bottom:15px; *zoom:1;}
+.social_main .cate_play .tab_btn ul:after {content:""; display:block; clear:both;}
+.social_main .cate_play .tab_btn ul li {float:left; margin-left:9px;}
+.social_main .cate_play .tab_btn ul li:first-child {margin-left:0;}
+.social_main .cate_play .tab_btn ul li a {position:relative; color:#909090; font-size:14px; padding-right:9px;}
+.social_main .cate_play .tab_btn ul li a.on {color:#404041}
+.social_main .cate_play .tab_btn ul li:first-child a:before {content:""; display:block; position:absolute; right:0; top:50%; background:#404041; width:1px; height:12px; margin-top:-6px}
+.social_main .cate_play .v_list ul {overflow:hidden; *zoom:1;}
+.social_main .cate_play .v_list ul:after {content:""; display:block; clear:both;}
+.social_main .cate_play .v_list ul li {float:left; margin-right:35px; margin-bottom:59px;}
+.social_main .cate_play .v_list ul li img {max-width:208px; height:209px; border:1px solid #d1d1d1; box-sizing:border-box;}
+.social_main .cate_play .v_list ul li span {display:block; margin-top:18px; font-weight:100; font-size:12px; width: 208px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+
+
+.chn_cate {overflow:hidden; background:#f5f5f5; width:100%; margin:70px 0 20px; padding:39px 0 36px; *zoom:1;}
+.chn_cate:after {content:""; display:block; clear:both;}
+.chn_cate h3 {float:left; margin:0 5px 15px 0; color:#282828; font-size:14px;}
+.chn_cate ul li a {display:block;}
+.chn_cate ul li a img {display:block; width:100%; max-width:208px; border:1px solid #d1d1d1; box-sizing:border-box;}
+.chn_cate ul li a span {display:block; margin-top:15px; font-weight:100; font-size:12px; width: 208px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.chn_cate .tab_btn ul {overflow:hidden; *zoom:1;}
+.chn_cate .tab_btn ul:after {content:""; display:block; clear:both;}
+.chn_cate .tab_btn ul li {float:left;}
+.chn_cate .tab_btn ul li:first-child {margin-left:0;}
+.chn_cate .tab_btn ul li:first-child a {padding-right:8px;}
+.chn_cate .tab_btn ul li a {position:relative; padding-left:8px; color:#858383; font-size:14px;}
+.chn_cate .tab_btn ul li:first-child a:before {content:""; display:block; position:absolute; right:0; top:50%; background:#434343; width:1px; height:12px; margin-top:-6px;}
+.chn_cate .tab_btn ul li a.on  {color:#282828;}
+.chn_cate .v_list ul li {width:172px;}
+.chn_cate .bx-wrapper {position:relative; width:1180px !important; max-width:1180px !important;}
+.chn_cate.ver02 {background:none; border-top:1px solid #e5e5e5; margin:60px 0 0; padding:59px 0 0;}
+.chn_cate.ver03 {background:#f0f9fc;}
+/*.v_list02 .bx-controls-direction .bx-prev {left:-16px; background-position:-35px -39px;}
+.v_list02  .bx-controls-direction .bx-next {right:-16px; background-position:-43px -39px;}
+
+*/
+
+.chn_social {overflow:hidden; background:#f5f5f5; width:100%; margin:74px 0 20px; padding:39px 0 36px; *zoom:1;}
+.chn_social:after {content:""; display:block; clear:both;}
+.chn_social h3 {float:left; margin:0 5px 15px 0; color:#282828; font-size:14px; font-weight:600;}
+.chn_social ul li a img {display:block; width:172px; height:97px;}
+.chn_social ul li a span {display:block; margin-top:15px;}
+.chn_social .tab_btn02 ul {overflow:hidden; *zoom:1;}
+.chn_social .tab_btn02 ul:after {content:""; display:block; clear:both;}
+.chn_social .tab_btn02 ul li {float:left;}
+.chn_social .tab_btn02 ul li:first-child {margin-left:0;}
+.chn_social .tab_btn02 ul li:first-child a {padding-right:8px;}
+.chn_social .tab_btn02 ul li a {position:relative; padding-left:8px; color:#858383; font-size:14px; font-weight:600;}
+.chn_social .tab_btn02 ul li:first-child a:before {content:""; display:block; position:absolute; right:0; bottom:1px; background:#434343; width:2px; height:12px;}
+.chn_social .tab_btn02 ul li a.on  {color:#282828;}
+.chn_social .tab_list02 ul li {width:172px; height:127px;}
+.chn_social .bx-wrapper {position:relative; width:100%;}
+
+
+/* social detail - page */
+.social_detail {}
+.social_detail .movie {overflow:hidden; background:#000; *zoom:1;}
+.social_detail .movie:after {content:""; display:block; clear:both;}
+.social_detail .movie iframe {float:left; width:940px; height:535px; margin:2px 18px 2px 0;}
+.social_detail .movie .play_btn02 {float:right;}
+.social_detail .movie .play_btn02 li {margin-top:25px;}
+
+.social_detail .movie ul li a {display:block; background:url(https://www.kcar.com/resources/images/channel/ico.png) no-repeat; color:#fff;}
+/*.social_detail .movie ul li.mv01 a {display:block; background:url(https://www.kcar.com/resources/images/channel/ico.png) no-repeat; background-position:0 -71px; width:32px; height:31px; margin-bottom:10px;}*/
+.social_detail .movie ul li.mv01 a {background:url(https://www.kcar.com/resources/images/channel/chanel_ico04.png) 50% 0 no-repeat; width:32px; padding-top:32px; text-align:center;}
+.social_detail .movie ul li.mv01 a.on {background:url(https://www.kcar.com/resources/images/channel/chanel_ico04_on.png) 50% 0 no-repeat; }
+.social_detail .movie ul li.mv01 a img {display:block;}
+.social_detail .movie ul li.mv01 a span {display:block; padding-top:9px; color:#fff;}
+.social_detail .movie ul li.mv02 a {background-position:-33px -74px; width:30px; height:20px; font-size:0;}
+.social_detail .movie ul li.mv03 a {background-position:-66px -65px; width:30px; height:36px; font-size:0;}
+.social_detail .movie ul li.mv04 a {background-position:-100px -73px; width:30px; height:28px; font-size:0;}
+
+.social_detail .detail_cts {margin-top:70px; color:#404041;}
+.social_detail .detail_cts .inner div:first-child h3 {margin-bottom:22px; color:#6b6b6b; font-size:14px; line-height:14px;}
+.social_detail .detail_cts .inner div:first-child span {display:block; margin-bottom:22px; font-size:20px;}
+.social_detail .detail_cts .inner div:first-child p {line-height:18px; font-size:12px; word-wrap:break-word;}
+.social_detail .detail_cts .inner > span {display:block; margin-bottom:20px; font-size:20px; line-height:20px;}
+.social_detail .detail_cts .user_txt {margin-top:52px;}
+.social_detail .detail_cts .user_txt > .login_box {overflow:hidden; margin-top:14px; *zoom:1;}
+.social_detail .detail_cts .user_txt > .login_box:after {content:""; display:block; clear:both;}
+.social_detail .detail_cts .user_txt > .login_box > li {float:left; margin-right:16px;}
+.social_detail .detail_cts .user_txt > .login_box > li label {margin-right:6px; vertical-align:middle; font-size:12px;}
+.social_detail .detail_cts .user_txt > .login_box > li input {width:87px; height:24px; padding:1px 5px 2px; border:1px solid #000; box-sizing:border-box; vertical-align:middle;}
+
+
+/* 異붽� 2017-06-27 */
+.social_detail .detail_cts .reply_2 > .login_box02 {overflow:hidden; padding-top:25px; zoom:1;}
+.social_detail .detail_cts .reply_2 > .login_box02:after {content:""; display:block; clear:both;}
+.social_detail .detail_cts .reply_2 > .login_box02 .name {width:auto !important; color:#404041 !important; margin-right:20px}
+.social_detail .detail_cts .reply_2 > .login_box02 > li label {margin-right:6px; vertical-align:middle; font-size:12px;}
+.social_detail .detail_cts .reply_2 > .login_box02 > li input {width:87px; height:24px; padding:1px 5px 2px; border:1px solid #000; box-sizing:border-box; vertical-align:middle;}
+
+/* //異붽� 2017-06-27 */
+.social_detail .detail_cts .write_box {overflow:hidden; margin-top:18px; padding-bottom:10px; border-bottom:1px solid #000; *zoom:1;}
+.social_detail .detail_cts .write_box:after {content:""; display:block; clear:both;}
+.social_detail .detail_cts .write_box input {float:left; width:870px; height:24px; margin-top:2px; padding: 2px 13px; box-sizing:border-box; border:#fff; outline:none;}
+.social_detail .detail_cts .write_box p {float:right;}
+.social_detail .detail_cts .write_box p a {display:inline-block; *display:inline; background:#000; width:57px; margin-left:13px; padding:7px 0; color:#fff; text-align:center; vertical-align:middle; *zoom:1;}
+.social_detail .detail_cts .write_show .reply_1 > li {position:relative; width:100%; padding:14px 0; border-bottom:1px solid #d9d9d9;}
+.social_detail .detail_cts .write_show .reply_1 > li > div {overflow:hidden; *zoom:1;}
+.social_detail .detail_cts .write_show .reply_1 > li > div:after {content:""; display:block; clear:both;}
+.social_detail .detail_cts .write_show .reply_1 > li > div p {float:left;}
+.social_detail .detail_cts .write_show .reply_1 > li > div .name {float:left; width:58px; color:#d9d9d9;}
+.social_detail .detail_cts .write_show .reply_1 > li > div .context {display:inline-block; *display:inline; max-width:80%; *zoom:1;}
+.social_detail .detail_cts .write_show .reply_1 > li > div .del {position:relative; margin-left:24px; padding-left:17px;}
+.social_detail .detail_cts .write_show .reply_1 > li > div .del:after {content:""; display:block; position:absolute; left:0; bottom:3px; background:#828283; width:1px; height:10px;}
+.social_detail .detail_cts .write_show .reply_1 > li > div .ballon {position:absolute; right:2px; top:14px; background:url(https://www.kcar.com/resources/images/channel/chanel_ico02.gif) 0 2px no-repeat;padding-left:23px;}
+.social_detail .detail_cts .write_show .reply_2 {display:none; margin-left:58px;}
+.social_detail .detail_cts .write_show .reply_2 .reply_2_2 li {overflow:hidden; margin-top:24px;  *zoom:1;}
+.social_detail .detail_cts .write_show .reply_2 .reply_2_2 li p {font-size:12px;}
+.social_detail .detail_cts .write_show .reply_2 .reply_2_2:after {content:""; display:block; clear:both;}
+.social_detail .detail_cts .write_show .reply_2 .write_box02 {margin-top:18px;}
+.social_detail .detail_cts .write_show .reply_2 .write_box02 span {padding-right:20px; color:#d9d9d9; vertical-align:middle;}
+.social_detail .detail_cts .write_show .reply_2 .write_box02 input {display:inline-block; *display:inline; width:84.8%; margin-top:2px; padding: 4px 13px; box-sizing:border-box; border:1px solid #d1d1d1; outline:none; vertical-align:middle; *zoom:1;}
+.social_detail .detail_cts .write_show .reply_2 .write_box02 a {display:inline-block; *display:inline; background:#000; width:57px; margin-left:13px; padding:7px 0; border:#fff; color:#fff; text-align:center; vertical-align:middle; *zoom:1;}
+.social_detail .detail_cts .btn_add {margin-top:22px; text-align:center;}
+.social_detail .detail_cts .btn_add a {background:url(https://www.kcar.com/resources/images/channel/chanel_arrow01.gif) 100% 48% no-repeat; padding-right:21px; line-height:24px;}
+
+.social_detail .detail_cts .write_box {overflow:hidden; margin-top:18px; padding-bottom:10px; border-bottom:1px solid #000; *zoom:1;}
+.social_detail .detail_cts .write_box:after {content:""; display:block; clear:both;}
+.social_detail .detail_cts .write_box input {float:left; width:870px; height:24px; margin-top:2px; padding: 2px 13px; box-sizing:border-box; border:#fff; outline:none;}
+.social_detail .detail_cts .write_box p {float:right;}
+.social_detail .detail_cts .write_box p a {display:inline-block; *display:inline; background:#000; width:57px; margin-left:13px; padding:7px 0; color:#fff; text-align:center; vertical-align:middle; *zoom:1;}
+.social_detail .detail_cts .write_show .reply_1 > li {position:relative; width:100%; padding:14px 0; border-bottom:1px solid #d9d9d9;}
+.social_detail .detail_cts .write_show .reply_1 > li > div {overflow:hidden; *zoom:1;}
+.social_detail .detail_cts .write_show .reply_1 > li > div:after {content:""; display:block; clear:both;}
+.social_detail .detail_cts .write_show .reply_1 > li > div p {float:left;}
+.social_detail .detail_cts .write_show .reply_1 > li > div .name {float:left; width:85px; color:#d9d9d9;}
+.social_detail .detail_cts .write_show .reply_1 > li > div .context {display:inline-block; *display:inline; max-width:80%; *zoom:1;}
+.social_detail .detail_cts .write_show .reply_1 > li > div .del {position:relative; margin-left:24px; padding-left:17px;}
+.social_detail .detail_cts .write_show .reply_1 > li > div .del:after {content:""; display:block; position:absolute; left:0; bottom:3px; background:#828283; width:1px; height:10px;}
+.social_detail .detail_cts .write_show .reply_1 > li > div .ballon {position:absolute; right:2px; top:14px; background:url(https://www.kcar.com/resources/images/channel/chanel_ico02.gif) 0 2px no-repeat;padding-left:23px;}
+.social_detail .detail_cts .write_show .reply_2 {display:none; margin-left:58px;}
+.social_detail .detail_cts .write_show .reply_2 ul li {overflow:hidden; margin-top:24px;  *zoom:1;}
+.social_detail .detail_cts .write_show .reply_2 ul li p {font-size:12px;}
+.social_detail .detail_cts .write_show .reply_2 ul:after {content:""; display:block; clear:both;}
+.social_detail .detail_cts .write_show .reply_2 .write_box02 {margin-top:18px;}
+.social_detail .detail_cts .write_show .reply_2 .write_box02 span {padding-right:20px; color:#d9d9d9; vertical-align:middle;}
+.social_detail .detail_cts .write_show .reply_2 .write_box02 input {display:inline-block; *display:inline; width:84.9%; margin-top:2px; padding: 4px 13px; box-sizing:border-box; border:1px solid #d1d1d1; outline:none; vertical-align:middle; *zoom:1;}
+.social_detail .detail_cts .write_show .reply_2 .write_box02 a {display:inline-block; *display:inline; background:#000; width:57px; margin-left:13px; padding:7px 0; border:#fff; color:#fff; text-align:center; vertical-align:middle; *zoom:1;}
+.social_detail .detail_cts .btn_add {margin-top:22px; text-align:center;}
+.social_detail .detail_cts .btn_add a {background:url(https://www.kcar.com/resources/images/channel/chanel_arrow01.gif) 100% 48% no-repeat; padding-right:21px; line-height:24px;}
+
+
+
+/*channel04*/
+
+.brand_campagin {margin-top:42px;}
+.brand_campagin .social_top {overflow:hidden; zoom:1;}
+.brand_campagin .social_top:after {content:""; display:block; clear:both;}
+.brand_campagin .social_top div {float:left;}
+.brand_campagin .social_top div:first-child {position:relative; background:#f1f1f1; width:446px; height:384px; text-align:center;}
+.brand_campagin .social_top div:first-child p span {display:block; margin-top:5px; font-size:12px;}
+.brand_campagin .social_top .play {position:relative; margin:0 0 0 50px;}
+.brand_campagin .social_top .play.on i {display:block; position:absolute; top:50%; left:50%; background:url(https://www.kcar.com/resources/images/channel/chanel_play.png) 50% 50% no-repeat; width:87px; height:87px; margin:-43.5px 0 0 -43.5px;}
+.brand_campagin .social_top .play a {display:block; cursor:pointer;}
+.brand_campagin .social_top .play a span {display:block; position:absolute; left:0; bottom:0; width:100%; height:114px; color:#fff; font-size:16px;
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */}
+.brand_campagin .social_top .play em {position:absolute; bottom:38px; left:33px;}
+
+.brand_campagin .social_cts {margin:52px 0 0;}
+.brand_campagin .cate_play {margin:52px 0 0;}
+.brand_campagin .cate_play .tab_btn ul{overflow:hidden; margin-bottom:15px; *zoom:1;}
+.brand_campagin .cate_play .tab_btn ul:after {content:""; display:block; clear:both;}
+.brand_campagin .cate_play .tab_btn ul li {float:left; margin-left:9px;}
+.brand_campagin .cate_play .tab_btn ul li:first-child {margin-left:0;}
+.brand_campagin .cate_play .tab_btn ul li a {position:relative; color:#909090; font-size:14px; padding-right:9px;}
+.brand_campagin .cate_play .tab_btn ul li a.on {color:#404041}
+.brand_campagin .cate_play .tab_btn ul li:first-child a:before {content:""; display:block; position:absolute; right:0; top:50%; background:#404041; width:1px; height:12px; margin-top:-6px}
+.brand_campagin .cate_play .v_list ul {overflow:hidden; *zoom:1;}
+.brand_campagin .cate_play .v_list ul:after {content:""; display:block; clear:both;}
+.brand_campagin .cate_play .v_list ul li {float:left; width:208px; margin-right:35px; margin-bottom:80px;}
+.brand_campagin .cate_play .v_list ul li a {display:block; width:208px; height:116px;}
+.brand_campagin .cate_play .v_list ul li img {max-width:208px; border:1px solid #d1d1d1; box-sizing:border-box}
+.brand_campagin .cate_play .v_list ul li span {display:block; margin-top:10px; font-weight:100;width: 208px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+
+/* channel05 */
+.play_detail {}
+
+.social_detail .movie .play_detail {position:relative; width:950px; margin:0 auto; text-align:center; height: auto;}
+.social_detail .movie .play_detail iframe {width:950px;}
+.social_detail .movie .play_detail ul li {padding:2px 0;}
+.social_detail .movie .play_detail .play_btn {position:absolute; right:-40px; top:0;}
+.social_detail .movie .play_detail .play_btn li {margin-top:25px;}
+.social_detail .movie .play_detail .bx-controls-direction a {position:absolute; top:50%; background:url(https://www.kcar.com/resources/images/channel/ico.png) no-repeat; width:15px; height:41px; margin-top:-21px; font-size:0;}
+.social_detail .movie .play_detail .bx-controls-direction .bx-prev {left:10px; background-position: 0 -30px;}
+.social_detail .movie .play_detail .bx-controls-direction .bx-next {right:10px; background-position:-15px -30px;}
+
+
+/*�븘�씠肄섎꽔湲� 怨듯넻*/
+.ico01 {background:url(https://www.kcar.com/resources/images/channel/ico_01.gif) 0 50% no-repeat;}
+.ico02 {background:url(https://www.kcar.com/resources/images/channel/ico_02.gif) 0 50% no-repeat;}
+.ico03 {background:url(https://www.kcar.com/resources/images/channel/ico_03.gif) 0 50% no-repeat;}
+.ico04 {background:url(https://www.kcar.com/resources/images/channel/ico_04.gif) 0 50% no-repeat;}
+.ico05 {background:url(https://www.kcar.com/resources/images/channel/ico_05.gif) 0 50% no-repeat;}
+.ico06 a {display:block; background:url(https://www.kcar.com/resources/images/channel/ico_06.gif) 0 50% no-repeat; padding:3px 0 0 26px; color:#939393; font-size:16px;}
+.ico01.on {background:url(https://www.kcar.com/resources/images/channel/ico_01_on.gif) 0 50% no-repeat;}
+.ico02.on {background:url(https://www.kcar.com/resources/images/channel/ico_02_on.gif) 0 50% no-repeat;}
+.ico03.on {background:url(https://www.kcar.com/resources/images/channel/ico_03_on.gif) 0 50% no-repeat;}
+.ico04.on {background:url(https://www.kcar.com/resources/images/channel/ico_04_on.gif) 0 50% no-repeat;}
+.ico05.on {background:url(https://www.kcar.com/resources/images/channel/ico_05_on.gif) 0 50% no-repeat;}
+.ico06.on a { background:url(https://www.kcar.com/resources/images/channel/ico_06_on.gif) 0 50% no-repeat; color:#0b7cbd;}
+/*pop 怨듯넻*/
+#popUp {display:none; position:fixed; top:50%; left:50%; background:#fff; width:376px; height:181px; margin:-90px 0 0 -188px; box-sizing:border-box; border:1px solid #000;}
+#popUp .close_btn {position:absolute; right:10px; top:10px; display:block;}
+#popUp .pop_inner {padding:56px 41px 24px; font-size:14px;}
+#popUp .pop_inner p {margin-bottom:35px; line-height:18px; text-align:center;}
+#popUp .pop_inner .pop_btn a {display:inline-block; *display:inline; width:133px; padding:5px 0; border:1px solid #000; text-align:center; box-sizing:border-box; *zoom:1;}
+#popUp .pop_inner .pop_btn a:first-child {margin-right:20px;}
+
+#popUp.popup02 .pop_inner {padding:47px 41px 24px;}
+#popUp.popup02 .pop_inner p {margin-bottom:17px;}
+#popUp.popup02 .pop_inner span {display:block; padding-bottom:15px; text-align:center;}
+#popUp.popup02 .pop_inner span input {padding:5px 10px}
+#popUp.popup02 .pop_inner .pop_btn {text-align:center;}
+#popUp.popup02 .pop_inner .pop_btn a {margin:0}
+
+.inner {position:relative; width:1180px; min-width:1000px; margin:0 auto;}
+.path_wrap {overflow:hidden; width:1180px; margin:-30px auto 0 auto; padding:10px 0; *zoom:1;}
+.path_wrap:after {content:""; display:block; clear:both;}
+.path_wrap .path{position:static !important; float:right; background:url(https://www.kcar.com/resources/images/channel/icon_home.gif) 0 50% no-repeat; padding:2px 0 0 18px; font-size:12px; letter-spacing:0;}
+/* top諛곕꼫 */
+
+.wdAside{float:left; width:160px; border-top:1px solid #cbcbcb; font-size:14px; font-weight:bold; }
+.wdAside h2{padding:52px 0 52px 20px; background:#d42a35;}
+.wdAside ul li a.on{color:#d42a35;}
+.wdAside ul>li{}
+.wdAside ul>li>a{display:block; padding:10px 0 10px 10px; letter-spacing:-1px; border-bottom:1px solid #cbcbcb;}
+.wdAside ul>li>ul{}
+.wdAside ul>li>ul>li>a{padding-left:20px;  font-weight:normal;}
+.wdAside ul>li>ul>li>ul{}
+.wdAside ul>li>ul>li>ul>li>a{padding-left:30px;}
+/* 위드엔카 메인 */
+.wdMainTop{overflow:hidden;}
+.wdMainTop .le{float:left; width:498px; }
+.wdMainTop .le .mov iframe{position:relative; z-index:1;}
+.wdMainTop .le .img{margin-top:5px;}
+.wdMainTop .le .img ul{overflow:hidden; background:#ccc;}
+.wdMainTop .le .img ul li{float:left; border-top:1px solid #ccc; border-left:1px solid #ccc;}
+.wdMainTop .le .img ul li:first-child{border-top:none; border-left:none}
+.wdMainTop .ri{float:right; width:495px;}
+.wdMainTop .ri .reale{height:263px; border:1px solid #ccc; overflow:hidden; text-align:center;}
+.wdMainTop .ri .reale img{width:278px; padding:35px 0; }
+.wdMainTop .ri .reale p{height:47px; padding:12px 10px 0 10px; background:#252525; color:#fff; line-height:1.5; overflow:hidden; text-align:left;}
+.wd_mad{margin-top:5px;}
+.wdMnotice{position:relative; height:234px; margin-top:5px; border:1px solid #d1d1d1; background:#fff;}
+.wdMnotice ul{padding:50px 15px 0 15px;}
+.wdMnotice ul li{padding:9px 0;border-bottom:1px solid #ededed;}
+.wdMnotice ul li.last{border:none;}
+.wdMnotice .tab h3{text-indent:-555px; overflow:hidden;}.mHelp .tab{}
+.wdMnotice .tab h3.heTab{position:absolute; left:0; top:0; width:247px; height:34px;}
+.wdMnotice .tab h3.heTab a{display:block; width:245px; height:29px; border-right:1px solid #d4d4d4; border-bottom:1px solid #d4d4d4; border-top:4px solid #d4d4d4;background:#f5f5f5 url(https://www.kcar.com/resources/images/content/wd/wd_mnotice.gif) 50% 50% no-repeat; cursor:pointer;}
+.wdMnotice .tab h3.heTab a.on{border-right:1px solid #fff; border-bottom:1px solid #fff; border-top:4px solid #e21238; background:#fff url(https://www.kcar.com/resources/images/content/wd/wd_mnotice_on.gif) 50% 50% no-repeat;}
+.wdMnotice .tab h3.seTab{position:absolute; right:0; top:0; width: 248px; height:34px;}
+.wdMnotice .tab h3.seTab a{display:block; width:245px; height:29px; border-left:1px solid #d4d4d4; border-bottom:1px solid #d4d4d4; border-top:4px solid #d4d4d4;background:#f5f5f5 url(https://www.kcar.com/resources/images/content/wd/wd_mwin.gif) 50% 50% no-repeat; cursor:pointer;}
+.wdMnotice .tab h3.seTab a.on{border-left:1px solid #fff; border-bottom:1px solid #fff; border-top:4px solid #e21238; background:#fff url(https://www.kcar.com/resources/images/content/wd/wd_mwin_on.gif) 50% 50% no-repeat;}
+.wdMlist{margin-top:5px;}
+.wdMlist ul{overflow:hidden;}
+.wdMlist ul li{position:relative; float:left; width:255px; height:201px; margin:0 7px 10px 0; border:1px solid #ccc; }
+.wdMlist ul li.nomargin{margin:0 0 10px 0;}
+.wdMlist ul li strong{position:absolute; top:134px; padding:4px 8px; background:#f58026; color:#fff; font-weight:normal;}
+.wdMlist ul li p.txt{padding:5px; height:30px; line-height:1.4; font-weight:bold;}
+.wdMlist ul li p.soc{padding:10px 5px; text-align:center;}
+.wdContent{width:1180px; margin:0 auto;}
+.wdContent:after{content:""; display:block; clear:both}
+.wdCont{float:right; width:1000px;}
+.wdCont h3{padding-bottom:5px; font-size:24px; font-weight:bold; color:#000;}
+.wdCont h4.tit{padding:20px 10px 10px 10px; font-size:18px; color:#d42a35;}
+.wdCont h4.tit span{display:inline-block; padding-top:5px; border-top:4px solid #d42a35;}
+.wdCont .textCont{padding:15px 10px 50px 10px; font-size:12px; line-height:1.7; text-align:justify;}
+.wdCont .textCont b.font16{font-size:16px;}
+/* csr */
+.wd_csr_img{height:206px; background:url(https://www.kcar.com/resources/images/content/wd/wd_csr_img.gif) left top no-repeat; overflow:hidden; line-height:100;}
+.csrList{padding-top:20px;overflow:hidden;}
+.csrList li{float:left; width:184px; padding:123px 9px 0 0;}
+.csrList li.kids{background:url(https://www.kcar.com/resources/images/content/wd/wd_csr_kids.gif) left top no-repeat;}
+.csrList li.eco{background:url(https://www.kcar.com/resources/images/content/wd/wd_csr_eco.gif) left top no-repeat;}
+.csrList li.classic{background:url(https://www.kcar.com/resources/images/content/wd/wd_csr_classic.gif) left top no-repeat;}
+.csrList li.bling{background:url(https://www.kcar.com/resources/images/content/wd/wd_csr_bling.gif) left top no-repeat; padding-right:0;}
+/* 서포터즈 */
+.wd_sup_img{height:255px; background:url(https://www.kcar.com/resources/images/content/wd/wd_sup_img.gif) left top no-repeat; overflow:hidden; line-height:100;}
+.wd_sup_btn{padding-top:20px; text-align:center;}
+/* eco */
+.wd_eco_img{height:274px; border:1px solid #e2e2e2; }
+.wd_eco_img h4{float:left; width:270px;height:274px; border-right:1px solid #e2e2e2; background:#f2f2f2 url(https://www.kcar.com/resources/images/content/wd/wd_eco_img.jpg) left top no-repeat;  overflow:hidden; line-height:100;}
+.wd_eco_bx{float:right; padding-right:20px; width:470px; line-height:1.6; text-align:justify; letter-spacing:-1px;}
+.wd_eco_bx .nameTit{display:block; padding-top:20px; font-weight:bold; color:#d42a35; font-size:14px;}
+.wd_eco_bx .tit{font-size:20px; font-weight:bold;}
+.wd_eco_bx .txt{padding:10px 0 5px 0; font-size:16px;}
+.wd_eco_bx .link{text-align:right;}
+.wd_eco_bx .link a{font-size:14px; color:#d42a35; text-decoration:underline; text-align:right;}
+.ecoList>li{padding:20px 0; overflow:hidden;}
+.ecoList>li:last-child{ border-top:1px solid #e2e2e2;}
+.ecoList li .img{float:left; width:224px;}
+.ecoList li .img span{display:block; padding-top:5px; text-align:center; text-decoration:underline; color:#d42a35;}
+.ecoList li .list{float:right; padding-right:20px; width:500px;}
+.ecoList li .list ul{padding-top:5px; font-weight:bold; line-height:1.5;}
+.ecoList>li h5{font-size:20px; font-weight:bold; color:#d42a35;}
+.ecoPoint{padding:10px 0 5px 30px; background:url(https://www.kcar.com/resources/images/content/wd/wd_eco_point.gif) left 2px no-repeat; font-size:16px;}
+.ecoPoint b{color:red;}
+.ecoPointList{}
+.ecoPointList li{padding:1px 0 2px 10px; background:url(https://www.kcar.com/resources/images/content/wd/wd_eco_dot.gif) left 9px no-repeat; font-size:13px}
+.wd_eco_btn{padding-top:20px; text-align:center;}
+/* kids */
+.wd_kids_img{height:274px; border:1px solid #e2e2e2; }
+.wd_kids_img h4{float:left; width:270px;height:274px; border-right:1px solid #e2e2e2; background:#f2f2f2 url(https://www.kcar.com/resources/images/content/wd/wd_kids_img.jpg) left top no-repeat;  overflow:hidden; line-height:100;}
+.wd_kids_bx{float:right; padding-right:20px; width:470px; line-height:1.6; text-align:justify; letter-spacing:-1px;}
+.wd_kids_bx .nameTit{display:block; padding-top:20px; font-weight:bold; color:#d42a35; font-size:14px;}
+.wd_kids_bx .tit{font-size:20px; font-weight:bold;}
+.wd_kids_bx .txt{padding:10px 0 10px 0; font-size:16px;}
+.wd_kids_bx .txt span{color:#e86800; font-size:14px;}
+.wd_kids_bx .link{text-align:right;}
+.wd_kids_bx .link a{font-size:14px; color:#d42a35; text-decoration:underline; text-align:right;}
+.kidsPro{margin-top:20px; background: url(https://www.kcar.com/resources/images/content/wd/wd_kids_dot.gif) left 50% repeat-x; font-size:22px; font-weight:bold; color:#d42a35; text-align:center;}
+.kidsPro span{background:#fff;}
+.kidsList{height:450px; background: url(https://www.kcar.com/resources/images/content/wd/wd_kids_bg.gif) 50% 50px no-repeat; overflow:hidden;}
+.kidsList li{line-height:100;}
+/* happy */
+.wd_happy_img{height:206px; background:url(https://www.kcar.com/resources/images/content/wd/wd_happy_img.gif) left top no-repeat; overflow:hidden; line-height:100;}
+.happyList li{overflow:hidden; padding-bottom:40px;}
+.happyList li .img{float:left; width:224px; padding-top:10px;}
+.happyList li .list{float:right; width:490px; font-size:12px; text-align:justify;}
+.happyList li .list h5{padding-top:2px; border-top:4px solid #d42a35; color:#d42a35; font-size:20px;}
+.wd_happy_classic{padding:10px 10px 10px 150px; background:#eee url(https://www.kcar.com/resources/images/content/wd/wd_happy_classic.gif) 25px 25px no-repeat;}
+/* together */
+.wd_together_img{height:274px; border:1px solid #e2e2e2; }
+.wd_together_img h4{float:left; width:270px;height:274px; border-right:1px solid #e2e2e2; background:#f2f2f2 url(https://www.kcar.com/resources/images/content/wd/wd_together_img.gif) 25px 25px no-repeat;  overflow:hidden; line-height:100;}
+.wd_together_bx{float:right; padding-right:20px; width:470px; line-height:1.6; text-align:justify; letter-spacing:-1px;}
+.wd_together_bx .tit{padding-top:40px; font-size:20px; font-weight:bold;}
+.wd_together_bx .txt{padding:10px 0 20px 0; font-size:16px;}
+.wd_together_bx .txt span{color:#e86800; font-size:14px;}
+.wd_together_bx .link{text-align:right;}
+.wd_together_bx .link a{font-size:14px; color:#d42a35; text-decoration:underline; text-align:right;}
+/* classic */
+.wd_classic_img{height:274px; border:1px solid #e2e2e2; }
+.wd_classic_img h4{float:left; width:270px;height:274px; border-right:1px solid #e2e2e2; background:#f2f2f2 url(https://www.kcar.com/resources/images/content/wd/wd_classic_img.jpg) left top no-repeat;  overflow:hidden; line-height:100;}
+.wd_classic_bx{float:right; padding-right:20px; width:470px; line-height:1.6; text-align:justify; letter-spacing:-1px;}
+.wd_classic_bx .nameTit{display:block; padding-top:20px; font-weight:bold; color:#d42a35; font-size:14px;}
+.wd_classic_bx .tit{font-size:20px; font-weight:bold;}
+.wd_classic_bx .txt{padding:10px 0 30px 0; font-size:16px;}
+.wd_classic_bx .txt span{color:#e86800; font-size:14px;}
+.textCont .classicPro{margin-top:20px; font-size:22px; font-weight:bold; color:#d42a35;}
+.textCont .classicList{padding-top:10px;  overflow:hidden;}
+.textCont ul.classicList li{float:left; padding-left:8px; text-align:center;}
+.textCont ul.classicList li:first-child{padding:0;}
+/* bling */
+.wd_bling_img{height:274px; border:1px solid #e2e2e2; }
+.wd_bling_img h4{float:left; width:270px;height:274px; border-right:1px solid #e2e2e2; background:#f2f2f2 url(https://www.kcar.com/resources/images/content/wd/wd_bling_img.jpg) left top no-repeat;  overflow:hidden; line-height:100;}
+.wd_bling_bx{float:right; padding-right:20px; width:470px; line-height:1.6; text-align:justify; letter-spacing:-1px;}
+.wd_bling_bx .nameTit{display:block; padding-top:20px; font-weight:bold; color:#d42a35; font-size:14px;}
+.wd_bling_bx .tit{font-size:20px; font-weight:bold;}
+.wd_bling_bx .txt{padding:10px 0 30px 0; font-size:16px;}
+.wd_bling_bx .txt span{color:#e86800; font-size:14px;}
+.wd_bling_bx .link{text-align:right;}
+.wd_bling_bx .link a{font-size:14px; color:#d42a35; text-decoration:underline; text-align:right;}
+.textCont .blingPro{margin-top:20px; font-size:22px; font-weight:bold; color:#d42a35; }
+.textCont .blingList{padding-top:60px; background: url(https://www.kcar.com/resources/images/content/wd/wd_bling_step.gif) 70px top no-repeat; overflow:hidden;}
+.textCont .blingList li{float:left; width:172px; text-align:center;}
+.textCont .blingList li strong{display:block;}
+.textCont .point{margin-top:30px; padding:10px; border:1px solid #d5d5d5; background:#eee; overflow:hidden; }
+.textCont .point h6{float:left; width:160px; height:110px; background:url(https://www.kcar.com/resources/images/content/wd/wd_bling_point.gif) 30px 20px no-repeat; overflow:hidden; line-height:100;}
+.textCont .point .list{float:left; width:550px;}
+.textCont .point .list li{padding:0 2px 0 10px; background:url(https://www.kcar.com/resources/images/content/wd/wd_bling_dot.gif) left 50% no-repeat; font-size:13px;}
+.textCont .wd_top{padding:30px 0 5px 0; overflow:hidden;}
+.textCont .wd_top h6{float:left; width:200px; font-size:16px; font-weight:bold;}
+.textCont .wd_top .wd_apply{float:right; width:400px; text-align:right;}
+.textCont .wd_top .wd_apply a{display:inline-block; padding:2px 15px; border:1px solid #cdcdcd; font-size:12px;}
+.textCont .wd_table{border-top:2px solid #686767; border-bottom:1px solid #686767; font-size:12px;}
+.textCont .wd_table th{padding:8px; border-bottom:1px solid #cdcdcd; text-align:center;}
+.textCont .wd_table td{padding:6px; text-align:center;}
+.textCont .wd_table td.al{text-align:left;}
+.textCont .wd_table td img{vertical-align:middle;}
+
+/* 공지사항 */
+.wd_tab{padding:10px 0;}
+.wd_tab ul{position:relative; overflow:hidden; border-bottom:1px solid #ccc; border-left:1px solid #ccc; z-index:2; height:40px;}
+.wd_tab ul li{position:relative; float:left; top:0; left:0; width:150px; height:39px; border-top:1px solid #ccc; border-right:1px solid #ccc; text-align:center; z-index:3; background:#f7f7f7;}
+.wd_tab ul li a{display:block; font-size:16px; font-weight:bold; padding:10px; }
+.wd_tab ul li.on{border-bottom:1px solid #fff; background:#fff;}
+.wd_tab ul li.on a{color:#d42a35;}
+.wd_noticeSe{padding-top:20px;overflow:hidden;}
+.wd_noticeSe .noticeSe{float:left; width:45%;}
+.wd_noticeSe .noticeSe select{border:1px solid #ccc; font-family:Arial; vertical-align:middle;}
+.wd_noticeSe .noticeSe .sePut{width:150px; height:17px; padding:2px 0 0 3px; border:1px solid #ccc; vertical-align:middle;}
+.wd_noticeSe .noticeSe .seBtn{width:40px; height:21px; margin-left:3px; border:none; background:#d42a35; color:#fff; vertical-align:middle;}
+.wd_noticeSe .noticeNum{float:right; width:45%; text-align:right;}
+.wd_noticeSe .noticeNum select{border:1px solid #ccc; font-family:Arial; vertical-align:middle;}
+.wd_noticeSe .noticeNum .write{display:inline-block; height:18px; padding:3px 15px 0 15px; background:#d42a35; color:#fff; font-size:13px; text-align:center; vertical-align:middle;}
+.wd_noticeList ul{}
+.wd_noticeList ul li .img{float:left; padding-right:10px;}
+.wd_noticeList ul li .img img{width:174px; height:130px;}
+.wd_noticeList ul li{min-height:120px; margin-top:6px; padding:20px 15px; border:1px solid #ccc; letter-spacing:-1px;}
+.wd_noticeList ul li.on{background:#e3e3e3;}
+.wd_noticeList ul li .num{display:block; padding-top:10px;}
+.wd_noticeList ul li .num span{padding-right:20px;}
+.wd_noticeList ul li .num span.new{display:inline-block; padding:0 5px; background:#d42a35; color:#fff;}
+.wd_noticeList ul li .tit{display:block; padding:10px 0 15px 0; font-size:20px; font-weight:bold;}
+.wd_noticeList ul li .tit span{font-size:18px; font-weight:normal;}
+.wd_noticeList ul li .cont{display:block; padding-bottom:10px; font-size:14px; line-height:1.6;}
+.wd_tab_win{padding:10px 0; overflow:hidden;}
+.wd_tab_win li{float:left; margin-right:5px;}
+.wd_tab_win li a{display:block; width:100px; padding:8px 0; background:#dadada; font-size:16px; font-weight:bold; text-align:center; letter-spacing:-1px;}
+.wd_tab_win li a.on{background:#d42a35; color:#fff;}
+.wd_noticeVeiw{margin-top:5px; padding:15px 10px 0 10px; border-top:1px solid #ccc;}
+.wd_noticeVeiw .date{font-size:11px;}
+.wd_noticeVeiw .tit{padding:5px 0 20px 0; font-size:18px; font-weight:bold;}
+.wd_noticeVeiw .cont{padding-bottom:20px; line-height:1.5; font-size:13px; }
+.wd_noticeVeiw .cont img{padding:10px 0; max-width:750px;}
+.wd_viewNext{margin-top:30px; border-bottom:2px solid #ccc;}
+.wd_viewNext li{padding:10px 0; border-top:1px solid #ccc;  font-weight:bold;}
+.wd_viewNext li span{display:inline-block; width:120px;text-align:center;  font-weight:normal;}
+.wd_viewNext li span.prev{background:url(https://www.kcar.com/resources/images/content/wd/wd_arr_prev.gif) 100px 50% no-repeat;}
+.wd_viewNext li span.next{background:url(https://www.kcar.com/resources/images/content/wd/wd_arr_next.gif) 100px 50% no-repeat;}
+.wd_noticeReg{border-top:1px solid #333;}
+.wd_noticeReg th{padding:10px 0; border-bottom:1px solid #ccc;}
+.wd_noticeReg td{padding:10px 0; border-bottom:1px solid #ccc;}
+.wd_btn{padding:5px 0;text-align:right;}
+.wd_btn a{display:inline-block; padding:4px 15px; background:#d42a35; color:#fff; font-size:14px; text-align:center;}
+.wd_real_img{height:274px; border:1px solid #e2e2e2; }
+.wd_real_img h4{float:left; width:270px;height:274px; border-right:1px solid #e2e2e2; background:#f2f2f2 url(https://www.kcar.com/resources/images/content/wd/wd_real_img.jpg) left top no-repeat;  overflow:hidden; line-height:100;}
+.wd_real_bx{float:right; padding-right:20px; width:680px; line-height:1.6; text-align:justify; letter-spacing:-1px;}
+.wd_real_bx .nameTit{display:block; padding-top:20px; font-weight:bold; color:#d42a35; font-size:14px;}
+.wd_real_bx .tit{padding-top:20px; font-size:20px; font-weight:bold;}
+.wd_real_bx .txt{padding:10px 0 5px 0; font-size:16px;}
+.wd_realeSe{padding-top:20px; text-align:right;}
+.wd_realeSe .write{display:inline-block; height:18px; padding:3px 15px 0 15px; background:#d42a35; color:#fff; font-size:13px; vertical-align:middle;}
+.realeList{}
+.realeList ul{overflow:hidden;}
+.realeList ul li{float:left; width:247px; margin:10px 4px 10px 0; }
+.realeList ul li.nomargin{margin-right:0}
+.realeList ul li .listBx{margin-bottom:10px; border:1px solid #ccc;}
+.realeList ul li .listBx strong{display:block; padding:5px 0; background:#bcbcbc; font-size:20px; font-weight:bold; color:#fff; text-align:center;}
+.realeList ul li .listBx p.carName{padding-top:20px; font-size:18px; font-weight:bold; text-align:center;}
+.realeList ul li .listBx p.carimg{padding:5px 0; text-align:center;}
+.realeList ul li .listBx p.carCompare{padding:5px 0; text-align:center; font-size:11px; }
+.realeList ul li .listBx p.carCompare b{font-size:12px; }
+.realeList ul li .listBx table{}
+.realeList ul li .listBx table th{padding:6px 0 6px 10px; font-size:11px; text-align:left;}
+.realeList ul li .listBx table td{padding:6px 0;}
+.realeList ul li .listBx table tr.eco{background:#999ba7; color:#fff; text-align:center;}
+.realeList ul li .listBx table tr.eco td{font-size:14px;}
+.realeList ul li .listBx table tr.drive{background:#818286; color:#fff; text-align:center;}
+.realeList ul li .listBx table tr.realeEco{background:#58585a; color:#fff; text-align:center;}
+.realeList ul li .listBx table tr.realeEco td{font-size:15px; font-weight:bold;}
+.realeList ul li .listBx p.realeList ul li table td{}
+.realeList ul li .carLink{border-top:1px solid #ccc; font-size:14px; }
+.realeList ul li .carLink a{display:block; padding:5px 0; text-align:center; text-decoration:underline;}
+.realeSe{padding:5px;}
+.realeSe select{width:100%; margin:1px 0; border:1px solid #ccc;}
+.realeSe .realeSeBtn{display:block; margin:3px 0; padding:2px 0; border:1px solid #ccc; background:#f9f9f9; text-align:center;}
+.realeList .arr{position:relative; margin-top:15px; width:124px; height:16px; margin-left:10px; text-align:left}
+.realeList .arr b{display:none;}
+.realeList .arr span.pe1{position:absolute; top:-14px; left:25px; font-size:10px;}
+.realeList .arr span.pe2{position:absolute; top:-14px; left:80px; font-size:10px;}
+.realeList .arrLe{display:block; height:16px; background:url(https://www.kcar.com/resources/images/content/wd/wd_reale_ri.png) right top no-repeat;}
+.realeList .arrRi{display:block; height:16px; background:url(https://www.kcar.com/resources/images/content/wd/wd_reale_le.png) left top no-repeat;}
+/* 위드엔카 레이어 */
+.wd_Pop{position:absolute; top:0; left:200px; width:600px; border:1px solid #d4d4d4; background:#fff url(https://www.kcar.com/resources/images/common/pop_top_line.gif) left top repeat-x;}
+.wd_Pop .popLy{padding:10px; background:url(https://www.kcar.com/resources/images/common/pop_top_linebg.gif) right top no-repeat;}
+.wd_Pop .popLy h5{padding:20px 0 10px 0; border-bottom:1px solid #ccc; background:url(https://www.kcar.com/resources/images/common/pop_logo.gif) right 50% no-repeat; font-size:16px; font-weight:bold;}
+.wd_Pop input{vertical-align:middle;}
+.popTit{padding:20px 0 5px 0; overflow:hidden;}
+.popTit .le{float:left; width:49%;}
+.popTit .ri{float:right; width:49%; text-align:right;}
+.wdLyTable{border-top:2px solid #bca99d; font-size:11px;}
+.wdLyTable th{padding:5px 0 5px 10px; border:1px solid #d4d4d4; background:#f5f5f4; text-align:left; font-weight:normal;}
+.wdLyTable td{padding:5px 10px; border:1px solid #d4d4d4;}
+.wdLyTable td input{vertical-align:middle;}
+.wdLyTable td textarea.ecoText{border:1px solid #d4d4d4; width:99%; height:100px;}
+.wdLyTable td textarea.clubtext{border:1px solid #d4d4d4; width:99%; height:100px;}
+.wdViewTable{border-top:2px solid #bca99d;}
+.wdViewTable th{height:20px; padding:8px 0 8px 10px; border:1px solid #d4d4d4; background:#f5f5f4; text-align:left; font-weight:normal;}
+.wdViewTable td{height:20px; padding:8px 10px; border:1px solid #d4d4d4;}
+.wdLyTable td .tableTxt{color:#999;}
+.wdUp{position:relative; padding-top:5px; overflow:hidden;}
+.wdUp .wdByte{position:absolute; top:5px; right:0;}
+.wdUp .wdUpList ul{padding:5px 0 0 2px;}
+.wdUp .wdUpList ul li{padding:1px 0;}
+.wdagree{padding-top:5px; text-align:right}
+.weLyBtn{text-align:center;}
+.weLyBtn a{display:inline-block; padding:0 0 0 10px; margin-top:2px; background: url(https://www.kcar.com/resources/images/common/btn_comm_le.gif) left top no-repeat;}
+.weLyBtn a b{display:inline-block; height:23px; padding:5px 10px 0 0; *padding:4px 10px 0 0; background:url(https://www.kcar.com/resources/images/common/btn_comm_ri.gif) right top no-repeat; font-size:11px; font-weight:bold;}
+/* 효도엔카 시작 */
+#content .wd_encar{position: relative;}
+.wd_encar h3{padding-bottom:5px; font-size:24px; font-weight:bold; color:#000;}
+.wd_encar .wd_visual{width: 1000px; height: 665px; background: url(https://www.kcar.com/resources/images/content/event/hyodo/wd_visual.jpg) no-repeat;}
+.wd_encar .wd_visual .wd_main_btn{width: 195px; height: 51px; position: absolute; top: 350px; left: 110px;}
+.wd_encar .wd_visual .movie{width:525px; height:295px; position: absolute; top:350px; left: 450px;}
+.wd_encar .wd_cont_area{width: 1000px; height: auto; margin-top: 25px;}
+.wd_encar .wd_cont_area .wd_tab_menu{width: 1000px; height: 45px;}
+.wd_encar .wd_cont_area .wd_tab_menu ul{width: 1000px; height:46px; border-bottom: 1px solid #d42a35; border-left: none;}
+.wd_encar .wd_cont_area .wd_tab_menu ul li{width: 162px; height: 45px; font-size: 14px; color: #5b5b5b; background: #f3f3f3; line-height: 45px; text-align: center; font-weight: bold; border: 1px solid #cdcbcb; border-bottom: 1px solid #d42a35; float: left;}
+.wd_encar .wd_cont_area .wd_tab_menu ul li a{color: #5b5b5b; display: block;}
+.wd_encar .wd_cont_area .wd_tab_menu ul li.wd_tab_on{border: 1px solid #d42a35; border-bottom: 1px solid #ffffff; background: #ffffff; color: #d42a35;}
+.wd_encar .wd_cont_area .wd_tab_menu ul li.wd_tab_on a{color: #d42a35;}
+/* 세부사항 */
+.wd_encar .wd_cont_area .wd_cont_box{padding: 60px 0 0 30px; box-sizing: border-box;}
+.wd_encar .wd_cont_area .wd_cont_box h3{font-size: 20px; color: #ee7421; font-weight: bold;}
+.wd_encar .wd_cont_area .wd_cont_box h3 strong{color: #d0112b;}
+.wd_encar .wd_cont_area .wd_cont_box h3 span{color: #222222;}
+.wd_encar .wd_cont_area .wd_cont_box ul{padding-top: 35px;}
+.wd_encar .wd_cont_area .wd_cont_box .wd_cont01{margin-bottom: 50px; background: url(https://www.kcar.com/resources/images/content/event/hyodo/wd_cont01_text.png) 680px 45px no-repeat;}
+.wd_encar .wd_cont_area .wd_cont_box .wd_cont01 ul li{background: url(https://www.kcar.com/resources/images/content/event/hyodo/wd_ul_bullet.jpg) 9px center no-repeat; font-size: 16px; color: #7f7e7f; font-weight: bold; line-height: 35px; padding-left: 22px;}
+.wd_encar .wd_cont_area .wd_cont_box .wd_cont01 ul li.bullet1{background: url(https://www.kcar.com/resources/images/content/event/hyodo/wd_ul_bullet.jpg) 9px 15px no-repeat; }
+.wd_encar .wd_cont_area .wd_cont_box .wd_cont01 ul li strong{width: 100px; color: #3f3f3f; float: left;}
+.wd_encar .wd_cont_area .wd_cont_box .wd_cont01 ul li span.span01{color: #d0112b;}
+.wd_encar .wd_cont_area .wd_cont_box .wd_cont01 ul li span.span02{color: #ee7421;}
+.wd_encar .wd_cont_area .wd_cont_box .wd_cont01 ul li span.span03{display:block;text-indent:100px;line-height:20px}
+.wd_encar .wd_cont_area .wd_cont_box .wd_cont02 h3{}
+.wd_encar .wd_cont_area .wd_cont_box .wd_cont02{position: relative;}
+.wd_encar .wd_cont_area .wd_cont_box .wd_cont02 dl{margin-top: 35px; text-align: center; font-weight: bold; float: left; padding-top: 150px; position: relative;}
+.wd_encar .wd_cont_area .wd_cont_box .wd_cont02 dl img.wd_tip{position: absolute; top: 10px; left: 70px; cursor: pointer;}
+.wd_encar .wd_cont_area .wd_cont_box .wd_cont02 dl dt{font-size: 15px; color: #7f7e7f; padding-bottom: 17px; margin-bottom: 17px; line-height: 22px;}
+.wd_encar .wd_cont_area .wd_cont_box .wd_cont02 dl dd{font-size: 14px; color: #957b5a; line-height: 18px;}
+.wd_encar .wd_cont_area .wd_cont_box .wd_cont02 dl.wd_dl01{background: url(https://www.kcar.com/resources/images/content/event/hyodo/wd02_dl01.png) center 13px no-repeat; width: 132px; margin-right: 100px}
+.wd_encar .wd_cont_area .wd_cont_box .wd_cont02 dl.wd_dl01 dt{padding: 15px 0 24px 0;}
+.wd_encar .wd_cont_area .wd_cont_box .wd_cont02 dl.wd_dl02{background: url(https://www.kcar.com/resources/images/content/event/hyodo/wd02_dl02.png) center 7px no-repeat; margin-left: 120px; margin-right: 120px;}
+.wd_encar .wd_cont_area .wd_cont_box .wd_cont02 dl.wd_dl03{background: url(https://www.kcar.com/resources/images/content/event/hyodo/wd02_dl03.png) center top no-repeat; margin-left: 120px; margin-right: 0px;}
+.wd_encar .wd_cont_area .wd_cont_box .wd_cont02 dl.wd_dl03 dt{padding: 15px 0 24px 0;}
+.wd_encar .wd_cont_area .wd_cont_box .wd_cont02 dl.wd_dl04{background: url(https://www.kcar.com/resources/images/content/event/hyodo/wd02_dl04.png) center top no-repeat; margin-left: 65px;}
+.wd_encar .wd_cont_area .wd_cont_box .wd_cont02 img.wd02_arrow{float: left; margin-top: 97px;}
+.wd_encar .wd_cont_area .wd_cont_box .wd_cont03{margin: 50px 0;}
+.wd_encar .wd_cont_area .wd_cont_box .wd_cont03 ul{padding: 35px 0 0 15px;}
+.wd_encar .wd_cont_area .wd_cont_box .wd_cont03 ul li{font-size: 13px; color: #939393; line-height: 20px;}
+/* 공통 팝업 */
+.wd_main_pop{width: 629px; height: 890px; position: absolute; background: url(https://www.kcar.com/resources/images/content/event/hyodo/main_pop_bg.jpg) no-repeat; top: 0; left: 50%; margin-left: -314.5px; display: none; z-index: 999}
+.wd_main_pop h3{width: 100%; height: 54px; padding-left: 30px; box-sizing: border-box; background: #cc0020;font-size: 16px; color: #ffffff; font-weight: bold; line-height: 54px;}
+.wd_main_pop p.wd_ptit{ font-size: 12px; color: #1c1c1c; padding-left: 30px; font-weight: bold; }
+.wd_main_pop .wd_main_pop01{width: 570px; height: auto; margin: 19px auto 13px; background: url(https://www.kcar.com/resources/images/content/event/hyodo/pop_top_bg.jpg) left top no-repeat;}
+.wd_main_pop .wd_main_pop01 p{font-size: 12px; color: #383838; padding: 10px 0; font-weight: bold;}
+.wd_main_pop .wd_main_pop01 textarea{width: 570px; height: 155px; border: 1px solid #dad9d9; box-sizing: border-box; resize: none;}
+.wd_main_pop .wd_main_pop02{width: 570px; height: auto; margin: 10px auto; background: url(https://www.kcar.com/resources/images/content/event/hyodo/pop_top_bg.jpg) left top no-repeat; padding-top: 2px;}
+.wd_main_pop .wd_main_pop02 table th{width: 108px; height: 45px; background: #f0f0f0; font-size: 12px; color: #7f7e7f; font-weight: bold; border-bottom: 1px solid #dad9d9;}
+.wd_main_pop .wd_main_pop02 table td{width: 510px; height: 45px; background: #ffffff; font-size: 12px; color: #7f7e7f; padding-left: 20px; box-sizing: border-box; line-height: 45px; border-bottom: 1px solid #dad9d9;}
+.wd_main_pop .wd_main_pop02 table td strong{color: #000000;}
+.wd_main_pop .wd_main_pop02 table td select{background: #ffffff; border: 1px solid #dad9d9; font-size: 12px; color: #7f7e7f; vertical-align: middle; height: 23px;}
+.wd_main_pop .wd_main_pop02 table td input{background: #ffffff; border: 1px solid #dad9d9; font-size: 12px; color: #7f7e7f; vertical-align: middle; height: 23px}
+.wd_main_pop .wd_main_pop02 table td select.select_tel{width: 60px;}
+.wd_main_pop .wd_main_pop02 table td select.select_email{width: 110px;}
+.wd_main_pop .wd_main_pop02 table td select.select_add{width: 110px;}
+.wd_main_pop .wd_main_pop02 table td input.pop_tel{width: 60px;}
+.wd_main_pop .wd_main_pop02 table td input.pop_email{width: 145px;}
+.wd_main_pop .wd_main_pop03{width: 570px; height: auto; margin: 20px auto 0;}
+.wd_main_pop .wd_main_pop03 label{font-size: 11px; color: #7f7e7f; margin-bottom: 10px; float: left;}
+.wd_main_pop .wd_main_pop03 label strong{color: #000000;}
+.wd_main_pop .wd_main_pop03 .agree_text{width: 560px; height: 60px; border: 1px solid #dad9d9; font-size: 12px; color: #7f7e7f; overflow-y: scroll; margin-bottom: 15px; box-sizing: border-box; padding: 10px;}
+.wd_main_pop .wd_main_pop03 .agree_text ul{padding-left: 10px;}
+.wd_main_pop .wd_main_pop03 .main_pop_btn{width: 160px; height: 30px; margin: 55px auto 0;}
+.wd_main_pop .wd_main_pop03 .wd_x_btn{width: 26px; height: 26px; position: absolute; top: 0; left: 50%; margin-left: 330px;}
+.wd_pop_bg{width: 100%; height: 100%; position: fixed; top: 0; left: 0; background: url(https://www.kcar.com/resources/images/content/event/hyodo/wd_pop_bg.png) repeat; display: none;}
+/* 신청사연 */
+.wd_encar .wd_cont_area .wd_cont_box02{width: 1000px; height: auto; padding: 30px 30px 0 30px; box-sizing: border-box; margin-bottom: 90px;}
+.wd_cont_box02 .wd_sub_cate{}
+.wd_cont_box02 .wd_sub_cate ul{float: left; padding-top:40px}
+.wd_cont_box02 .wd_sub_cate ul li span{font-size: 12px; color: #999; font-weight:normal}
+.wd_cont_box02 .wd_sub_cate ul{float: left;}
+.wd_cont_box02 .wd_sub_cate ul li{font-size: 14px; color: #7f7e7f; font-weight: bold; float: left;}
+.wd_cont_box02 .wd_sub_cate ul li a{color: #7f7e7f;}
+.wd_cont_box02 .wd_sub_cate ul li a.wd_cate_on{color: #1e1e1e;}
+.wd_cont_box02 .wd_sub_cate p{float: right; font-size: 11px; color: #7f7e7f; padding-right: 30px;}
+.wd_cont_box02 .wd_sub_cate p span{color: #ee7421;}
+.wd_cont_box02 .wd_sub_cate .slist{position:relative}
+.wd_cont_box02 .wd_sub_cate .slist ul{position:absolute;right:0}
+.wd_cont_box02 .wd_sub_cate .slist ul li{padding:0 5px;height:20px;line-height:20px;background:#d3d3d0;font-size:12px;margin-left:5px;font-weight:normal}
+.wd_cont_box02 .wd_sub_cate .slist ul li a:hover{display:block}
+.wd_cont_box02 .wd_notice_area{width: 940px; height: auto; border-top: 1px solid #333333; border-bottom: 1px solid #333333; margin-top: 20px;}
+.wd_cont_box02 .wd_notice_area .wd_notice{border-bottom: 1px dotted #aaa9a9; padding-bottom: 15px;}
+.wd_cont_box02 .wd_notice_area .wd_notice .badge{position:relative}
+.wd_cont_box02 .wd_notice_area .wd_notice .badge p{position:absolute;right:0;top:-7px}
+.wd_cont_box02 .wd_notice_area dl{padding: 15px 0 20px 0;}
+.wd_cont_box02 .wd_notice_area dl dt{width: 100%; height: 15px; font-size: 12px; color: #1e1e1e; font-weight: bold; padding-bottom: 25px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+.wd_cont_box02 .wd_notice_area dl dt img{margin-left: 20px;}
+.wd_cont_box02 .wd_notice_area dl dd{width: 100%; height: 100%; font-size: 11px; color: #7f7e7f; line-height: 22px; word-break: break-all;}
+.wd_cont_box02 .wd_notice_area ul{}
+.wd_cont_box02 .wd_notice_area ul li{height: 23px; line-height: 23px; font-size: 12px; color: #7f7f7f; float: left;}
+.wd_cont_box02 .wd_notice_area ul li.wd_notice_li01{margin-right: 10px;}
+.wd_cont_box02 .wd_notice_area ul li strong{color: #d42a35}
+.wd_cont_box02 .wd_notice_paging{width: 450px; height: 21px; margin: 35px auto 0;}
+.wd_cont_box02 .wd_notice_paging img{margin-right: 3px; float: left;}
+.wd_cont_box02 .wd_notice_paging p{margin-right: 5px; color: #7f7e7f; font-size: 12px; float: left; padding: 0 5px;}
+.wd_cont_box02 .wd_notice_paging p a{margin: 0 5px;}
+/* 이용후기 */
+.wd_encar .wd_cont_area .wd_cont_box03{width: 1000px; height: auto; padding: 10px 30px 30px 30px; box-sizing: border-box; margin-bottom: 30px;}
+.wd_cont_box03 .wd_sub_cont02{width: 100%; height: auto;}
+.wd_cont_box03 .wd_sub_cont02 .wd_review_whrite{width: 228px; height: 0px; float: right; margin-bottom: 30px;}
+.wd_cont_box03 .wd_sub_cont02 .wd_review_area{width: 100%; height: auto; clear: both;}
+.wd_cont_box03 .wd_sub_cont02 .wd_review_area .wd_reivew{width: 940px; height: 200px; margin-bottom: 20px;}
+.wd_cont_box03 .wd_sub_cont02 .wd_review_area .left_photo{float: left; width: 300px; height: 200px;}
+.wd_cont_box03 .wd_sub_cont02 .wd_review_area .right_text{width: 640px; height: 200px; padding: 48px 0 0 34px; box-sizing: border-box; border: 1px solid #e4e4e4; border-left: none; float: right;}
+.wd_sub_cont02 .wd_review_area .right_text h5{font-size: 11px; color: #ee7421; padding-bottom: 16px; font-weight: bold; width: 100%; height: 15px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;}
+.wd_sub_cont02 .wd_review_area .right_text dl{padding-bottom: 60px;}
+.wd_sub_cont02 .wd_review_area .right_text dl dt{font-size: 20px; color: #222222; padding-right: 50px; padding-bottom: 25px; font-weight: bold; /* width: 100%; */ height: 26px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;}
+.wd_sub_cont02 .wd_review_area .right_text dl dd{font-size: 14px; color: #656565; line-height: 23px; width: 100%; height: 70px; text-overflow: ellipsis; /*white-space: nowrap;*/ overflow: hidden;}
+.wd_sub_cont02 .wd_review_area .right_text p{font-size: 14px; color: #656565; font-weight: bold;}
+.wd_sub_cont02 .wd_review_area .wd_galley_btn{width: 35px; height: 35px; margin: 40px auto 0;}
+/* 후기작성 뷰 페이지 */
+.wd_review_area02{width: 940px; height: auto; clear: both;}
+.wd_review_area02 .wd_review_view{width: 940px; height: auto; border: 1px solid #e4e4e4; padding: 30px 20px 50px 20px; box-sizing: border-box;}
+.wd_review_area02 .wd_review_view .wd03_view_tit{width: 100%; height: auto; border-bottom: 1px solid #e4e4e4; padding: 0 15px 15px 15px; box-sizing: border-box;}
+.wd_review_area02 .wd_review_view .wd03_view_tit h4{font-size: 20px; color: #222222; font-weight: bold;}
+.wd_review_area02 .wd_review_view .wd03_view_tit ul{padding-top: 10px;}
+.wd_review_area02 .wd_review_view .wd03_view_tit ul li{font-size: 12px; color: #656565; padding-right: 20px; float: left;}
+.wd_review_area02 .wd_review_view .wd03_view_cont{width: 100%; height: auto; padding: 20px 15px 0 15px;}
+.wd_review_area02 .wd_review_view .wd03_view_cont p.wd03_view_text{font-size: 12px; color: #656565; line-height: 23px;}
+.wd_review_area02 .wd_review_view .wd03_view_cont .wd03_view_img{margin: 40px 50px 0px 50px; word-break : break-all;}
+.wd_review_area02 .wd_review_view .wd03_view_cont .wd03_view_img p{min-height: 15px; }
+.wd_review_area02 .wd_view_list_btn1{width: 136px; height: 44px; margin: 30px auto 0;}
+.wd_review_area02 .wd_view_list_btn2{width: 360px; height: 27px; margin: 30px auto 0; padding-left: 40px;}
+.wd_review_area02 .wd_view_list_btn2 img{float: left; margin-right: 15px;}
+.wd_review_area02 .wd03_reivew_list{width: 960px; height: auto; border-top: 2px solid #bca99d; margin-top: 40px;}
+.wd_review_area02 .wd03_reivew_list dl{width: 100%; height: 40px; border-bottom: 1px solid #e4e4e4; line-height: 40px;}
+.wd_review_area02 .wd03_reivew_list dl dt{width: 75px; height: 40px; text-align: center; font-size: 12px; color: #656565; float: left;}
+.wd_review_area02 .wd03_reivew_list dl dd{width: 885px; height: 40px; padding-left: 10px; font-size: 12px; color: #656565; box-sizing: border-box; float: left;}
+.wd_review_area02 .wd03_reivew_list dl dd span{font-size: 12px; color: #656565; float: right; padding-right: 20px;}
+/* 후기작성 글쓰기 */
+.wd_cont_box03 .wd_review_area03{width: 100%; height: auto;}
+.wd_cont_box03 .wd_review_area03 .wd_review_write{width: 100%; height: auto; border: 1px solid #e4e4e4; border-top: 2px solid #686767; margin-top: 30px;}
+.wd_cont_box03 .wd_review_area03 .wd_review_write table.wd03_write_table01{border-collapse:collapse;border-spacing:0; vertical-align: middle;}
+.wd_cont_box03 .wd_review_area03 .wd_review_write table.wd03_write_table01 th{width: 150px; height: 40px; border-bottom: 1px solid #e4e4e4; background: #f3f3f3; text-align: center; font-size:12px; color: #656565; box-sizing: border-box;}
+.wd_cont_box03 .wd_review_area03 .wd_review_write table.wd03_write_table01 td{width: 790px; height: 40px; border-bottom: 1px solid #e4e4e4; background: #ffffff; padding-left: 20px; box-sizing: border-box; color: #000000;}
+.wd_cont_box03 .wd_review_area03 .wd_review_write table.wd03_write_table01 td input.wd03_name{width: 220px; height: 20px; line-height: 20px; border: 1px solid #e1e1e1;}
+.wd_cont_box03 .wd_review_area03 .wd_review_write table.wd03_write_table01 td input.wd03_name{width: 220px; height: 20px; line-height: 20px; border: 1px solid #e1e1e1;}
+.wd_cont_box03 .wd_review_area03 .wd_review_write table.wd03_write_table01 td input.wd03_tit{width: 745px; height: 20px; line-height: 20px; border: 1px solid #e1e1e1;}
+.wd_cont_box03 .wd_review_area03 .wd_review_write .wd_review_editer{width: 100%; height: auto; padding: 20px; box-sizing: border-box;}
+.wd_cont_box03 .wd_review_area03 .wd_review_write table.wd03_write_table02{border-collapse:collapse; border-spacing:0; vertical-align: middle; border-top: 1px solid #e4e4e4;}
+.wd_cont_box03 .wd_review_area03 .wd_review_write table.wd03_write_table02 th{width: 150px; height: 40px; border-bottom: 1px solid #e4e4e4; background: #f3f3f3; text-align: center; font-size:12px; color: #656565; box-sizing: border-box;}
+.wd_cont_box03 .wd_review_area03 .wd_review_write table.wd03_write_table02 td{width: 790px; height: 40px; border-bottom: 1px solid #e4e4e4; background: #ffffff; padding-left: 20px; box-sizing: border-box;}
+.wd_cont_box03 .wd_review_area03 .wd_review_write table.wd03_write_table02 td input{border: 1px solid #e4e4e4;}
+.wd_cont_box03 .wd_review_area03 .wd_review_write .wd03_write_btn{width: 100%; height: 30px; padding: 0 30px; margin: 30px 0; box-sizing: border-box;}
+.wd_cont_box03 .wd_review_area03 .wd_review_write .wd03_write_btn .wd03_write_btn01{width: 93px; height: 30px; float: left;}
+.wd_cont_box03 .wd_review_area03 .wd_review_write .wd03_write_btn .wd03_write_btn02{width: 220px; height: 30px; float: right;}
+.wd_cont_box03 .wd_review_area03 .wd_review_write .wd03_write_btn .wd03_write_btn02 img{margin-left: 15px;}
+.wd_review_area03 .wd03_reivew_list{width: 940px; height: auto; border-top: 2px solid #bca99d; margin-top: 40px;}
+.wd_review_area03 .wd03_reivew_list dl{width: 100%; height: 40px; border-bottom: 1px solid #e4e4e4; line-height: 40px;}
+.wd_review_area03 .wd03_reivew_list dl dt{width: 75px; height: 40px; text-align: center; font-size: 12px; color: #656565; float: left;}
+.wd_review_area03 .wd03_reivew_list dl dd{width: 845px; height: 40px; padding-left: 10px; font-size: 12px; color: #656565; box-sizing: border-box; float: left;}
+.wd_review_area03 .wd03_reivew_list dl dd span{font-size: 12px; color: #656565; float: right; padding-right: 20px;}
+/* 후기작성 팝업*/
+.wd_review_pop{width: 630px; height: 472px; position: absolute; top: 690px; left: 50%; margin-left: -315px; background: url(https://www.kcar.com/resources/images/content/event/hyodo/review_pop_bg.jpg) no-repeat; display: none; z-index: 1000;}
+.wd_review_pop h3{width: 100%; height: 54px; padding-left: 30px; box-sizing: border-box; background: #cc0020; font-size: 16px; color: #ffffff; font-weight: bold; line-height: 54px;}
+.wd_review_pop .wd_reivew_table{width: 570px; height: auto; margin: 19px auto 13px; background: url(https://www.kcar.com/resources/images/content/event/hyodo/pop_top_bg.jpg) left top no-repeat; padding-top: 2px;}
+.wd_review_pop .wd_reivew_table table{vertical-align: middle;}
+.wd_review_pop .wd_reivew_table table th{width: 108px; height: 45px; background: #f0f0f0; text-align: center; font-size: 12px; color: #7f7e7f; border-bottom: 1px solid #dad9d9;}
+.wd_review_pop .wd_reivew_table table td{width: 200px; height: 45px; padding-left: 20px; box-sizing: border-box; border-bottom: 1px solid #dad9d9; font-size: 12px; color: #a6a6a6;}
+.wd_review_pop .wd_reivew_table table td strong{color: #000000;}
+.wd_review_pop .wd_reivew_table table td input{height: 23px; border: 1px solid #dad9d9; background: #ffffff; box-sizing: border-box;}
+.wd_review_pop .wd_reivew_table table td input.review_tit{width: 430px;}
+.wd_review_pop .wd_reivew_table table td input.review_photo{width: 375px; padding-left: 10px;}
+.wd_review_pop .wd_reivew_table table td textarea{width: 430px; height: 133px; background: #ffffff;  border: 1px solid #dad9d9; resize: none;}
+.wd_review_pop .wd_reivew_table table td.textarea_td{padding: 15px 0 15px 20px;}
+.wd_review_pop .wd_reivew_table table td input.review_image{width: 50px; height: 23px; border: none;}
+.wd_review_pop .wd_reivew_pop_btn{width: 160px; height: 30px; margin: 0 auto;}
+.wd_review_pop .wd_x_btn02{width: 26px; height: 26px; position: absolute; top: 0; left: 50%; margin-left: 330px;}
+.wd_pop_bg02{width: 100%; height: 100%; position: fixed; top: 0; left: 0; background: url(https://www.kcar.com/resources/images/content/event/hyodo/wd_pop_bg.png) repeat; display: none;}
+/*클럽엔카*/
+.wdClubCont{width: 1000px; padding-bottom:50px;}
+.wdClubTop{position:relative;}
+.wdClubTop .topImg{}
+.wdClubTop .mov{position:absolute; top:330px; left:450px; width:525px; height:295px;}
+.wdClubTop .mov iframe{width:525px; height:295px;}
+
+.moveCar{padding-bottom:40px; background:#f8f8f8;}
+.moveCar .move_img{padding-top:599px; background:url('https://www.kcar.com/resources/images/content/event/move/move_img.png') 50% top no-repeat;}
+.moveCar .txt_main{height:200px; background:url('https://www.kcar.com/resources/images/content/event/move/bg_red.png') 50% top repeat;}
+.moveCar .txt_main .txt{position:relative; width:900px; margin:0 auto; padding:18px 0 0 20px;}
+.moveCar .btn_send{position:absolute; top:70px; right:30px;}
+
+.moveCar .moveTab{height:49px; background:#707070; overflow:hidden;}
+.moveCar .moveTab .moveTabBx{ width:920px; margin:0 auto;}
+.moveCar .moveTab .moveTabBx h3{float:left; padding:15px 20px;}
+.moveCar .moveTab .moveTabBx ul{width:370px; float:right;overflow:hidden;}
+.moveCar .moveTab .moveTabBx ul li{float:left;}
+.moveCar .moveCont{width:920px; margin:0 auto;}
+.moveCar .moveCont h4.tit{padding:35px 0 10px 0; margin:0 20px;}
+.moveCar .moveCont h4.tit2{padding:35px 0 15px 0; margin:0 20px; border-bottom:1px solid #e8e8e8;}
+.moveCar .moveWeek{padding-top:40px;  overflow:hidden;}
+.moveCar .moveWeek .le{float:left; width:550px; height:270px; border-bottom:1px solid #e6e6e6; position:relative;}
+.moveCar .moveWeek .le h4{position:relative; padding:0 0 12px 20px; border-bottom:1px solid #e6e6e6;}
+.moveCar .moveWeek .le h4 span{position:absolute;  top:2px; right:0; font-size:14px; color:#888; font-weight:bold;}
+.moveCar .moveWeek .le .weekBx{padding:40px 0 0 20px; overflow:hidden; width:540px; height:187px; position:relative;}
+.moveCar .moveWeek .le .weekBx .weekGood{position:absolute; top:20px; left:0;}
+.moveCar .moveWeek .le .weekBx .img{float:left; width:160px;}
+.moveCar .moveWeek .le .weekBx .img img{width:160px;}
+.moveCar .moveWeek .le .weekBx .weekTxt{float:right; width:350px;}
+.moveCar .moveWeek .le .weekBx .weekTxt strong{display:block; font-size:14px; font-weight:bold;}
+.moveCar .moveWeek .le .weekBx .weekTxt p{width:300px; padding-top:10px; line-height:1.6; text-align:justify;}
+.moveCar .moveWeek .le .btnle{position:absolute; left:0; top:130px; cursor: pointer; width:30px; height:40px; z-index:100}
+.moveCar .moveWeek .le .btnri{position:absolute; right:0; top:130px; cursor: pointer; width:30px; height:40px; z-index:100}
+.moveCar .moveWeek .ri{float:right; width:308px; height:270px; margin-right:20px; border:1px solid #e6e6e6;}
+.moveCar .moveWeek .ri .carTit{position:relative;}
+.moveCar .moveWeek .ri .carTit span{position:absolute; top:28px; right:55px; font-size:14px; color:#000;}
+
+/*20170302*/
+.moveCar .moveWeek .ri .carTitnew{position:relative;}
+.moveCar .moveWeek .ri .carTitnew span{position: absolute;top: 20px;right: 50px;color: #000;}
+.moveCar .moveWeek .ri .carTitnew span.arr_r{position:absolute; cursor: pointer; top:3px; right:-35px; font-size:14px; color:#000;}
+.moveCar .moveWeek .ri .carTitnew span.arr_l{position:absolute; cursor: pointer; top:3px; right:40px; font-size:14px; color:#000;}
+.moveCar .moveWeek .ri .carTitnew span.nummid{position:absolute; top:0px; right:12px; font-size:24px;}
+.moveCar .moveWeek .ri .carTitnew span.monthtxt{ position:absolute; top:8px; right:-2px; font-size:14px;font-weight:normal}
+.moveCar .calnotice{position:relative;}
+.moveCar .calnotice p{position: absolute;top: 320px;right:30px;}
+/*//20170302*/
+
+.moveCar .moveWeek .ri table{width:100%;}
+.moveCar .moveWeek .ri table th{padding:5px 0;}
+.moveCar .moveWeek .ri table td{text-align:center; font-weight:bold;}
+.moveCar .moveWeek .ri table td.we span{color:#34826a; }
+.moveCar .moveWeek .ri table td div{position:relative;}
+.moveCar .moveWeek .ri table td span{display:inline-block; width:31px; height:21px; padding-top:11px; vertical-align:middle; }
+.moveCar .moveWeek .ri table td span i{position:relative; z-index:2; font-style:normal;}
+.moveCar .moveWeek .ri table td span i.on{color:#fff;}
+.moveCar .moveWeek .ri table td div b.st{z-index:1; display:block; width:40px; height:21px; padding-top:11px; vertical-align:middle; position:absolute; left:1px; top:0; background:url('https://www.kcar.com/resources/images/content/event/move/cal_st.png') 50% 50% no-repeat; color:#fff;  cursor:pointer;}
+.moveCar .moveWeek .ri table td div b.ed{z-index:1; display:block; width:40px; height:21px; padding-top:11px; vertical-align:middle; position:absolute; left:1px; top:0; background:url('https://www.kcar.com/resources/images/content/event/move/cal_ed.png') 50% 50% no-repeat;  cursor:pointer;}
+.moveCar .moveWeek .ri table td div b.talk{display:none;}
+.moveCar .moveWeek .ri table td div span:hover b.talk{display:block; position:absolute; left:-22px; top:-30px; width:95px; background:#fff; border:1px solid #ccc; padding:3px; color:#666; z-index:100; font-weight:normal; font-size:11px;}
+
+.moveCar .mainAfter{position:relative}
+.moveCar .mainNew{position:relative;}
+.moveCar .mainAfter .more{position:absolute; top:40px; right:22px;}
+.moveCar .mainNew .more{position:absolute; top:40px; right:22px;}
+.mainUse .step{height:200px; background:url('https://www.kcar.com/resources/images/content/event/move/use_list.gif') 50% 10px no-repeat; overflow:hidden; line-height:5555px;}
+
+
+/*table type*/
+.moveCar .listType1{padding-bottom:40px;border-bottom:1px solid #eee; margin-left:20px;}
+.moveCar .listType1 li{position:relative; float:left; width:190px; height:275px; padding:7px 7px; margin:5px 20px 10px 0; background:#fff;}
+.moveCar .listType1 li strong.tit{display:block; padding:8px 0; }
+.moveCar .listType1 li p.txt{display:block; txet-align:justify;}
+.moveCar .listType1 li img{width:190px; height:174px;}
+.moveCar .listType1 li.nomargin{margin-right:0;}
+.moveCar .listType1:after{content:""; display:block; clear:both}
+.moveCar .listType1 li .icon_good{position:absolute; top:-5px; left:-5px; width:47px; height:75px;}
+.moveCar .listType1 li .icon_good img{width:56px; height:76px;}
+
+.moveCar .listType1 li .endOver{position:absolute; top:0; left:0; width:204px; height:285px; display:block; text-align:center; }
+.moveCar .listType1 li .endOver .bin{display:block; width:204px; height:285px; background:#000; opacity:0.2; filter:alpha(opacity=20);}
+.moveCar .listType1 li .endOver img{position:absolute; top:0; left:0; padding:50px 0 0 60px; width:79px; height:78px;}
+
+.moveCar .listType2{overflow:hidden; padding:40px 0;border-bottom:1px solid #eee;}
+.moveCar .listType2 li{position:relative; float:left; width:229px; padding-left:46px;}
+.moveCar .listType2 li strong.tit{display:block; padding:8px 0; }
+.moveCar .listType2 li p.txt{display:block; txet-align:justify;}
+.moveCar .listType2 li img{width:229px; height:185px;}
+.moveCar .listType2:after{content:""; display:block; clear:both}
+.moveCar .listType2 li .icon_good{position:absolute; top:-5px; left:35px; width:47px; height:75px;}
+.moveCar .listType2 li .icon_good img{width:56px; height:76px;}
+
+
+
+
+/*좋아요*/
+.moveCar .wlike{padding-top:8px; font-size:11px;}
+.moveCar .wlike img{vertical-align:top;}
+.moveCar .wlike span{display:inline-block; padding:3px 4px 0 0; }
+.moveCar .wlike b{display:inline-block; padding:3px 0 0 19px;background:url('https://www.kcar.com/resources/images/mobile/event/move/icon_like.png') left top no-repeat; color:#dc1835;}
+
+/* 레이어 */
+.move_Pop{position:absolute; top:200px; left:50%; width:800px; height:550px; margin-left:-400px; background:#fff; z-index:9000; border:3px solid #000;}
+.mpop_tit{padding:10px 0; background:#5e5e5e; text-align:center;}
+.mpop_tit2{padding:8px 0; background:#707070; text-align:center;}
+.popLy{padding:15px; height:400px; overflow-y:scroll;}
+.popLy table{margin-top:5px; border-top:1px solid #333;}
+.popLy table th{padding:8px 0; border-bottom:1px solid #ccc; background:#ececec;}
+.popLy table td{padding:8px 0 8px 5px; border-bottom:1px solid #ccc;}
+.popLy table td input.input97p{width:97%; border:1px solid #ccc; }
+.popLy tx-canvas iframe {height:200px!important;}
+.popLy input, .popLy select{vertical-align:middle;}
+
+.popLy2{padding:15px; }
+.popLy2 table{margin-top:5px; border-top:1px solid #333;}
+.popLy2 table th{padding:8px 0; border-bottom:1px solid #ccc; background:#ececec;}
+.popLy2 table td{padding:8px 0 8px 5px; border-bottom:1px solid #ccc;}
+.popLy2 table td input.input97p{width:97%; border:1px solid #ccc; }
+.popLy2 .tx-canvas iframe {height:400px!important;}
+.popLy2 input, .popLy2 select{vertical-align:middle;}
+
+.moveAgreeTit{padding:20px 0 5px 10px; }
+.moveAgree{padding:12px 8px; height:80px; border-top:1px solid #ddd; border-bottom:1px solid #ddd; background:#f1f1f1; overflow-y:scroll; font-size:87.5%; line-height:1.5;}
+.moveAgree p{padding:3px 0;}
+
+.btn_move{margin-top:10px;}
+.btn_move .btn_co{display:inline-block; padding:5px 20px;}
+.btn_move .re{background:#d42a35; color:#fff;}
+.btn_move .ba{background:#888; color:#fff;}
+.btn_move .blu{background:#0a6ea9; color:#fff;}
+
+/*신청사연*/
+.moveBest{margin:0 20px 20px 20px; border:1px solid #ccc; background:#fff;}
+.bestTab{margin:20px; overflow:hidden;}
+.bestTab li{float:left; width:50%;}
+.bestTab li a{display:block; padding:15px 0; background:#555; text-align:center; font-weight:bold; color:#fff;}
+.bestTab li a.on{background:#d42a35; }
+
+.seListTop{position:relative; padding:15px 20px 5px 20px;}
+.seListTop .listAlign{}
+.seListTop .listAlign a{color:#dc1835}
+.seListTop .listAlign a.on{font-weight:bold;}
+.seListTop .sheckSe{position:absolute; top:10px; right:20px;}
+.sheckSe input,
+.sheckSe select{vertical-align:middle;}
+.moveSe{padding:20px 0; text-align:center;}
+.moveSe select{}
+.moveSe input{height:19px; border:1px solid #ccc;}
+.moveSe .btn_co{display:inline-block; padding:3px 20px; background:#d42a35; color:#fff;}
+/*이용후기*/
+.afterWr{position:absolute; top:-35px; right:20px;}
+.afterWr a{display:inline-block; padding:5px 20px; background:#d42a35; color:#fff;}
+
+/* view */
+.moveVeiw{margin-top:5px; padding:20px 10px 20px 10px; }
+.moveVeiw .date{padding:10px 0; font-size:11px;}
+.moveVeiw .tit{padding:10px 0 10px 0; font-size:18px; font-weight:bold; border-top:1px solid #ccc; border-bottom:1px solid #ccc;}
+.moveVeiw .cont{min-height:300px; padding:20px 0; line-height:1.5; font-size:13px; border-bottom:1px solid #ccc;}
+.moveVeiw .cont img{padding:10px 0; max-width:750px;}
+
+.move_btn{padding:5px 0;text-align:right;}
+.move_btn a{display:inline-block; padding:4px 15px; background:#d42a35; color:#fff; font-size:14px; text-align:center;}
