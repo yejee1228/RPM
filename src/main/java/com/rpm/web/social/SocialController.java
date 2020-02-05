@@ -11,6 +11,8 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
@@ -53,7 +55,7 @@ public class SocialController {
         String filename = itr.next();
         MultipartFile mfile = uploadFile.getFile(filename);
         String origName=mfile.getOriginalFilename();
-        String path = "C:\\Users\\yejee\\IdeaProjects\\TeamRPM\\src\\main\\resources\\static\\img";
+        String path = "C:\\Users\\yejee\\IdeaProjects\\RPM\\src\\main\\resources\\static\\img";
         String directory=new SimpleDateFormat("yy-MM-dd").format(new Date()).replace("-", File.separator);
         File serverPath = socialService.makeDir(path, directory);
         serverPath.mkdirs();
@@ -62,6 +64,8 @@ public class SocialController {
         File serverFile = socialService.makeFile(serverPath, filename);
         box.add(directory);
         box.add(filename);
+        System.out.println(box.get().get(0));
+        System.out.println(box.get().get(1));
         try {
             mfile.transferTo(serverFile);
         } catch (Exception e) {
@@ -72,42 +76,14 @@ public class SocialController {
 
     @DeleteMapping("/uploadImg")
     public String deleteUploadImg(HttpServletRequest uploadFile){
-        /*String origName=uploadFile.getLocalName();
-        String extension = origName.substring(origName.lastIndexOf(".")+1);
         //직전에 업로드했던 파일 삭제
-        String filePath_ = (String)box.get().get(0);
-        Path filePath= Paths.get("C:\\Users\\yejee\\IdeaProjects\\TeamRPM\\src\\main\\resources\\static\\img\\" + filePath_);
-        // 어제 업로드 된 첨부파일 목록으로 파일경로 구함
-        // ready for check file in directory with DB file list
-        List<Path> fileListPaths = fileList
-                .stream()
-                .map(
-                        vo -> Paths.get(
-                                "C:\\upload",
-                                vo.getUploadPath(),
-                                vo.getUuid() + "_" + vo.getFileName())
-                )
-                .collect(Collectors.toList());
-
-
-        // 어제 디렉토리 경로
-        // files in yesterday directory
-        File targetDir = Paths.get("C:\\Users\\yejee\\IdeaProjects\\TeamRPM\\src\\main\\resources\\static\\img\\"+
-                (String)box.get().get(0),);
-
-        // 어제 디렉토리와 비교해서 삭제할 파일 경로 구하기
-        // attach 테이블에 없는 파일목록 구하기
-        File[] removeFiles = targetDir.listFiles(
-                file -> fileListPaths.contains(file.toPath()) == false);
-
-        // 하나씩 삭제
-        for (File file : removeFiles) {
-            file.delete();
+        Path file= Paths.get("C:\\Users\\yejee\\IdeaProjects\\RPM\\src\\main\\resources\\static\\img\\"
+                +box.get().get(0)+File.separator+box.get().get(1));
+        try {
+            Files.delete(file);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-
-
-*/
-
         box.clear();
         return "";
     }

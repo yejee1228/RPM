@@ -13,6 +13,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.function.BiFunction;
@@ -129,7 +132,14 @@ public class SocialServiceImpl implements SocialService{
     @Override
     public void deleteContent(String boardSeq) {
         social = socialRepository.findById(Long.parseLong(boardSeq)).get();
-        socialRepository.delete(social);
+        Path file= Paths.get("C:\\Users\\yejee\\IdeaProjects\\RPM\\src\\main\\resources\\static\\"
+                +social.getBoardImg());
+        try {
+            socialRepository.delete(social);
+            Files.delete(file);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
