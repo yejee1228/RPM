@@ -20,6 +20,7 @@ public class SocialController {
     @Autowired PageProxy pager;
     @Autowired ThumbRepository thumbRepository;
 
+    
     @GetMapping("/viewList/{pageNo}/{userid}")
     public Map<String, Object> viewList(@PathVariable String pageNo, @PathVariable String userid){
         Map<String, Object> map = new HashMap<>();
