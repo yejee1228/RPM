@@ -22,6 +22,7 @@ const actions = {
             .then(({data})=>{
                 if(data.result == "success") {
                     commit('LOGIN_COMMIT', data)
+                    localStorage.setItem('auth',data.user.auth)
                     localStorage.setItem("token", data.token)
                     localStorage.setItem("userId",data.user.userid)
                     if(data.user.auth==0) {
