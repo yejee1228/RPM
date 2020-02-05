@@ -55,18 +55,18 @@ export default new Router({
         {path:'/snsmodify', name:'snsmodify', component : SnsModify},
         {path:'/snswrite', name:'snswrite', component : SnsWrite},
         {path:'/payment', name:'payment', component : Payment},
-        {path: '/customerDetail',name: 'customerDetail', component:CustomerDetail,children:
+        {path: '/customerDetail', component:CustomerDetail,children:
         [
-            {path: '',name: 'customerDetailRight', component:CustomerDetailRight },
+            {path: '', component:CustomerDetailRight },
             {path: 'bestCarList',name: 'bestCarList', component:BestCarList }
         ]
         },
-        {path: '/companyHome',name: 'companyHome', component:CompanyHome ,children:
+        {path: '/companyHome', component:CompanyHome ,children:
                 [
                     {path: '',name: 'companyMain', component:CompanyMain },
                     {path: 'customerList',name: 'CustomerList', component: CustomerList},
                     {path: 'carList',name: 'CarList', component: CarList}]},
-        {path: '/recommendHome',name: 'recommendHome', component:RecommendHome, children:[
+        {path: '/recommendHome', component:RecommendHome, children:[
                 {path: '',name: 'RecommendContent', component: RecommendContent},
                 {path: 'condition',name: 'Condition', component: Condition}]}
     ]
