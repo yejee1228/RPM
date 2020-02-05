@@ -45,6 +45,7 @@
             </div>
         </nav>
 
+
         <div id = "main_layout">
             <div v-if="this.$store.state.user.user.auth==1" class="logout" >
                 <a @click.prevent="logout">로그아웃</a>
