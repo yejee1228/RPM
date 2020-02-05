@@ -3,8 +3,8 @@
         <div className="mc_search1">
             <ul>
                 <li>
-                    <line-example  ref="monthRevenue" v-if="isLineGraph === true" v-bind="LineGraphDataSetup"/>
-                    <horizontal-bar-example  ref="modelRevenue" v-if="isLineGraph === false"  v-bind="BarGraphDataSetup"/>
+                    <line-example  ref="monthRevenue" v-if="isLineGraph" v-bind="LineGraphDataSetup"/>
+                    <horizontal-bar-example  ref="modelRevenue" v-if="!isLineGraph"  v-bind="BarGraphDataSetup"/>
                 </li>
             </ul>
         </div>
