@@ -23,7 +23,6 @@ public class ReCommendedCarController {
             recommendedCar.setCars(carsRepository.findByCarcd(el));
             recommendedCar.setUserid(String.valueOf(send.get("userid")));
             recommendedCar.setCenterCode(String.valueOf(send.get("centercode")));
-            System.out.println(recommendedCar.toString());
             recommendedCarRepository.save(recommendedCar);
         });
 

@@ -15,7 +15,7 @@ public class RevenueScheduler {
     @Autowired
     RevenueRepository revenueRepository;
 
-    @Scheduled(cron="0 0 0 25 * *")
+    @Scheduled(cron="0 0 0 1 * *")
     public void test(){
         SimpleDateFormat sdf =new SimpleDateFormat("yyyyMM");
         Date now = new Date();
