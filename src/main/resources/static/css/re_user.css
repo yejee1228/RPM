@@ -14,7 +14,7 @@
 #aside dl dd span{color:#4f4f4f; text-decoration:none}
 #aside dl dd span.on{font-weight:bold; letter-spacing:-1px; color:#d94200}
 /*contents*/
-#contents{float:right;width: 1000px;padding:0  0 70px 20px;border-left:1px solid #dfdddc;min-height:600px;}
+#contents{float:right;width: 1000px;padding:0  0 70px 20px;min-height:600px;}
 
 
 .blind { border: 0 !important; clip: rect(0 0 0 0) !important; height: 1px !important; margin: -1px !important; overflow: hidden !important; padding: 0 !important; position: absolute !important; width: 1px !important; }
