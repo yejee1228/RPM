@@ -64,8 +64,6 @@ public class SocialController {
         File serverFile = socialService.makeFile(serverPath, filename);
         box.add(directory);
         box.add(filename);
-        System.out.println(box.get().get(0));
-        System.out.println(box.get().get(1));
         try {
             mfile.transferTo(serverFile);
         } catch (Exception e) {

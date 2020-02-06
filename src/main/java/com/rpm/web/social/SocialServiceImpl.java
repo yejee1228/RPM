@@ -79,7 +79,6 @@ public class SocialServiceImpl implements SocialService{
         socialDetailDto.setBoardImg(social.getBoardImg());
         socialDetailDto.setUserid(social.getUserSeq().getUserid());
         socialDetailDto.setUserName(social.getUserSeq().getName());
-        //socialDetailDto.setCommentCount(social.getComments().size());
         socialDetailDto.setThumbCount(social.getThumbs().size());
         return socialDetailDto;
     }
@@ -92,10 +91,9 @@ public class SocialServiceImpl implements SocialService{
         social.setCarName(param.getCarName());
         social.setBoardDate(new SimpleDateFormat ( "yy.MM.dd HH:mm:ss").format( new Date()));
         social.setCarCode("board"+social.getBoardDate());
-        int boxSize=box.get().size();
         social.setBoardImg("img"+File.separator
-                +box.get().get(boxSize-2)+File.separator
-                +box.get().get(boxSize-1));
+                +box.get().get(0)+File.separator
+                +box.get().get(1));
         box.clear();
         social.setBoardContent(param.getBoardContent());
         socialRepository.save(social);

@@ -14,7 +14,7 @@
 .directCenter .centerMintro{float:left; width:218px; height:632px; border-right:1px solid #e5e5e5;}
 .directCenter .centerMintro .centerMintroBx{padding-left:16px;}
 .directCenter .centerMintro h4{padding-top:40px;}
-.directCenter .centerMintro .direct_mguide{height:123px; padding:18px 0 20px 0;  backg  round:url(/resources/images/content/center/direct_m_guideList.gif) left 18px no-repeat; overflow:hidden;}
+.directCenter .centerMintro .direct_mguide{height:123px; padding:18px 0 20px 0;  background:url(/resources/images/content/center/direct_m_guideList.gif) left 18px no-repeat; overflow:hidden;}
 .directCenter .centerMintro .direct_mguide li{float:left; width:93px; height:26px; background:url(/resources/images/content/center/direct_m_guideList.gif) left top no-repeat; line-height:0; font-size:0;text-indent:-5555px;}
 .directCenter .centerMintro .direct_mguide li.g0{background-position:0 0;}
 .directCenter .centerMintro .direct_mguide li.g4{background-position:-93px 0;}
