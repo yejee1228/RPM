@@ -1,7 +1,8 @@
 const state = {
     title : '' ,
+    lineGraphTitle : '' ,
     labels :[] ,
-    lineGraphLabels :[] ,
+    lineGraphLabels :['January' , 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ]  ,
     barGraphLabels :[] ,
     rowData : [],
     lineGraphRowData : [],
@@ -17,6 +18,7 @@ const state = {
 }
 const getters = {
     title : state => state.title ,
+    lineGraphTitle : state => state.lineGraphTitle ,
     labels : state => state.labels ,
     lineGraphLabels : state => state.lineGraphLabels,
     barGraphLabels  : state => state.barGraphLabels ,
@@ -140,6 +142,9 @@ const actions = {
     async drawingChartByModel( { commit } , data ) {
         commit( 'DRAWINGCHARTBYMODEL' , data )
     },
+    async drawingChartByMonth( { commit } , data ) {
+        commit( 'DRAWINGCHARTBYMONTH' , data )
+    },
     async changeGraph ( { commit } , data ) {
         commit( 'CHANGEGRAPH' , data )
     },
@@ -156,26 +161,45 @@ const mutations = {
             state.labels = data.labels
             state.GrandTotal = data.GrandTotal
         }
-
+        let domestic = state.Domestic
+        for (let i = 0; i < 10 ; ) {
+            if (!domestic[i].subCategory.includes('Sub-total')) {
+                state.barGraphLabels.push(domestic[i].modelName)
+                i++
+            }
+        }
         if (data.mainCategory === state.mainCategoryItem.export ) state.Export = data.data
+
     },
     UPDATECHARTDATA ( state , data ) {
         //state.labels.push(label);
         let total = 0;
         state.Domestic[data.index].monthRevenue[data.monthIndex] = data.hasText
         state.Domestic[data.index].monthRevenue.forEach( item => total += Number(item))
-        console.log(total)
         state.Domestic[data.index].Total =total
         let subTotalIndex = state.Domestic.filter( item => item.subCategory === state.Domestic[data.index].subCategory).length
         let subTotal = 0
         for (let i = 0; i < subTotalIndex-1 ; i++) {
-            subTotal += Number(state.Domestic[i].Jan)
+            subTotal += Number(state.Domestic[i].monthRevenue[data.monthIndex])
         }
-        state.Domestic[subTotalIndex-1].Jan = subTotal
+        state.Domestic[subTotalIndex-1].monthRevenue[data.monthIndex] = subTotal
     },
     DRAWINGCHARTBYMODEL ( state , data ) {
-        state.lineGraphLabels = Object.keys(data.targetItem).slice(3,14)
-        state.lineGraphRowData = Object.values(data.targetItem).slice(3,14)
+        state.lineGraphTitle = data.targetItem.modelName + ' 의 월별 판매량 '
+        state.lineGraphRowData = Object.values(data.targetItem.monthRevenue)
+    },
+    DRAWINGCHARTBYMONTH ( state , monthIndex ) {
+        state.barGraphLabels = []
+        state.barGraphRowData= []
+        let domestic = state.Domestic
+        for (let i = 0; i < 10 ; ) {
+            if (!domestic[i].subCategory.includes('Sub-total')) {
+                state.barGraphRowData.push(domestic[i].monthRevenue[monthIndex.monthIndex ])
+                state.barGraphLabels.push(domestic[i].modelName)
+                i++
+            }
+        }
+        console.log(monthIndex)
     },
     CHANGEGRAPH ( state , data ) {
         switch ( data ) {

@@ -27,12 +27,16 @@
                                         <div class="searchcont1">
                                             <ul >
                                                <li v-if="isAnyCar">
-                                                   <span  style="font-size: 20px">  제품 관련 키워드로 RPM 보유 상품을 우선으로 보여 드립니다.</span><br/>
-                                                   <span style="font-size: 15px">선택하신 키워드 : {{selectedItem}}</span>
+                                                   <span style="font-size: 25px">선택하신 키워드 : <b>{{selectedItem}}</b></span><br/>
+                                                   <span  style="font-size: 20px">  <b>제품</b> 관련 키워드로 <b>RPM 보유 상품</b>을 우선으로 보여 드립니다.</span><br/>
                                                </li>
                                                 <li v-if="isAnyArticle && !isAnyCar">
-                                                   <span style="font-size: 20px">  기사 관련 키워드로 기사를 보여 드립니다.</span><br/>
-                                                    <span style="font-size: 15px"> 선택하신 키워드 : {{selectedItem}}</span>
+                                                    <span style="font-size: 25px"> 선택하신 키워드 : <b>{{selectedItem}}</b></span><br/>
+                                                    <span style="font-size: 20px">  <b>기사</b> 관련 키워드로 <b>기사</b>를 보여 드립니다.</span><br/>
+                                               </li>
+                                                <li v-if="!isAnyArticle && !isAnyCar">
+                                                   <span style="font-size: 25px">  최근 2년간 기사의 형태소를 분석하여 워드 크라우드로 보여드립니다.</span><br/>
+                                                    <span style="font-size: 15px"> 관심있는 <b>키워드</b>를 선택하시면 관련 내용을 확인하실 수 있습니다. </span>
                                                </li>
                                             </ul>
                                         </div>
