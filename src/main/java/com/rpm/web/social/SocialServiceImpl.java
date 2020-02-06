@@ -7,6 +7,7 @@ import com.rpm.web.proxy.Box;
 import com.rpm.web.user.User;
 import com.rpm.web.user.UserRepository;
 
+import com.rpm.web.util.PathEnum;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
@@ -130,7 +131,7 @@ public class SocialServiceImpl implements SocialService{
     @Override
     public void deleteContent(String boardSeq) {
         social = socialRepository.findById(Long.parseLong(boardSeq)).get();
-        Path file= Paths.get("C:\\Users\\yejee\\IdeaProjects\\RPM\\src\\main\\resources\\static\\"
+        Path file= Paths.get(PathEnum.UPLOAD_PATH.toString()
                 +social.getBoardImg());
         try {
             socialRepository.delete(social);
@@ -145,6 +146,7 @@ public class SocialServiceImpl implements SocialService{
         thumb.setBoardSeq(socialRepository.findById(Long.parseLong(boardSeq)).get());
         thumb.setUserSeq(userRepository.findByUserid(userid));
         thumbRepository.save(thumb);
+        System.out.println(1);
     }
 
     @Override
@@ -153,5 +155,6 @@ public class SocialServiceImpl implements SocialService{
         user = userRepository.findByUserid(userid);
         thumb = thumbRepository.findByBoardSeqAndUserSeq(social, user);
         thumbRepository.delete(thumb);
+        System.out.println(2);
     }
 }

@@ -4,6 +4,7 @@ import com.rpm.web.proxy.Box;
 import com.rpm.web.proxy.PageProxy;
 import com.rpm.web.user.User;
 import com.rpm.web.user.UserRepository;
+import com.rpm.web.util.PathEnum;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -11,14 +12,11 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
-import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
 import java.util.*;
-import java.util.stream.Collectors;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:8081")
@@ -29,6 +27,7 @@ public class SocialController {
     @Autowired PageProxy pager;
     @Autowired ThumbRepository thumbRepository;
     @Autowired Box box;
+
 
     @GetMapping("/viewList/{pageNo}/{userid}")
     public Map<String, Object> viewList(@PathVariable String pageNo, @PathVariable String userid){
@@ -55,15 +54,15 @@ public class SocialController {
         String filename = itr.next();
         MultipartFile mfile = uploadFile.getFile(filename);
         String origName=mfile.getOriginalFilename();
-        String path = "C:\\Users\\yejee\\IdeaProjects\\RPM\\src\\main\\resources\\static\\img";
         String directory=new SimpleDateFormat("yy-MM-dd").format(new Date()).replace("-", File.separator);
-        File serverPath = socialService.makeDir(path, directory);
+        File serverPath = socialService.makeDir(PathEnum.UPLOAD_PATH.toString(), directory);
         serverPath.mkdirs();
         String extension = origName.substring(origName.lastIndexOf(".")+1);
         filename = UUID.randomUUID().toString() +"."+extension;
         File serverFile = socialService.makeFile(serverPath, filename);
         box.add(directory);
         box.add(filename);
+        System.out.println(box.get());
         try {
             mfile.transferTo(serverFile);
         } catch (Exception e) {
@@ -74,8 +73,7 @@ public class SocialController {
 
     @DeleteMapping("/uploadImg")
     public String deleteUploadImg(HttpServletRequest uploadFile){
-        //직전에 업로드했던 파일 삭제
-        Path file= Paths.get("C:\\Users\\yejee\\IdeaProjects\\RPM\\src\\main\\resources\\static\\img\\"
+        Path file= Paths.get(PathEnum.UPLOAD_PATH.toString()
                 +box.get().get(0)+File.separator+box.get().get(1));
         try {
             Files.delete(file);
@@ -116,6 +114,7 @@ public class SocialController {
     @GetMapping("/thumbDown/{boardSeq}/{userid}")
     public Boolean thumbDown(@PathVariable String boardSeq, @PathVariable String userid){
         socialService.thumbDown(boardSeq, userid);
+        System.out.println(userid);
         return true;
     }
 
@@ -126,6 +125,7 @@ public class SocialController {
         User user = userRepository.findByUserid(userid);
         Thumb thumb = thumbRepository.findByBoardSeqAndUserSeq(social, user);
         if(thumb != null){result = true;}
+        System.out.println(userid);
         return result;
     }
 

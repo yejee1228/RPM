@@ -25,7 +25,7 @@ public class Social implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "BOARDSEQ") @NotNull private Long boardSeq;
     @Column(name = "BOARDDATE", length=25) @NotNull private String boardDate;
-    @Column(name = "CARCODE", length=15) @NotNull private String carCode;
+    @Column(name = "CARCODE", length=50) @NotNull private String carCode;
     @Column(name = "CARNAME", length=100) @NotNull private String carName;
     @Column(name = "BOARDCONTENT", length = 20000) @NotNull private String boardContent;
     @Column(name = "BOARDIMG", length=200) @NotNull private String boardImg;
