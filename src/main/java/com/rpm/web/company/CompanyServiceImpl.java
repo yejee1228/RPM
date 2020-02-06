@@ -30,7 +30,14 @@ public class CompanyServiceImpl implements CompanyService{
                 }
             });
         }
+        if(list.size()<5){
+            carsRepository.findByModelnmOrderByPrice(recommend.getModelNm()).forEach(el->{
 
+                if ( list.size()<5) {
+                    list.add(el);
+                }
+            });
+        }
 
         return list;
     }

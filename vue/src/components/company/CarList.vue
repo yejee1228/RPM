@@ -11,23 +11,21 @@
                     </div>
                 </div>
                 <div class="align">
-                    <!-- 20181217 VR차량 -->
-                    <span><a href="" class="3dview_flag txt "><em class="vr_ordermark"></em> 3D 라이브 뷰 차량</a></span>
-                    <!-- //20181217 VR차량 -->
-                    <span class="basic"><a href=""
-                                           class="txt">기본정렬</a></span>
-                    <span><a href="" class="txt">가격순</a><a href="" class="down ">낮은순</a>
-												<a href="" class="up ">높은순</a>
-						</span>
+
+
+
+                    <span><a @click.prevent href="" class="txt">가격순</a><a @click.prevent="priceAsc" href="" class="down ">낮은순</a>
+                                                 <a @click.prevent="priceDesc" href="" class="up ">높은순</a>
+                         </span>
                     <span><a href="" class="txt">주행거리 순</a><a
-                            href="" class="down ">낮은순</a>
-						<a href=""
-                           class="up ">높은순</a>
-						</span>
+                            @click.prevent="milageAsc"    href="" class="down ">낮은순</a>
+                         <a @click.prevent="milageDesc" href=""
+                            class="up ">높은순</a>
+                         </span>
                     <span><a href="" class="txt">연식 순</a><a
-                            href="" class="down ">낮은순</a>
-						<a href="" class="up ">높은순</a>
-						</span>
+                            @click.prevent="beginYearAsc" href="" class="down ">낮은순</a>
+                         <a @click.prevent="beginYearDesc" href="" class="up ">높은순</a>
+                         </span>
                 </div>
             </div>
             <div class="result_list">
@@ -46,7 +44,7 @@
                     <tr>
                         <td class="check">
                             <div class="checker" id="uniform-interest_list_check1">
-                                <span  :class="{checked:car.checked}" @click="check(car)" @change='updateCheckall(car)' >
+                                <span  :class="{checked:car.checked}" @click="check(car)" @change='updateCheckall(cars)' >
                                     <input type="checkbox" id="interest_list_check1" class="uniform"  >
                                 </span>
                             </div>
@@ -88,12 +86,9 @@
             </div>
 
             <div class="btn_cont">
-                <a href="" class="delete" >선택삭제</a>
-
-                <div class="center_btn">
+                <a @click.prevent="removeData()" href="" class="delete" >선택삭제</a>
 
 
-                </div>
             </div>
             <pagination :pagination="List" @movePage="movePageBlock" ref="pagination"></pagination>
 
@@ -131,6 +126,61 @@
                 this.$store.dispatch('contents/setProduct',carItem)
                 this.$router.push('/product')
             },
+            priceAsc(){
+                this.List.sort(function (a,b) {
+                    return a.price-b.price;
+                })
+                this.$refs.pagination.first()
+            },
+            priceDesc(){
+                this.List.sort(function (a,b){
+                    return b.price -a.price
+                })
+                this.$refs.pagination.first()
+
+            },
+            milageAsc(){
+                this.List.sort(function (a,b) {
+                    return a.milage-b.milage;
+                })
+                this.$refs.pagination.first()
+            },
+            milageDesc(){
+                this.List.sort(function (a,b){
+                    return b.milage -a.milage
+                })
+                this.$refs.pagination.first()
+
+            },
+            beginYearAsc(){
+                this.List.sort(function (a,b) {
+                    return a.beginYear-b.beginYear;
+                })
+                this.$refs.pagination.first()
+            },
+            beginYearDesc(){
+                this.List.sort(function (a,b){
+                    return b.beginYear -a.beginYear
+                })
+                this.$refs.pagination.first()
+
+            },
+            removeData(){
+                for(let i=0;i<this.cars.length;i++) {
+                    if (this.cars[i].checked == true) {
+                        this.checkedList.push(this.cars[i])
+                    }
+                }
+                axios
+                    .post(`${this.context}/company/carRemove`,this.checkedList)
+                    .then(()=>{
+                        alert('삭제완료')
+                        location.reload()
+                    })
+                    .catch(e=>{
+                        alert(`axios fail${e}`)
+                    })
+            }
 
 
         },

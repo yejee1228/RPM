@@ -1,5 +1,6 @@
 package com.rpm.web.recommendedCar;
 
+import com.rpm.web.contents.Cars;
 import com.rpm.web.contents.CarsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -34,5 +35,12 @@ public class ReCommendedCarController {
         List<RecommendedCar> list =recommendedCarRepository.findByUserid(userid);
         list.sort((a,b) -> b.getRecoCarSeq().compareTo(a.getRecoCarSeq()));
         return list;
+    }
+    @PostMapping("/recommendedCarRemove")
+    public void recommendedCarRemove(@RequestBody List<RecommendedCar> recommendedCars){
+
+        recommendedCars.forEach(el->{
+            recommendedCarRepository.deleteById(el.getRecoCarSeq());
+        });
     }
 }

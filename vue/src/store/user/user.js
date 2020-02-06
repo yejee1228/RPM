@@ -26,11 +26,8 @@ const actions = {
                     localStorage.setItem("token", data.token)
                     localStorage.setItem("userId",data.user.userid)
                     if(data.user.auth==0) {
-                        if(data.mycar){
-                            localStorage.setItem("mycar", JSON.stringify(data.mycar))
-                            if(data.record){
-                                localStorage.setItem("record", JSON.stringify(data.record))
-                            }
+                        if(data.mycar){localStorage.setItem("mycar", JSON.stringify(data.mycar))
+                            if(data.record){localStorage.setItem("record", JSON.stringify(data.record))}
                         }
                         router.push('/')
                     }else{
