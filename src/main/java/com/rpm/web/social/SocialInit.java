@@ -58,9 +58,8 @@ public class SocialInit implements ApplicationRunner {
             }
             long count = socialRepository.count();
             if (count == 0) {
-                ArrayList<Social> list = socialDummy.crawlingBoard(user, car);
                 for (int i = 0; i < 10; i++) {
-                    for (Social s : list) {
+                    for (Social s : socialDummy.crawlingBoard(user, car)) {
                         socialRepository.save(s);
                     }
                 }

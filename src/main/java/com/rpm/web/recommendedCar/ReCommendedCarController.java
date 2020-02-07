@@ -31,6 +31,7 @@ public class ReCommendedCarController {
     }
     @GetMapping("/getRecommendedCar/{userid}")
     public List<RecommendedCar> getRecommendedCar(@PathVariable String userid){
+
         List<RecommendedCar> list =recommendedCarRepository.findByUserid(userid);
         list.sort((a,b) -> b.getRecoCarSeq().compareTo(a.getRecoCarSeq()));
         return list;
