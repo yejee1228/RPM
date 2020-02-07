@@ -32,21 +32,6 @@ import Payment from '@/components/contents/Payment.vue'
 
 Vue.use(Router)
 
-const requireAuthCompany = () => (to, from, next) => {
-    if (localStorage.getItem('auth') === 1) {
-        return next();
-    }
-    next('/');
-    alert('접근권한이 없습니다.')
-};
-const requireAuthUser = () => (to, from, next) => {
-    if (localStorage.getItem('auth') === 0) {
-        return next();
-    }
-    next('/');
-    alert('접근권한이 없습니다.')
-};
-
 
 
 
@@ -60,10 +45,10 @@ export default new Router({
         {path:'/join', name:'join', component : Join},
         {path:'/login', name:'login', component : Login},
         {path:'/product', name:'product', component : Product},
-        {path:'/mypage',beforeEnter:requireAuthUser(), name:'mypage', component : Mypage},
-        {path:'/mypageModify',beforeEnter:requireAuthUser(), name:'mypageModify', component : MypageModify},
-        {path:'/mycarModify',beforeEnter:requireAuthUser(), name:'mycarModify', component : MycarModify},
-        {path:'/mypageModifyCheck', beforeEnter:requireAuthUser(),name:'mypageModifyCheck', component : MypageModifyCheck},
+        {path:'/mypage', name:'mypage', component : Mypage},
+        {path:'/mypageModify', name:'mypageModify', component : MypageModify},
+        {path:'/mycarModify',name:'mycarModify', component : MycarModify},
+        {path:'/mypageModifyCheck',name:'mypageModifyCheck', component : MypageModifyCheck},
         {path:'/seencar', name:'seencar', component : SeenCar},
         {path:'/magazine', name:'magazine', component : Magazine},
         {path:'/chartMaker', name:'chartMaker', component : ChartMaker},
@@ -74,19 +59,19 @@ export default new Router({
         {path:'/snsmodify', name:'snsmodify', component : SnsModify},
         {path:'/snswrite', name:'snswrite', component : SnsWrite},
         {path:'/payment', name:'payment', component : Payment},
-        {path: '/customerDetail',beforeEnter: requireAuthCompany(), component:CustomerDetail,children:
+        {path: '/customerDetail',component:CustomerDetail,children:
         [
-            {path: '',beforeEnter: requireAuthCompany(), component:CustomerDetailRight },
-            {path: 'bestCarList',beforeEnter: requireAuthCompany(),name: 'bestCarList', component:BestCarList }
+            {path: '',component:CustomerDetailRight },
+            {path: 'bestCarList',name: 'bestCarList', component:BestCarList }
         ]
         },
-        {path: '/companyHome',beforeEnter: requireAuthCompany(), component:CompanyHome ,children:
+        {path: '/companyHome', component:CompanyHome ,children:
                 [
-                    {path: '',beforeEnter: requireAuthCompany(),name: 'companyMain', component:CompanyMain },
-                    {path: 'customerList',beforeEnter: requireAuthCompany(),name: 'CustomerList', component: CustomerList},
-                    {path: 'carList',beforeEnter: requireAuthCompany(),name: 'CarList', component: CarList}]},
-        {path: '/recommendHome',beforeEnter: requireAuthCompany(), component:RecommendHome, children:[
-                {path: '',beforeEnter: requireAuthCompany(),name: 'RecommendContent', component: RecommendContent},
-                {path: 'condition',beforeEnter: requireAuthCompany(),name: 'Condition', component: Condition}]}
+                    {path: '',name: 'companyMain', component:CompanyMain },
+                    {path: 'customerList',name: 'CustomerList', component: CustomerList},
+                    {path: 'carList',name: 'CarList', component: CarList}]},
+        {path: '/recommendHome', component:RecommendHome, children:[
+                {path: '',name: 'RecommendContent', component: RecommendContent},
+                {path: 'condition',name: 'Condition', component: Condition}]}
     ]
 })
