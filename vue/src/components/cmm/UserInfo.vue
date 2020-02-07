@@ -5,11 +5,11 @@
             <div class="profilePhotoArea">
                 <img src="https://static.nid.naver.com/images/web/user/default.png" width="80" height="80" style="border-radius: 50%"  alt="">
             </div>
-        <div class="nameSpace">{{this.user.name}} 님</div>
+        <div class="nameSpace">{{this.user.username}} 님</div>
         <div v-if="this.mycar!=null" class="myCarSpace">내차: {{this.mycar.model}} </div>
         </div>
         <div class ='buttonArea'>
-            <router-link to="/MypageModifyCheck">
+            <router-link to="/updateuser">
                 <a href="" class="mypageButton" > 회원정보 수정 </a>
             </router-link>
             <a href="" @click="logout" class="logoutButton">   로그아웃</a>
