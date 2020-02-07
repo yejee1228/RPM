@@ -51,9 +51,9 @@ public class RecommendInit implements ApplicationRunner {
                 for(int i =0; i<20;i++) {
 
                         Recommend recommend = new Recommend();
-                        recommend.setAuth(true);
-                        recommend.setCenterRegion(companyRepository.findByCenterCode2(el));
+                        recommend.setCenterRegion(companyRepository.findCenterRigionByCenterCode(el));
                         recommend.setCenterName(companyRepository.findByCenterCode(el));
+                        recommend.setCenterCode(el);
                         recommend.setFuleTypedName(fuel[i%5]);
                         recommend.setMaxBeginYear(maxBeginYear[i]);
                         recommend.setMinBeginYear(minBeginYear[i]);
@@ -67,23 +67,8 @@ public class RecommendInit implements ApplicationRunner {
                         recommend.setTransmissioncdName(transmissionCdName[i%2]);
                         recommend.setUserId(recommendRepository.findUserId().get(i));
                         recommend.setName(recommendRepository.findNameByUserId(recommendRepository.findUserId().get(i)));
-                        Recommend recommendCenter = new Recommend();
-                        recommendCenter.setAuth(false);
-                        recommendCenter.setFuleTypedName(recommend.getFuleTypedName());
-                        recommendCenter.setMaxBeginYear(recommend.getMaxBeginYear());
-                        recommendCenter.setMinBeginYear(recommend.getMinBeginYear());
-                        recommendCenter.setMaxMilage(recommend.getMaxMilage());
-                        recommendCenter.setMinMilage(recommend.getMinMilage());
-                        recommendCenter.setMaxPrice(recommend.getMaxPrice());
-                        recommendCenter.setMinPrice(recommend.getMinPrice());
-                        recommendCenter.setModelGrpNm(recommend.getModelGrpNm());
-                        recommendCenter.setModelNm(recommend.getModelNm());
-                        recommendCenter.setMakeNm(recommend.getMakeNm());
-                        recommendCenter.setName(recommend.getName());
-                        recommendCenter.setTransmissioncdName(recommend.getTransmissioncdName());
-                        recommendCenter.setUserId(companyRepository.findByCenterName(recommend.getCenterName()));
                         recommendRepository.save(recommend);
-                        recommendRepository.save(recommendCenter);
+
                 }
                 });
             }
