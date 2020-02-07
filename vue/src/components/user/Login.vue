@@ -62,10 +62,8 @@
 		beforeDestroy(){
 			this.$store.state.user.fail = false
 		},
-
 		created() {
 			if(this.auth=== true){
-				alert('이미로그인중입니다')
 				this.$router.push('/')
 			}
 		}

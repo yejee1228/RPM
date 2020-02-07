@@ -276,13 +276,13 @@
 					axios
 							.post(url, data, headers)
 							.then(res=>{
-								if(res.data.msg=="SUCCESS"){
+								if(res.data.result){
 									alert(`RPM의 가족이 되신 것을 환영합니다. 로그인해주세요.`)
 									return this.$router.push({path : '/login'})
 								}
 							})
 							.catch(()=>{
-								alert(`join axios Error`)
+								alert(`다시 회원가입 해주세요!`)
 							})
 				}else{
 					alert(`필수 입력값을 확인해주세요.`)
