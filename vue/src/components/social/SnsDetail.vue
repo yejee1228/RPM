@@ -7,28 +7,21 @@
     <div class="portfolio-modal modal fade show" id="portfolioModal2" tabindex="-1" style="overflow: scroll; display: block; padding-right: 16.9962px;">
       <div class="modal-dialog">
         <div class="modal-content">
-          <div class="close-modal" style="color:#0d124f" @click="gotoList" data-dismiss="modal">
-            <i class="fas fa-undo fa-3x"></i>
-          </div>
           <div class="container">
             <div class="row">
+              <div class="close-modal" style="color:#0d124f" @click="gotoList" data-dismiss="modal">
+                <i class="fas fa-undo fa-3x"></i>
+              </div>
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h4 class="text-uppercase">{{board.carName}}</h4>
-                  <p class="item-intro text-muted">{{board.userName}}</p>
                   <img class="img-fluid d-block mx-auto" :src="board.boardImg" alt="">
-                  <p>{{board.boardContent}}</p>
-                  <ul class="list-inline">
-                    <li>작성시간: {{board.boardDate}}</li>
-                    <li>작성자: @{{board.userid}}</li>
-                  </ul>
-                  <!--thumb-->
-                  <div style="margin:30px">
+                  <div style="margin:30px; text-align: left"><div style="text-align: left; width: 39%; height: 35px; display: inline-block;">
                     <a class="btn-like" @click="thumbUp" v-if="empty"><i class="far fa-heart fa-2x"></i> </a>
                     <a class="btn-like" @click="thumbDown" v-if="fall"><i class="fas fa-heart fa-2x"></i></a>
-                    {{board.thumbCount}}
+                    좋아요 {{board.thumbCount}}개 </div> <div style="text-align: right; width: 60%; height: 35px; display: inline-block; vertical-align: baseline">{{board.userName}} @{{board.userid}}   {{board.boardDate}}</div>
                   </div>
+                  <h5 class="text-uppercase" style="text-align: left">{{board.carName}}</h5>
+                  <p style="text-align: left; font-size: 15px; font-weight: lighter">{{board.boardContent}}</p>
                   <div v-if="myContent">
                     <button class="btn btn-primary" @click="goModify" data-dismiss="modal" type="button">
                       <i class="fas fa-pen"></i> 글 수정하기</button>
@@ -155,12 +148,17 @@
   }
   .modal-content{
     width: 1000px;
-    max-height: 900px;
     display: inline-block;
+    padding-top: 0px;
+  }
+  .portfolio-modal .modal-content {
+    font-family: 'Segoe UI';
+    padding: 20px 0;
+    text-align: center;
   }
   .portfolio-modal .modal-content img {
     margin-bottom: 30px;
-    max-height: 400px;
+    max-height: 500px;
   }
   .btn-primary {
     margin: auto 10px;
@@ -176,5 +174,8 @@
   }
   h2 {
     color: #0d124f;
+  }
+  .close-modal {
+    float: right;
   }
 </style>

@@ -24,7 +24,7 @@ public class SocialDummy {
         List<String> dates = new ArrayList<>();
         dates.clear();
         try {
-            Document rawData = Jsoup.connect("http://www.ppomppu.co.kr/zboard/zboard.php?id=car&category=6").timeout(10 * 1000).get();
+            Document rawData = Jsoup.connect("http://www.ppomppu.co.kr/zboard/zboard.php?id=car&category=6").get();
             Elements aTag = rawData.select("a[href^=view.php?id=car&page=1]");
             Elements date = rawData.select("td[class=eng list_vspace]");
             for (Element e : aTag) {
@@ -56,13 +56,14 @@ public class SocialDummy {
                 social.setCarCode(car.get(0).getCarcd());
                 social.setCarName(car.get(0).getTruckName());
                 social.setBoardDate(dates.get(i));
-                Document rawData = Jsoup.connect(urls.get(i)).timeout(10 * 1000).get();
+                Document rawData = Jsoup.connect(urls.get(i)).get();
                 Elements boardContent = rawData.select(".pic_bg")
                         .select("tbody").select("tr").select("td")
                         .select("table").select("tbody").select("tr").select("td")
                         .select("table").select("tbody").select("tr").select("td").select("p");
                 Elements boardImg = rawData.select("img[src^=//cdn.ppomppu.co.kr/zboard/]");
                 social.setBoardImg(boardImg.get(0).attr("src"));
+
                 social.setBoardContent(StringReplace(boardContent.text()));
                 list.add(social);
             } catch (Exception e2) {

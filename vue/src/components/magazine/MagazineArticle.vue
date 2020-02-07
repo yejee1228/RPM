@@ -37,24 +37,62 @@
 </script>
 
 <style scoped>
-    .mc_wide_search{margin-bottom: 57px; }
-    .mc_wide_searchbox{  width:1200px; background: #ffffff;height:603px;position:relative;display:inline-block; z-index:2; margin-bottom:27px;}
-    .mc_wide_searchbox .searchbg{ margin-top: 50px; width:100%; background:url( https://www.kcar.com/resources/images/index/search_bg.png) center no-repeat; opacity: 0.97; display:inline-block;}
-    .mc_wide_searchbox .searchbg .mc_search{margin: 0px auto 0 auto; }
+    .mc_wide_search {
+        margin-bottom: 57px;
+    }
+
+    .mc_wide_searchbox {
+        width: 1200px;
+        background: #ffffff;
+        height: 603px;
+        position: relative;
+        display: inline-block;
+        z-index: 2;
+        margin-bottom: 27px;
+    }
+
+    .mc_wide_searchbox .searchbg {
+        font-family: 'Segoe UI';
+        margin-top: 50px;
+        width: 100%;
+        background: url(https://www.kcar.com/resources/images/index/search_bg.png) center no-repeat;
+        opacity: 0.97;
+        display: inline-block;
+    }
+
+    .mc_wide_searchbox .searchbg .mc_search {
+        margin: 0px auto 0 auto;
+        font-family: 'Segoe UI';
+    }
+
     .mc_search .selectric-items .selectric-scroll {
         overflow-x: hidden;
         overflow-y: auto;
     }
-    .fst{
-        opacity: 0.97; display:inline-block; background-color: white; margin-bottom: 10px;
+
+    .fst {
+        opacity: 0.97;
+        display: inline-block;
+        background-color: white;
+        margin-bottom: 10px;
     }
-    .wrap_section{max-width:1112px;margin:0 auto}
-    .area_section {background-color: aliceblue; margin-top: 100px;}
+
+    .wrap_section {
+        max-width: 1112px;
+        margin: 0 auto
+    }
+
+    .area_section {
+        background-color: aliceblue;
+        margin-top: 100px;
+    }
+
     .list_1boon {
         overflow: hidden;
         margin: 0 auto;
         padding-top: 6px;
     }
+
     .list_1boon .thumb_g .img_thumb {
         display: block;
         overflow: hidden;
@@ -64,14 +102,17 @@
         height: 192px;
 
     }
+
     .list_1boon .detail_sub {
         overflow: hidden;
         padding: 0 25px 23px;
     }
+
     .list_1boon li {
         float: left;
         width: 25%;
     }
+
     .list_1boon .tit_thumb {
         display: block;
         display: -webkit-box;
@@ -86,6 +127,7 @@
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 2;
     }
+
     .list_1boon .txt_number {
         display: block;
         overflow: hidden;
