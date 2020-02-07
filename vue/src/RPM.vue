@@ -4,7 +4,7 @@
         <div id="main_image" style="width: 100%; height: 100px; line-height: 100px; text-align: center">
             <img @click="goHome" style="width: 100%; max-width: 760px; vertical-align: middle" src="@/assets/image/rpmlogoblack.png" alt="">
         </div>
-        <nav v-if="!(this.$store.state.user.auth==='ADMIN')">
+        <nav v-if="!(this.$store.state.user.user.auth==='ADMIN')">
             <button v-if="!this.user.auth" class="navbar-toggler navbar-toggler-right"  type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>

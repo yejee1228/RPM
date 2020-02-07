@@ -102,7 +102,7 @@
         methods : {
             sendCar(){
                 axios
-                    .post('/recommendedCar/recommendedCar', this.send)
+                    .post('http://localhost:8080/recommendedCar/recommendedCar', this.send)
                     .then(() => { alert('고객에게 추천차 정보를 보냈습니다') })
                     .catch(e=>{
                         alert('erorr'+e)

@@ -22,17 +22,8 @@ const actions = {
             .then(({data})=>{
                 if(data.result) {
                     commit('LOGIN_COMMIT', data)
-                    localStorage.setItem('auth',data.user.auth)
-                    localStorage.setItem("token", data.token)
-                    localStorage.setItem("userId",data.user.userid)
-                    if(data.user.auth==0) {
-                        if(data.mycar){localStorage.setItem("mycar", JSON.stringify(data.mycar))
-                            if(data.record){localStorage.setItem("record", JSON.stringify(data.record))}
-                        }
-                        router.push('/')
-                    }else{
-                        router.push('/companyHome')
-                    }
+                }else{
+                    commit('fail_commit')
                 }
             })
             .catch(()=>{
@@ -45,8 +36,8 @@ const actions = {
     async getUserInfo({commit}){
         const token = localStorage.getItem("token")
         let headers = {headers : {
-            'Accept' : 'application/json',
-        }}
+                'Accept' : 'application/json',
+            }}
         axios.post('http://localhost:8080/getUserInfo',token,headers)
             .then(({data})=>{
                 if(data.result){

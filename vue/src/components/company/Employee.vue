@@ -27,7 +27,7 @@
         name: "employee",
         data(){
             return{
-                context:'http://localhost:8080/',
+                context:'http://localhost:8080',
                 em_row:[0,1,2,3,4],
                 em_col:[],
 
