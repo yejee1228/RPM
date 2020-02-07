@@ -38,7 +38,7 @@
 
 <style scoped>
     .mc_wide_search{margin-bottom: 57px; }
-    .mc_wide_searchbox{  width:1000px; background: #ffffff;height:603px;position:relative;display:inline-block; z-index:2; margin-bottom:27px;}
+    .mc_wide_searchbox{  width:1200px; background: #ffffff;height:603px;position:relative;display:inline-block; z-index:2; margin-bottom:27px;}
     .mc_wide_searchbox .searchbg{ margin-top: 50px; width:100%; background:url( https://www.kcar.com/resources/images/index/search_bg.png) center no-repeat; opacity: 0.97; display:inline-block;}
     .mc_wide_searchbox .searchbg .mc_search{margin: 0px auto 0 auto; }
     .mc_search .selectric-items .selectric-scroll {

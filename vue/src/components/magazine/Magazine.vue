@@ -8,9 +8,12 @@
                     <div class="mc_wide_searchbox">
                         <vue-word-cloud
                                 :words="wordList"
-                                font-family="맑은 고딕"
-                                :enter-animation="enterAnimation"
-                                :color="([, weight]) => weight > 19 ? colorItems[Math.floor(Math.random()*11+1)] : weight > 16 ? colorItems[Math.floor(Math.random()*11+1)] : weight > 12 ? colorItems[Math.floor(Math.random()*11+1)] : weight > 8 ?  colorItems[Math.floor(Math.random()*11+1)] : weight > 4 ? colorItems[Math.floor(Math.random()*11+1)] : colorItems[Math.floor(Math.random()*11+1)]"
+                                font-family="Roboto"
+                                :color="([, weight]) => weight > 19 ? colorItems[Math.floor(Math.random()*11+1)] : weight > 18 ? colorItems[Math.floor(Math.random()*11+1)] : weight > 15 ? colorItems[Math.floor(Math.random()*11+1)] : weight > 12 ?  colorItems[Math.floor(Math.random()*11+1)] : weight > 10 ? colorItems[Math.floor(Math.random()*11+1)] : colorItems[Math.floor(Math.random()*11+1)]"
+                                :rotation="([, weight]) => weight > 19 ? rotationItems[0] : weight > 18 ? rotationItems[Math.floor(Math.random()*2)] : weight > 17 ? rotationItems[Math.floor(Math.random()*2)] : weight > 16 ?  rotationItems[Math.floor(Math.random()*2)] : weight > 15 ? rotationItems[Math.floor(Math.random()*2)] : rotationItems[Math.floor(Math.random()*2)]"
+                                :spacing = spacing
+                                :enter-animation = enterAnimation
+                                :animation-duration = 5000
                         >
                             <template slot-scope="{text, weight , word}" >
                                 <div :title="word" style="cursor: pointer;" @click="onWordClick(text)">
@@ -70,7 +73,10 @@
             return {
                 enterAnimation: enterAnimation,
                 selectedItem: '',
-                colorItems: ['#ffd077', '#3bc4c7', '#3a9eea', '#ff4e69', '#461e47','#31a50d', '#d1b022', '#74482a','#d99cd1', '#c99cd1', '#b99cd1', '#a99cd1']
+                colorItems: ['#ffd077', '#3bc4c7', '#3a9eea', '#ff4e69', '#461e47','#31a50d', '#d1b022', '#74482a','#d99cd1', '#c99cd1', '#b99cd1', '#a99cd1'],
+                rotationItems : [0, 3/4],
+                spacingValues: [0, 1/4, 1/2, 1, 2]
+
             }
         },
         computed : {
@@ -84,6 +90,9 @@
             },
             isAnyArticle : function(){
                 return (this.$store.state.magazine.articleList.length>0)
+            },
+            spacing: function() {
+                return this.spacingValues[1];
             }
         },
         methods: {
@@ -118,5 +127,9 @@
         overflow-x: hidden;
         overflow-y: auto;
     }
-
+    .fst{
+        opacity: 0.97; display:inline-block;
+    }
+    .wrap_section{max-width:1112px;margin:0 auto}
+    .area_section {background-color: aliceblue; margin-top: 150px;}
 </style>

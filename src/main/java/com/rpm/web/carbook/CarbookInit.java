@@ -29,7 +29,7 @@ public class CarbookInit implements ApplicationRunner {
         SimpleDateFormat SystemTime = new SimpleDateFormat ( "yyyy-MM-dd HH:mm:ss");
         String formattedTime1 = SystemTime.format (System.currentTimeMillis());
 
-        System.out.println( formattedTime1 + "  INFO 18844 --- [           CarbookInit ]         : CarbookInit Start ");
+        System.out.println( formattedTime1 + "  INFO 00001 --- [           CarbookInit ]         : CarbookInit Start ");
 
         mycarInit();
         recordInit();

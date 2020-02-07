@@ -291,7 +291,7 @@
                             <table>
                                 <caption>차량검색결과</caption>
 
-                                <colgroup>
+                                <colgroup>table
                                     <col style="width: 190px;">
                                     <col style="width: 300px;">
                                     <col style="width: 280px;">
