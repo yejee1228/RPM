@@ -85,7 +85,7 @@ axios.post('http://localhost:8080/getAuth',token,headers)
                     }}
                 axios.post('http://localhost:8080/getAuth',token,headers)
                     .then(({data})=>{
-                        if(data.result && data.auth === 'ADMIN'){
+                        if(data.result && data.auth === 'USER'){
                             return next();
                         }else{
                             alert(`권한이 없습니다!`)
