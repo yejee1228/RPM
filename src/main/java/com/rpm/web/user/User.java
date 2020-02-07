@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import com.rpm.web.social.Social;
+import com.rpm.web.social.Thumb;
 import lombok.*;
 import org.hibernate.validator.constraints.UniqueElements;
 import org.springframework.context.annotation.Lazy;
@@ -35,7 +36,7 @@ public class User implements UserDetails {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "USERSEQ") @NotNull private Long userSeq;
     @Column(name = "USERID", unique = true, length = 25) @NotNull private String userid;
-    @Column(name = "PASSWD", length=40) @NotNull private String passwd;
+    @Column(name = "PASSWD") @NotNull private String passwd;
     @Column(name = "NAME", length = 30) @NotNull private String name;
     @Column(name = "EMAIL", length=100) @NotNull private String email;
     @Column(name = "AUTH") @NotNull private int auth;
@@ -48,6 +49,9 @@ public class User implements UserDetails {
             orphanRemoval = true)
     private List<Social> socials = new ArrayList<>();
 
+    @OneToMany(mappedBy = "userSeq", cascade = CascadeType.ALL,
+            orphanRemoval = true)
+    private List<Thumb> thumbs = new ArrayList<>();
 
     @ElementCollection(fetch = FetchType.EAGER)
     @Builder.Default

@@ -62,7 +62,7 @@ public class UserController {
     @PostMapping("/getUserInfo")
     public HashMap<String, Object> getUserInfo(@RequestBody String token){
         trunk.clear();
-        if(jwtTokenProvider.validateToken(token)){
+        if(token != null &&jwtTokenProvider.validateToken(token)){
             user = userRepository.findByUserid(jwtTokenProvider.getUserPk(token));
             trunk.put(Arrays.asList("token","result", "user"), Arrays.asList(token, true, makeUserAxios(user)));
         }else{
@@ -88,7 +88,7 @@ public class UserController {
     @PostMapping("/withDrawl")
     public Map<String, Object> withDrawl(@RequestBody String token){
         trunk.clear();
-        if(jwtTokenProvider.validateToken(token)){
+        if(token != null &&jwtTokenProvider.validateToken(token)){
             userService.withDrawl(jwtTokenProvider.getUserPk(token));
             trunk.put(Arrays.asList("result"), Arrays.asList(true));
         }else{
@@ -96,6 +96,17 @@ public class UserController {
         }
         return trunk.get();
 }
+    @PostMapping("/getAuth")
+    public Map<String, Object> getAuth(@RequestBody String token){
+        trunk.clear();
+        System.out.println(token);
+        if(token != null && jwtTokenProvider.validateToken(token)){
+            trunk.put(Arrays.asList("result", "auth"), Arrays.asList(true, userRepository.findRolesByuserUserseq(user.getUserSeq())));
+        }else{
+            trunk.put(Arrays.asList("result"), Arrays.asList(false));
+        }
+        return trunk.get();
+    }
     private UserForAxios makeUserAxios(User user) {
         userForAxios.setUserid(user.getUserid());
         userForAxios.setUsername(user.getName());

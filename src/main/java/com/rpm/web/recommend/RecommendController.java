@@ -43,7 +43,6 @@ public class RecommendController {
     @GetMapping("/customerList/{userid}")
     public List<Recommend> customerList(@PathVariable String userid){
         List<Recommend> list=recommendRepository.findByCenterCode(userid);
-        System.out.println(list.toString());
         list.sort((a,b) -> b.getRecoSeq().compareTo(a.getRecoSeq()));
         return  list;
 
