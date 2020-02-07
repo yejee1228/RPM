@@ -24,8 +24,8 @@ public class Recommend implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "RECO_SEQ") @NotNull private Long recoSeq;
     @Column(name = "AUTH") @NotNull private Boolean auth;
-    @Column(name = "USERID") @NotNull private String userId;
-    @Column(name = "NAME") @NotNull private String name;
+    @Column(name = "USERID", length = 25) @NotNull private String userId;
+    @Column(name = "NAME", length = 30) @NotNull private String name;
     @Column(name = "CENTER_REGION", length = 10) private String centerRegion;
     @Column(name = "CENTER_NAME", length = 20) private String centerName;
     @Column(name = "MIN_BEGIN_YEAR") private int minBeginYear;

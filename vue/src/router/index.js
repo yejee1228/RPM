@@ -32,26 +32,6 @@ import Payment from '@/components/contents/Payment.vue'
 
 Vue.use(Router)
 
-/*
-const requireAuthCompany = () => (to, from, next) => {
-    if (localStorage.getItem('auth') === 1) {
-        return next();
-    }
-    next('/');
-    alert('접근권한이 없습니다.')
-};
-const requireAuthUser = () => (to, from, next) => {
-    if (localStorage.getItem('auth') === 0) {
-        return next();
-    }
-    next('/');
-    alert('접근권한이 없습니다.')
-};
-
-
-*/
-
-
 
 export default new Router({
     mode: 'history',
@@ -62,10 +42,10 @@ export default new Router({
         {path:'/join', name:'join', component : Join},
         {path:'/login', name:'login', component : Login},
         {path:'/product', name:'product', component : Product},
-        {path:'/mypage',/*beforeEnter:requireAuthUser(),*/ name:'mypage', component : Mypage},
-        {path:'/mypageModify',/*beforeEnter:requireAuthUser(),*/ name:'mypageModify', component : MypageModify},
-        {path:'/mycarModify',/*beforeEnter:requireAuthUser(),*/ name:'mycarModify', component : MycarModify},
-        {path:'/mypageModifyCheck', /*beforeEnter:requireAuthUser(),*/name:'mypageModifyCheck', component : MypageModifyCheck},
+        {path:'/mypage', name:'mypage', component : Mypage},
+        {path:'/mypageModify', name:'mypageModify', component : MypageModify},
+        {path:'/mycarModify',name:'mycarModify', component : MycarModify},
+        {path:'/mypageModifyCheck',name:'mypageModifyCheck', component : MypageModifyCheck},
         {path:'/seencar', name:'seencar', component : SeenCar},
         {path:'/magazine', name:'magazine', component : Magazine},
         {path:'/chartMaker', name:'chartMaker', component : ChartMaker},

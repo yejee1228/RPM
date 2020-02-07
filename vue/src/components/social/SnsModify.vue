@@ -185,6 +185,7 @@
                 contentTitle1 : '',
                 contentTitle2 : '',
                 contentTitle3 : '',
+                contentTitle : '',
                 userName:'',
                 content:'',
             }
@@ -198,13 +199,6 @@
                 modelList : state => state.contents.modelList,
                 modelListIsOpen : state => state.contents.modelListIsOpen,
             }),
-            contentTitle() {
-                if (this.keyWord1 === '국산차/수입차를 먼저 선택하세요') {
-                    return this.board.carName
-                } else {
-                    return this.contentTitle1 + ' ' + this.contentTitle2 + ' ' + this.contentTitle3
-                }
-            },
             boardImgName(){
                 return (this.$refs.pond.getFile()===null)?this.board.boardImg:this.$refs.pond.getFile().filename
             }
@@ -217,6 +211,7 @@
                 .then(res=>{
                     this.board = res.data
                     console.log(this.board)
+                    this.contentTitle = this.board.carName
                 })
                 .catch(()=>{
                     alert('axios error')
@@ -277,21 +272,25 @@
             },
 
             setCategory2(param){
+                this.contentTitle = ''
                 this.keyWord2 = this.defaultKeyWord2
                 this.keyWord3 = this.defaultKeyWord3
                 this.keyWord1 = param.name
                 this.contentTitle1 = this.keyWord1
+                this.contentTitle = this.contentTitle1
                 this.$store.dispatch('contents/getCategory2',{'param':this.keyWord1,'column':'MAKENM'})
             },
             setCategory3(param){
                 this.keyWord3 = this.defaultKeyWord3
                 this.keyWord2 = param.name
                 this.contentTitle2 = this.keyWord2
+                this.contentTitle = this.contentTitle1+' '+this.contentTitle2
                 this.$store.dispatch('contents/getCategory3',{'param':this.keyWord2,'column':'MODEL_GRP_NM'})
             },
             setKeyWord3(param){
                 this.keyWord3 = param.name
                 this.contentTitle3 = this.keyWord3
+                this.contentTitle = this.contentTitle1+' '+this.contentTitle2+' '+this.contentTitle3
             },
             updateContent() {
                 let headers = {
