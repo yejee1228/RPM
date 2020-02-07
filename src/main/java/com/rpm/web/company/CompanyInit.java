@@ -1,5 +1,8 @@
 package com.rpm.web.company;
 
+import com.rpm.web.contents.CarsRepository;
+import com.rpm.web.employee.EmployeeRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.core.annotation.Order;
@@ -10,11 +13,12 @@ import java.util.List;
 @Order(value=1)
 @Component
 public class CompanyInit implements ApplicationRunner {
-    private CompanyRepository companyRepository;
+    @Autowired
+    CompanyRepository companyRepository;
+    @Autowired
+    EmployeeRepository employeeRepository;
 
-    public CompanyInit(CompanyRepository companyRepository) {
-        this.companyRepository= companyRepository;
-    }
+
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
@@ -27,18 +31,19 @@ public class CompanyInit implements ApplicationRunner {
 
 
         long count = companyRepository.count();
-        List<String> code= companyRepository.findCenterCode();
-        List<String> centerName =  companyRepository.findByCenterRegion("서울");
-        code.forEach(el->{
-            if (count == 0) {
-                Company company= new Company();
-                company.setCenterCode(el);
-                company.setCenterName(companyRepository.findByCenterCode(el));
-                company.setCenterRegion(companyRepository.findByCenterCode2(el));
-                companyRepository.save(company);
-            }
-        });
+        if (count == 0) {
+            List<String> code = companyRepository.findCenterCode();
+            code.forEach(el -> {
 
+                Company company = new Company();
+                company.setCenterCode(el);
+                company.setEmployees(employeeRepository.findByCenterCode(el));
+                company.setCenterName(companyRepository.findByCenterCode(el));
+                company.setCenterRegion(companyRepository.findCenterRigionByCenterCode(el));
+                companyRepository.save(company);
+
+            });
+        }
 
 
         System.out.println( formattedTime1 + "  INFO 18844 --- [           CompanyInit ]         : CompanyInit End ");

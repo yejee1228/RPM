@@ -11,25 +11,7 @@
                         <span :class="{checked:allchecked}" @click="allcheck(cars)" :key="allchecked"><input type="checkbox" name="allCheck" id="allCheck" class="uniform" title="전체체크"></span>
                     </div>
                 </div>
-                <div class="align">
-                    <!-- 20181217 VR차량 -->
-                    <span><a href="" class="3dview_flag txt "><em class="vr_ordermark"></em> 3D 라이브 뷰 차량</a></span>
-                    <!-- //20181217 VR차량 -->
-                    <span class="basic"><a href=""
-                                           class="txt">기본정렬</a></span>
-                    <span><a href="" class="txt">가격순</a><a href="" class="down ">낮은순</a>
-												<a href="" class="up ">높은순</a>
-						</span>
-                    <span><a href="" class="txt">주행거리 순</a><a
-                            href="" class="down ">낮은순</a>
-						<a href=""
-                           class="up ">높은순</a>
-						</span>
-                    <span><a href="" class="txt">연식 순</a><a
-                            href="" class="down ">낮은순</a>
-						<a href="" class="up ">높은순</a>
-						</span>
-                </div>
+                <h1 class="best_title"> 요구사항에 가장 적합한 보유차량</h1>
             </div>
             <div class="result_list">
                 <table>
@@ -147,7 +129,11 @@
             axios
                 .post('/company/bestCarList', JSON.parse( localStorage.getItem("customerDetail")))
                 .then(res=> {
-                this.cars=res.data
+                    res.data.forEach(el=>{
+                        el.checked=false
+                        this.cars.push(el)
+                    })
+
                 })
                 .catch(e=>{
                     alert('erorr'+e)
@@ -168,5 +154,11 @@
         border: 1px solid #000;
         text-align: center;
         font-size: 13px;
+    }
+    .best_title{
+        margin: 10px;
+        text-align: center;
+        font-size: large;
+        font-weight: bold;
     }
 </style>

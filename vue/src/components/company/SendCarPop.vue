@@ -93,7 +93,8 @@
                 ],
                 rows:[],
                 compares: [ [],[],[],[],[],[],[]],
-                send:{userid:'kangsj24',centercode:'114',carcodeList:[]},
+
+                send:{userid:JSON.parse( localStorage.getItem("customerDetail")).userId,centercode:this.$store.state.user.user.userid,carcodeList:[]},
 
                 checkedList:this.$store.state.recommend.recommendedCar
             }

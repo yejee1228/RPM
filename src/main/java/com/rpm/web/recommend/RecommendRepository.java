@@ -15,6 +15,8 @@ public interface RecommendRepository extends CrudRepository<Recommend, Long> {
     @Query(value = "SELECT userid FROM user " , nativeQuery = true)
     public List<String> findUserId();
     @Query(value = "SELECT name FROM user WHERE userid like ? " , nativeQuery = true)
+
     public String findNameByUserId(String userid);
     public List<Recommend> findByUserId(String userid);
+    public List<Recommend> findByCenterCode(String centerCode);
 }

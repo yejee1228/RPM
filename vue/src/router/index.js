@@ -33,6 +33,22 @@ import Payment from '@/components/contents/Payment.vue'
 Vue.use(Router)
 
 
+/*const requireAuthCompany = () => (to, from, next) => {
+    if (localStorage.getItem('auth') === '1') {
+        return next();
+    }
+    next('/');
+    alert('접근권한이 없습니다.')
+};*/
+/*const requireAuthUser = () => (to, from, next) => {
+    if (localStorage.getItem('auth') === '0') {
+        return next();
+    }
+    next('/');
+    alert('접근권한이 없습니다.')
+};*/
+
+
 
 
 
@@ -47,8 +63,8 @@ export default new Router({
         {path:'/product', name:'product', component : Product},
         {path:'/mypage', name:'mypage', component : Mypage},
         {path:'/mypageModify', name:'mypageModify', component : MypageModify},
-        {path:'/mycarModify',name:'mycarModify', component : MycarModify},
-        {path:'/mypageModifyCheck',name:'mypageModifyCheck', component : MypageModifyCheck},
+        {path:'/mycarModify', name:'mycarModify', component : MycarModify},
+        {path:'/mypageModifyCheck', name:'mypageModifyCheck', component : MypageModifyCheck},
         {path:'/seencar', name:'seencar', component : SeenCar},
         {path:'/magazine', name:'magazine', component : Magazine},
         {path:'/chartMaker', name:'chartMaker', component : ChartMaker},
@@ -59,9 +75,9 @@ export default new Router({
         {path:'/snsmodify', name:'snsmodify', component : SnsModify},
         {path:'/snswrite', name:'snswrite', component : SnsWrite},
         {path:'/payment', name:'payment', component : Payment},
-        {path: '/customerDetail',component:CustomerDetail,children:
+        {path: '/customerDetail', component:CustomerDetail,children:
         [
-            {path: '',component:CustomerDetailRight },
+            {path: '', component:CustomerDetailRight },
             {path: 'bestCarList',name: 'bestCarList', component:BestCarList }
         ]
         },

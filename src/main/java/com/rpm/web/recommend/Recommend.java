@@ -1,5 +1,6 @@
 package com.rpm.web.recommend;
 
+import com.rpm.web.user.User;
 import lombok.*;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
@@ -23,9 +24,9 @@ public class Recommend implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "RECO_SEQ") @NotNull private Long recoSeq;
-    @Column(name = "AUTH") @NotNull private Boolean auth;
-    @Column(name = "USERID", length = 25) @NotNull private String userId;
+    @Column(name = "USERID" ,length = 25) @NotNull private String userId;
     @Column(name = "NAME", length = 30) @NotNull private String name;
+    @Column(name = "CENTER_CODE" ,length = 3) @NotNull private String centerCode;
     @Column(name = "CENTER_REGION", length = 10) private String centerRegion;
     @Column(name = "CENTER_NAME", length = 20) private String centerName;
     @Column(name = "MIN_BEGIN_YEAR") private int minBeginYear;
@@ -40,4 +41,6 @@ public class Recommend implements Serializable {
     @Column(name = "MODEL_GRP_NM", length = 100) private String modelGrpNm;
     @Column(name = "MODELNM", length = 45) private String modelNm;
     @Column(name = "REC_COMMENT_CD", length = 3) private String recCommentCd;
+
+
 }

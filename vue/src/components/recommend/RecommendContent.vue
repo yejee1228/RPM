@@ -11,73 +11,71 @@
             <div class="align_field">
                 <div class="all_check">
                     <div class="checker" id="uniform-allCheck">
-                        <span :class="{checked:allchecked}" @click="allcheck(List)" :key="allchecked"><input type="checkbox" name="allCheck" id="allCheck" class="uniform" title="전체체크"></span>
+                        <span :class="{checked:allchecked}" @click="allcheck(recommendedCar)" :key="allchecked"><input type="checkbox" name="allCheck" id="allCheck" class="uniform" title="전체체크"></span>
                     </div>
                 </div>
                 <div class="align">
-                    <!-- 20181217 VR차량 -->
-                    <span><a href="" class="3dview_flag txt "><em class="vr_ordermark"></em> 3D 라이브 뷰 차량</a></span>
-                    <!-- //20181217 VR차량 -->
-                    <span class="basic"><a href=""
-                                           class="txt">기본정렬</a></span>
-                    <span><a href="" class="txt">가격순</a><a href="" class="down ">낮은순</a>
-												<a href="" class="up ">높은순</a>
-						</span>
+
+
+
+                    <span><a @click.prevent href="" class="txt">가격순</a><a @click.prevent="priceAsc" href="" class="down ">낮은순</a>
+                                                 <a @click.prevent="priceDesc" href="" class="up ">높은순</a>
+                         </span>
                     <span><a href="" class="txt">주행거리 순</a><a
-                            href="" class="down ">낮은순</a>
-						<a href=""
-                           class="up ">높은순</a>
-						</span>
+                            @click.prevent="milageAsc"    href="" class="down ">낮은순</a>
+                         <a @click.prevent="milageDesc" href=""
+                            class="up ">높은순</a>
+                         </span>
                     <span><a href="" class="txt">연식 순</a><a
-                            href="" class="down ">낮은순</a>
-						<a href="" class="up ">높은순</a>
-						</span>
+                            @click.prevent="beginYearAsc" href="" class="down ">낮은순</a>
+                         <a @click.prevent="beginYearDesc" href="" class="up ">높은순</a>
+                         </span>
                 </div>
             </div>
             <div class="result_list">
-                <colgroup>
-                    <col style="width: 55px;">
-                    <col style="width: 190px;">
-                    <col style="width: 485px;">
-                    <col style="width: 290px;">
-                    <col>
-                </colgroup>
+
                 <h1 class="emptySign" v-if="recommendedCar.length==0">등록된 차량이 없습니다</h1>
                 <table>
-
-                    <tbody v-for="car of recommendedCar" :key="car.cid">
+                    <colgroup>
+                        <col style="width: 55px;">
+                        <col style="width: 190px;">
+                        <col style="width: 485px;">
+                        <col style="width: 290px;">
+                        <col>
+                    </colgroup>
+                    <tbody v-for="car in recommendedCar" :key="car.cars.cid">
                     <tr>
                         <td class="check">
                             <div class="checker" id="uniform-interest_list_check1">
-                                <span  :class="{checked:car.checked}" @click="check(car)" @change='updateCheckall(List)' >
+                                <span  :class="{checked:car.checked}" @click="check(car)" @change='updateCheckall(recommendedCar)' >
                                     <input type="checkbox" id="interest_list_check1" class="uniform"  >
                                 </span>
                             </div>
                         </td>
                         <td class="thumb">
-                            <a @click="productClick(car)">
-                                <img  :src="car.middleImg" alt="자동차 썸네일">
+                            <a @click="productClick(car.cars)">
+                                <img  :src="car.cars.middleImg" alt="자동차 썸네일">
                             </a>
                         </td>
                         <td class="car_info">
-                            <span class="md_year">{{car.centerName}}</span>
-                            <a @click="productClick(car)" class="name">{{car.makenm}} {{car.modelnm}} </a>
-                            <span class="md_year">{{car.beginYear}}년 주행거리 : {{car.milage}} km </span>
-                            <span class="price">가격 :{{car.price}}만원 </span>
+                            <span class="md_year">{{car.cars.centerName}}</span>
+                            <a @click="productClick(car.cars)" class="name">{{car.cars.makenm}} {{car.cars.modelnm}} </a>
+                            <span class="md_year">{{car.cars.beginYear}}년 주행거리 : {{car.cars.milage|thousandFormatter}} km </span>
+                            <span class="price">가격 :{{car.cars.price|thousandFormatter}}만원 </span>
                         </td>
                         <td class="car_opt">
                             <ul class="opt_list">
                                 <li>
-                                    <span class="pt">{{car.transmissioncdName}}</span>
-                                    <span>{{car.fuleTypedName}}</span>
+                                    <span class="pt"> {{car.cars.recCommentCd|acident}}</span>
+                                    <span>{{car.cars.fuleTypedName}}</span>
                                 </li>
                                 <li>
-                                    <span>{{car.exteriorColornm}}</span>
-                                    <span>{{car.carType}}</span>
+                                    <span>{{car.cars.exteriorColornm}}</span>
+                                    <span>{{car.cars.categorynm}}</span>
                                 </li>
                                 <li>
-                                    <span>{{car.centerRegion}}</span>
-                                    <span>{{car.passCnt}}</span>
+                                    <span>{{car.cars.centerRegion}}</span>
+                                    <span>{{car.cars.passCnt}}인승</span>
                                 </li>
                             </ul>
 
@@ -94,7 +92,7 @@
             </div>
 
             <div class="btn_cont">
-                <a href="" class="delete" >선택삭제</a>
+                <a @click.prevent="removeData()" href="" class="delete" >선택삭제</a>
 
                 <div class="center_btn">
                     <button  href="" @click="pop_rendar">한눈에 비교하기</button>
@@ -132,9 +130,9 @@
 
             pop_rendar(){
 
-                for(let i=0;i<this.List.length;i++) {
-                    if (this.List[i].checked == true) {
-                        this.checkedList.push(this.List[i])
+                for(let i=0;i<this.recommendedCar.length;i++) {
+                    if (this.recommendedCar[i].checked == true) {
+                        this.checkedList.push(this.recommendedCar[i].cars)
                     }
                 }
                 this.$modal.show(comparePop,{
@@ -157,9 +155,79 @@
             movePageBlock(pagination){
                 this.recommendedCar=pagination
             },
+            priceAsc(){
+                this.List.sort(function (a,b) {
+                    return a.cars.price-b.cars.price;
+                })
+                this.$refs.pagination.first()
+            },
+            priceDesc(){
+                this.List.sort(function (a,b){
+                    return b.cars.price -a.cars.price
+                })
+                this.$refs.pagination.first()
+
+            },
+            milageAsc(){
+                this.List.sort(function (a,b) {
+                    return a.cars.milage-b.cars.milage;
+                })
+                this.$refs.pagination.first()
+            },
+            milageDesc(){
+                this.List.sort(function (a,b){
+                    return b.cars.milage -a.cars.milage
+                })
+                this.$refs.pagination.first()
+
+            },
+            beginYearAsc(){
+                this.List.sort(function (a,b) {
+                    return a.cars.beginYear-b.cars.beginYear;
+                })
+                this.$refs.pagination.first()
+            },
+            beginYearDesc(){
+                this.List.sort(function (a,b){
+                    return b.cars.beginYear -a.cars.beginYear
+                })
+                this.$refs.pagination.first()
+
+            },
+            removeData(){
+                for(let i=0;i<this.recommendedCar.length;i++) {
+                    if (this.recommendedCar[i].checked == true) {
+                        this.checkedList.push(this.recommendedCar[i])
+                    }
+                }
+                axios
+                    .post(`http://localhost:8080//recommendedCar/recommendedCarRemove`,this.checkedList)
+                    .then(()=>{
+                        alert('삭제완료')
+                        location.reload()
+                    })
+                    .catch(e=>{
+                        alert(`axios fail${e}`)
+                    })
+            }
 
 
 
+
+        },
+        filters : {
+            thousandFormatter: function (value) {
+                return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            },
+            acident(value){
+                switch (value) {
+                    case '001': value='무사고';break;
+                    case '002': value='단순교환';break;
+                    case '003': value='단순사고(접촉)';break;
+                    case '004': value='사고';break;
+                }
+                return value
+            }
 
         },
         mixins:[checkBox],
@@ -168,8 +236,8 @@
                 .get(`http://localhost:8080//recommendedCar/getRecommendedCar/`+localStorage.getItem("userId"))
                 .then(({data})=>{
                     data.forEach(el=>{
-                        el.cars.checked=false
-                        this.List.push(el.cars)
+                        el.checked=false
+                        this.List.push(el)
                     })
                     this.$refs.pagination.first()
                 })

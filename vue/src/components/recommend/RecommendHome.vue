@@ -13,8 +13,9 @@
         <link rel="stylesheet" type="text/css" href="http://localhost:8081/css/danawaHome.css">
         <link rel="stylesheet" type="text/css" href="http://localhost:8081/css/dnawaAuto.css">
         <Tab></Tab>
+        <div class=" recommend">
         <router-view />
-
+        </div>
     </div>
 </template>
 <script>
@@ -25,4 +26,9 @@
         components:{Tab}
     }
 </script>
-<style scoped></style>
+<style scoped>
+    .recommend{
+        padding: 50px;
+    }
+
+</style>
