@@ -22,10 +22,7 @@ public class RecommendInit implements ApplicationRunner {
 
 
 
-        SimpleDateFormat SystemTime = new SimpleDateFormat ( "yyyy-MM-dd HH:mm:ss");
-        String formattedTime1 = SystemTime.format (System.currentTimeMillis());
-
-        System.out.println( formattedTime1 + "  INFO 18844 --- [           RecommendInit ]         : RecommendInit Start ");
+        System.out.println( new SimpleDateFormat ( "yyyy-MM-dd HH:mm:ss").format (System.currentTimeMillis()) + "  INFO 18844 --- [           RecommendInit ]         : RecommendInit Start ");
 
         long count = recommendRepository.count();
             if (count == 0) {
@@ -72,7 +69,7 @@ public class RecommendInit implements ApplicationRunner {
                 }
                 });
             }
-        System.out.println( formattedTime1 + "  INFO 18844 --- [           RecommendInit ]         : RecommendInit End ");
+        System.out.println( new SimpleDateFormat ( "yyyy-MM-dd HH:mm:ss").format (System.currentTimeMillis()) + "  INFO 18844 --- [           RecommendInit ]         : RecommendInit End ");
     }
 
 }

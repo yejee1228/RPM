@@ -1,6 +1,5 @@
 package com.rpm.web.user;
 
-import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.stereotype.Component;
@@ -9,5 +8,5 @@ import org.springframework.stereotype.Component;
 @Getter
 @Setter
 public class UserForAxios {
-    private String userid, username, auth;
+    private String userid, username, auth ;
 }
