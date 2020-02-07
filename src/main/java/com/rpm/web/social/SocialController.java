@@ -55,7 +55,7 @@ public class SocialController {
         MultipartFile mfile = uploadFile.getFile(filename);
         String origName=mfile.getOriginalFilename();
         String directory=new SimpleDateFormat("yy-MM-dd").format(new Date()).replace("-", File.separator);
-        File serverPath = socialService.makeDir(PathEnum.UPLOAD_PATH.toString(), directory);
+        File serverPath = socialService.makeDir(PathEnum.UPLOAD_PATH.toString()+"\\img", directory);
         serverPath.mkdirs();
         String extension = origName.substring(origName.lastIndexOf(".")+1);
         filename = UUID.randomUUID().toString() +"."+extension;
@@ -73,7 +73,7 @@ public class SocialController {
 
     @DeleteMapping("/uploadImg")
     public String deleteUploadImg(HttpServletRequest uploadFile){
-        Path file= Paths.get(PathEnum.UPLOAD_PATH.toString()
+        Path file= Paths.get(PathEnum.UPLOAD_PATH.toString()+"\\img\\"
                 +box.get().get(0)+File.separator+box.get().get(1));
         try {
             Files.delete(file);

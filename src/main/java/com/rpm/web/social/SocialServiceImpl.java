@@ -119,9 +119,16 @@ public class SocialServiceImpl implements SocialService{
         if(socialWriteDto.getBoardImgName()=="oldImg"){
             social.setBoardImg(social.getBoardImg());
         }else{
+            Path file= Paths.get(PathEnum.UPLOAD_PATH.toString()+File.separator
+                    +social.getBoardImg());
             social.setBoardImg("img"+File.separator
                     +box.get().get(0)+File.separator
                     +box.get().get(1));
+            try {
+                Files.delete(file);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
         social.setCarName(socialWriteDto.getCarName());
         social.setBoardContent(socialWriteDto.getBoardContent());
@@ -131,7 +138,7 @@ public class SocialServiceImpl implements SocialService{
     @Override
     public void deleteContent(String boardSeq) {
         social = socialRepository.findById(Long.parseLong(boardSeq)).get();
-        Path file= Paths.get(PathEnum.UPLOAD_PATH.toString()
+        Path file= Paths.get(PathEnum.UPLOAD_PATH.toString()+File.separator
                 +social.getBoardImg());
         try {
             socialRepository.delete(social);
@@ -146,7 +153,6 @@ public class SocialServiceImpl implements SocialService{
         thumb.setBoardSeq(socialRepository.findById(Long.parseLong(boardSeq)).get());
         thumb.setUserSeq(userRepository.findByUserid(userid));
         thumbRepository.save(thumb);
-        System.out.println(1);
     }
 
     @Override
@@ -155,6 +161,5 @@ public class SocialServiceImpl implements SocialService{
         user = userRepository.findByUserid(userid);
         thumb = thumbRepository.findByBoardSeqAndUserSeq(social, user);
         thumbRepository.delete(thumb);
-        System.out.println(2);
     }
 }

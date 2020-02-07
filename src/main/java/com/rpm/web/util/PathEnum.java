@@ -8,8 +8,8 @@ public enum PathEnum {
         String  result= "";
         switch (this) {
             case UPLOAD_PATH:
-                //resource\\static\\img의 주소를 작성.
-                result= "C:\\Users\\yejee\\IdeaProjects\\RPM\\src\\main\\resources\\static\\img";
+                //resource\\static의 주소를 작성.
+                result= "C:\\Users\\yejee\\IdeaProjects\\RPM\\src\\main\\resources\\static";
                 break;
         }
         return result;
