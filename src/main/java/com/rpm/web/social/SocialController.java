@@ -33,7 +33,7 @@ public class SocialController {
     public Map<String, Object> viewList(@PathVariable String pageNo, @PathVariable String userid){
         Map<String, Object> map = new HashMap<>();
         pager.setPageNum(Integer.parseInt(pageNo));
-        pager.setPageSize(12);
+        pager.setPageSize(24);
         pager.paging(socialService.allList());
         int thisPageSize = (pager.getEndRow()+1)-((pager.getPageNum()-1)*pager.getPageSize());
         SocialListDTO[] list = new SocialListDTO[thisPageSize];

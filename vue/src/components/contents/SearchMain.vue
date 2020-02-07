@@ -306,7 +306,7 @@
                                     <td class="thumb">
                                         <a href="#" >
                                             <div class="mark_area"></div>
-                                            <img @click="productClick(showCar)" :src="showCar.middleImg" alt="자동차 썸네일">
+                                            <img @click="productClick(showCar)" :src="showCar.middleImg" alt="자동차 썸네일" target="_blank">
                                         </a>
                                     </td>
                                     <td class="car_info">

@@ -26,10 +26,8 @@ import SnsModify from "@/components/social/SnsModify.vue"
 import SnsWrite from "@/components/social/SnsWrite.vue"
 import Payment from '@/components/contents/Payment.vue'
 import axios from 'axios'
+
 Vue.use(Router)
-
-
-
 
 export default new Router({
     mode: 'history',
@@ -58,28 +56,28 @@ export default new Router({
         },
         {path: '/companyHome', beforeEnter : (to, from, next)=>{
             const token = localStorage.getItem("token")
-let headers = {headers : {
-        'Accept' : 'application/json',
-    }}
-axios.post('http://localhost:8080/getAuth',token,headers)
-    .then(({data})=>{
-        if(data.result && data.auth === 'ADMIN'){
-            return next();
-        }else{
-            alert(`권한이 없습니다!`)
-            return next('/login');
-        }
-    })
-    .catch(()=>{
-        return next('/login')
-    })
-}, component:CompanyHome ,children:
-                [
-                    {path: '', name: 'companyMain', component:CompanyMain },
-                    {path: 'customerList',name: 'CustomerList', component: CustomerList},
-                    {path: 'carList',name: 'CarList', component: CarList}]},
-        {path: '/recommendHome', component:RecommendHome, children:[
-                {path: '',name: 'RecommendContent', component: RecommendContent},
-                {path: 'condition',name: 'Condition', component: Condition}]}
-    ]
-})
+            let headers = {headers : {
+                    'Accept' : 'application/json',
+                }}
+            axios.post('http://localhost:8080/getAuth',token,headers)
+                .then(({data})=>{
+                    if(data.result && data.auth === 'ADMIN'){
+                        return next();
+                    }else{
+                        alert(`권한이 없습니다!`)
+                        return next('/login');
+                    }
+                })
+                .catch(()=>{
+                    return next('/login')
+                })
+            }, component:CompanyHome ,children:
+                            [
+                                {path: '', name: 'companyMain', component:CompanyMain },
+                                {path: 'customerList',name: 'CustomerList', component: CustomerList},
+                                {path: 'carList',name: 'CarList', component: CarList}]},
+                    {path: '/recommendHome', component:RecommendHome, children:[
+                            {path: '',name: 'RecommendContent', component: RecommendContent},
+                            {path: 'condition',name: 'Condition', component: Condition}]}
+                ]
+            })

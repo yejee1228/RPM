@@ -18,7 +18,7 @@
         <div class="row-contents">
 
           <div v-for="(item, index) in boardList" :key="index" class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" href="/snsdetail" @click="goDetail(item.boardSeq)" active-class="active">
+            <a class="portfolio-link"  @click="goDetail(item.boardSeq)" active-class="active">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
                   <i class="fas fa-plus fa-3x"></i>
@@ -27,7 +27,7 @@
               <img class="img-fluid" :src="item.boardImg" alt="">
             </a>
             <div class="btn-like-comment">
-              <a class="btn-like" v-if="thumbed(item.boardSeq)" style="color:#E81919"><i class="fas fa-heart" ></i></a>
+              <a class="btn-like" v-if="thumbed(item.boardSeq)" style="color:#E81919"><h6><i class="fas fa-heart" ></i>좋아요  {{item.thumbCount}} 개</h6></a>
               <a class="btn-like" v-else><h6><i class="far fa-heart"></i> 좋아요  {{item.thumbCount}} 개</h6></a>
             </div>
             <div class="portfolio-caption1">
@@ -69,10 +69,6 @@
         }
       }
     },
-
-    /* mounted(){
-       this.scroll()
-     },*/
     methods: {
       loadData(){
         let userid = (this.$store.state.user.auth===false)?"ghest":this.$store.state.user.user.userid
@@ -99,22 +95,12 @@
 
         this.page += 1
       },
-      /* scroll () {
-         window.onscroll = () => {
-
-           let bottomOfWindow = document.documentElement.scrollTop + window.innerHeight === document.documentElement.scrollHeight+100
-           if (bottomOfWindow) {
-             this.scrolledToBottom = true
-             alert('')
-             this.loadData()
-           }
-         }
-       },*/
       write() {
         this.$router.push({path: '/snswrite'})
       },
       goDetail(boardSeq){
         localStorage.setItem('storedData', boardSeq)
+        this.$router.push({path: '/snsdetail'})
       }
 
     }
@@ -125,19 +111,14 @@
   body{
     overflow: visible;
   }
-  .btn-like-comment{
-
-  }
   .row-contents{
     text-align: center;
     display: inline-flex;
     width: 100%;
     flex-wrap: wrap;
-    /*border: 1px solid rgba(var(--b6a,219,219,219),1);*/
   }
   #portfolio .portfolio-item .portfolio-link .portfolio-hover {
     background: #0d124f78;
-
   }
   h2 {
     font-size: 14px;
@@ -206,18 +187,15 @@
     inline-size: -webkit-fill-available;
   }
 
-  kbd {
-    padding: 0.2rem 0.4rem;
-    font-size: 87.5%;
-    color: #fff;
-    background-color: #212529;
-    border-radius: 0.2rem;
+  #portfolio .portfolio-item {
+    right: 0;
+    margin: 0 0 15px;
+    box-shadow: 0 3px 5px rgba(116, 187, 248, 0.11), 0 3px 5px rgba(185, 208, 214, 0.24);
+    /*box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);*/
   }
-
-  kbd kbd {
-    padding: 0;
-    font-size: 100%;
-    font-weight: 700;
+  #portfolio .portfolio-item:hover {
+    /*box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);*/
+    box-shadow: 0 14px 28px rgba(47, 72, 119, 0.25), 0 10px 10px rgba(84, 112, 248, 0.22);
   }
 
   .container {
@@ -227,24 +205,6 @@
     margin-right: auto;
     margin-left: auto;
   }
-
-/*  @media (min-width: 576px) {
-    .container {
-      max-width: 540px;
-    }
-  }
-
-  @media (min-width: 768px) {
-    .container {
-      max-width: 720px;
-    }
-  }
-
-  @media (min-width: 992px) {
-    .container {
-      max-width: 960px;
-    }
-  }*/
 
   @media (min-width: 1200px) {
     .container {
@@ -276,11 +236,9 @@
   }
   .col-sm-6 {
     max-width: 22%;
-    border: 1px solid rgba(var(--ce3,239,239,239),1);
   }
   .col-md-4 {
     max-width: 22%;
-    border: 1px solid rgba(var(--ce3,239,239,239),1);
   }
   .col-lg-12 {
     max-width: 100%;
@@ -340,233 +298,9 @@
   .btn-primary.disabled, .btn-primary:disabled {
     color: #fff;
   }
-
-
-  .btn-group-lg > .btn {
-    padding: 0.5rem 1rem;
-    font-size: 1.25rem;
-    line-height: 1.5;
-    border-radius: 0.3rem;
-  }
-
-  .btn-group-sm > .btn {
-    padding: 0.25rem 0.5rem;
-    font-size: 0.875rem;
-    line-height: 1.5;
-    border-radius: 0.2rem;
-  }
-
-  .btn-block + .btn-block {
-    margin-top: 0.5rem;
-  }
-
-  .dropdown-toggle {
-    white-space: nowrap;
-  }
-
-  .dropdown-toggle::after {
-    display: inline-block;
-    margin-left: 0.255em;
-    vertical-align: 0.255em;
-    content: "";
-    border-top: 0.3em solid;
-    border-right: 0.3em solid transparent;
-    border-bottom: 0;
-    border-left: 0.3em solid transparent;
-  }
-
-  .dropdown-toggle:empty::after {
-    margin-left: 0;
-  }
-
-  .dropup .dropdown-toggle::after {
-    display: inline-block;
-    margin-left: 0.255em;
-    vertical-align: 0.255em;
-    content: "";
-    border-top: 0;
-    border-right: 0.3em solid transparent;
-    border-bottom: 0.3em solid;
-    border-left: 0.3em solid transparent;
-  }
-
-  .dropup .dropdown-toggle:empty::after {
-    margin-left: 0;
-  }
-
-  .dropright .dropdown-toggle::after {
-    display: inline-block;
-    margin-left: 0.255em;
-    vertical-align: 0.255em;
-    content: "";
-    border-top: 0.3em solid transparent;
-    border-right: 0;
-    border-bottom: 0.3em solid transparent;
-    border-left: 0.3em solid;
-  }
-
-  .dropright .dropdown-toggle:empty::after {
-    margin-left: 0;
-  }
-
-  .dropright .dropdown-toggle::after {
-    vertical-align: 0;
-  }
-
-  .dropleft .dropdown-toggle::after {
-    display: inline-block;
-    margin-left: 0.255em;
-    vertical-align: 0.255em;
-    content: "";
-  }
-
-  .dropleft .dropdown-toggle::after {
-    display: none;
-  }
-
-  .dropleft .dropdown-toggle::before {
-    display: inline-block;
-    margin-right: 0.255em;
-    vertical-align: 0.255em;
-    content: "";
-    border-top: 0.3em solid transparent;
-    border-right: 0.3em solid;
-    border-bottom: 0.3em solid transparent;
-  }
-
-  .dropleft .dropdown-toggle:empty::after {
-    margin-left: 0;
-  }
-
-  .dropleft .dropdown-toggle::before {
-    vertical-align: 0;
-  }
-
-  .btn-group > .btn,
-  .btn-group-vertical > .btn {
-    position: relative;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-  }
-
-  .btn-group > .btn:hover,
-  .btn-group-vertical > .btn:hover {
-    z-index: 1;
-  }
-
-
-  .btn-group > .btn:focus, .btn-group > .btn:active, .btn-group > .btn.active,
-  .btn-group-vertical > .btn:focus,
-  .btn-group-vertical > .btn:active {
-    z-index: 1;
-  }
-
-
-  .btn-group > .btn:not(:first-child) {
-    margin-left: -1px;
-  }
-
-  .btn-group > .btn:not(:last-child):not(.dropdown-toggle),
-  .btn-group > .btn-group:not(:last-child) > .btn {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-
-  .btn-group > .btn:not(:first-child),
-  .btn-group > .btn-group:not(:first-child) > .btn {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-
-  .btn-group-vertical > .btn  {
-    width: 100%;
-  }
-
-  .btn-group-vertical > .btn:not(:first-child) {
-    margin-top: -1px;
-  }
-
-  .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle),
-  .btn-group-vertical > .btn-group:not(:last-child) > .btn {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-
-  .btn-group-vertical > .btn:not(:first-child),
-  .btn-group-vertical > .btn-group:not(:first-child) > .btn {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-  }
-
-  .btn-group-toggle > .btn,
-  .btn-group-toggle > .btn-group > .btn {
-    margin-bottom: 0;
-  }
-
-  .btn-group-toggle > .btn input[type="radio"],
-  .btn-group-toggle > .btn input[type="checkbox"],
-  .btn-group-toggle > .btn-group > .btn input[type="radio"],
-  .btn-group-toggle > .btn-group > .btn input[type="checkbox"] {
-    position: absolute;
-    clip: rect(0, 0, 0, 0);
-    pointer-events: none;
-  }
-
-  .input-group-prepend .btn,
-  .input-group-append .btn {
-    position: relative;
-    z-index: 2;
-  }
-
-  .input-group-prepend .btn:focus,
-  .input-group-append .btn:focus {
-    z-index: 3;
-  }
-
-  .input-group-prepend .btn + .btn,
-  .input-group-prepend .input-group-text + .btn,
-  .input-group-append .btn + .btn,
-  .input-group-append .input-group-text + .btn {
-    margin-left: -1px;
-  }
-
-  .input-group-text input[type="radio"],
-  .input-group-text input[type="checkbox"] {
-    margin-top: 0;
-  }
-  .input-group-lg > .input-group-prepend > .btn,
-  .input-group-lg > .input-group-append > .btn {
-    padding: 0.5rem 1rem;
-    font-size: 1.25rem;
-    line-height: 1.5;
-    border-radius: 0.3rem;
-  }
-  .input-group-sm > .input-group-prepend > .btn,
-  .input-group-sm > .input-group-append > .btn {
-    padding: 0.25rem 0.5rem;
-    font-size: 0.875rem;
-    line-height: 1.5;
-    border-radius: 0.2rem;
-  }
-
-  .input-group > .input-group-prepend > .btn,
-  .input-group > .input-group-append:not(:last-child) > .btn,
-  .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle) {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-
-  .input-group > .input-group-append > .btn,
-  .input-group > .input-group-prepend:not(:first-child) > .btn,
-  .input-group > .input-group-prepend:first-child > .btn:not(:first-child) {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-
   .text-center {
     text-align: center !important;
   }
-
   @media print {
     *,
     *::before,
@@ -611,7 +345,7 @@
   .btn-like-comment a{
     margin: 5px;
     margin-top: 15px;
-    color: #0d124f;
+    color: rgba(215, 87, 138, 0.87);
     font-size: 15px;
     float: left;
   }

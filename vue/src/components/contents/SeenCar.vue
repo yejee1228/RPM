@@ -9,10 +9,8 @@
 <link rel="stylesheet" type="text/css"  href="css/plugin/ion.rangeSlider.skinHTML5.css">
 <link rel="stylesheet" type="text/css"  href="css/plugin/uniform.css">
 <link rel="stylesheet" type="text/css"  href="css/plugin/jquery.scrollbar.css">
-	
-		<div id="content" class="content_1180"> 
 
-
+		<div id="content" class="content_1180">
 
 <div class="sub_content">
 	<div class="mypage_CarList lastView">
@@ -25,6 +23,7 @@
 				<span></span>
 				<span class="basic" > </span>
 			</div>
+		</div>
 		<div class="result_list">
 			<table>
 				<caption>관심차량</caption>
@@ -105,7 +104,6 @@
 	</div>
 </div>
 		</div>
-	</div>
 </template>
 <script>
 	import { mapState } from 'vuex'
@@ -154,6 +152,6 @@
 		margin-top: 20px;
 	}
 	.align_field {
-		margin-bottom: 50px;
+		margin-bottom: 30px;
 	}
 </style>

@@ -60,7 +60,6 @@
       axios.get(`${url}/loadBoard/${this.boardSeq}`)
               .then(res=>{
                 this.board = res.data
-                console.log(this.board)
                 this.checkThumb()
                 if(this.board.userid === this.$store.state.user.user.userid){
                   this.myContent = true
@@ -104,7 +103,6 @@
                   .then(res=>{
                     if(res.data){
                       this.board.thumbCount +=1
-                      console.log(this.board)
                     }
                   })
                   .catch(()=>{
@@ -120,7 +118,6 @@
                 .then(res=>{
                   if(res.data){
                     this.board.thumbCount -=1
-                    console.log(this.board)
                   }
                 })
                 .catch(()=>{
@@ -147,9 +144,10 @@
     text-align: center;
   }
   .modal-content{
+    margin-top: 30px;
     width: 1000px;
     display: inline-block;
-    padding-top: 0px;
+    padding-top: 30px;
   }
   .portfolio-modal .modal-content {
     font-family: 'Segoe UI';
