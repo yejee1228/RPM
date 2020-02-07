@@ -25,6 +25,7 @@
 				<span></span>
 				<span class="basic" > </span>
 			</div>
+		</div>
 		<div class="result_list">
 			<table>
 				<caption>관심차량</caption>
@@ -105,7 +106,6 @@
 	</div>
 </div>
 		</div>
-	</div>
 </template>
 <script>
 	import { mapState } from 'vuex'
