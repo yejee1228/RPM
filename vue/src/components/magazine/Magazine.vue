@@ -109,7 +109,6 @@
             vue2.setAttribute('src', 'https://unpkg.com/vuewordcloud')
             document.head.appendChild(vue)
             document.head.appendChild(vue2)
-
         }
     }
 </script>
