@@ -8,11 +8,8 @@ import Product from '@/components/contents/Product.vue'
 import Sale from '@/components/contents/Sale.vue'
 import Magazine from '@/components/magazine/Magazine.vue'
 import ChartMaker from '@/components/magazine/Datacenter.vue'
-import Mypage from '@/components/carbook/MyPage.vue'
-import MypageModify from '@/components/carbook/MypageModify.vue'
-import MypageModifyCheck from '@/components/carbook/MypageModifyCheck.vue'
+import UserUpdate from '@/components/user/UserUpdate.vue'
 import SeenCar from '@/components/contents/SeenCar.vue'
-import StationInfo from '@/components/carbook/StationInfo.vue'
 import Condition from "@/components/recommend/Condition.vue"
 import RecommendContent from "@/components/recommend/RecommendContent.vue"
 import CarList from "@/components/company/CarList.vue"
@@ -27,7 +24,6 @@ import SnsPage from "@/components/social/SnsPage.vue"
 import SnsDetail from "@/components/social/SnsDetail.vue"
 import SnsModify from "@/components/social/SnsModify.vue"
 import SnsWrite from "@/components/social/SnsWrite.vue"
-import MycarModify from '@/components/carbook/MycarModify.vue'
 import Payment from '@/components/contents/Payment.vue'
 
 Vue.use(Router)
@@ -58,14 +54,10 @@ export default new Router({
         {path:'/join', name:'join', component : Join},
         {path:'/login', name:'login', component : Login},
         {path:'/product', name:'product', component : Product},
-        {path:'/mypage', name:'mypage', component : Mypage},
-        {path:'/mypageModify', name:'mypageModify', component : MypageModify},
-        {path:'/mycarModify', name:'mycarModify', component : MycarModify},
-        {path:'/mypageModifyCheck', name:'mypageModifyCheck', component : MypageModifyCheck},
+        {path:'/updateuser', name:'updateUser', component : UserUpdate},
         {path:'/seencar', name:'seencar', component : SeenCar},
         {path:'/magazine', name:'magazine', component : Magazine},
         {path:'/chartMaker', name:'chartMaker', component : ChartMaker},
-        {path:'/stationInfo', name:'stationInfo', component : StationInfo},
         {path:'/sale', name:'sale', component : Sale},
         {path:'/sns', name:'snspage', component : SnsPage},
         {path:'/snsdetail', name:'snsdetail', component : SnsDetail},

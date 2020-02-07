@@ -1,5 +1,6 @@
 package com.rpm.web.user;
 
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
@@ -7,6 +8,7 @@ import org.springframework.stereotype.Repository;
 public interface UserRepository extends CrudRepository<User,Long> {
     User findByUserid(String userid);
     User findByUseridAndPasswd(String userid, String passwd);
-    User findByUserSeq(long seq);
+    @Query(value = "SELECT roles FROM user_roles WHERE user_userseq LIKE ? " , nativeQuery = true)
+    public String findRolesByuserUserseq(long user_userseq);
 
 }

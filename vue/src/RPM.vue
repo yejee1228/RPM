@@ -4,7 +4,7 @@
         <div id="main_image" style="width: 100%; height: 100px; line-height: 100px; text-align: center">
             <img @click="goHome" style="width: 100%; max-width: 760px; vertical-align: middle" src="@/assets/image/rpmlogoblack.png" alt="">
         </div>
-        <nav v-if="!this.$store.state.user.user.auth==1">
+        <nav v-if="!(this.$store.state.user.user.auth==='ADMIN')">
             <button v-if="!this.user.auth" class="navbar-toggler navbar-toggler-right"  type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -47,7 +47,7 @@
 
 
         <div id = "main_layout">
-            <div v-if="this.$store.state.user.user.auth==1" class="logout" >
+            <div v-if="(this.$store.state.user.user.auth==='ADMIN')" class="logout" >
                 <a @click.prevent="logout">로그아웃</a>
             </div>
             <router-view></router-view>
@@ -60,7 +60,6 @@
     import {Slide} from 'vue-burger-menu'
     import {mapState} from 'vuex'
     import UserInfo from "./components/cmm/UserInfo.vue";
-
 
     export default {
         name: 'app',
@@ -84,7 +83,7 @@
                 location.reload()
             },
             goHome(){
-                (this.$store.state.user.user.auth==1)? this.$router.push('/companyHome'): this.$router.push('/')
+                (this.$store.state.user.user.auth==="ADMIN")? this.$router.push('/companyHome'): this.$router.push('/')
             }
         }
     }

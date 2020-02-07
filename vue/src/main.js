@@ -8,12 +8,12 @@ import VModal from 'vue-js-modal'
 
 Vue.use(VModal, { dynamic: true })
 Vue.config.productionTip = false
+axios.defaults.headers.post['Content-Type'] ='application/x-www-form-urlencoded';
 
 new Vue({
   beforeCreate(){
-    if(localStorage.getItem('token')){
+    if(localStorage.getItem('token')!=undefined&&this.$store.state.user.auth==false){
       this.$store.dispatch('user/getUserInfo')
-      this.$store.state.auth = true
     }
   },
   render: h => h(App),

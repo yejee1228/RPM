@@ -201,7 +201,7 @@
                     }
                 }
                 axios
-                    .post(`http://localhost:8080//recommendedCar/recommendedCarRemove`,this.checkedList)
+                    .post(`http://localhost:8080/recommendedCar/recommendedCarRemove`,this.checkedList)
                     .then(()=>{
                         alert('삭제완료')
                         location.reload()
@@ -233,7 +233,7 @@
         mixins:[checkBox],
         created() {
             axios
-                .get(`http://localhost:8080//recommendedCar/getRecommendedCar/`+localStorage.getItem("userId"))
+                .get(`http://localhost:8080/recommendedCar/getRecommendedCar/`+localStorage.getItem("userId"))
                 .then(({data})=>{
                     data.forEach(el=>{
                         el.checked=false
@@ -241,8 +241,8 @@
                     })
                     this.$refs.pagination.first()
                 })
-                .catch(e=>{
-                    alert(`axios fail${e}`)
+                .catch(()=>{
+
                 })
         }
     }

@@ -13,7 +13,7 @@
 						</colgroup>
 						<tbody><tr>
 							<th>이름</th>
-							<td colspan="3"><b>{{this.$store.state.user.user.name}}</b></td>
+							<td colspan="3"><b>{{this.$store.state.user.user.username}}</b></td>
 						</tr>
 						<tr>
 							<th>아이디</th>
@@ -137,7 +137,7 @@
 </template>
 <script>
 	import axios from "axios"
-	import JoinModal from "../user/JoinModal"
+	import JoinModal from "./JoinModal"
 	import WithdrawalModal from "./WithdrawlModal"
 	export default {
 		name: 'join',
@@ -221,35 +221,38 @@
 				}
 			},
 			modify(){
+				const token = localStorage.getItem("token")
+				let headers = {headers : {
+						'Accept' : 'application/json',
+					}}
 				if(this.passwd==this.passwd2 &&
 						this.email1!='' && this.email2!=''){
 					let data = {
 						userid : this.$store.state.user.user.userid,
 						passwd : this.passwd,
-						name : this.$store.state.user.user.name,
+						username : this.$store.state.user.user.username,
 						email:this.email,
 						gender:this.gender,
 						birthMonth:this.birthMonth,
 						region:this.region,
-					}
-
-					let headers = {
-						'authorization': 'JWT fefege..',
-						'Accept' : 'application/json',
-						'Content-Type': 'application/json'
+						token : token
 					}
 					axios
-							.post(`${this.context}/update`, data, headers)
-							.then(res=>{
-								if(res.data.msg=="success"){
-									alert(`${res.data.user.name}님의 회원정보가 수정되었습니다. 다시 로그인해주세요.`)
-									this.$store.dispatch('user/logout', {userid:this.$store.state.user.user.userid,passwd:this.$store.state.user.user.passwd})
-									this.$router.push({path : '/login'})
-								}
-							})
-							.catch(()=>{
-								alert(`join axios Error`)
-							})
+						.post(`${this.context}/update`, data, headers)
+						.then(res=>{
+							if(res.data.result){
+								alert(`회원정보가 수정되었습니다. 다시 로그인해주세요.`)
+								this.$store.dispatch('user/logout')
+								this.$router.push({path : '/login'})
+							}else{
+								this.$store.dispatch('user/logout')
+								alert(`로그인을 다시 해주세요!`)
+								this.$router.push('/login')
+							}
+						})
+						.catch(()=>{
+							alert('회원정보를 다시 수정해 주세요.')
+						})
 				}else{
 					alert(`필수 입력값을 확인해주세요.`)
 				}
