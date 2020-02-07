@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import com.rpm.web.social.Social;
+import com.rpm.web.social.Thumb;
 import lombok.*;
 import org.hibernate.validator.constraints.UniqueElements;
 import org.springframework.context.annotation.Lazy;
@@ -44,10 +45,11 @@ public class User implements UserDetails {
     @Column(name = "REGION", length=10)  private String region;
 
 
+
+
     @OneToMany(mappedBy = "userSeq", cascade = CascadeType.ALL,
             orphanRemoval = true)
-    private List<Social> socials = new ArrayList<>();
-
+    private List<Thumb> thumbs = new ArrayList<>();
 
     @ElementCollection(fetch = FetchType.EAGER)
     @Builder.Default
