@@ -371,13 +371,14 @@
     .tabcontent {
         display: none;
         padding: 6px 0px;
-        border: 1px solid #b9d0d6;
+        /*border: 1px solid #b9d0d6;*/
         border-top: none;
         font-family: 'Helvetica', Arial;
         color: #464646;
         text-transform: uppercase;
         border-bottom: 1px solid #f1f1f1;
         margin-top: 0;
+        box-shadow: 0 3px 5px rgba(116, 187, 248, 0.11), 0 3px 5px rgba(185, 208, 214, 0.24);
     }
 
     .tabcontent {
@@ -445,6 +446,7 @@
         text-align: right;
         padding: 20px 0 0;
         font-family: 'Helvetica', Arial;
+        box-shadow: 0 3px 5px rgba(116, 187, 248, 0.11), 0 3px 5px rgba(185, 208, 214, 0.24);
     }
 
     input#innerinput {

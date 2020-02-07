@@ -75,6 +75,7 @@
         display: inline-block;
         background-color: white;
         margin-bottom: 10px;
+        box-shadow: 0 3px 5px rgba(116, 187, 248, 0.11), 0 3px 5px rgba(185, 208, 214, 0.24);
     }
 
     .wrap_section {

@@ -131,12 +131,14 @@
         display: inline-block;
         z-index: 2;
         margin-bottom: 50px;
+        box-shadow: 0 5px 8px rgba(15, 22, 37, 0.11), 0 5px 8px rgba(185, 208, 214, 0.24);
+
     }
 
     .mc_wide_searchbox .searchbg {
         margin-top: 50px;
         width: 100%;
-        background: url(https://www.kcar.com/resources/images/index/search_bg.png) center no-repeat;
+        /*background: url(https://www.kcar.com/resources/images/index/search_bg.png) center no-repeat;*/
         opacity: 0.97;
         display: inline-block;
     }
