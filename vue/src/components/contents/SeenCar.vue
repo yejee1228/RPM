@@ -20,8 +20,11 @@
 			<h3>최근 본 차량</h3>
 			<p>최근 일주일 동안 고객님이 보신 차량입니다. 최근 본 차량을 계속 보관하려면 로그인 후 관심차량에 담아 주세요.</p>
 		</div>
-
-
+		<div class="align_field">
+			<div class="align" >
+				<span></span>
+				<span class="basic" > </span>
+			</div>
 		<div class="result_list">
 			<table>
 				<caption>관심차량</caption>
@@ -34,7 +37,7 @@
 				</colgroup>
 
 				<tbody>
-				<td class="empty_result" colspan="4" v-show="seenHistoryList"><p><span style="font-size: 27px">찾아 보신 조건의 차량이 없습니다!</span><br/>다른 검색어를 입력해주세요.</p>
+				<td class="empty_result" colspan="4" v-show="isAnyCar"><p><span style="font-size: 27px">찾아 보신 조건의 차량이 없습니다!</span><br/>다른 검색어를 입력해주세요.</p>
 					<img src="https://www.kcar.com//resources/images/common/ico_empty.jpg" alt="차량없음 이미지">
 				</td>
 				<tr v-for="seenHistory of seenHistoryList" :key="seenHistory.carcd">
@@ -98,8 +101,7 @@
 		<div class="btn_cont">
 			<a href="javascript:;" class="delete" onclick="">선택삭제</a>
 		</div>
-		
-		
+		</div>
 	</div>
 </div>
 		</div>
@@ -112,16 +114,18 @@
 		data() {
 			return {}
 		},
-		computed: mapState({
+		computed: {
+			...mapState({
 			seenHistoryList : state => state.contents.seenHistoryList
 		}),
+		isAnyCar : function(){
+			return ( this.$store.state.contents.seenHistoryList.length === 0 )
+		}
+	},
 		methods : {
 			check(checkedItem){
 				this.$store.dispatch('contents/CHECKER', checkedItem , { root: true })
 				this.searchWithCondition()
-			},
-			hello () {
-				alert('dddd')
 			}
 		},
 		filters: {
@@ -146,4 +150,10 @@
 </script>
 <style scoped>
 	.mark {padding-top: 0px; padding-bottom: 20px;}
+	.empty_result {
+		margin-top: 20px;
+	}
+	.align_field {
+		margin-bottom: 50px;
+	}
 </style>

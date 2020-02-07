@@ -20,7 +20,7 @@ public class RecommendedCar implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "RECOCAR_SEQ") @NotNull private Long recoCarSeq;
-    @Column(name = "USERID") @NotNull private String userid;
+    @Column(name = "USERID", length = 25) @NotNull private String userid;
     @Column(name = "CENTER_CODE", length = 3) @NotNull private String centerCode;
 
     @OneToOne

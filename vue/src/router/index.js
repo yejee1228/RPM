@@ -28,6 +28,23 @@ import Payment from '@/components/contents/Payment.vue'
 
 Vue.use(Router)
 
+
+/*const requireAuthCompany = () => (to, from, next) => {
+    if (localStorage.getItem('auth') === '1') {
+        return next();
+    }
+    next('/');
+    alert('접근권한이 없습니다.')
+};*/
+/*const requireAuthUser = () => (to, from, next) => {
+    if (localStorage.getItem('auth') === '0') {
+        return next();
+    }
+    next('/');
+    alert('접근권한이 없습니다.')
+};*/
+
+
 export default new Router({
     mode: 'history',
     base:process.env.BASE_URL,
@@ -53,13 +70,13 @@ export default new Router({
             {path: 'bestCarList',name: 'bestCarList', component:BestCarList }
         ]
         },
-        {path: '/companyHome', component:CompanyHome ,children:
+        {path: '/companyHome'/*,beforeEnter: requireAuthCompany()*/, component:CompanyHome ,children:
                 [
-                    {path: '',name: 'companyMain', component:CompanyMain },
-                    {path: 'customerList',name: 'CustomerList', component: CustomerList},
-                    {path: 'carList',name: 'CarList', component: CarList}]},
-        {path: '/recommendHome', component:RecommendHome, children:[
-                {path: '',name: 'RecommendContent', component: RecommendContent},
-                {path: 'condition',name: 'Condition', component: Condition}]}
+                    {path: ''/*,beforeEnter: requireAuthCompany()*/,name: 'companyMain', component:CompanyMain },
+                    {path: 'customerList'/*,beforeEnter: requireAuthCompany()*/,name: 'CustomerList', component: CustomerList},
+                    {path: 'carList'/*,beforeEnter: requireAuthCompany()*/,name: 'CarList', component: CarList}]},
+        {path: '/recommendHome'/*,beforeEnter: requireAuthCompany()*/, component:RecommendHome, children:[
+                {path: ''/*,beforeEnter: requireAuthCompany()*/,name: 'RecommendContent', component: RecommendContent},
+                {path: 'condition'/*,beforeEnter: requireAuthCompany()*/,name: 'Condition', component: Condition}]}
     ]
 })

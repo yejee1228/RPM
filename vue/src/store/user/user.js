@@ -22,8 +22,17 @@ const actions = {
             .then(({data})=>{
                 if(data.result) {
                     commit('LOGIN_COMMIT', data)
-                }else{
-                    commit('fail_commit')
+                    localStorage.setItem('auth',data.user.auth)
+                    localStorage.setItem("token", data.token)
+                    localStorage.setItem("userId",data.user.userid)
+                    if(data.user.auth==0) {
+                        if(data.mycar){localStorage.setItem("mycar", JSON.stringify(data.mycar))
+                            if(data.record){localStorage.setItem("record", JSON.stringify(data.record))}
+                        }
+                        router.push('/')
+                    }else{
+                        router.push('/companyHome')
+                    }
                 }
             })
             .catch(()=>{

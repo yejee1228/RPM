@@ -334,7 +334,7 @@
         data(){
             return{
                 searchKeyWord : '',
-                recommend:{ userId:'',makeNm : '제조사를 선택하세요', modelGrpNm : '모델을 선택하세요', modelNm : '세부모델을 선택하세요',
+                recommend:{ userId:this.$store.state.user.user.userid,makeNm : '제조사를 선택하세요', modelGrpNm : '모델을 선택하세요', modelNm : '세부모델을 선택하세요',
                     minBeginYear :'최소', maxBeginYear:'최대',minMilage:'최소',maxMilage:'최대',transmissioncdName:'변속기를 선택하세요',
                     fuleTypedName:'연료를 선택하세요',recCommentCd:'',centerRegion:'지역',centerName:'직영점',minPrice:'최소',
                     maxPrice:'최대',recoCode:0,auth:true,name:this.$store.state.user.user.name},

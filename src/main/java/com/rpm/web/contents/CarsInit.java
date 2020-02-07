@@ -46,7 +46,7 @@ public class CarsInit implements ApplicationRunner {
 
         if (carsRepository.count() == 0) {
             int count = Integer.parseInt(http.getCarCount("https://www.kcar.com/search/api/getCarSearchWithCondition.do"));
-            for (int i = 1; i <= count; i++) {
+            for (int i = 1; i <= count-100; i++) {
                 if ( i % 1000 == 0 )         System.out.println( formattedTime1 + "  INFO 18844 --- [           CarsInit ]         : CarsInit processing :: insert Data count = [ "+ i +" ] ");
 
                 Map<String, String> strJson = new HashMap<>();

@@ -7,12 +7,16 @@ import com.rpm.web.proxy.Box;
 import com.rpm.web.user.User;
 import com.rpm.web.user.UserRepository;
 
+import com.rpm.web.util.PathEnum;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.function.BiFunction;
@@ -76,7 +80,6 @@ public class SocialServiceImpl implements SocialService{
         socialDetailDto.setBoardImg(social.getBoardImg());
         socialDetailDto.setUserid(social.getUserSeq().getUserid());
         socialDetailDto.setUserName(social.getUserSeq().getName());
-        //socialDetailDto.setCommentCount(social.getComments().size());
         socialDetailDto.setThumbCount(social.getThumbs().size());
         return socialDetailDto;
     }
@@ -89,10 +92,9 @@ public class SocialServiceImpl implements SocialService{
         social.setCarName(param.getCarName());
         social.setBoardDate(new SimpleDateFormat ( "yy.MM.dd HH:mm:ss").format( new Date()));
         social.setCarCode("board"+social.getBoardDate());
-        int boxSize=box.get().size();
         social.setBoardImg("img"+File.separator
-                +box.get().get(boxSize-2)+File.separator
-                +box.get().get(boxSize-1));
+                +box.get().get(0)+File.separator
+                +box.get().get(1));
         box.clear();
         social.setBoardContent(param.getBoardContent());
         socialRepository.save(social);
@@ -117,9 +119,16 @@ public class SocialServiceImpl implements SocialService{
         if(socialWriteDto.getBoardImgName()=="oldImg"){
             social.setBoardImg(social.getBoardImg());
         }else{
+            Path file= Paths.get(PathEnum.UPLOAD_PATH.toString()+File.separator
+                    +social.getBoardImg());
             social.setBoardImg("img"+File.separator
                     +box.get().get(0)+File.separator
                     +box.get().get(1));
+            try {
+                Files.delete(file);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
         social.setCarName(socialWriteDto.getCarName());
         social.setBoardContent(socialWriteDto.getBoardContent());
@@ -129,7 +138,14 @@ public class SocialServiceImpl implements SocialService{
     @Override
     public void deleteContent(String boardSeq) {
         social = socialRepository.findById(Long.parseLong(boardSeq)).get();
-        socialRepository.delete(social);
+        Path file= Paths.get(PathEnum.UPLOAD_PATH.toString()+File.separator
+                +social.getBoardImg());
+        try {
+            socialRepository.delete(social);
+            Files.delete(file);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

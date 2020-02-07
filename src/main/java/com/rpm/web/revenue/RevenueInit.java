@@ -40,7 +40,7 @@ public class RevenueInit implements ApplicationRunner {
                             revenue.setMonth(String.valueOf(year) + "0"+String.valueOf(i));
                             revenue.setEmCode(el);
                             revenue.setEmName(employeeRepository.findEmNameByEmCode(el));
-                            revenue.setCenterCode(employeeRepository.findByEmCode(el));
+                            revenue.setCenterCode(employeeRepository.findByEmCode(el).getCenterCode());
                             revenue.setEmRevenue((int) (Math.random() * 100 + 1) * 1000);
                             revenueRepository.save(revenue);
                         }
@@ -52,7 +52,7 @@ public class RevenueInit implements ApplicationRunner {
                             revenue.setMonth(String.valueOf(year) + month);
                             revenue.setEmCode(el);
                             revenue.setEmName(employeeRepository.findEmNameByEmCode(el));
-                            revenue.setCenterCode(employeeRepository.findByEmCode(el));
+                            revenue.setCenterCode(employeeRepository.findByEmCode(el).getCenterCode());
                             revenue.setEmRevenue((int) (Math.random() * 100 + 1) * 1000);
                             revenueRepository.save(revenue);
                         }
@@ -60,9 +60,8 @@ public class RevenueInit implements ApplicationRunner {
                 }
 
             });
-
-            System.out.println( formattedTime1 + "  INFO 18844 --- [           RevenueInit ]         : RevenueInit End ");
-
+ 
         }
+        System.out.println( formattedTime1 + "  INFO 18844 --- [           RevenueInit ]         : RevenueInit End ");
     }
 }

@@ -1,6 +1,7 @@
 package com.rpm.web.company;
 
 
+import com.rpm.web.employee.Employee;
 import lombok.*;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Component;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
+import java.util.List;
 
 @Component
 @Entity
@@ -26,4 +28,8 @@ public class Company implements Serializable {
     @NotNull@Column(name = "CENTER_NAME", length = 20) private String centerName;
     @NotNull@Column(name = "CENTER_REGION", length = 10) private String centerRegion;
     @Column(name = "MONTH_REVENUE") private int monthRevenue;
+
+    @OneToMany(fetch = FetchType.LAZY)
+    @JoinColumn(name = "COMPANY_ID")
+    private List<Employee> employees;
 }

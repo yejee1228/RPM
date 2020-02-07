@@ -1,10 +1,15 @@
 <template>
     <div id="app">
-        <div className="mc_search1">
+        <div class="container">
+        <div class="mc_search1">
             <ul>
                 <li>
-                    <line-example  ref="monthRevenue" v-if="isLineGraph" v-bind="LineGraphDataSetup"/>
-                    <horizontal-bar-example  ref="modelRevenue" v-if="!isLineGraph"  v-bind="BarGraphDataSetup"/>
+                    <line-graph  ref="monthRevenue"
+                                 v-if="isLineGraph"
+                                 :data="LineGraphDataSetup"/>
+                    <horizontal-bar-graph  ref="modelRevenue"
+                                           v-if="!isLineGraph"
+                                           :data="BarGraphDataSetup"/>
                 </li>
             </ul>
         </div>
@@ -28,124 +33,106 @@
         <!-- Tab content -->
         <div id="Domestic" class="tabcontent">
             <table id='DomesticTable'>
-                <th v-for=" month of labels " :key=" month ">
-                <td class="labelHead" @click="drawingChartByMonth( month )"> {{ month }}</td>
+                <th v-for=" ( month , index )  of labels " :key=" index ">
+                    <td class="labelHead" >
+                        {{ month }}
+                    </td>
                 </th>
                 <tr v-for=" ( d , index ) of Domestic" :key=" d.Total ">
-                    <td class="subCate" :colspan="DcolspanNum( d.subCategory )"
-                        :rowspan=" DrowspanNum( d.subCategory ) " v-if=" DrowspanSetting( d.subCategory , index ) "> {{
-                        d.subCategory }}
+                    <td class="subCate"
+                        :colspan="DcolspanNum( d.subCategory )"
+                        :rowspan=" DrowspanNum( d.subCategory ) "
+                        v-if=" DrowspanSetting( d.subCategory , index ) ">
+                            {{ d.subCategory }}
                     </td>
-                    <td class="model" @click="drawingChartByModel( d )" v-if="TotcolspanSetting( d.subCategory )"> {{
-                        d.modelName }}
+                    <td class="model"
+                        @click="drawingChartByModel( d )"
+                        v-if="TotcolspanSetting( d.subCategory )">
+                            {{ d.modelName }}
                     </td>
-                    <td class="month" @dblclick="ctf( index , 3 )" @focusout="ctfsave( index , 3 ) "> {{ d.Jan |
-                        thousandFormatter }}
+                    <td class="month"
+                        @dblclick="ctf( index , i + 3 )"
+                        @focusout="ctfsave( index , i + 3 , d) "
+                        v-for=" ( month , i ) of d.monthRevenue "
+                        :key="i">
+                            {{ month |thousandFormatter }}
                     </td>
-                    <td class="month"> {{ d.Feb | thousandFormatter }}</td>
-                    <td class="month"> {{ d.Mar | thousandFormatter }}</td>
-                    <td class="month"> {{ d.Apr | thousandFormatter }}</td>
-                    <td class="month"> {{ d.May | thousandFormatter }}</td>
-                    <td class="month"> {{ d.Jun | thousandFormatter }}</td>
-                    <td class="month"> {{ d.Jul | thousandFormatter }}</td>
-                    <td class="month"> {{ d.Aug | thousandFormatter }}</td>
-                    <td class="month"> {{ d.Sep | thousandFormatter }}</td>
-                    <td class="month"> {{ d.Oct | thousandFormatter }}</td>
-                    <td class="month"> {{ d.Nov | thousandFormatter }}</td>
-                    <td class="month"> {{ d.Dec | thousandFormatter }}</td>
-                    <td class="month"> {{ d.Total | thousandFormatter }}</td>
+                    <td class="month"> {{ d.Total | thousandFormatter }} </td>
                 </tr>
                 <tr>
-                    <td class="subCate" colspan="2"><h1>{{GrandTotal.subCategory}}</h1></td>
-                    <td class="month"> {{ GrandTotal.Jan | thousandFormatter }}</td>
-                    <td class="month"> {{ GrandTotal.Feb | thousandFormatter }}</td>
-                    <td class="month"> {{ GrandTotal.Mar | thousandFormatter }}</td>
-                    <td class="month"> {{ GrandTotal.Apr | thousandFormatter }}</td>
-                    <td class="month"> {{ GrandTotal.May | thousandFormatter }}</td>
-                    <td class="month"> {{ GrandTotal.Jun | thousandFormatter }}</td>
-                    <td class="month"> {{ GrandTotal.Jul | thousandFormatter }}</td>
-                    <td class="month"> {{ GrandTotal.Aug | thousandFormatter }}</td>
-                    <td class="month"> {{ GrandTotal.Sep | thousandFormatter }}</td>
-                    <td class="month"> {{ GrandTotal.Oct | thousandFormatter }}</td>
-                    <td class="month"> {{ GrandTotal.Nov | thousandFormatter }}</td>
-                    <td class="month"> {{ GrandTotal.Dec | thousandFormatter }}</td>
+                    <td class="subCate" colspan="2"> <h1>{{ GrandTotal.subCategory }} </h1></td>
+                    <td class="month" v-for=" ( month , i ) of GrandTotal.monthRevenue " :key="i"> {{ month | thousandFormatter }}</td>
                     <td class="month"> {{ GrandTotal.Total | thousandFormatter }}</td>
                 </tr>
             </table>
-            <button @click="csvExport(Domestic)"> Export to CSV</button>
+            <div class="exportCSV">
+            <button @click="csvExport(Domestic)"  class="btn_file" > Export to CSV</button>
+            </div>
         </div>
 
         <div id="Export" class="tabcontent">
             <table id='ExportTable'>
-                <th v-for="month of labels" :key="month">
-                <td class="labelHead"> {{month}}</td>
+                <th v-for="month of labels"
+                    :key="month">
+                    <td class="labelHead" >
+                        {{ month }}
+                    </td>
                 </th>
                 <tr v-for=" ( e , index ) of Export" :key="e.Total">
-                    <td class="subCate" :colspan="EcolspanNum( e.subCategory )" :rowspan=" ErowspanNum( e.subCategory )"
-                        v-if="ErowspanSetting( e.subCategory , index )">{{ e.subCategory }}
+                    <td class="subCate"
+                        :colspan="EcolspanNum( e.subCategory )"
+                        :rowspan=" ErowspanNum( e.subCategory )"
+                        v-if="ErowspanSetting( e.subCategory , index )">
+                            {{ e.subCategory }}
                     </td>
                     <td class="model" v-if="TotcolspanSetting( e.subCategory )"> {{ e.modelName }}</td>
-                    <td class="month"> {{ e.Jan | thousandFormatter }}</td>
-                    <td class="month"> {{ e.Feb | thousandFormatter }}</td>
-                    <td class="month"> {{ e.Mar | thousandFormatter }}</td>
-                    <td class="month"> {{ e.Apr | thousandFormatter }}</td>
-                    <td class="month"> {{ e.May | thousandFormatter }}</td>
-                    <td class="month"> {{ e.Jun | thousandFormatter }}</td>
-                    <td class="month"> {{ e.Jul | thousandFormatter }}</td>
-                    <td class="month"> {{ e.Aug | thousandFormatter }}</td>
-                    <td class="month"> {{ e.Sep | thousandFormatter }}</td>
-                    <td class="month"> {{ e.Oct | thousandFormatter }}</td>
-                    <td class="month"> {{ e.Nov | thousandFormatter }}</td>
-                    <td class="month"> {{ e.Dec | thousandFormatter }}</td>
+                    <td class="month" v-for=" ( month , i ) of e.monthRevenue " :key="i"
+                        @dblclick="ctf( index , i + 3 )"
+                        @focusout="ctfsave( index , i + 3 , e) ">
+                            {{ month |thousandFormatter }}
+                    </td>
                     <td class="month"> {{ e.Total | thousandFormatter }}</td>
                 </tr>
                 <tr>
-                    <td class="subCate" colspan="2"><h1>{{GrandTotal.subCategory}}</h1></td>
-                    <td class="month"> {{ GrandTotal.Jan | thousandFormatter }}</td>
-                    <td class="month"> {{ GrandTotal.Feb | thousandFormatter }}</td>
-                    <td class="month"> {{ GrandTotal.Mar | thousandFormatter }}</td>
-                    <td class="month"> {{ GrandTotal.Apr | thousandFormatter }}</td>
-                    <td class="month"> {{ GrandTotal.May | thousandFormatter }}</td>
-                    <td class="month"> {{ GrandTotal.Jun | thousandFormatter }}</td>
-                    <td class="month"> {{ GrandTotal.Jul | thousandFormatter }}</td>
-                    <td class="month"> {{ GrandTotal.Aug | thousandFormatter }}</td>
-                    <td class="month"> {{ GrandTotal.Sep | thousandFormatter }}</td>
-                    <td class="month"> {{ GrandTotal.Oct | thousandFormatter }}</td>
-                    <td class="month"> {{ GrandTotal.Nov | thousandFormatter }}</td>
-                    <td class="month"> {{ GrandTotal.Dec | thousandFormatter }}</td>
+                    <td class="subCate" colspan="2"><h1>{{ GrandTotal.subCategory }}</h1></td>
+                    <td class="month" v-for=" ( month , i ) of GrandTotal.monthRevenue " :key="i"> {{ month | thousandFormatter }}</td>
                     <td class="month"> {{ GrandTotal.Total | thousandFormatter }}</td>
                 </tr>
             </table>
-            <button @click="csvExport(Export)"> Export to CSV</button>
+            <div class="exportCSV">
+                <button @click="csvExport(Export)" class="btn_file" > Export to CSV</button>
+            </div>
         </div>
         <div id="Model" class="tabcontent">
-            <h3></h3>
+            <div class="beforeOpen"> 서비스 준비중 입니다. </div>
+        </div>
         </div>
     </div>
 </template>
 <script>
-    import {mapState} from 'vuex';
-    import LineExample from './chartjs/lineExample'
-    import HorizontalBarExample from './chartjs/horizontalBarExample'
+    import { mapState } from 'vuex';
+    import LineGraph from './chartjs/lineExample'
+    import HorizontalBarGraph from './chartjs/horizontalBarExample'
 
     export default {
         name: "datacenterChart",
         components: {
-            'line-example' : LineExample,
-            'horizontal-bar-example': HorizontalBarExample
+            'line-graph' : LineGraph,
+            'horizontal-bar-graph': HorizontalBarGraph
         },
         data: function () {
             return {
                 fileName: '',
                 flag: false ,
-                LineGraphDataSetup : { title : 'CSV 파일을 올려주세요 ', labels : ['January' , 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December', 'Total' ], lineGraphRowData : this.lineGraphRowData},
-                BarGraphDataSetup : { title :  'CSV 파일을 올려주세요 ', labels : ['January' , 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December', 'Total' ], barGraphRowData : this.barGraphRowData}
+                LineGraphDataSetup :  {labels : ['January' , 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ]  , title: 'CSV 파일을 올려주세요 ' , lineGraphRowData: [10,10,10,10,10,10,10,10,10,10,10,10] },
+                BarGraphDataSetup : ''
             }
         },
         computed: {
             ...mapState({
                 labels: state => state.decenter.labels,
                 title: state => state.decenter.title,
+                lineGraphTitle: state => state.decenter.lineGraphTitle,
                 Domestic: state => state.decenter.Domestic,
                 Export: state => state.decenter.Export,
                 mainCategoryItem: state => state.decenter.mainCategoryItem,
@@ -163,39 +150,47 @@
             }
         },
         methods: {
-            drawingChartByMonth(month) {
-                console.log('month >>>' + month)
-                this.$store.dispatch('decenter/changeGraph', this.GraphItem.HorizontalBar)
+            drawingChartByMonth( monthIndex ) {
+                this.$store.dispatch('decenter/drawingChartByMonth', { monthIndex : monthIndex -2 })
+                this.BarGraphDataSetup =  {labels : this.barGraphLabels , title: 'title' , barGraphRowData: this.barGraphRowData  }
+                this.$store.dispatch('decenter/changeGraph',  this.GraphItem.HorizontalBar )
+                this.$refs.modelRevenue.dataInit(this.BarGraphDataSetup)
             },
-            drawingChartByModel(targetItem) {
-                this.$store.dispatch('decenter/drawingChartByModel', {targetItem: targetItem})
-                this.$store.dispatch('decenter/changeGraph', this.GraphItem.Line)
+            drawingChartByModel( targetItem ) {
+                this.$store.dispatch('decenter/drawingChartByModel', { targetItem : targetItem })
+                this.LineGraphDataSetup = {labels : this.lineGraphLabels , title: this.lineGraphTitle , lineGraphRowData: this.lineGraphRowData }
+                this.$store.dispatch('decenter/changeGraph', this.GraphItem.Line )
+                this.$refs.monthRevenue.dataInit(this.LineGraphDataSetup)
+
             },
             thousandFormatter(value) {
                 return (value === undefined || value === '') ? 0
                     : value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
             },
-            ctf(tr, td) {
-                console.log(tr, td)
+            ctf(tr, td ) {
                 if (this.flag) return alert('작업 중인 셀을 완료해주세요');
                 this.flag = !this.flag
-                td += this.DrowspanSetting(this.Domestic[0].subCategory, tr) ? 0 : -1
+                let calcTd = this.DrowspanSetting(this.Domestic[0].subCategory, tr) ? 0 : -1
+                calcTd += td
                 let calcTr = tr + 16
-                var baseElement = document.querySelector("#DomesticTable > tr:nth-child(" + calcTr + ") > td:nth-child(" + td + ")");
+                var baseElement = document.querySelector("#DomesticTable > tr:nth-child(" + calcTr + ") > td:nth-child(" + calcTd + ")");
                 if (this.flag) {
-                    baseElement.innerHTML = "<input v-model=\"message\"  style=\"text-align: right\" placeholder=\"" + this.thousandFormatter(this.Domestic[tr].Jan) + "\" id = \"innerinput\" >"
+                    baseElement.innerHTML = "<input style=\"text-align: right\" placeholder=\"" + this.thousandFormatter(this.Domestic[tr].monthRevenue[calcTd]) + "\" id = \"innerinput\" >"
                 }
+
             },
-            ctfsave(tr, td) {
+            ctfsave(tr, td , targetItem ) {
                 //this.flag = false
-                td += this.DrowspanSetting(this.Domestic[0].subCategory, tr) ? 0 : -1
+                let calcTd = this.DrowspanSetting(this.Domestic[0].subCategory, tr) ? 0 : -1
+                    calcTd += td
                 let calcTr = tr + 16
-                var baseElement = document.querySelector("#DomesticTable > tr:nth-child(" + calcTr + ") > td:nth-child(" + td + ")");
+                var baseElement = document.querySelector("#DomesticTable > tr:nth-child(" + calcTr + ") > td:nth-child(" + calcTd + ")");
                 let hasText = baseElement.querySelector("input").value
                 baseElement.innerHTML = ''
-                baseElement.innerHTML = this.thousandFormatter(hasText)
-                this.$store.dispatch('decenter/UpdateChartData', {index: tr, hasText: hasText})
+                this.$store.dispatch('decenter/UpdateChartData', {index: tr, monthIndex : td - 3  , inputIndex : calcTd ,  hasText: hasText})
                 this.flag = false
+                if (this.isLineGraph) this.drawingChartByModel(targetItem)
+                else this.drawingChartByMonth(td - 1)
             },
             csvExport(arrData) {
                 let csvContent = "data:text/csv;charset=utf-8,";
@@ -209,9 +204,19 @@
 
                 const data = encodeURI(csvContent);
                 const link = document.createElement("a");
+
+                let createdTime = new Date();
                 link.setAttribute("href", data);
-                link.setAttribute("download", "export.csv");
+                link.setAttribute("download", this.title+' ('+this.getFormatDate(createdTime)+").csv");
                 link.click();
+            },
+            getFormatDate(date){
+                var year = date.getFullYear();              //yyyy
+                var month = (1 + date.getMonth());          //M
+                month = month >= 10 ? month : '0' + month;  //month 두자리로 저장
+                var day = date.getDate();                   //d
+                day = day >= 10 ? day : '0' + day;          //day 두자리로 저장
+                return  year + '' + month + '' + day;
             },
             /**
              * @return {boolean}
@@ -414,7 +419,9 @@
     .month {
         text-align: right;
     }
-
+    .container{
+        width: 1200px;
+    }
     .labelHead, .subCate {
         padding-left: 10px;
     }
@@ -493,4 +500,26 @@
         clip: rect(0, 0, 0, 0);
         bord: 0
     }
+    .beforeOpen{
+        width: 100%;
+        height: 300px;
+        text-align: center;
+        padding-top: 140px;
+        font-size: 30px;
+    }
+    .exportCSV{
+        margin: 10px 10px 0px 10px;
+    }
+    .exportCSV .btn_file{
+        display: inline-block;
+        border: 1px solid #000;
+        width: 100px;
+        height: 30px;
+        font-size: 0.8em;
+        line-height: 30px;
+        text-align: center;
+        vertical-align: middle;
+        margin-right: 0px
+    }
+
 </style>

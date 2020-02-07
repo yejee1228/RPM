@@ -7,12 +7,16 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 
 @SpringBootApplication(exclude = {SecurityAutoConfiguration.class })
 @EnableBatchProcessing
 @EnableWebSecurity
 @CrossOrigin(origins = "http://localhost:8081")
+
+
+@EnableScheduling
 public class RpmApplication {
 
     public static void main(String[] args) throws Exception {

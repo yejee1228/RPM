@@ -31,19 +31,18 @@ public class CompanyController {
         map.put("result",carsRepository.findByCenterCode(centerCode));
         return map;
     }
-    @GetMapping("/customerList")
-    public Map<String, String> customerList(){
-        Map<String,String> map = new HashMap();
-        map.put("result","aa");
-        return map;
-
-    }
     @PostMapping("/bestCarList")
     public List<Cars> bestCarList(@RequestBody Recommend recommend){
-        System.out.println(recommend.toString());
 
         return companyServiceImpl.getBestCarList(recommend);
     }
+    @PostMapping("/carRemove")
+    public void carRemove(@RequestBody List<Cars> cars){
+        cars.forEach(el->{
+            carsRepository.deleteById(el.getCid());
+        });
+    }
+
 
 
 }

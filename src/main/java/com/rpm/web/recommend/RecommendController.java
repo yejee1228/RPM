@@ -35,31 +35,22 @@ public class RecommendController {
     }
     @PostMapping("/inputRecommend")
     public void inputRecommend(@RequestBody Recommend recommend){
-        recommend.setAuth(true);
+        recommend.setCenterCode(companyRepository.findByCenterName(recommend.getCenterName()));
         recommendRepository.save(recommend);
-        Recommend recommendCenter =new Recommend();
-        recommendCenter.setAuth(false);
-        recommendCenter.setFuleTypedName(recommend.getFuleTypedName());
-        recommendCenter.setMaxBeginYear(recommend.getMaxBeginYear());
-        recommendCenter.setMinBeginYear(recommend.getMinBeginYear());
-        recommendCenter.setMaxMilage(recommend.getMaxMilage());
-        recommendCenter.setMinMilage(recommend.getMinMilage());
-        recommendCenter.setMaxPrice(recommend.getMaxPrice());
-        recommendCenter.setMinPrice(recommend.getMinPrice());
-        recommendCenter.setModelGrpNm(recommend.getModelGrpNm());
-        recommendCenter.setModelNm(recommend.getModelNm());
-        recommendCenter.setMakeNm(recommend.getMakeNm());
-        recommendCenter.setTransmissioncdName(recommend.getTransmissioncdName());
-        recommendCenter.setUserId(companyRepository.findByCenterName(recommend.getCenterName()));
-        recommendCenter.setName(recommend.getName());
-        recommendRepository.save(recommendCenter);
+
 
     }
     @GetMapping("/customerList/{userid}")
     public List<Recommend> customerList(@PathVariable String userid){
-        List<Recommend> list=recommendRepository.findByUserId(userid);
+        List<Recommend> list=recommendRepository.findByCenterCode(userid);
         list.sort((a,b) -> b.getRecoSeq().compareTo(a.getRecoSeq()));
         return  list;
 
+    }
+    @PostMapping("/recommendRemove")
+    public void recommendRemove(@RequestBody List<Recommend> recommends){
+        recommends.forEach(el->{
+            recommendRepository.deleteById(el.getRecoSeq());
+        });
     }
 }

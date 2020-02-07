@@ -24,11 +24,11 @@ public class Social implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "BOARDSEQ") @NotNull private Long boardSeq;
-    @Column(name = "BOARDDATE") @NotNull private String boardDate;
-    @Column(name = "CARCODE") @NotNull private String carCode;
-    @Column(name = "CARNAME") @NotNull private String carName;
+    @Column(name = "BOARDDATE", length=25) @NotNull private String boardDate;
+    @Column(name = "CARCODE", length=50) @NotNull private String carCode;
+    @Column(name = "CARNAME", length=100) @NotNull private String carName;
     @Column(name = "BOARDCONTENT", length = 20000) @NotNull private String boardContent;
-    @Column(name = "BOARDIMG") @NotNull private String boardImg;
+    @Column(name = "BOARDIMG", length=200) @NotNull private String boardImg;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "USERSEQ")
