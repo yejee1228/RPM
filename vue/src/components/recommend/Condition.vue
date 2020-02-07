@@ -408,7 +408,7 @@
                     if(this.recommend.fuleTypedName=='연료를 선택하세요'){this.recommend.fuleTypedName=''}
                     if(this.recommend.transmissioncdName=='변속기를 선택하세요'){this.recommend.transmissioncdName=''}
                     axios
-                        .post('/recommend/inputRecommend', this.recommend)
+                        .post('http://localhost:8080/recommend/inputRecommend', this.recommend)
                         .catch(e=>{
                             alert('erorr'+e)
                         })

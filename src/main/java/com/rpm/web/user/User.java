@@ -36,9 +36,7 @@ public class User implements Serializable {
     @Column(name = "REGION")  private String region;
 
 
-    @OneToMany(mappedBy = "userSeq", cascade = CascadeType.ALL,
-            orphanRemoval = true)
-    private List<Social> socials = new ArrayList<>();
+
 
 
     @Builder
