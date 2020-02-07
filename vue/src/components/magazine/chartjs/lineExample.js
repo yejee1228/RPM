@@ -12,10 +12,29 @@ export default {
             borderColor: '#005276',
             data:  [10,10,10,10,10,10,10,10,10,10,10,10],
             borderCapStyle: 'butt',
-            lineTension: 0.2,
+            lineTension: 0.1,
             fill: false
           }
         ]
       }, {responsive: true, maintainAspectRatio: false})
+    },
+  methods :{
+    dataInit(data){
+      this.renderChart({
+        labels: data.labels,
+        datasets: [
+          {
+            label: data.title,
+            backgroundColor: '#5700fe',
+            borderColor: '#005276',
+            data: data.lineGraphRowData,
+            borderCapStyle: 'butt',
+            lineTension: 0.0,
+            fill: false
+          }
+        ]
+      }, {responsive: true, maintainAspectRatio: false})
+
     }
+  },
 }

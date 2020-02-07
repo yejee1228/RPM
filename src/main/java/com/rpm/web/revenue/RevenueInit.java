@@ -60,9 +60,7 @@ public class RevenueInit implements ApplicationRunner {
                 }
 
             });
-
-
-
+ 
         }
         System.out.println( formattedTime1 + "  INFO 18844 --- [           RevenueInit ]         : RevenueInit End ");
     }

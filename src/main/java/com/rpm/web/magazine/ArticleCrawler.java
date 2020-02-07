@@ -125,11 +125,51 @@ public class ArticleCrawler {
         for( int i = 0; i < kl.size(); i++ ) {
             SearchDetailCondition searchDetailCondition = new SearchDetailCondition();
             Keyword kwrd = kl.get(i);
-            if (kwrd.getString().length() > 1 && kwrd.getCnt() > 2 ) {
+            if ( stopWordFillter(kwrd) ) {
+                kwrd = setWeightValue(kwrd);
+                System.out.println(kwrd.getString() + "///"+ kwrd.getCnt() );
                 extractedWordRepository.save(new ExtractedWord( kwrd.getString() , kwrd.getCnt() ));
             }
         }
     }
+
+    private boolean stopWordFillter ( Keyword kwrd ) {
+
+        boolean result = true;
+
+        if ( kwrd.getString().length() < 2 ) {
+            return false;
+        }
+        if ( kwrd.getCnt() < 3 ) {
+            return false;
+        }
+
+        if ( kwrd.getString() == "스파이" ) {
+            return false;
+        }
+        if ( kwrd.getString() == "아우" ) {
+            return false;
+        }
+        if ( kwrd.getString() == "승기" ) {
+            return false;
+        }
+        if ( kwrd.getString() == "추가" ) {
+            return false;
+        }
+        if ( kwrd.getString() == "이완" ) {
+            return false;
+        }
+        return result;
+    }
+
+    private Keyword setWeightValue ( Keyword kwrd ) {
+
+        if ( kwrd.getString().contains("리콜")) kwrd.setCnt( kwrd.getCnt() * 3);
+        if ( kwrd.getString() == "페이스리프트" ) kwrd.setCnt( kwrd.getCnt() * 2);
+        if ( kwrd.getString() == "자율주행" ) kwrd.setCnt( kwrd.getCnt() * 2);
+        return kwrd;
+    }
+
     public void morphemeAnalyzer () throws Exception {
         // string to analyze
         String strToExtrtKwrd = null;
