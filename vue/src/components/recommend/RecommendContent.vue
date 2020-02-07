@@ -234,15 +234,15 @@
         created() {
             axios
                 .get(`http://localhost:8080/recommendedCar/getRecommendedCar/`+localStorage.getItem("userId"))
-                .then(({data})=>{
-                    data.forEach(el=>{
-                        el.checked=false
-                        this.List.push(el)
-                    })
-                    this.$refs.pagination.first()
-                })
-                .catch(()=>{
-
+                        .then(({data})=>{
+                            data.forEach(el=>{
+                                el.checked=false
+                                this.List.push(el)
+                            })
+                            this.$refs.pagination.first()
+                        })
+                        .catch(e=>{
+                            alert(`axios fail${e}`)
                 })
         }
     }

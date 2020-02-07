@@ -45,9 +45,7 @@ public class User implements UserDetails {
     @Column(name = "REGION", length=10)  private String region;
 
 
-    @OneToMany(mappedBy = "userSeq", cascade = CascadeType.ALL,
-            orphanRemoval = true)
-    private List<Social> socials = new ArrayList<>();
+
 
     @OneToMany(mappedBy = "userSeq", cascade = CascadeType.ALL,
             orphanRemoval = true)

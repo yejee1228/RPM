@@ -1,5 +1,9 @@
 package com.rpm.web.recommendedCar;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import com.rpm.web.contents.Cars;
 import lombok.*;
 import org.springframework.stereotype.Component;
@@ -23,7 +27,11 @@ public class RecommendedCar implements Serializable {
     @Column(name = "USERID", length = 25) @NotNull private String userid;
     @Column(name = "CENTER_CODE", length = 3) @NotNull private String centerCode;
 
-    @OneToOne
-    @JoinColumn(name="cid")
+
+
+    @ManyToOne
+    @JoinColumn(name="CID")
     private Cars cars;
+
+
 }

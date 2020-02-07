@@ -1,5 +1,10 @@
 package com.rpm.web.contents;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import com.rpm.web.recommendedCar.RecommendedCar;
 import lombok.*;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
@@ -8,6 +13,7 @@ import org.springframework.util.Assert;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
+import java.util.List;
 
 @Component
 @Entity
@@ -17,6 +23,7 @@ import java.io.Serializable;
 @ToString
 @Lazy
 @Table(name = "CAR")
+
 public class Cars implements Serializable {
     private static final long serialVersionUID = 1L;
 
@@ -64,6 +71,8 @@ public class Cars implements Serializable {
     @Column(name = "MODEL_GRP_CD", length = 50) private String modelGrpCd;
     @Column(name = "CENTER_NAME", length = 20) private String centerName;
     @Column(name = "MODEL_GRP_NM", length = 100) private String modelGrpNm;
+
+
 
     @Builder
     public Cars(
