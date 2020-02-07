@@ -2,7 +2,8 @@
     <div class="v--modal-box v--modal" style="width: 600px; height: 300px;">
         <div class="modal-header">
             <div class="msg">
-                <b style="font-size: 20px">회원가입을 취소하시겠습니까?</b>
+                <b style="font-size: 20px">회원가입을 취소하시겠습니까?</b><br><br><br><br>
+                <b style="font-size: 15px">입력하신 정보가 사라집니다.</b>
             </div>
         </div>
         <div class="example-modal-content">

@@ -5,7 +5,7 @@
                 <div class="head_cont">
                     <div class="center_tit">
                         <div class="region_name"></div>
-                        <h3 class="center_name">RPM {{this.$store.state.user.user.name}}</h3>
+                        <h3 class="center_name">RPM {{this.$store.state.user.user.username}}</h3>
 
                     </div>
                     <ul class="detail_tab">

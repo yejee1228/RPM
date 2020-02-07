@@ -108,7 +108,7 @@
         },
         data(){
             return {
-                context:'http://localhost:8080/',
+                context:'http://localhost:8080',
                 allchecked:false,
                 List:[],
                 checkedList:[],

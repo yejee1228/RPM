@@ -23,7 +23,7 @@
 						<input type="checkbox" class="am" id="id_save" name="id_save" value="Y">
 						<label for="id_save" class="id_save">아이디 저장</label>
 					</span>
-							<a @click.prevent="checkSubmit" href=""><img src="https://www.kcar.com/resources/images/common/loginBtn.gif" alt="로그인" class="am"></a>
+							<a @click.prevent="login" href=""><img src="https://www.kcar.com/resources/images/common/loginBtn.gif" alt="로그인" class="am"></a>
 						</div>
 						<div class="findjoin">
 							<a @click.prevent="">아이디 찾기</a> <a href="/user/passInf.do" >비밀번호 찾기</a><modals-container />
@@ -48,17 +48,12 @@
 		data(){
 			return{
 				userid : '',
-				passwd : '',
-				result :''
-
+				passwd : ''
 			}
 		},
 		methods:{
 			moveToPasswd(){
 				document.getElementById('passwd').focus()
-			},
-			checkSubmit(){
-					this.login()
 			},
 			login(){
 				this.$store.dispatch('user/login', { userid : this.userid , passwd : this.passwd })
@@ -67,10 +62,8 @@
 		beforeDestroy(){
 			this.$store.state.user.fail = false
 		},
-
 		created() {
 			if(this.auth=== true){
-				alert('이미로그인중입니다')
 				this.$router.push('/')
 			}
 		}
