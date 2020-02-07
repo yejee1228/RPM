@@ -37,10 +37,7 @@ public class SocialInit implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
 
-        SimpleDateFormat SystemTime = new SimpleDateFormat ( "yyyy-MM-dd HH:mm:ss");
-        String formattedTime1 = SystemTime.format (System.currentTimeMillis());
-
-        System.out.println( formattedTime1 + "  INFO 18844 --- [           SocialInit ]         : SocialInit Start ");
+        System.out.println( new SimpleDateFormat ( "yyyy-MM-dd HH:mm:ss").format (System.currentTimeMillis())+ "  INFO 18844 --- [           SocialInit ]         : SocialInit Start ");
 
         if (userRepository.count() != 0 && carsRepository.count() != 0) {
             //socialBoard 테이블을 지운 후 social더미만 먼저 실행
@@ -95,7 +92,7 @@ public class SocialInit implements ApplicationRunner {
                 }
             }
         }
-        System.out.println( formattedTime1 + "  INFO 18844 --- [           SocialInit ]         : SocialInit End ");
+        System.out.println( new SimpleDateFormat ( "yyyy-MM-dd HH:mm:ss").format (System.currentTimeMillis())+ "  INFO 18844 --- [           SocialInit ]         : SocialInit End ");
     }
 }
 

@@ -22,10 +22,7 @@ public class RevenueInit implements ApplicationRunner {
     public void run(ApplicationArguments args) throws Exception {
 
 
-        SimpleDateFormat SystemTime = new SimpleDateFormat ( "yyyy-MM-dd HH:mm:ss");
-        String formattedTime1 = SystemTime.format (System.currentTimeMillis());
-
-        System.out.println( formattedTime1 + "  INFO 18844 --- [           RevenueInit ]         : RevenueInit Start ");
+        System.out.println( new SimpleDateFormat ( "yyyy-MM-dd HH:mm:ss").format (System.currentTimeMillis())+ "  INFO 18844 --- [           RevenueInit ]         : RevenueInit Start ");
 
        long count = revenueRepository.count();
 
@@ -62,6 +59,6 @@ public class RevenueInit implements ApplicationRunner {
             });
  
         }
-        System.out.println( formattedTime1 + "  INFO 18844 --- [           RevenueInit ]         : RevenueInit End ");
+        System.out.println( new SimpleDateFormat ( "yyyy-MM-dd HH:mm:ss").format (System.currentTimeMillis())+ "  INFO 18844 --- [           RevenueInit ]         : RevenueInit End ");
     }
 }

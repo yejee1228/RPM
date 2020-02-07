@@ -23,10 +23,7 @@ public class CompanyInit implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
 
-        SimpleDateFormat SystemTime = new SimpleDateFormat ( "yyyy-MM-dd HH:mm:ss");
-        String formattedTime1 = SystemTime.format (System.currentTimeMillis());
-
-        System.out.println( formattedTime1 + "  INFO 18844 --- [           CompanyInit ]         : CompanyInit Start ");
+        System.out.println( new SimpleDateFormat ( "yyyy-MM-dd HH:mm:ss").format (System.currentTimeMillis())+ "  INFO 18844 --- [           CompanyInit ]         : CompanyInit Start ");
 
 
 
@@ -46,7 +43,7 @@ public class CompanyInit implements ApplicationRunner {
         }
 
 
-        System.out.println( formattedTime1 + "  INFO 18844 --- [           CompanyInit ]         : CompanyInit End ");
+        System.out.println( new SimpleDateFormat ( "yyyy-MM-dd HH:mm:ss").format (System.currentTimeMillis()) + "  INFO 18844 --- [           CompanyInit ]         : CompanyInit End ");
 
     }
 

@@ -30,12 +30,8 @@ public class UserInit implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        SimpleDateFormat SystemTime = new SimpleDateFormat ( "yyyy-MM-dd HH:mm:ss");
-        String formattedTime1 = SystemTime.format (System.currentTimeMillis());
 
-        System.out.println( formattedTime1 + "  INFO 18844 --- [           UserInit ]         : UserInit Start ");
-
-
+        System.out.println( new SimpleDateFormat ( "yyyy-MM-dd HH:mm:ss").format (System.currentTimeMillis()) + "  INFO 18844 --- [           UserInit ]         : UserInit Start ");
 
         UserDummy userDummy = new UserDummy();
         if(userRepository.count() == 0){
@@ -56,6 +52,6 @@ public class UserInit implements ApplicationRunner {
             });
         }
 
-        System.out.println( formattedTime1 + "  INFO 18844 --- [           UserInit ]         : UserInit END ");
+        System.out.println( new SimpleDateFormat ( "yyyy-MM-dd HH:mm:ss").format (System.currentTimeMillis()) + "  INFO 18844 --- [           UserInit ]         : UserInit END ");
     }
 }
