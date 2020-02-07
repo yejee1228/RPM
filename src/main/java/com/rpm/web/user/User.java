@@ -35,7 +35,7 @@ public class User implements UserDetails {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "USERSEQ") @NotNull private Long userSeq;
     @Column(name = "USERID", unique = true, length = 25) @NotNull private String userid;
-    @Column(name = "PASSWD", length=40) @NotNull private String passwd;
+    @Column(name = "PASSWD") @NotNull private String passwd;
     @Column(name = "NAME", length = 30) @NotNull private String name;
     @Column(name = "EMAIL", length=100) @NotNull private String email;
     @Column(name = "AUTH") @NotNull private int auth;
