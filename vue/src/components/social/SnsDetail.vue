@@ -15,7 +15,7 @@
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">{{board.carName}}</h2>
+                  <h4 class="text-uppercase">{{board.carName}}</h4>
                   <p class="item-intro text-muted">{{board.userName}}</p>
                   <img class="img-fluid d-block mx-auto" :src="board.boardImg" alt="">
                   <p>{{board.boardContent}}</p>
@@ -150,10 +150,26 @@
 
 </script>
 <style scoped>
-  .snsDetail {
+  .modal-dialog{
+    text-align: center;
+  }
+  .modal-content{
+    width: 1000px;
+    max-height: 900px;
+    display: inline-block;
+  }
+  .portfolio-modal .modal-content img {
+    margin-bottom: 30px;
+    max-height: 400px;
   }
   .btn-primary {
     margin: auto 10px;
+  }
+  .portfolio-modal .modal-content p.item-intro {
+    font-size: 16px;
+    font-style: italic;
+    margin: 15px 0 20px;
+    font-family: 'Droid Serif',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
   }
   .fa-heart:before{
     color : #E81919;

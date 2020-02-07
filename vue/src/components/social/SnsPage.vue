@@ -26,14 +26,12 @@
               </div>
               <img class="img-fluid" :src="item.boardImg" alt="">
             </a>
-            <div class="portfolio-caption">
-              <h4>{{item.carName}}</h4>
-              <p class="text-muted">{{item.userName}}</p>
-              <div class="btn-like-comment">
-                <a class="btn-like" v-if="thumbed(item.boardSeq)" style="color:#E81919"><i class="fas fa-heart"></i></a>
-                <a class="btn-like" v-else><i class="far fa-heart"></i></a>
-                {{item.thumbCount}}
-              </div>
+            <div class="btn-like-comment">
+              <a class="btn-like" v-if="thumbed(item.boardSeq)" style="color:#E81919"><i class="fas fa-heart" ></i></a>
+              <a class="btn-like" v-else><h6><i class="far fa-heart"></i> 좋아요  {{item.thumbCount}} 개</h6></a>
+            </div>
+            <div class="portfolio-caption1">
+              <p class="userNamePlace">{{item.userName}}</p> <h6>{{item.carName}}</h6>
             </div>
           </div>
         </div>
@@ -127,13 +125,19 @@
   body{
     overflow: visible;
   }
+  .btn-like-comment{
+
+  }
   .row-contents{
-    display: flex;
+    text-align: center;
+    display: inline-flex;
     width: 100%;
     flex-wrap: wrap;
+    /*border: 1px solid rgba(var(--b6a,219,219,219),1);*/
   }
   #portfolio .portfolio-item .portfolio-link .portfolio-hover {
     background: #0d124f78;
+
   }
   h2 {
     font-size: 14px;
@@ -153,7 +157,9 @@
     border-color: #0d124f!important;
     margin: 30px;
   }
-
+  #main_layout{
+    padding-top: 10px;
+  }
   h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0.5rem;
     font-weight: 500;
@@ -166,6 +172,8 @@
 
   h2 {
     font-size: 2rem;
+    font-weight: 700;
+    font-family: Montserrat,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
   }
 
   h3 {
@@ -173,7 +181,7 @@
   }
 
   h4 {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 
   h5 {
@@ -182,6 +190,7 @@
 
   h6 {
     font-size: 1rem;
+
   }
 
   hr {
@@ -193,7 +202,7 @@
 
   .img-fluid {
     max-width: 100%;
-    height: 350px;
+    height: 280px;
     inline-size: -webkit-fill-available;
   }
 
@@ -219,7 +228,7 @@
     margin-left: auto;
   }
 
-  @media (min-width: 576px) {
+/*  @media (min-width: 576px) {
     .container {
       max-width: 540px;
     }
@@ -235,7 +244,7 @@
     .container {
       max-width: 960px;
     }
-  }
+  }*/
 
   @media (min-width: 1200px) {
     .container {
@@ -260,25 +269,22 @@
   .col-sm-6, .col-md-4, .col-lg-12 {
     position: relative;
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 16px;
+    padding-left: 16px;
+    padding-top: 10px;
+
   }
   .col-sm-6 {
-    -ms-flex: 0 0 50%;
-    flex: 0 0 50%;
-    max-width: 50%;
+    max-width: 22%;
+    border: 1px solid rgba(var(--ce3,239,239,239),1);
   }
   .col-md-4 {
-    -ms-flex: 0 0 30%;
-    flex: 0 0 30%;
-    max-width: 30%;
+    max-width: 22%;
+    border: 1px solid rgba(var(--ce3,239,239,239),1);
   }
   .col-lg-12 {
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
     max-width: 100%;
   }
-
   .btn {
     display: inline-block;
     font-weight: 400;
@@ -604,9 +610,10 @@
   }
   .btn-like-comment a{
     margin: 5px;
-    margin-top: 10px;
-    color: rgba(33,37,41,.35);
+    margin-top: 15px;
+    color: #0d124f;
     font-size: 15px;
+    float: left;
   }
   .btn-primary{
     background-color: #fed136;
@@ -615,5 +622,16 @@
   .btn-like-comment a:hover {
     text-decoration: dashed;
   }
-
+ .portfolio-caption1 {
+    max-width: 100%;
+    margin: 0px auto;
+    padding: 0px 0px 20px 0px;
+    text-align: left;
+     background-color: #fff;
+     display: inline-block;
+  }
+  .userNamePlace{
+    text-align: left;
+    font-size: 14px;
+  }
 </style>

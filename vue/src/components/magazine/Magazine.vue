@@ -10,7 +10,7 @@
                                 :words="wordList"
                                 font-family="Roboto"
                                 :color="([, weight]) => weight > 19 ? colorItems[Math.floor(Math.random()*11+1)] : weight > 18 ? colorItems[Math.floor(Math.random()*11+1)] : weight > 15 ? colorItems[Math.floor(Math.random()*11+1)] : weight > 12 ?  colorItems[Math.floor(Math.random()*11+1)] : weight > 10 ? colorItems[Math.floor(Math.random()*11+1)] : colorItems[Math.floor(Math.random()*11+1)]"
-                                :rotation="([, weight]) => weight > 19 ? rotationItems[0] : weight > 18 ? rotationItems[Math.floor(Math.random()*2)] : weight > 17 ? rotationItems[Math.floor(Math.random()*2)] : weight > 16 ?  rotationItems[Math.floor(Math.random()*2)] : weight > 15 ? rotationItems[Math.floor(Math.random()*2)] : rotationItems[Math.floor(Math.random()*2)]"
+                                :rotation="([, weight]) => weight > 19 ? rotationItems[0] : weight > 18 ? rotationItems[0] : weight > 15 ? rotationItems[0] : weight > 12 ?  rotationItems[1] : weight > 8 ? rotationItems[0] : rotationItems[1]"
                                 :spacing = spacing
                                 :enter-animation = enterAnimation
                                 :animation-duration = 5000
