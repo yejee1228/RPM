@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import com.rpm.web.social.Social;
 import lombok.*;
+import org.hibernate.validator.constraints.UniqueElements;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 import org.springframework.util.Assert;
@@ -26,14 +27,14 @@ public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "USERSEQ") @NotNull private Long userSeq;
-    @Column(name = "USERID") @NotNull private String userid;
-    @Column(name = "PASSWD") @NotNull private String passwd;
-    @Column(name = "NAME") @NotNull private String name;
-    @Column(name = "EMAIL") @NotNull private String email;
+    @Column(name = "USERID", unique = true, length = 25) @NotNull private String userid;
+    @Column(name = "PASSWD", length=40) @NotNull private String passwd;
+    @Column(name = "NAME", length = 30) @NotNull private String name;
+    @Column(name = "EMAIL", length=100) @NotNull private String email;
     @Column(name = "AUTH") @NotNull private int auth;
-    @Column(name = "GENDER")  private String gender;
-    @Column(name = "BIRTHMONTH")  private String birthMonth;
-    @Column(name = "REGION")  private String region;
+    @Column(name = "GENDER", length=10)  private String gender;
+    @Column(name = "BIRTHMONTH", length=10)  private String birthMonth;
+    @Column(name = "REGION", length=10)  private String region;
 
 
 

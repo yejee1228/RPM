@@ -32,6 +32,7 @@ import Payment from '@/components/contents/Payment.vue'
 
 Vue.use(Router)
 
+
 /*const requireAuthCompany = () => (to, from, next) => {
     if (localStorage.getItem('auth') === '1') {
         return next();
