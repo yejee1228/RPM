@@ -74,7 +74,7 @@
                 }else{
                   this.myContent = false
                 }
-              })
+              }) 
               .catch(()=>{
                 alert('axios error')
               })
