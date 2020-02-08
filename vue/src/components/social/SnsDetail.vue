@@ -72,7 +72,7 @@
                 if(this.board.userid === this.$store.state.user.user.userid){
                   this.myContent = true
                 }else{
-                  this.myContent = false
+                  this.myContent = false 
                 }
               })
               .catch(()=>{
