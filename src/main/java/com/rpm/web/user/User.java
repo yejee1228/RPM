@@ -31,7 +31,7 @@ import java.util.stream.Collectors;
 @Table(name="USER")
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "userSeq")
 public class User implements UserDetails {
-
+ 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "USERSEQ") @NotNull private Long userSeq;
