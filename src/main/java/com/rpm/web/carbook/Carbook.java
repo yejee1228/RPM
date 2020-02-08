@@ -18,7 +18,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name="MYCAR")
-public class Carbook implements Serializable {
+public class Carbook implements Serializable { 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "MYCARID")  @NotNull  private Long mycarId;
