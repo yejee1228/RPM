@@ -122,12 +122,10 @@
       thumbDown(){
         this.empty=true
         this.fall=false
-        console.log(this.$store.state.user.user.userid)
         axios.get(`${url}/thumbDown/${this.boardSeq}/${this.$store.state.user.user.userid}`)
                 .then(res=>{
                   if(res.data){
                     this.board.thumbCount -=1
-                    console.log(this.board)
                   }
                 })
                 .catch(()=>{
