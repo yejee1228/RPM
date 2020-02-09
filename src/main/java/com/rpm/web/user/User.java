@@ -3,8 +3,8 @@ package com.rpm.web.user;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import com.rpm.web.social.Social;
+import com.rpm.web.social.Thumb;
 import lombok.*;
-import org.hibernate.validator.constraints.UniqueElements;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 import org.springframework.util.Assert;
@@ -40,6 +40,10 @@ public class User implements Serializable {
     @OneToMany(mappedBy = "userSeq", cascade = CascadeType.ALL,
             orphanRemoval = true)
     private List<Social> socials = new ArrayList<>();
+
+    @OneToMany(mappedBy = "userSeq", cascade = CascadeType.ALL,
+            orphanRemoval = true)
+    private List<Thumb> thumbs = new ArrayList<>();
 
 
     @Builder
