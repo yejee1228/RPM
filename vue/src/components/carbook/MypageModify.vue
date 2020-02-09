@@ -243,7 +243,7 @@
 							.then(res=>{
 								if(res.data.msg=="success"){
 									alert(`${res.data.user.name}님의 회원정보가 수정되었습니다. 다시 로그인해주세요.`)
-									this.$store.dispatch('user/logout', {userid:this.$store.state.user.user.userid,passwd:this.$store.state.user.user.passwd})
+									this.$store.dispatch('user/logout', {userid:this.$store.state.user.user.userid, passwd:this.$store.state.user.user.passwd})
 									this.$router.push({path : '/login'})
 								}
 							})

@@ -156,7 +156,6 @@
     import FilePondPluginImagePreview from 'filepond-plugin-image-preview';
     const FilePond = vueFilePond(FilePondPluginFileValidateType, FilePondPluginImagePreview);
     import axios from "axios"
-    import { mapState } from 'vuex'
     let url = 'http://localhost:8080'
 
 
@@ -194,11 +193,6 @@
             FilePond
         },
         computed:{
-            ...mapState({
-                makerList: state => state.contents.makerList,
-                modelList : state => state.contents.modelList,
-                modelListIsOpen : state => state.contents.modelListIsOpen,
-            }),
             boardImgName(){
                 return (this.$refs.pond.getFile()===null)?this.board.boardImg:this.$refs.pond.getFile().filename
             }
@@ -249,7 +243,6 @@
                 this.keyWord1 = this.defaultKeyWord1
                 this.keyWord2 = this.defaultKeyWord2
                 this.keyWord3 = this.defaultKeyWord3
-
             },
             searchKeyClick(searchKeyID){
                 const searchKey = document.getElementById(searchKeyID)

@@ -18,7 +18,7 @@
         <div class="row-contents">
 
           <div v-for="(item, index) in boardList" :key="index" class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" href="/snsdetail" @click="goDetail(item.boardSeq)" active-class="active">
+            <a class="portfolio-link" @click="goDetail(item.boardSeq)" active-class="active">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
                   <i class="fas fa-plus fa-3x"></i>
@@ -71,10 +71,6 @@
         }
       }
     },
-
-    /* mounted(){
-       this.scroll()
-     },*/
     methods: {
       loadData(){
         let userid = (this.$store.state.user.auth===false)?"guest":this.$store.state.user.user.userid
@@ -101,22 +97,12 @@
 
         this.page += 1
       },
-      /* scroll () {
-         window.onscroll = () => {
-
-           let bottomOfWindow = document.documentElement.scrollTop + window.innerHeight === document.documentElement.scrollHeight+100
-           if (bottomOfWindow) {
-             this.scrolledToBottom = true
-             alert('')
-             this.loadData()
-           }
-         }
-       },*/
       write() {
         this.$router.push({path: '/snswrite'})
       },
       goDetail(boardSeq){
         localStorage.setItem('storedData', boardSeq)
+        this.$router.push({path:'/snsdetail'})
       }
 
     }
