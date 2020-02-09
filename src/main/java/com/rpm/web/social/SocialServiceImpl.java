@@ -150,6 +150,7 @@ public class SocialServiceImpl implements SocialService{
 
     @Override
     public void thumbUp(String boardSeq, String userid) {
+        thumb = new Thumb();
         thumb.setBoardSeq(socialRepository.findById(Long.parseLong(boardSeq)).get());
         thumb.setUserSeq(userRepository.findByUserid(userid));
         thumbRepository.save(thumb);
