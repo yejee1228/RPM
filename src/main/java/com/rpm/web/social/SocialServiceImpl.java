@@ -116,7 +116,7 @@ public class SocialServiceImpl implements SocialService{
     @Override
     public void updateContent(String boardSeq, SocialWriteDTO socialWriteDto){
         social = socialRepository.findById(Long.parseLong(boardSeq)).get();
-        if(socialWriteDto.getBoardImgName()=="oldImg"){
+        if(socialWriteDto.getBoardImgName().equals("oldImg")){
             social.setBoardImg(social.getBoardImg());
         }else{
             Path file= Paths.get(PathEnum.UPLOAD_PATH.toString()+File.separator
@@ -150,6 +150,7 @@ public class SocialServiceImpl implements SocialService{
 
     @Override
     public void thumbUp(String boardSeq, String userid) {
+        thumb = new Thumb();
         thumb.setBoardSeq(socialRepository.findById(Long.parseLong(boardSeq)).get());
         thumb.setUserSeq(userRepository.findByUserid(userid));
         thumbRepository.save(thumb);

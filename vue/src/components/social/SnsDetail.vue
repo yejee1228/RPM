@@ -37,7 +37,6 @@
                     <modals-container />
                   </div>
                   <div>
-                    <!--댓글창-->
                   </div>
                 </div>
               </div>

@@ -151,7 +151,6 @@
     import FilePondPluginImagePreview from 'filepond-plugin-image-preview';
     const FilePond = vueFilePond(FilePondPluginFileValidateType, FilePondPluginImagePreview);
     import axios from "axios"
-    import { mapState } from 'vuex'
     let url = 'http://localhost:8080'
 
     export default{
@@ -186,14 +185,6 @@
         },
         components: {
             FilePond
-        },
-        computed:{
-            ...mapState({
-                makerList: state => state.contents.makerList,
-                modelList : state => state.contents.modelList,
-                modelListIsOpen : state => state.contents.modelListIsOpen,
-            }),
-
         },
         created(){
             if(this.$store.state.user.auth===false){
@@ -231,8 +222,7 @@
                 this.keyWord1 = this.defaultKeyWord1
                 this.keyWord2 = this.defaultKeyWord2
                 this.keyWord3 = this.defaultKeyWord3
-
-
+                this.$store.dispatch('contents/getCategory1',{'param':'IMP','column':'CAR_TYPE'})
             },
             searchKeyClick(searchKeyID){
                 const searchKey = document.getElementById(searchKeyID)
