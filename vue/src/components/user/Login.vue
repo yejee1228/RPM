@@ -19,16 +19,8 @@
 							<label for="passwd" class="loginLabel"><img src="https://www.kcar.com/resources/images/common/login_pass.gif" alt="패스워드" class="am"></label>
 
 							<input v-model="passwd" v-on:keyup.enter="login" type="password" name="i_sPassWord" class="input_pass am" id="passwd" value="" maxlength="20">&nbsp;&nbsp;
-							<span class="idSave">
-						<input type="checkbox" class="am" id="id_save" name="id_save" value="Y">
-						<label for="id_save" class="id_save">아이디 저장</label>
-					</span>
 							<a @click.prevent="checkSubmit" href=""><img src="https://www.kcar.com/resources/images/common/loginBtn.gif" alt="로그인" class="am"></a>
 						</div>
-						<div class="findjoin">
-							<a @click.prevent="">아이디 찾기</a> <a href="/user/passInf.do" >비밀번호 찾기</a><modals-container />
-						</div>
-
 						<p class="skjoin">아직 RPM 회원이 아니세요? <router-link to="/join">회원가입</router-link></p>
 					</div>
 				</div>
