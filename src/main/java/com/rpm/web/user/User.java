@@ -49,6 +49,9 @@ public class User implements UserDetails {
 
     @OneToMany(mappedBy = "userSeq", cascade = CascadeType.ALL,
             orphanRemoval = true)
+    private List<Social> socials = new ArrayList<>();
+    @OneToMany(mappedBy = "userSeq", cascade = CascadeType.ALL,
+            orphanRemoval = true)
     private List<Thumb> thumbs = new ArrayList<>();
 
     @ElementCollection(fetch = FetchType.EAGER)
