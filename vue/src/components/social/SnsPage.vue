@@ -77,15 +77,15 @@
      },*/
     methods: {
       loadData(){
-        let userid = (this.$store.state.user.auth===false)?"ghest":this.$store.state.user.user.userid
+        let userid = (this.$store.state.user.auth===false)?"guest":this.$store.state.user.user.userid
         axios
                 .get(`${url}/viewList/${this.page}/${userid}`)
                 .then(res => {
                   if (res.data.boardList.length) {
                     if(res.data.thumbedboard!=null){
-                      this.thumbedboard.push(res.data.thumbedboard)
+                      this.thumbedboard.push(...res.data.thumbedboard)
                     }
-                    this.boardList.push(res.data.boardList)
+                    this.boardList.push(...res.data.boardList)
                     if(res.data.length<12){
                       this.noMore = true
                       this.hasMore = false

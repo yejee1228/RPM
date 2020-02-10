@@ -42,7 +42,7 @@ public class SocialController {
             list[i]=param.get(pager.getStartRow()+i);
         }
         map.put("boardList", list);
-        if(!userid.equals("ghest")){
+        if(!userid.equals("guest")){
             map.put("thumbedboard", socialService.thumbed(userid));
         }
         return map;
