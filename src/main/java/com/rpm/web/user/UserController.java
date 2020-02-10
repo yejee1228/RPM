@@ -99,7 +99,6 @@ public class UserController {
     @PostMapping("/getAuth")
     public Map<String, Object> getAuth(@RequestBody String token){
         trunk.clear();
-        System.out.println(token);
         if(token != null && jwtTokenProvider.validateToken(token)){
             trunk.put(Arrays.asList("result", "auth"), Arrays.asList(true, userRepository.findRolesByuserUserseq(user.getUserSeq())));
         }else{

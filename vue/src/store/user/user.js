@@ -41,43 +41,48 @@ const actions = {
         axios.post('http://localhost:8080/getUserInfo',token,headers)
             .then(({data})=>{
                 if(data.result){
-                    commit('LOGIN_COMMIT', data)
+                    commit('REFRESH', data)
                 }else{
                     commit('LOGOUT_COMMIT')
                     alert(`로그인을 다시 해주세요!`)
                     router.push('/login')
                 }
             })
+    },
+    async loginDestory({commit}){
+        commit('LOGINDESTROY')
     }
 }
 const mutations = {
     LOGIN_COMMIT(state, data){
-        state.fail = false
         state.auth = true
         state.user = data.user
         localStorage.setItem("token", data.token)
         localStorage.setItem("userId",data.user.userid)
         if(data.user.auth==="USER") {
-            if(data.mycar!=undefined){
-                localStorage.setItem("mycar", JSON.stringify(data.mycar))
-                if(data.record!=undefined){
-                    localStorage.setItem("record", JSON.stringify(data.record))
-                }
-            }
             router.push('/')
         }else{
             router.push('/companyHome')
         }
     },
+    REFRESH(state, data){
+        state.auth = true
+        state.user = data.user
+        localStorage.setItem("token", data.token)
+        localStorage.setItem("userId",data.user.userid)
+        router.go(1)
+    },
 
     LOGOUT_COMMIT(state){
         localStorage.clear()
-        state.fail = false
         state.auth = false
         state.user  = {}
     },
     fail_commit(state){
         state.fail = true
+    },
+    LOGINDESTROY(state){
+        state.fail = false
     }
 }
 export default {

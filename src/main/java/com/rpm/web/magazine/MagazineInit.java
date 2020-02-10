@@ -1,5 +1,6 @@
 package com.rpm.web.magazine;
 
+import com.rpm.web.util.ArticleCrawler;
 import com.rpm.web.util.MakeCarDummyList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;

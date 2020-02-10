@@ -29,6 +29,5 @@ public class Employee implements Serializable {
     @Column(name = "CENTER_CODE", length = 3) private String centerCode;
     @Column(name = "EM_POSITION", length = 3) private String emPosition;
     @Column(name = "CARCD", length = 12) private String carcd;
-    @Column(name = "EM_IMG", length = 100) private String emImg;
 
 }

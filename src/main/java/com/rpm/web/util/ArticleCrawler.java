@@ -1,6 +1,10 @@
-package com.rpm.web.magazine;
+package com.rpm.web.util;
 
 import com.rpm.web.contents.SearchDetailCondition;
+import com.rpm.web.magazine.Article;
+import com.rpm.web.magazine.ArticleRepository;
+import com.rpm.web.magazine.ExtractedWord;
+import com.rpm.web.magazine.ExtractedWordRepository;
 import com.rpm.web.proxy.Trunk;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
@@ -47,7 +51,6 @@ public class ArticleCrawler {
             for ( menuCnt = 1 ; menuCnt < 7 ; menuCnt++) {
 
                 String motorgraph = "https://www.motorgraph.com/news/articleList.html?sc_section_code=S1N"+menuCnt+"&view_type=sm" ;
-                // 2. SSL 체크
                 if(motorgraph.indexOf("https://") >= 0){
                     ArticleCrawler.setSSL();
                 }

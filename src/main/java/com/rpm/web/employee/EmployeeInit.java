@@ -47,15 +47,13 @@ public class EmployeeInit implements ApplicationRunner {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            Elements element = doc.select("span.employee_name");
-            Elements element2 = doc.select("span.employee_txt");
-            Elements element3 = doc.select("span.img>img");
-            Elements element4 = doc.select("h3.center_name");
+            Elements element = doc.select("strong.name");
+            Elements element2 = doc.select("span.task");
+            Elements element4 = doc.select("div.branch_tit h2");
 
 
             Iterator<Element> ie1 = element.iterator();
             Iterator<Element> ie2 = element2.iterator();
-            Iterator<Element> ie3 = element3.iterator();
 
 
             for (int j=0;j<element.size()/2;j++) {
@@ -69,7 +67,6 @@ public class EmployeeInit implements ApplicationRunner {
                 employee.setCenterName(element4.text());
                 employee.setEmName(ie1.next().text());
                 employee.setEmPosition(ie2.next().text());
-                employee.setEmImg(ie3.next().attr("src"));
                 employeeRepository.save(employee);
 
 

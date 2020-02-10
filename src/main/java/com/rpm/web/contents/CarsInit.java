@@ -42,8 +42,8 @@ public class CarsInit implements ApplicationRunner {
         Map<String, Map<String, Object>> map = new HashMap<>();
 
         if (carsRepository.count() == 0) {
-            int count = Integer.parseInt(http.getCarCount("https://www.kcar.com/search/api/getCarSearchWithCondition.do"));
-            for (int i = 1; i <= count-100; i++) {
+            int count = Integer.parseInt(http.getCarCount("https://www.kcar.com/index_api/getCarCnt.do"));
+            for (int i = 1; i <= count-7000; i++) {
                 if ( i % 1000 == 0 ) System.out.println( new SimpleDateFormat ( "yyyy-MM-dd HH:mm:ss").format (System.currentTimeMillis()) + "  INFO 18844 --- [           CarsInit ]         : CarsInit processing :: insert Data count = [ "+ i +" ] ");
 
                 Map<String, String> strJson = new HashMap<>();
@@ -84,8 +84,10 @@ public class CarsInit implements ApplicationRunner {
             }
         }
         if(recentSearchWord.count()==0){
-            for(int i =0; i<30000; i++){
-                recentSearchWord.save(new RecentSearchWord(list.get((int)(Math.random() * list.size())), Long.parseLong("20200000000000000"), String.valueOf(i)));
+            for(int i =0; i<300; i++){
+                for(int j = 0; j<100; j++){
+                    recentSearchWord.save(new RecentSearchWord(list.get((int)(Math.random() * list.size())), Long.parseLong("20200000000000000"), String.valueOf(i)));
+                }
             }
 
         }

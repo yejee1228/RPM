@@ -53,7 +53,7 @@
 			},
 		},
 		beforeDestroy(){
-			this.$store.state.user.fail = false
+			this.$store.dispatch('user/loginDestory')
 		},
 		created() {
 			if(this.auth=== true){

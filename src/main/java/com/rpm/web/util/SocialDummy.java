@@ -35,7 +35,7 @@ public class SocialDummy {
                     dates.add(e.attr("title"));
                 }
             }
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         map.put("url", list);
