@@ -47,7 +47,6 @@ public class ArticleCrawler {
             for ( menuCnt = 1 ; menuCnt < 7 ; menuCnt++) {
 
                 String motorgraph = "https://www.motorgraph.com/news/articleList.html?sc_section_code=S1N"+menuCnt+"&view_type=sm" ;
-                // 2. SSL 체크
                 if(motorgraph.indexOf("https://") >= 0){
                     ArticleCrawler.setSSL();
                 }

@@ -50,7 +50,7 @@
             <div v-if="(this.$store.state.user.user.auth==='ADMIN')" class="logout" >
                 <a @click.prevent="logout">로그아웃</a>
             </div>
-            <router-view></router-view>
+            <router-view ></router-view>
         </div>
     </div>
 </template>
@@ -80,7 +80,6 @@
             logout(){
                 this.$store.dispatch('user/logout')
                 this.$router.push('/')
-                location.reload()
             },
             goHome(){
                 (this.$store.state.user.user.auth==="ADMIN")? this.$router.push('/companyHome'): this.$router.push('/')

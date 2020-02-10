@@ -41,20 +41,14 @@ public class MakeCarDummyList {
             result  = Jsoup
                     .connect(targetUrl)
                     .userAgent(USER_AGENT)
-                    .data("price_tab_flag", "2")
-                    .data("limit", "1")
-                    .data("orderFlag", "true")
-                    .data("orderby", "n_order:desc")
-                    .data("wr_eq_v_usernm", "")
-                    .data("pageno", "1")
                     .ignoreContentType(true)
                     .execute()
                     .body();
-            result.split(",")[6].replaceAll("^[0-9]", "");
+            result.split(",")[0].replaceAll("^[0-9]", "");
     } catch (Exception e) {
         e.printStackTrace();
     }
-        return result.split(",")[6].replaceAll("[^0-9]", "");
+        return result.split(",")[0].replaceAll("[^0-9]", "");
     }
 
 

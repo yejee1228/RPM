@@ -24,7 +24,7 @@ public class SocialDummy {
         List<String> dates = new ArrayList<>();
         dates.clear();
         try {
-            Document rawData = Jsoup.connect("http://www.ppomppu.co.kr/zboard/zboard.php?id=car&category=6").timeout(10 * 1000).get();
+            Document rawData = Jsoup.connect("http://www.ppomppu.co.kr/zboard/zboard.php?id=car&category=6").timeout(5000).get();
             Elements aTag = rawData.select("a[href^=view.php?id=car&page=1]");
             Elements date = rawData.select("td[class=eng list_vspace]");
             for (Element e : aTag) {

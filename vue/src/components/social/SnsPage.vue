@@ -77,7 +77,7 @@
      },*/
     methods: {
       loadData(){
-        let userid = (this.$store.state.user.auth===false)?"ghest":this.$store.state.user.user.userid
+        let userid = (this.$store.state.user.auth===false)?"guest":this.$store.state.user.user.userid
         axios
                 .get(`${url}/viewList/${this.page}/${userid}`)
                 .then(res => {
