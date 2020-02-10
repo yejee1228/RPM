@@ -1,6 +1,10 @@
-package com.rpm.web.magazine;
+package com.rpm.web.util;
 
 import com.rpm.web.contents.SearchDetailCondition;
+import com.rpm.web.magazine.Article;
+import com.rpm.web.magazine.ArticleRepository;
+import com.rpm.web.magazine.ExtractedWord;
+import com.rpm.web.magazine.ExtractedWordRepository;
 import com.rpm.web.proxy.Trunk;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
